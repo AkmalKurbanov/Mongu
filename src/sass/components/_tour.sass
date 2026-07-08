@@ -1,0 +1,276 @@
+@use '../settings/shared' as v
+
+.tour
+  padding: v.to-rem(20) 0
+
+  &__grid
+    display: flex
+    flex-direction: column
+    row-gap: v.to-rem(20)
+
+    @include v.media(laptop)
+      column-gap: v.to-rem(20)
+      display: grid
+      grid-template-columns: 60% 1fr
+      grid-template-areas: "gallery desc" "gallery specifications" "accordion specifications"
+
+    @include v.media(desktop)
+      column-gap: v.to-rem(20)
+      grid-template-columns: 65% 1fr
+
+  &__desc
+    grid-area: desc
+
+    .title
+      font-family: v.$ff-base
+      margin-bottom: v.to-rem(15)
+      font-weight: 500
+
+    p
+      font-size: v.to-rem(14)
+      line-height: 1.6
+
+  &__slider-gallery
+    padding: 0
+
+  &__gallery
+    grid-area: gallery
+
+  &__slider-wrap
+    position: relative
+
+  &__gallery-item
+    width: 100%
+    border-radius: v.to-rem(8)
+    overflow: hidden
+
+    img
+      height: 100%
+      object-fit: cover
+
+  &__gallery-nav
+    position: absolute
+    width: 100%
+    top: 50%
+    transform: translateY(-50%)
+    padding: 0 v.to-rem(16)
+
+  &__gallery-pagination
+    position: absolute
+    width: 100%
+    display: flex
+    bottom: 0
+    margin-top: 0
+    padding-bottom: v.to-rem(16)
+
+  &__gallery-thumbs
+    gap: v.to-rem(5)
+    margin-top: v.to-rem(10)
+
+  &__gallery-thumb
+    width: v.to-rem(80)
+    height: v.to-rem(60)
+    border-radius: v.to-rem(8)
+
+    @include v.media(tablet)
+      width: v.to-rem(150)
+      height: v.to-rem(100)
+
+  &__specifications
+    grid-area: specifications
+
+    .btn
+      width: 100%
+      border-radius: v.to-rem(16)
+
+  &__item-sticky
+    @include v.media(laptop)
+      position: sticky
+      top: v.to-rem(100)
+      height: auto
+
+  &__accordion
+    grid-area: accordion
+
+  .specifications
+    display: flex
+    gap: v.to-rem(5)
+    margin-bottom: v.to-rem(30)
+
+    &__item
+      width: calc( (100% - (3 * v.to-rem(5))) / 4 )
+      text-align: center
+      display: flex
+      flex-direction: column
+      align-items: center
+      row-gap: v.to-rem(5)
+      flex-shrink: 0
+
+      .icon
+        color: v.$clr-accent
+        height: 40px
+        width: 100%
+
+      span
+        text-transform: uppercase
+        font-size: 11px
+        font-weight: 600
+        line-height: 1.3
+        display: block
+
+    &__difficulty
+
+      &_lvl-1
+        .icon_difficulty-arrow
+          transform: rotate(-65deg)
+          margin-left: v.to-rem(7.5)
+          margin-bottom: v.to-rem(2)
+
+      &_lvl-2
+        .icon_difficulty-arrow
+          transform: rotate(-23deg)
+          margin-left: v.to-rem(4)
+
+      &_lvl-3
+        .icon_difficulty-arrow
+          margin-right: v.to-rem(4)
+          transform: rotate(23deg)
+
+      &_lvl-4
+        .icon_difficulty-arrow
+          transform: rotate(65deg)
+          margin-right: v.to-rem(7.5)
+          margin-bottom: v.to-rem(2)
+
+    &__difficulty-icon
+      display: flex
+      position: relative
+      align-items: flex-end
+      justify-content: center
+
+      .icon
+        &_difficulty
+          width: v.to-rem(60)
+          height: v.to-rem(40)
+          align-items: flex-start
+
+        &_difficulty-arrow
+          width: v.to-rem(12)
+          height: v.to-rem(24)
+          position: absolute
+          transform-origin: bottom
+          display: flex
+          align-items: center
+          justify-content: center
+
+  .price-card
+    border-radius: v.to-rem(16)
+    text-align: center
+    display: flex
+    flex-direction: column
+    row-gap: v.to-rem(20)
+    line-height: normal
+    background-color: #f3f3fb
+    padding: v.to-rem(16)
+    margin-bottom: v.to-rem(20)
+    border: 2px solid v.$clr-secondary
+
+    &__duration
+      font-size: v.to-rem(16)
+      font-weight: 600
+
+    &__label
+      font-size: v.to-rem(12)
+      text-transform: uppercase
+      font-weight: 600
+      color: #737995
+
+    &__value
+      font-size: v.to-rem(30)
+      color: v.$clr-secondary
+      font-weight: 700
+
+  &__all-link
+    text-decoration: none
+    text-align: center
+    color: v.$clr-secondary
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 600
+    font-size: v.to-rem(13)
+    text-transform: uppercase
+    margin-top: v.to-rem(20)
+    column-gap: v.to-rem(2)
+
+    .icon
+      transition: transform v.$tr-base
+
+    @include v.has-mouse
+      &:hover
+        .icon
+          transform: translateX(3px)
+
+  table
+    border-collapse: collapse
+    width: 100%
+    tr
+      td
+        border: 1px solid v.$clr-secondary
+        padding: v.to-rem(10) v.to-rem(7)
+        font-size: v.to-rem(10)
+
+        @include v.media(tablet)
+          font-size: v.to-rem(12)
+
+        @include v.media(laptop)
+          font-size: v.to-rem(13)
+
+        &:last-child
+          text-align: center
+
+      &:nth-child(odd)
+        td
+          background-color: rgba(v.$clr-secondary, .2)
+
+  .tour-tabs
+    h2,
+    h3,h4,h5,h6
+      margin-bottom: v.to-rem(15)
+      font-size: v.to-rem(20)
+
+    &__text
+      p
+        margin-bottom: v.to-rem(15)
+        &:last-child
+          margin-bottom: 0
+
+    &__desc
+      padding-bottom: v.to-rem(20)
+      margin-bottom: v.to-rem(20)
+      border-bottom: 1px solid #e2e2e9
+
+      &:last-child
+        border: none
+
+      ul
+        padding-left: v.to-rem(18)
+
+    &__table-booking
+      td
+        border-top: 0
+        border-right: 0
+        border-left: 0
+        font-weight: 600
+
+        &:nth-child(2)
+          text-align: center
+
+        &:last-child
+          text-align: right
+
+      .btn
+        padding: v.to-rem(5) v.to-rem(8)
+        font-size: v.to-rem(10)
+        border-radius: v.to-rem(6)
+        display: inline-flex

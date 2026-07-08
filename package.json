@@ -1,0 +1,27 @@
+{
+  "name": "Mongu",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0",
+    "gh-pages": "^6.3.0",
+    "glob": "^13.0.6",
+    "sass": "^1.101.0",
+    "sharp": "^0.35.1",
+    "vite": "^8.0.16",
+    "vite-plugin-image-optimizer": "^2.0.3"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^6.1.14",
+    "modern-normalize": "^3.0.1",
+    "swiper": "^12.2.0"
+  }
+}

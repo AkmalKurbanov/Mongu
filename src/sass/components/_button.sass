@@ -1,0 +1,55 @@
+@use '../settings/shared' as v
+.btn-wrap
+  display: flex
+
+  &_centered
+    justify-content: center
+
+.btn
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  padding: v.to-rem(16px) v.to-rem(32px)
+  background-color: v.$clr-accent
+  color: #fff
+  text-decoration: none
+  font-weight: 500
+  transition: background-color v.$tr-base
+  text-transform: uppercase
+  letter-spacing: 1px
+  border: none
+  cursor: pointer
+  line-height: normal
+
+  @include v.has-mouse
+    &:hover
+      background-color: rgb(v.$clr-accent, 70%)
+
+      .icon
+        transform: translateX(5px)
+
+  .icon
+    width: v.to-rem(24)
+    height: v.to-rem(24)
+    margin-left: v.to-rem(6)
+    transition: transform v.$tr-base
+    color: currentColor
+    flex-shrink: 0
+
+  &_light
+    background-color: #fff
+    color: v.$clr-text
+
+    @include v.has-mouse
+      &:hover
+        color: #fff
+
+  &_bordered
+    background-color: transparent
+    border: 1px solid v.$clr-accent
+    color: v.$clr-accent
+
+    @include v.has-mouse
+      &:hover
+        background-color: v.$clr-accent
+        color: #fff

@@ -1,0 +1,17 @@
+@use "sass:math"
+@use '../settings/variables' as v
+
+@function to-rem($pixel)
+  @if not math.is-unitless($pixel)
+    $pixel: math.div($pixel, $pixel * 0 + 1)
+
+  @return math.div($pixel, v.$base-fsize) * 1rem
+
+@function to-em($pixel, $context: v.$base-fsize)
+  @if not math.is-unitless($pixel)
+    $pixel: math.div($pixel, $pixel * 0 + 1)
+
+  @if not math.is-unitless($context)
+    $context: math.div($context, $context * 0 + 1)
+
+  @return math.div($pixel, $context) * 1em

@@ -1,0 +1,37 @@
+@use "sass:map"
+@use '../tools/_functions' as v
+
+$breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1920px)
+
+@mixin media($key)
+  $size: map.get($breakpoints, $key)
+
+  @if $size
+    @media (min-width: $size)
+      @content
+
+  @else
+    @warn "Брекпоинт #{$key} не найден в карте!"
+
+@mixin has-mouse
+  @media (hover: hover) and (pointer: fine)
+    @content
+
+@mixin is-touch
+  @media (hover: none) and (pointer: coarse)
+    @content
+
+@mixin portrait
+  @media (orientation: portrait)
+    @content
+
+@mixin landscape
+  @media (orientation: landscape)
+    @content
+
+@mixin section-padding
+  padding: v.to-rem(40) 0
+  @include media('tablet')
+    padding: v.to-rem(60) 0
+  @include media('desktop')
+    padding: v.to-rem(100) 0

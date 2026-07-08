@@ -1,0 +1,157 @@
+@use '../settings/shared' as v
+
+.footer
+  .container
+    max-width: v.to-rem(1400)
+
+  &__top-flex-wrap
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+    justify-content: space-between
+    max-width: v.to-rem(1400)
+    width: 100%
+    margin: 0 auto
+    gap: v.to-rem(10)
+
+    @include v.media(tablet)
+      gap: v.to-rem(20)
+
+    @include v.media(desktop)
+      align-items: center
+
+  &__col
+
+    &:first-child
+      order: 1
+      width: 100%
+      text-align: center
+      margin-bottom: v.to-rem(30)
+
+      @include v.media(desktop)
+        text-align: left
+        width: auto
+
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(4),
+    &:nth-child(5)
+      width: calc( 50% - v.to-rem(5) )
+
+      @include v.media(tablet)
+        width: calc( 50% - v.to-rem(10) )
+
+      @include v.media(laptop)
+        width: auto
+
+    &:nth-child(2)
+      order: 2
+
+    &:nth-child(3)
+      order: 3
+
+    &:nth-child(4)
+      order: 4
+
+    &:nth-child(5)
+      order: 5
+
+    .btn
+      width: 100%
+      padding: v.to-rem(8) v.to-rem(16)
+
+      @include v.media(tablet)
+        padding: v.to-rem(16) v.to-rem(32)
+
+  &__subtitle
+    margin-top: v.to-rem(15)
+
+  &__contacts-link
+    position: relative
+    display: flex
+    column-gap: v.to-rem(10)
+    text-decoration: none
+    color: v.$clr-text
+
+    @include v.media(tablet)
+      column-gap: v.to-rem(20)
+      align-items: center
+
+    .icon
+      flex-shrink: 0
+      width: v.to-rem(24)
+      height: v.to-rem(24)
+      @include v.media(tablet)
+        width: v.to-rem(32)
+        height: v.to-rem(32)
+
+    span
+      font-weight: 500
+      transition: color v.$tr-base
+      font-size: v.to-rem(12)
+
+    @include v.has-mouse
+      &:hover
+        span
+          color: v.$clr-accent
+
+  &__contacts-title
+    text-transform: uppercase
+    font-weight: 500
+    font-size: v.to-rem(12)
+
+    @include v.media(tablet)
+      font-size: v.to-rem(18)
+      margin-bottom: v.to-rem(3)
+
+  &__bottom
+    background-color: v.$clr-accent-darker
+    padding: v.to-rem(15) 0
+
+    .logo
+      width: v.to-rem(100)
+      margin-bottom: v.to-rem(20)
+      color: #fff
+
+      @include v.media(laptop)
+        margin-bottom: 0
+
+    nav
+
+      ul
+        display: flex
+        flex-wrap: wrap
+        gap: v.to-rem(10)
+
+        li
+          list-style: none
+          width: calc((100% - v.to-rem(10)) / 2)
+
+          @include v.media(tablet)
+            width: calc((100% - (2 * v.to-rem(10))) / 3)
+
+          @include v.media(laptop)
+            width: auto
+
+          a
+            color: #fff
+            text-transform: uppercase
+            text-decoration: none
+            font-size: v.to-rem(13)
+
+  &__bottom-flex-wrap
+    @include v.media(laptop)
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+  &__copyright
+    color: #fff
+    margin-top: v.to-rem(20)
+    text-align: center
+
+    @include v.media(laptop)
+      margin-top: 0
+
+    @include v.media(laptop)
+      font-size: v.to-rem(13)

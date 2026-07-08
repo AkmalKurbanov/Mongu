@@ -1,0 +1,48 @@
+@use '../settings/shared' as v
+
+.tabs
+
+  &__list
+    column-gap: v.to-rem(20)
+    display: flex
+    margin-bottom: v.to-rem(20)
+    border-bottom: 1px solid #e2e2e9
+
+  &__tab
+    border: none
+    background: none
+    outline: none
+    text-transform: uppercase
+    font-size: v.to-rem(13)
+    font-weight: 700
+    transition: color v.$tr-base
+    padding-bottom: v.to-rem(10)
+    position: relative
+    white-space: nowrap
+
+    &:after
+      position: absolute
+      content: ''
+      width: 0
+      height: 1px
+      background-color: v.$clr-secondary
+      left: 50%
+      transform: translateX(-50%)
+      bottom: v.to-rem(-1)
+      transition: width v.$tr-base
+
+    @include v.has-mouse
+      cursor: pointer
+
+      &:hover
+        color: v.$clr-secondary
+
+        &:after
+          width: calc( 100% - v.to-rem(20) )
+
+    &_active
+      color: v.$clr-secondary
+      pointer-events: none
+
+      &:after
+        width: calc( 100% - v.to-rem(20) )

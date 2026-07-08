@@ -1,0 +1,43 @@
+@use '../settings/shared' as v
+.reviews
+  &__slider
+    gap: v.to-rem(30)
+
+    &::-webkit-scrollbar
+      display: none
+
+  &__slide
+    flex: 0 0 calc( 100vw - 30px )
+
+    @include v.media(tablet)
+      flex: 0 0 50%
+
+    @include v.media(laptop)
+      flex: 0 0 33.33%
+
+  &__item
+    display: flex
+    align-items: flex-end
+    gap: v.to-rem(20)
+
+  &__photo
+    width: v.to-rem(50)
+    height: v.to-rem(50)
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 100%
+    overflow: hidden
+    background-color: #eee
+    flex-shrink: 0
+
+  &__text
+    p
+      font-family: v.$ff-accent
+      font-weight: 500
+      letter-spacing: 2px
+
+    figcaption
+      font-weight: 700
+      margin-top: v.to-rem(30)
+      display: block

@@ -1,0 +1,109 @@
+@use '../settings/shared' as v
+.hero
+  height: 100svh
+  position: relative
+
+  @include v.is-touch
+    @include v.landscape
+      height: auto
+      padding-bottom: v.to-rem(30)
+
+  &::before
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    inset: 0
+    background-color: rgba(0,0,0,0.4)
+    background-color: rgba(0,0,0,0.5)
+    z-index: 2
+
+  &__media,
+  &__poster,
+  &__video
+    position: absolute
+    width: 100%
+    height: 100%
+    inset: 0
+
+    img
+      object-fit: cover
+      object-position: bottom right
+      height: 100%
+      width: 100%
+
+  &__content
+    position: relative
+    z-index: 3
+    height: 100%
+    display: flex
+    padding-top: v.to-rem(70)
+
+    @include v.media(tablet)
+      padding-top: v.to-rem(160)
+      @include v.landscape
+        padding-top: v.to-rem(80)
+
+    @include v.media(laptop)
+      @include v.has-mouse
+        @include v.landscape
+          padding-bottom: v.to-rem(120)
+          align-items: flex-end
+
+    h1
+      font-family: v.$ff-accent
+      color: #fff
+      font-size: v.to-rem(35)
+      line-height: v.to-rem(40)
+      font-weight: 400
+
+      @include v.media(tablet)
+        font-size: v.to-rem(60)
+        line-height: v.to-rem(60)
+
+      span
+        font-style: italic
+        font-weight: 400
+
+  &__subtitle
+    text-transform: uppercase
+    color: #fff
+    line-height: 1.6
+    font-weight: 600
+    max-width: v.to-rem(360)
+    width: 100%
+
+  &__subtitle,
+  &__btn-links
+    margin-top: v.to-rem(20)
+
+  &__btn-links
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: v.to-rem(16)
+
+    .btn
+      padding: v.to-rem(10px) v.to-rem(18px)
+      font-size: v.to-rem(13)
+      @include v.media(laptop)
+        padding: v.to-rem(16px) v.to-rem(32px)
+        font-size: v.to-rem(16)
+
+    @include v.media(desktop)
+      flex-direction: row
+
+  &_inside
+    height: v.to-rem(400)
+    display: flex
+    justify-content: flex-end
+    flex-direction: column
+
+    @include v.media(tablet)
+      height: v.to-rem(500)
+
+    .hero
+      &__content
+        padding-bottom: v.to-rem(40)
+        height: auto
+        width: 100%

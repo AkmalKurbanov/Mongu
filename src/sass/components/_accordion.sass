@@ -1,0 +1,43 @@
+@use '../settings/shared' as v
+
+.accordion
+  &__content
+    display: grid
+    grid-template-rows: 0fr
+    transition: grid-template-rows .2s ease-out
+    overflow: hidden
+
+  &__item
+    border-bottom: 1px solid #e2e2e9
+    padding: v.to-rem(10) 0
+    
+
+  &__header
+    border: none
+    background: none
+    outline: none
+    width: 100%
+    text-align: left
+    font-weight: 600
+    display: flex
+    align-items: center
+    justify-content: space-between
+
+    @include v.has-mouse
+      cursor: pointer
+
+    .icon 
+      width: v.to-rem(32)
+      height: v.to-rem(32)  
+
+
+  &__body
+    min-height: 0
+    
+    p
+      margin-bottom: v.to-rem(15)
+      &:last-child
+        margin-bottom: 0
+
+  &__content[aria-hidden="false"]
+    grid-template-rows: 1fr

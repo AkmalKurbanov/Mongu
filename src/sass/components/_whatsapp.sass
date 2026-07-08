@@ -1,0 +1,33 @@
+@use '../settings/shared' as v
+
+.whatsapp-float
+  position: fixed
+  width: v.to-rem(60)
+  height: v.to-rem(60)
+  bottom: v.to-rem(20)
+  right: v.to-rem(5)
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7)
+  z-index: 10000
+  transition: transform v.$tr-base
+  text-decoration: none
+  animation: pulse-soft 2.5s infinite
+
+@keyframes pulse-soft
+  0%
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7)
+
+  70%
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0)
+
+  100%
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0)
+
+.whatsapp-float
+  @include v.has-mouse
+    &:hover
+      transform: scale(1.1)
+      animation: none

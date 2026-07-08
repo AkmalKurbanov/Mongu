@@ -1,0 +1,54 @@
+@use '../settings/shared' as v
+
+.badges
+  display: flex
+  flex-wrap: wrap
+  gap: v.to-rem(5)
+
+  &__badge
+    border: 1px solid
+    border-radius: v.to-rem(5)
+    padding: v.to-rem(2.5) v.to-rem(5)
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    font-weight: 500
+
+    a
+      text-decoration: none
+      transition: color v.$tr-base
+
+    &_category
+      color: v.$clr-accent
+      border-color: v.$clr-accent
+      transition: color v.$tr-base, border-color v.$tr-base
+      a
+        color: v.$clr-accent
+
+      @include v.has-mouse
+        &:hover
+          border-color: v.$clr-secondary
+          a
+            color: v.$clr-secondary
+
+    &_duration
+      color: v.$clr-secondary
+      border-color: v.$clr-secondary
+
+    &_price
+      background-color: v.$clr-secondary
+      border-color: v.$clr-secondary
+      color: #fff
+
+    &_peak
+      background-color: #fff
+      border-color: #fff
+      display: flex
+      column-gap: v.to-rem(5)
+
+      .icon
+        color: v.$clr-accent
+
+    &_price,
+    &_peak
+      font-size: v.to-rem(13)

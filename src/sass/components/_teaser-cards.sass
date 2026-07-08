@@ -1,0 +1,83 @@
+@use '../settings/shared' as v
+.teaser-cards
+  &__grid
+    gap: v.to-rem(20)
+    padding: v.to-rem(30) 0
+
+    @include v.media(tablet)
+      flex-wrap: wrap
+
+  &__item
+    flex: 0 0 calc( 100vw - v.to-rem(32) )
+
+    @include v.media(tablet)
+      flex: 0 0 calc( 50% - 10px )
+
+    @include v.media(laptop)
+      flex: 0 0 calc( 25% - 15px )
+
+.teaser-card
+  position: relative
+  overflow: hidden
+  border-radius: v.to-rem(10)
+  transition: transform .3s ese
+  background-color: #fff
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05)
+  transition: transform v.$tr-base
+
+  &__img
+    overflow: hidden
+    aspect-ratio: 4/3
+
+    img
+      transition: transform v.$tr-base
+      height: 100%
+
+  &__desc
+    padding: v.to-rem(16)
+
+    .badges
+      margin-bottom: v.to-rem(10)
+
+      &__badge_category
+        z-index: 2
+  &__title
+    margin-bottom: v.to-rem(8)
+    font-size: v.to-rem(17)
+
+  p
+    color: #6b6b73
+    font-size: v.to-rem(15)
+    margin-bottom: v.to-rem(12)
+    font-weight: 500
+    line-height: 1.6
+
+  &__more
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    gap: v.to-rem(5)
+    cursor: pointer
+    color: v.$clr-secondary
+    transition: color v.$tr-base
+
+    .icon
+      transition: color v.$tr-base, transform v.$tr-base
+
+  &__link
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 1
+
+  @include v.has-mouse
+    &:hover
+      transform: translateY(-5px)
+      .teaser-card__img
+        img
+          transform: scale(1.02)
+
+      .teaser-card__more
+        color: v.$clr-accent-darker
+        .icon
+          transform: translateX(5px)
