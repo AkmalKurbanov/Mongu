@@ -20,8 +20,6 @@
     "vite-plugin-image-optimizer": "^2.0.3"
   },
   "dependencies": {
-    "@fancyapps/ui": "^6.1.14",
-    "modern-normalize": "^3.0.1",
-    "swiper": "^12.2.0"
+    "modern-normalize": "^3.0.1"
   }
 }
