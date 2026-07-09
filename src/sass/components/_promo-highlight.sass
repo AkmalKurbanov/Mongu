@@ -1,19 +1,15 @@
 @use '../settings/shared' as v
 
 .promo-highlight
-  padding: 0
-  .container
-    padding: 0
-    @include v.media(tablet)
-      display: flex
-      max-width: 100%
-
+  @include v.media(tablet)
+    display: flex
   &__img
     position: relative
     max-height: v.to-rem(400)
 
     @include v.media(tablet)
       width: 57%
+
     img
       width: 100%
       height: 100%
@@ -25,15 +21,15 @@
     color: #fff
     display: flex
     align-items: center
-    padding: v.to-rem(30) v.to-rem(16)
+    padding: v.$space-xl v.$space-md
 
     @include v.media(tablet)
-      padding: v.to-rem(30) v.to-rem(16) v.to-rem(30) v.to-rem(30)
+      padding: v.$space-xl v.$space-md v.$space-xl v.$space-xl
       width: 43%
 
     @include v.media(desktop)
-      padding: v.to-rem(30) v.to-rem(16) v.to-rem(30) v.to-rem(100)
+      padding: v.$space-xl v.$space-md v.$space-xl v.to-rem(100)
 
     .title,
     p
-      margin-bottom: v.to-rem(15)
+      margin-bottom: v.$space-md

@@ -148,6 +148,7 @@
           d="M68.77 55.6c-1.38-3.06-2.83-3.12-4.13-3.17l-3.53-.05c-1.22 0-3.22.46-4.9 2.3s-6.44 6.3-6.44 15.34 6.6 17.78 7.51 19 12.72 20.39 31.4 27.76c15.53 6.12 18.7 4.9 22.07 4.6s10.87-4.45 12.4-8.74 1.54-7.97 1.08-8.74-1.69-1.23-3.53-2.15-10.88-5.36-12.56-5.98-2.91-.92-4.14.92-4.74 5.98-5.82 7.2-2.14 1.39-3.98.47-7.76-2.86-14.78-9.12c-5.47-4.88-9.16-10.9-10.23-12.73s-.12-2.84.8-3.75c.83-.83 1.84-2.15 2.77-3.22s1.22-1.84 1.83-3.07.3-2.3-.15-3.22-4.03-10.01-5.67-13.65" />
       </svg>
     </a>
+
     <header class="header">
       <div class="header__container container container_wide">
         <div class="header__logo">
@@ -325,22 +326,22 @@
 
         <div class="hero__content">
           <div class="container container_wide">
-            <h1>
+            <h1 class="hero__title">
               Discover <br />
               Kyrgyzstan <br />
-              <span>Beyond the Ordinary</span>
+              <span  class="hero__title-accent">Beyond the Ordinary</span>
             </h1>
 
             <p class="hero__subtitle">Authentic adventures. Local guides. unforgettable memories.</p>
 
             <div class="hero__btn-links">
-              <a href="#" class="btn"
+              <a href="#" class="hero__btn btn"
                 >Explore tours
                 <svg class="icon">
                   <use href="#arrow"></use>
                 </svg>
               </a>
-              <a href="#" class="btn btn_light"
+              <a href="#" class="hero__btn btn btn_light"
                 >Stay at Sokmo lodge
                 <svg class="icon">
                   <use href="#arrow"></use>
@@ -351,55 +352,55 @@
         </div>
       </section>
 
-      <section class="about-section section-padding">
+      <section class="about section-padding">
         <div class="container">
           <div class="title-wrap">
-            <h2 class="title title_centered">We are MONGU</h2>
+            <h2 class="about__title title title_centered">We are MONGU</h2>
           </div>
-          <div class="about-section__flex-container">
-            <ul class="features">
-              <li class="features__item">
+          <div class="about__flex-container">
+            <ul class="features about__features">
+              <li class="features__item about__features-item">
                 <svg class="icon">
                   <use href="/icons.svg#guide"></use>
                 </svg>
-                <h3>Local</h3>
+                <h3 class="about__features-title">Local</h3>
                 <p>Expert guides</p>
               </li>
-              <li class="features__item">
+              <li class="features__item about__features-item">
                 <svg class="icon">
                   <use href="/icons.svg#sustainable"></use>
                 </svg>
-                <h3>Sustainable</h3>
+                <h3 class="about__features-title">Sustainable</h3>
                 <p>Tourism</p>
               </li>
-              <li class="features__item">
+              <li class="features__item about__features-item">
                 <svg class="icon">
                   <use href="/icons.svg#smile"></use>
                 </svg>
-                <h3>1000+</h3>
+                <h3 class="about__features-title">1000+</h3>
                 <p>Happy travelers</p>
               </li>
-              <li class="features__item">
+              <li class="features__item about__features-item">
                 <svg class="icon">
                   <use href="/icons.svg#award"></use>
                 </svg>
-                <h3>10+</h3>
+                <h3 class="about__features-title">10+</h3>
                 <p>Years experience</p>
               </li>
-              <li class="features__item">
+              <li class="features__item about__features-item">
                 <svg class="icon">
                   <use href="/icons.svg#tent"></use>
                 </svg>
-                <h3>Our</h3>
+                <h3 class="about__features-title">Our</h3>
                 <p>own camp</p>
               </li>
             </ul>
-            <div class="about-section__desc">
+            <div class="about__desc">
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ut beatae molestias ad ducimus iusto
                 voluptatem eos mollitia quibusdam omnis?
               </p>
-              <a href="#" class="about-section__link"
+              <a href="#" class="about__link"
                 >about us
                 <svg class="icon">
                   <use href="#arrow"></use>
@@ -410,16 +411,17 @@
         </div>
       </section>
 
-      <section class="categories-teaser section-padding section-bg">
+      <section class="teaser-cat section-padding section-bg">
+
         <div class="container">
           <div class="title-wrap">
             <h2 class="title title_centered">Choose your ideal tour</h2>
           </div>
 
           <div class="js-slider slider">
-            <div class="categories-teaser__flex-wrap js-slider-viewport">
-              <div class="categories-teaser__item js-slide">
-                <div class="categories-teaser__img">
+            <div class="teaser-cat__flex-wrap js-slider-viewport">
+              <div class="teaser-cat__item js-slide">
+                <div class="teaser-cat__img">
                   <img
                     src="./images/categories/trekking.jpg"
                     width="1024"
@@ -427,27 +429,23 @@
                     loading="lazy"
                     alt="Trekking adventures" />
                 </div>
-                <div class="categories-teaser__desc">
-                  <svg class="categories-teaser__icon">
+                <div class="teaser-cat__desc-wrap">
+                  <svg class="teaser-cat__icon">
                     <use href="/icons.svg#trekking"></use>
                   </svg>
-                  <h3 class="categories-teaser__title">
+                  <h3 class="teaser-cat__title">
                     Trekking <br />
                     adventures
-                    <svg class="icon">
-                      <use href="#arrow"></use>
-                    </svg>
                   </h3>
-                  <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id nesciunt rerum praesentium mollitia
-                    placeat iusto accusamus dignissimos! Voluptatibus, temporibus sunt!
+                  <p class="teaser-cat__desc">
+                    Embark on immersive hikes through rugged landscapes, discovering hidden canyons and panoramic mountain vistas.
                   </p>
                 </div>
-                <a href="#" aria-label="Смотреть туры: Trekking adventures" class="categories-teaser__link"></a>
+                <a href="#" aria-label="Смотреть туры: Trekking adventures" class="teaser-cat__link"></a>
               </div>
 
-              <div class="categories-teaser__item js-slide">
-                <div class="categories-teaser__img">
+              <div class="teaser-cat__item js-slide">
+                <div class="teaser-cat__img">
                   <img
                     src="./images/categories/horseback.jpg"
                     width="1024"
@@ -455,23 +453,23 @@
                     loading="lazy"
                     alt="Horseback expedition" />
                 </div>
-                <div class="categories-teaser__desc">
-                  <svg class="categories-teaser__icon">
+                <div class="teaser-cat__desc-wrap">
+                  <svg class="teaser-cat__icon">
                     <use href="/icons.svg#horse"></use>
                   </svg>
-                  <h3 class="categories-teaser__title">
+                  <h3 class="teaser-cat__title">
                     Horseback <br />
                     expedition
-                    <svg class="icon">
-                      <use href="#arrow"></use>
-                    </svg>
                   </h3>
+                  <p class="teaser-cat__desc">
+                    Experience authentic nomadic life by exploring pristine mountain trails on hardy horses in harmony with wild nature.
+                  </p>
                 </div>
-                <a href="#" class="categories-teaser__link" aria-label="Смотреть туры: Horseback expedition"></a>
+                <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Horseback expedition"></a>
               </div>
 
-              <div class="categories-teaser__item js-slide">
-                <div class="categories-teaser__img">
+              <div class="teaser-cat__item js-slide">
+                <div class="teaser-cat__img">
                   <img
                     src="./images/categories/overland.jpg"
                     width="1024"
@@ -479,23 +477,22 @@
                     loading="lazy"
                     alt="Overland & jeep journeys" />
                 </div>
-                <div class="categories-teaser__desc">
-                  <svg class="categories-teaser__icon">
+                <div class="teaser-cat__desc-wrap">
+                  <svg class="teaser-cat__icon">
                     <use href="/icons.svg#car"></use>
                   </svg>
-                  <h3 class="categories-teaser__title">
+                  <h3 class="teaser-cat__title">
                     Overland & <br />
                     jeep journeys
-                    <svg class="icon">
-                      <use href="#arrow"></use>
-                    </svg>
                   </h3>
-                </div>
-                <a href="#" class="categories-teaser__link" aria-label="Смотреть туры: Overland & jeep journeys"></a>
+                  <p class="teaser-cat__desc">
+                    Extreme off-road routes to the most inaccessible locations, hidden from ordinary tourists in the depths of the Mangystau region.
+                  </div>
+                <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Overland & jeep journeys"></a>
               </div>
 
-              <div class="categories-teaser__item js-slide">
-                <div class="categories-teaser__img">
+              <div class="teaser-cat__item js-slide">
+                <div class="teaser-cat__img">
                   <img
                     src="./images/categories/nomadic.jpg"
                     width="1024"
@@ -503,23 +500,23 @@
                     loading="lazy"
                     alt="Nomadic heritage" />
                 </div>
-                <div class="categories-teaser__desc">
-                  <svg class="categories-teaser__icon">
+                <div class="teaser-cat__desc-wrap">
+                  <svg class="teaser-cat__icon">
                     <use href="/icons.svg#nomadic"></use>
                   </svg>
-                  <h3 class="categories-teaser__title">
+                  <h3 class="teaser-cat__title">
                     Nomadic <br />
                     heritage
-                    <svg class="icon">
-                      <use href="#arrow"></use>
-                    </svg>
                   </h3>
+                  <p class="teaser-cat__desc">
+                    A unique journey into ancient traditions, nomadic lifestyle, and hospitality culture within an authentic yurt camp among majestic cliffs.
+                  </p>
                 </div>
-                <a href="#" class="categories-teaser__link" aria-label="Смотреть туры: Nomadic heritage"></a>
+                <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Nomadic heritage"></a>
               </div>
 
-              <div class="categories-teaser__item js-slide">
-                <div class="categories-teaser__img">
+              <div class="teaser-cat__item js-slide">
+                <div class="teaser-cat__img">
                   <img
                     src="./images/categories/custom.avif"
                     width="1024"
@@ -527,23 +524,23 @@
                     loading="lazy"
                     alt="Custom expedition" />
                 </div>
-                <div class="categories-teaser__desc">
-                  <svg class="categories-teaser__icon">
+                <div class="teaser-cat__desc-wrap">
+                  <svg class="teaser-cat__icon">
                     <use href="/icons.svg#map"></use>
                   </svg>
-                  <h3 class="categories-teaser__title">
+                  <h3 class="teaser-cat__title">
                     Custom <br />
                     expedition
-                    <svg class="icon">
-                      <use href="#arrow"></use>
-                    </svg>
                   </h3>
+                  <p class="teaser-cat__desc">
+                    Bespoke itineraries of any complexity, combining exclusive locations, professional guidance, and full immersion into the region’s unique atmosphere.
+                  </p>
                 </div>
-                <a href="#" class="categories-teaser__link" aria-label="Смотреть туры: Custom expedition"></a>
+                <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Custom expedition"></a>
               </div>
 
-              <div class="categories-teaser__item js-slide">
-                <div class="categories-teaser__img">
+              <div class="teaser-cat__item js-slide">
+                <div class="teaser-cat__img">
                   <img
                     src="./images/categories/camp.webp"
                     width="1024"
@@ -551,19 +548,18 @@
                     loading="lazy"
                     alt="Custom expedition" />
                 </div>
-                <div class="categories-teaser__desc">
-                  <svg class="categories-teaser__icon">
+                <div class="teaser-cat__desc-wrap">
+                  <svg class="teaser-cat__icon">
                     <use href="/icons.svg#tent"></use>
                   </svg>
-                  <h3 class="categories-teaser__title">
+                  <h3 class="teaser-cat__title">
                     Camp &<br />
                     Infrastructure
-                    <svg class="icon">
-                      <use href="#arrow"></use>
-                    </svg>
                   </h3>
-                </div>
-                <a href="#" class="categories-teaser__link" aria-label="Смотреть туры: Custom expedition"></a>
+                  <p class="teaser-cat__desc">
+                   Enjoy the wilderness without sacrificing comfort at our fully-equipped private camp with modern amenities.
+                  </div>
+                <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Custom expedition"></a>
               </div>
             </div>
             <div class="slider__nav">
@@ -581,14 +577,14 @@
             <div class="slider__pagination js-pagination"></div>
           </div>
 
-          <!-- <div class="btn-wrap btn-wrap_centered">
+          <!-- <div class="teaser-cat__btn-wrap btn-wrap btn-wrap_centered">
             <a href="#" class="btn">View all tours</a>
           </div> -->
         </div>
       </section>
 
-      <section class="promo-highlight section-padding">
-        <div class="container">
+      <section class="promo-highlight">
+        
           <div class="promo-highlight__img">
             <img src="./images/lodge/sokmo-lodge.jpg" width="1086" height="400" loading="lazy" alt="Sokmo Lodge" />
           </div>
@@ -609,7 +605,7 @@
               </a>
             </div>
           </div>
-        </div>
+      
       </section>
 
       <section class="teaser-cards section-padding section-bg">

@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const handleScroll = () => {
     window.requestAnimationFrame(() => {
-      // Если прокрутили больше 0 пикселей — добавляем класс
       if (window.scrollY > 0) {
         header.classList.add('header_bg');
       } else {

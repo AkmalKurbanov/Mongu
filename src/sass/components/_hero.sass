@@ -1,4 +1,9 @@
 @use '../settings/shared' as v
+
+@mixin wh
+  width: 100%
+  height: 100%
+
 .hero
   height: 100svh
   position: relative
@@ -6,31 +11,27 @@
   @include v.is-touch
     @include v.landscape
       height: auto
-      padding-bottom: v.to-rem(30)
+      padding-bottom: v.$space-xl
 
   &::before
+    @include wh
     position: absolute
     content: ''
-    width: 100%
-    height: 100%
     inset: 0
-    background-color: rgba(0,0,0,0.4)
     background-color: rgba(0,0,0,0.5)
     z-index: 2
 
   &__media,
   &__poster,
   &__video
+    @include wh
     position: absolute
-    width: 100%
-    height: 100%
     inset: 0
 
     img
+      @include wh
       object-fit: cover
       object-position: bottom right
-      height: 100%
-      width: 100%
 
   &__content
     position: relative
@@ -41,6 +42,7 @@
 
     @include v.media(tablet)
       padding-top: v.to-rem(160)
+
       @include v.landscape
         padding-top: v.to-rem(80)
 
@@ -50,20 +52,20 @@
           padding-bottom: v.to-rem(120)
           align-items: flex-end
 
-    h1
-      font-family: v.$ff-accent
-      color: #fff
-      font-size: v.to-rem(35)
-      line-height: v.to-rem(40)
-      font-weight: 400
+  &__title
+    font-family: v.$ff-accent
+    color: #fff
+    font-size: v.$fz-hero
+    line-height: v.to-rem(40)
+    font-weight: 400
 
-      @include v.media(tablet)
-        font-size: v.to-rem(60)
-        line-height: v.to-rem(60)
+    @include v.media(tablet)
+      font-size: v.to-rem(60)
+      line-height: v.to-rem(60)
 
-      span
-        font-style: italic
-        font-weight: 400
+  &__title-accent
+    font-style: italic
+    font-weight: 400
 
   &__subtitle
     text-transform: uppercase
@@ -75,20 +77,13 @@
 
   &__subtitle,
   &__btn-links
-    margin-top: v.to-rem(20)
+    margin-top: v.$space-lg
 
   &__btn-links
     display: flex
     flex-direction: column
     align-items: flex-start
-    gap: v.to-rem(16)
-
-    .btn
-      padding: v.to-rem(10px) v.to-rem(18px)
-      font-size: v.to-rem(13)
-      @include v.media(laptop)
-        padding: v.to-rem(16px) v.to-rem(32px)
-        font-size: v.to-rem(16)
+    gap: v.$space-md
 
     @include v.media(desktop)
       flex-direction: row
@@ -104,6 +99,6 @@
 
     .hero
       &__content
-        padding-bottom: v.to-rem(40)
+        padding-bottom: v.$space-xl
         height: auto
         width: 100%

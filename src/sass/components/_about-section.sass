@@ -1,14 +1,14 @@
 @use '../settings/shared' as v
 
-.about-section
-  .title
+.about
+  &__title
     @include v.media(laptop)
       text-align: left
 
   &__flex-container
     display: flex
     flex-direction: column
-    gap: v.to-rem(30)
+    gap: v.$space-xl
     margin: 0 auto
     text-align: center
 
@@ -27,7 +27,6 @@
     margin: 0 auto
 
     @include v.media(laptop)
-      flex-shrink: 1
       flex-basis: v.to-rem(300)
       margin-left: 0
 
@@ -35,7 +34,7 @@
     text-transform: uppercase
     text-decoration: none
     font-weight: 600
-    margin-top: v.to-rem(20)
+    margin-top: v.$space-lg
     display: inline-flex
     align-items: center
     transition: color v.$tr-base
@@ -48,13 +47,13 @@
       &:hover
         color: v.$clr-accent
         .icon
-          transform: translateX(3px)
+          transform: translateX(v.to-rem(3))
 
-  .features
+  &__features
     display: flex
     flex-wrap: wrap
     justify-content: center
-    column-gap: v.to-rem(10)
+    column-gap: v.$space-sm
     row-gap: v.to-rem(30)
     text-align: center
     list-style: none
@@ -66,36 +65,37 @@
       max-width: v.to-rem(820)
       column-gap: 0
 
-    &__item
-      width: calc( 50% - 5px )
-      color: v.$clr-accent
+  &__features-item
+    width: calc( 50% - v.to-rem(5) )
+    color: v.$clr-accent
+
+    @include v.media(tablet)
+      width: 20%
+      border-right: v.to-rem(1) solid v.$clr-accent
+      padding: 0 v.to-rem(5)
+
+      &:last-child
+        border: none
+
+    .icon
+      width: v.to-rem(50)
+      height: v.to-rem(50)
+      fill: v.$clr-accent
+
+    p
+      font-weight: 500
+      font-size: v.$fz-sm
 
       @include v.media(tablet)
-        width: calc((100% - (4 * v.to-rem(0))) / 5)
-        border-right: v.to-rem(1) solid v.$clr-accent
-        padding: 0 v.to-rem(5)
+        font-size: v.$fz-md
 
-        &:last-child
-          border: none
 
-      .icon
-        width: v.to-rem(50)
-        height: v.to-rem(50)
-        fill: v.$clr-accent
+  &__features-title
+    font-size: v.$fz-sm
+    font-weight: 500
+    text-transform: uppercase
+    color: v.$clr-accent
+    margin-bottom: v.$space-xs
 
-      h3
-        font-size: v.to-rem(13)
-        font-weight: 500
-        text-transform: uppercase
-        color: v.$clr-accent
-        margin-bottom: v.to-rem(5)
-
-        @include v.media(tablet)
-          font-size: v.to-rem(16)
-
-      p
-        font-weight: 500
-        font-size: v.to-rem(12)
-
-        @include v.media(tablet)
-          font-size: v.to-rem(14)
+    @include v.media(tablet)
+      font-size: v.$fz-base

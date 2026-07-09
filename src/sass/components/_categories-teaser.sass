@@ -1,11 +1,11 @@
 @use '../settings/shared' as v
 
-.categories-teaser
-  .btn-wrap
-    margin-top: v.to-rem(20)
+.teaser-cat
+  &__btn-wrap
+    margin-top: v.$space-lg
 
   &__flex-wrap
-    gap: v.to-rem(16)
+    gap: v.$space-md
 
     &.js-slider-viewport
       @include v.media(tablet)
@@ -19,18 +19,19 @@
   &__item
     flex: 0 0 100%
     position: relative
-    border-radius: v.to-rem(16)
+    border-radius: v.$rad-lg
     overflow: hidden
     aspect-ratio: 4/3
 
     @include v.has-mouse
       &:hover
-        .categories__img img,
-        .categories__desc
-          transform: translateY(-10px)
+        .teaser-cat__img img,
+        .teaser-cat__desc-wrap
+          will-change: transform
+          transform: translateY(v.to-rem(-5))
 
-        .categories__img img
-          transform: translateY(-10px) scale(1.1)
+        .teaser-cat__img img
+          transform: translateY(v.to-rem(-5)) scale(1.02)
 
     @include v.media(tablet)
       aspect-ratio: inherit
@@ -82,28 +83,49 @@
       object-fit: cover
       transition: transform .5s ease
 
-  &__desc
+  &__desc-wrap
     position: absolute
-    left: v.$space-xl
-    right: v.$space-xl
-    bottom: v.$space-xl
     color: #fff
     transition: transform .6s ease
+    left: v.$space-md
+    right: v.$space-md
+    bottom: v.$space-md
+    
+    @include v.media(desktop)
+      left: v.$space-xl
+      right: v.$space-xl
+      bottom: v.$space-xl
 
   &__icon
     width: v.to-rem(50)
     height: v.to-rem(50)
     fill: #fff
-    margin-bottom: v.to-rem(-15)
+    margin-bottom: v.to-rem(-14)
 
   &__title
     font-weight: 700
-    font-size: v.to-rem(20)
+    font-size: v.$fz-xl
     text-transform: uppercase
     line-height: normal
     display: flex
     align-items: flex-end
-    gap: v.to-rem(5)
+    gap: v.$space-xs
+
+    @include v.media(tablet)
+      font-size: v.$fz-md
+
+    @include v.media(laptop)
+      font-size: v.$fz-xl
+
+  &__desc
+    margin-top: v.$space-sm
+
+    @include v.media(tablet)
+      font-size: v.$fz-md
+    
+    @include v.media(laptop)
+      font-size: v.$fz-base
+
 
   &__link
     position: absolute

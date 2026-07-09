@@ -3,17 +3,17 @@
 .badges
   display: flex
   flex-wrap: wrap
-  gap: v.to-rem(5)
+  gap: v.$space-xs
 
   &__badge
-    border: 1px solid
+    border: v.to-rem(1) solid
     border-radius: v.to-rem(5)
-    padding: v.to-rem(2.5) v.to-rem(5)
+    padding: v.to-rem(2.5) v.to-rem(3)
     display: inline-flex
     align-items: center
     justify-content: center
     font-weight: 500
-
+    font-size: v.$fz-sm
     a
       text-decoration: none
       transition: color v.$tr-base
@@ -44,11 +44,8 @@
       background-color: #fff
       border-color: #fff
       display: flex
-      column-gap: v.to-rem(5)
+      column-gap: v.$space-xs
 
       .icon
         color: v.$clr-accent
 
-    &_price,
-    &_peak
-      font-size: v.to-rem(13)

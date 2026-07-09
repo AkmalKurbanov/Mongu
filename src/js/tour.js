@@ -1,3 +1,4 @@
+import "./header-fixed";
 import "./menu";
 import "./slider";
 import "./tabs";

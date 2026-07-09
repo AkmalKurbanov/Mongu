@@ -9,7 +9,8 @@
   display: inline-flex
   align-items: center
   justify-content: center
-  padding: v.to-rem(16px) v.to-rem(32px)
+  padding: v.$space-sm v.$space-md
+  font-size: v.$fz-sm
   background-color: v.$clr-accent
   color: #fff
   text-decoration: none
@@ -20,6 +21,10 @@
   border: none
   cursor: pointer
   line-height: normal
+
+  @include v.media(laptop)
+    padding: v.$space-md v.$space-xl
+    font-size: v.$fz-base
 
   @include v.has-mouse
     &:hover

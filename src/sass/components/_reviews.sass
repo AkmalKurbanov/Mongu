@@ -1,13 +1,13 @@
 @use '../settings/shared' as v
 .reviews
   &__slider
-    gap: v.to-rem(30)
+    gap: v.$space-xl
 
     &::-webkit-scrollbar
       display: none
 
   &__slide
-    flex: 0 0 calc( 100vw - 30px )
+    flex: 0 0 calc( 100vw - v.to-rem(30) )
 
     @include v.media(tablet)
       flex: 0 0 50%
@@ -18,7 +18,7 @@
   &__item
     display: flex
     align-items: flex-end
-    gap: v.to-rem(20)
+    gap: v.$space-lg
 
   &__photo
     width: v.to-rem(50)
@@ -35,9 +35,9 @@
     p
       font-family: v.$ff-accent
       font-weight: 500
-      letter-spacing: 2px
+      letter-spacing: v.to-rem(2)
 
     figcaption
       font-weight: 700
-      margin-top: v.to-rem(30)
+      margin-top: v.$space-xl
       display: block

@@ -220,34 +220,42 @@
       &_headphones
         width: v.to-rem(24)
         height: v.to-rem(24)
+  
+  &_inside,
+  &_bg
+    .header__container
+      background-color: #f9f9fb
+      box-shadow: v.$shadow-sm
+
+    .logo
+      color: #000
+    .hamburger
+      color: v.$clr-accent  
+
+    .header__nav-link
+      color: v.$clr-text
+      @include v.has-mouse
+        &:hover
+          color: v.$clr-accent-darker
+
   &_bg
     
     .header__container
       max-width: calc( v.to-rem(1200) - (v.$container-padding * 3) )
-      background-color: #f9f9fb
       padding: 0 v.$space-md
-      box-shadow: v.$shadow-sm
 
     .header__btn
       @include v.media(laptop)
         font-size: v.$fz-xs
     
     .logo
-      color: #000
       flex-shrink: 0
       
       @include v.media(desktop)
         width: v.to-rem(100)
         height: v.to-rem(30)
-      
-    .hamburger
-      color: v.$clr-accent
 
-    
     .header__nav-link
-      color: v.$clr-text
       text-transform: inherit
 
-      @include v.has-mouse
-        &:hover
-          color: v.$clr-accent-darker
+      

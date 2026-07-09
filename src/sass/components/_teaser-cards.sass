@@ -1,29 +1,39 @@
 @use '../settings/shared' as v
 .teaser-cards
   &__grid
-    gap: v.to-rem(20)
-    padding: v.to-rem(30) 0
+    padding: v.$space-xl 0
+    gap: v.$space-sm
 
     @include v.media(tablet)
+      gap: v.$space-lg
       flex-wrap: wrap
+    
+    @include v.media(laptop)
+      gap: v.$space-sm
+    
+    @include v.media(desktop)
+      gap: v.$space-lg
 
   &__item
-    flex: 0 0 calc( 100vw - v.to-rem(32) )
+    width: 100%
 
     @include v.media(tablet)
-      flex: 0 0 calc( 50% - 10px )
+      width: calc( (50% - (1 * v.$space-lg) / 2) )
 
     @include v.media(laptop)
-      flex: 0 0 calc( 25% - 15px )
+      width: calc( (100% - (3 * v.$space-sm)) / 4 )
+    
+    @include v.media(desktop)
+      width: calc( (100% - (3 * v.$space-lg)) / 4 )
 
 .teaser-card
   position: relative
   overflow: hidden
-  border-radius: v.to-rem(10)
-  transition: transform .3s ese
-  background-color: #fff
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05)
+  border-radius: v.$rad-md
   transition: transform v.$tr-base
+  will-change: transform
+  background-color: #fff
+  box-shadow: v.$shadow-md
 
   &__img
     overflow: hidden
@@ -34,29 +44,31 @@
       height: 100%
 
   &__desc
-    padding: v.to-rem(16)
+    padding: v.$space-md
 
     .badges
-      margin-bottom: v.to-rem(10)
+      margin-bottom: v.$space-sm
 
       &__badge_category
         z-index: 2
+
   &__title
-    margin-bottom: v.to-rem(8)
-    font-size: v.to-rem(17)
+    margin-bottom: v.$space-xs
+    font-size: v.$fz-base
+    font-weight: 600
 
   p
     color: #6b6b73
-    font-size: v.to-rem(15)
-    margin-bottom: v.to-rem(12)
+    font-size: v.$fz-md
+    margin-bottom: v.$space-sm
     font-weight: 500
-    line-height: 1.6
+    line-height: 1.4
 
   &__more
     display: inline-flex
     align-items: center
     justify-content: center
-    gap: v.to-rem(5)
+    gap: v.$space-xs
     cursor: pointer
     color: v.$clr-secondary
     transition: color v.$tr-base
@@ -72,7 +84,17 @@
 
   @include v.has-mouse
     &:hover
-      transform: translateY(-5px)
+      transform: translateY(v.to-rem(-5))
+      
+      .teaser-card__img img
+        transform: scale(1.02) 
+
+      .teaser-card__more
+        color: v.$clr-accent-darker
+        .icon
+          transform: translateX(v.to-rem(5))
+    &:hover
+      transform: translateY(v.to-rem(-5))
       .teaser-card__img
         img
           transform: scale(1.02)
@@ -80,4 +102,4 @@
       .teaser-card__more
         color: v.$clr-accent-darker
         .icon
-          transform: translateX(5px)
+          transform: translateX(v.to-rem(5))
