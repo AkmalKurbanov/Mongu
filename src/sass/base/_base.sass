@@ -8,8 +8,8 @@ html, body
   height: 100%
 
 html
-  scroll-behavior: smooth
-  font-size: 16px
+  // scroll-behavior: smooth
+  font-size: v.$fz-base
 
 body
   font-family: v.$ff-base
@@ -47,7 +47,7 @@ h1, h2, h3
 
   @include v.media(laptop)
     max-width: v.to-rem(920)
-  
+
   @include v.media(desktop)
     max-width: v.to-rem(1200)
 
@@ -105,8 +105,6 @@ img
   width: v.to-rem(100)
   height: v.to-rem(30)
   flex-shrink: 0
-
- 
 
 .section-padding
   padding: v.$section-padding-y

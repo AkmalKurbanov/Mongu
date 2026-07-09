@@ -21,11 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const targetElement = li.querySelector("a");
 
       const svgIcon = `
-        <button class="js-trigger-submenu" type="button" aria-label="Открыть подменю">
-        <svg class="icon">
-          <use href="/icons.svg#angle"></use>
-        </svg>
-      </button>
+        <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu"></button>
       `;
 
       targetElement.insertAdjacentHTML("afterend", svgIcon);

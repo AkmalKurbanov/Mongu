@@ -136,3 +136,12 @@
           ul
             height: auto
             opacity: 1
+
+  &__submenu-trigger
+    height: v.to-rem(24)
+    position: relative
+    &::after
+      content: ''
+      display: inline-block
+      border: v.to-rem(7) solid transparent 
+      border-top: v.to-rem(6) solid v.$clr-accent

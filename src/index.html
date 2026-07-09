@@ -2,6 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preload" href="/fonts/PlayfairDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/Montserrat-Medium.woff2" as="font" type="font/woff2" crossorigin>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Авторские туры по Кыргызстану | Mongu</title>
     <meta
@@ -18,8 +20,6 @@
 
     <link rel="canonical" href="https://yourdomain.com/" />
 
-    <link rel="preload" href="fonts/montserrat-regular.woff2" as="font" type="font/woff2" crossorigin />
-
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -31,88 +31,7 @@
     </script>
   </head>
   <body>
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="arrow" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M13.6 7.6q.4-.5.8 0l4 4 .5.4-.5.4-4 4a.6.6 0 0 1-.8-.8l2.9-3H6a.6.6 0 1 1 0-1.2h10.5l-3-3z" />
-      </symbol>
-      <symbol id="hamburger" viewBox="0 0 16 12">
-        <path
-          fill="currentColor"
-          d="M14.6 10c.1591 0 .3117.0632.4243.1757.1125.1126.1757.2652.1757.4243s-.0632.3117-.1757.4243c-.1126.1125-.2652.1757-.4243.1757H.6c-.15913 0-.311742-.0632-.424264-.1757C.0632141 10.9117 0 10.7591 0 10.6s.0632141-.3117.175736-.4243C.288258 10.0632.44087 10 .6 10zm0-5c.0788 0 .1568.01552.2296.04567s.139.07435.1947.13007c.0557.05571.0999.12185.13.19465.0302.07279.0457.15082.0457.22961s-.0155.15681-.0457.22961c-.0301.0728-.0743.13894-.13.19465-.0557.05572-.1219.09992-.1947.13007S14.6788 6.2 14.6 6.2H.6c-.078793 0-.156815-.01552-.22961-.04567s-.138939-.07435-.194654-.13007a.599884.599884 0 0 1-.1300641-.19465C.0155191 5.75681 0 5.67879 0 5.6s.0155191-.15682.0456719-.22961a.599884.599884 0 0 1 .1300641-.19465c.055715-.05572.121859-.09992.194654-.13007S.521207 5 .6 5zm0-5c.1591 0 .3117.0632141.4243.175736C15.1368.288258 15.2.44087 15.2.6s-.0632.311742-.1757.42426c-.1126.11253-.2652.17574-.4243.17574H.6c-.15913 0-.311742-.06321-.424264-.17574C.0632141.911742 0 .75913 0 .6S.0632141.288258.175736.175736C.288258.0632141.44087 0 .6 0z" />
-      </symbol>
-      <symbol id="cross" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M15 8a.6.6 0 0 1 1 1l-3.1 3 3 3a.6.6 0 0 1-.8 1L12 12.8l-3 3a.6.6 0 0 1-1-.8l3.1-3.1-3-3a.6.6 0 0 1 .8-1L12 11z" />
-      </symbol>
-      <symbol id="angle" viewBox="0 0 24 24">
-        <path fill="currentColor" d="M15.6 9.6a.6.6 0 0 1 .8.8l-4 4-.4.5-.4-.5-4-4a.6.6 0 0 1 .8-.8L12 13z" />
-      </symbol>
-      <symbol id="headphone" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M11.2 19.6a1.2 1.2 0 1 1 0-2.3 1.2 1.2 0 0 1 0 2.3m0-1.8a.6.6 0 1 0 .5 1.1.6.6 0 0 0-.5-1" />
-        <path
-          fill="currentColor"
-          d="M18.6 9.9a6.7 6.7 0 0 0-13.2 0 2 2 0 0 0-1.7 2V14a2 2 0 0 0 1.5 2 7 7 0 0 0 5.2 2.7v-.6a7 7 0 0 1-4.5-2h.2q1-.1 1-1v-4.3a1 1 0 0 0-1-1H6a6.2 6.2 0 0 1 12 0 1 1 0 0 0-1 1v4.3q0 .9 1 1h.4c1.1 0 2-1 2-2.1v-2.1a2 2 0 0 0-1.7-2M6 10.4q.5 0 .5.5V15q0 .3-.5.4h-.4q-1.3-.2-1.5-1.5v-2.1q.2-1.4 1.5-1.5zM19.8 14a1.5 1.5 0 0 1-1.5 1.5h-.4a.4.4 0 0 1-.5-.5v-4.2q0-.3.5-.4h.4q1.4.1 1.5 1.5z" />
-      </symbol>
-      <symbol id="envelope" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M20.4 7q-.1-1.3-1.4-1.4H5Q3.7 5.7 3.6 7v10q.1 1.3 1.4 1.4h14q1.3-.1 1.4-1.4zm-2.7.8a.6.6 0 1 1 .9 1l-4.8 4.4c-1 1-2.6 1-3.6 0L5.5 8.7a.6.6 0 0 1 .8-.9l4.8 4.5q.9.8 1.8 0zm4 9.2c0 1.4-1.3 2.6-2.7 2.6H5A2.6 2.6 0 0 1 2.4 17V7c0-1.4 1.2-2.6 2.6-2.6h14c1.4 0 2.6 1.2 2.6 2.6z" />
-      </symbol>
-      <symbol id="whatsapp" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="m16 13.8-1.4-.7q-.4-.2-.6 0l-.7 1h-.5L11 12.9l-1.2-1.5.1-.5.4-.3.2-.4v-.4L9.8 8q-.3-.4-.5-.3h-.5l-.6.2a3 3 0 0 0-.8 1.9q0 1.4 1 2.3a10 10 0 0 0 3.8 3.4l1.3.5h1.4a2 2 0 0 0 1.5-1q.2-.5.1-1z" />
-        <path
-          fill="currentColor"
-          d="M18.3 5.6A9 9 0 0 0 12 3a9 9 0 0 0-7.8 4.5 9 9 0 0 0 0 8.9L3 21l4.8-1.2a9 9 0 0 0 12.6-4.4 9 9 0 0 0-2-9.8M12 19.3q-2.1 0-3.9-1l-.2-.2L5 19l.7-2.8-.2-.2a7.4 7.4 0 0 1 1.7-9.7A7.5 7.5 0 0 1 19 9q.5 1.4.5 2.8a7.4 7.4 0 0 1-7.4 7.4" />
-      </symbol>
-    </svg>
-    <div class="menu js-menu">
-      <div class="menu__sidebar">
-        <div class="menu__close js-menu-close">
-          <svg class="icon">
-            <use href="#cross"></use>
-          </svg>
-        </div>
-
-        <nav aria-label="Мобильная навигация">
-          <ul>
-            <li>
-              <a href="https://ak-sai.com/">Tours</a>
-              <ul>
-                <li>
-                  <a href="#">Trekking adventures</a>
-                </li>
-                <li>
-                  <a href="#">Horseback expedition</a>
-                </li>
-                <li>
-                  <a href="#">Overland jeep journeys</a>
-                </li>
-                <li>
-                  <a href="#">Nomadic heritage</a>
-                </li>
-                <li>
-                  <a href="#">Custom expedition</a>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#">Private tours</a></li>
-            <li><a href="#">Solmo lodge</a></li>
-            <li><a href="#">Destination</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacts</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    
     <a
       href="https://wa.me/996555150795"
       class="whatsapp-float"
@@ -211,7 +130,11 @@
             </div>
             <ul class="header__callback-list">
               <li class="header__callback-item">
-                <a class="header__callback-link" href="https://wa.me/996555150795" target="_blank" rel="noopener noreferrer">
+                <a
+                  class="header__callback-link"
+                  href="https://wa.me/996555150795"
+                  target="_blank"
+                  rel="noopener noreferrer">
                   <svg class="icon">
                     <use href="#whatsapp"></use>
                   </svg>
@@ -229,7 +152,7 @@
             </ul>
           </div>
 
-          <button type="button" class="hamburger js-hamburger">
+          <button type="button" aria-label="Mobile menu" class="hamburger js-hamburger">
             <svg class="icon">
               <use href="#hamburger"></use>
             </svg>
@@ -241,7 +164,7 @@
     <main class="main-content">
       <section class="hero">
         <div class="hero__media">
-          <picture class="hero__poster">
+          <!-- <picture class="hero__poster">
             <source
               type="image/avif"
               media="(min-width: 1200px)"
@@ -318,7 +241,120 @@
               width="1920"
               height="1080"
               fetchpriority="high" />
+          </picture> -->
+        
+          <picture class="hero__poster">
+            <source
+              type="image/avif"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="1080"
+              srcset="./images/hero/hero-large.avif 1920w, ./images/hero/hero-large-2x.avif 3840w" />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="1080"
+              srcset="./images/hero/hero-large.webp 1920w, ./images/hero/hero-large-2x.webp 3840w" />
+            <source
+              type="image/jpeg"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="1080"
+              srcset="./images/hero/hero-large.jpg 1920w, ./images/hero/hero-large-2x.jpg 3840w" />
+
+            <source
+              type="image/avif"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="900"
+              srcset="./images/hero/hero-desktop.avif 1440w, ./images/hero/hero-desktop-2x.avif 2880w" />
+            <source
+              type="image/webp"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="900"
+              srcset="./images/hero/hero-desktop.webp 1440w, ./images/hero/hero-desktop-2x.webp 2880w" />
+            <source
+              type="image/jpeg"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="900"
+              srcset="./images/hero/hero-desktop.jpg 1440w, ./images/hero/hero-desktop-2x.jpg 2880w" />
+
+            <source
+              type="image/avif"
+              media="(orientation: landscape)"
+              sizes="100vw"
+              width="1440"
+              height="900"
+              srcset="./images/hero/hero-desktop.avif 1440w, ./images/hero/hero-desktop-2x.avif 2880w" />
+            <source
+              type="image/webp"
+              media="(orientation: landscape)"
+              sizes="100vw"
+              width="1440"
+              height="900"
+              srcset="./images/hero/hero-desktop.webp 1440w, ./images/hero/hero-desktop-2x.webp 2880w" />
+            <source
+              type="image/jpeg"
+              media="(orientation: landscape)"
+              sizes="100vw"
+              width="1440"
+              height="900"
+              srcset="./images/hero/hero-desktop.jpg 1440w, ./images/hero/hero-desktop-2x.jpg 2880w" />
+
+            <source
+              type="image/avif"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="1100"
+              srcset="./images/hero/hero-tablet.avif 800w, ./images/hero/hero-tablet-2x.avif 1600w" />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="1100"
+              srcset="./images/hero/hero-tablet.webp 800w, ./images/hero/hero-tablet-2x.webp 1600w" />
+            <source
+              type="image/jpeg"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="1100"
+              srcset="./images/hero/hero-tablet.jpg 800w, ./images/hero/hero-tablet-2x.jpg 1600w" />
+
+            <source
+              type="image/avif"
+              sizes="100vw"
+              width="450"
+              height="950"
+              srcset="./images/hero/hero-mobile.avif 450w" />
+            <source
+              type="image/webp"
+              sizes="100vw"
+              width="450"
+              height="950"
+              srcset="./images/hero/hero-mobile.webp 450w" />
+
+            <img
+              src="./images/hero/hero-mobile.jpg"
+              alt="Discover Kyrgyzstan — авторские конные туры и экспедиции"
+              class="hero__poster-img"
+              width="450"
+              height="950"
+              fetchpriority="high"
+              decoding="sync" />
           </picture>
+
         </div>
         <!-- <video class="hero__video" autoplay loop muted playsinline preload="none">
           <source src="video/hero-video.mp4" type="video/mp4" />
@@ -329,7 +365,7 @@
             <h1 class="hero__title">
               Discover <br />
               Kyrgyzstan <br />
-              <span  class="hero__title-accent">Beyond the Ordinary</span>
+              <span class="hero__title-accent">Beyond the Ordinary</span>
             </h1>
 
             <p class="hero__subtitle">Authentic adventures. Local guides. unforgettable memories.</p>
@@ -361,35 +397,35 @@
             <ul class="features about__features">
               <li class="features__item about__features-item">
                 <svg class="icon">
-                  <use href="/icons.svg#guide"></use>
+                  <use href="./icons.svg#guide"></use>
                 </svg>
                 <h3 class="about__features-title">Local</h3>
                 <p>Expert guides</p>
               </li>
               <li class="features__item about__features-item">
                 <svg class="icon">
-                  <use href="/icons.svg#sustainable"></use>
+                  <use href="./icons.svg#sustainable"></use>
                 </svg>
                 <h3 class="about__features-title">Sustainable</h3>
                 <p>Tourism</p>
               </li>
               <li class="features__item about__features-item">
                 <svg class="icon">
-                  <use href="/icons.svg#smile"></use>
+                  <use href="./icons.svg#smile"></use>
                 </svg>
                 <h3 class="about__features-title">1000+</h3>
                 <p>Happy travelers</p>
               </li>
               <li class="features__item about__features-item">
                 <svg class="icon">
-                  <use href="/icons.svg#award"></use>
+                  <use href="./icons.svg#award"></use>
                 </svg>
                 <h3 class="about__features-title">10+</h3>
                 <p>Years experience</p>
               </li>
               <li class="features__item about__features-item">
                 <svg class="icon">
-                  <use href="/icons.svg#tent"></use>
+                  <use href="./icons.svg#tent"></use>
                 </svg>
                 <h3 class="about__features-title">Our</h3>
                 <p>own camp</p>
@@ -412,7 +448,6 @@
       </section>
 
       <section class="teaser-cat section-padding section-bg">
-
         <div class="container">
           <div class="title-wrap">
             <h2 class="title title_centered">Choose your ideal tour</h2>
@@ -422,23 +457,45 @@
             <div class="teaser-cat__flex-wrap js-slider-viewport">
               <div class="teaser-cat__item js-slide">
                 <div class="teaser-cat__img">
-                  <img
-                    src="./images/categories/trekking.jpg"
-                    width="1024"
-                    height="728"
-                    loading="lazy"
-                    alt="Trekking adventures" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.avif   600w,
+                        ./images/teaser-categories/teaser-category-1200.avif 1200w,
+                        ./images/teaser-categories/teaser-category-1800.avif 1800w
+                      " />
+
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.webp   600w,
+                        ./images/teaser-categories/teaser-category-1200.webp 1200w,
+                        ./images/teaser-categories/teaser-category-1800.webp 1800w
+                      " />
+
+                    <img
+                      src="./images/teaser-categories/teaser-category-1200.jpg"
+                      alt="Описание"
+                      width="600"
+                      height="450"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-cat__desc-wrap">
                   <svg class="teaser-cat__icon">
-                    <use href="/icons.svg#trekking"></use>
+                    <use href="./icons.svg#trekking"></use>
                   </svg>
                   <h3 class="teaser-cat__title">
                     Trekking <br />
                     adventures
                   </h3>
                   <p class="teaser-cat__desc">
-                    Embark on immersive hikes through rugged landscapes, discovering hidden canyons and panoramic mountain vistas.
+                    Embark on immersive hikes through rugged landscapes, discovering hidden canyons and panoramic
+                    mountain vistas.
                   </p>
                 </div>
                 <a href="#" aria-label="Смотреть туры: Trekking adventures" class="teaser-cat__link"></a>
@@ -446,23 +503,45 @@
 
               <div class="teaser-cat__item js-slide">
                 <div class="teaser-cat__img">
-                  <img
-                    src="./images/categories/horseback.jpg"
-                    width="1024"
-                    height="728"
-                    loading="lazy"
-                    alt="Horseback expedition" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.avif   600w,
+                        ./images/teaser-categories/teaser-category-1200.avif 1200w,
+                        ./images/teaser-categories/teaser-category-1800.avif 1800w
+                      " />
+
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.webp   600w,
+                        ./images/teaser-categories/teaser-category-1200.webp 1200w,
+                        ./images/teaser-categories/teaser-category-1800.webp 1800w
+                      " />
+
+                    <img
+                      src="./images/teaser-categories/teaser-category-1200.jpg"
+                      alt="Описание"
+                      width="600"
+                      height="450"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-cat__desc-wrap">
                   <svg class="teaser-cat__icon">
-                    <use href="/icons.svg#horse"></use>
+                    <use href="./icons.svg#horse"></use>
                   </svg>
                   <h3 class="teaser-cat__title">
                     Horseback <br />
                     expedition
                   </h3>
                   <p class="teaser-cat__desc">
-                    Experience authentic nomadic life by exploring pristine mountain trails on hardy horses in harmony with wild nature.
+                    Experience authentic nomadic life by exploring pristine mountain trails on hardy horses in harmony
+                    with wild nature.
                   </p>
                 </div>
                 <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Horseback expedition"></a>
@@ -470,46 +549,91 @@
 
               <div class="teaser-cat__item js-slide">
                 <div class="teaser-cat__img">
-                  <img
-                    src="./images/categories/overland.jpg"
-                    width="1024"
-                    height="728"
-                    loading="lazy"
-                    alt="Overland & jeep journeys" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.avif   600w,
+                        ./images/teaser-categories/teaser-category-1200.avif 1200w,
+                        ./images/teaser-categories/teaser-category-1800.avif 1800w
+                      " />
+
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.webp   600w,
+                        ./images/teaser-categories/teaser-category-1200.webp 1200w,
+                        ./images/teaser-categories/teaser-category-1800.webp 1800w
+                      " />
+
+                    <img
+                      src="./images/teaser-categories/teaser-category-1200.jpg"
+                      alt="Описание"
+                      width="600"
+                      height="450"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-cat__desc-wrap">
                   <svg class="teaser-cat__icon">
-                    <use href="/icons.svg#car"></use>
+                    <use href="./icons.svg#car"></use>
                   </svg>
                   <h3 class="teaser-cat__title">
                     Overland & <br />
                     jeep journeys
                   </h3>
                   <p class="teaser-cat__desc">
-                    Extreme off-road routes to the most inaccessible locations, hidden from ordinary tourists in the depths of the Mangystau region.
-                  </div>
+                    Extreme off-road routes to the most inaccessible locations, hidden from ordinary tourists in the
+                    depths of the Mangystau region.
+                  </p>
+                </div>
                 <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Overland & jeep journeys"></a>
               </div>
 
               <div class="teaser-cat__item js-slide">
                 <div class="teaser-cat__img">
-                  <img
-                    src="./images/categories/nomadic.jpg"
-                    width="1024"
-                    height="728"
-                    loading="lazy"
-                    alt="Nomadic heritage" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.avif   600w,
+                        ./images/teaser-categories/teaser-category-1200.avif 1200w,
+                        ./images/teaser-categories/teaser-category-1800.avif 1800w
+                      " />
+
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.webp   600w,
+                        ./images/teaser-categories/teaser-category-1200.webp 1200w,
+                        ./images/teaser-categories/teaser-category-1800.webp 1800w
+                      " />
+
+                    <img
+                      src="./images/teaser-categories/teaser-category-1200.jpg"
+                      alt="Описание"
+                      width="600"
+                      height="450"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-cat__desc-wrap">
                   <svg class="teaser-cat__icon">
-                    <use href="/icons.svg#nomadic"></use>
+                    <use href="./icons.svg#nomadic"></use>
                   </svg>
                   <h3 class="teaser-cat__title">
                     Nomadic <br />
                     heritage
                   </h3>
                   <p class="teaser-cat__desc">
-                    A unique journey into ancient traditions, nomadic lifestyle, and hospitality culture within an authentic yurt camp among majestic cliffs.
+                    A unique journey into ancient traditions, nomadic lifestyle, and hospitality culture within an
+                    authentic yurt camp among majestic cliffs.
                   </p>
                 </div>
                 <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Nomadic heritage"></a>
@@ -517,23 +641,45 @@
 
               <div class="teaser-cat__item js-slide">
                 <div class="teaser-cat__img">
-                  <img
-                    src="./images/categories/custom.avif"
-                    width="1024"
-                    height="728"
-                    loading="lazy"
-                    alt="Custom expedition" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.avif   600w,
+                        ./images/teaser-categories/teaser-category-1200.avif 1200w,
+                        ./images/teaser-categories/teaser-category-1800.avif 1800w
+                      " />
+
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.webp   600w,
+                        ./images/teaser-categories/teaser-category-1200.webp 1200w,
+                        ./images/teaser-categories/teaser-category-1800.webp 1800w
+                      " />
+
+                    <img
+                      src="./images/teaser-categories/teaser-category-1200.jpg"
+                      alt="Описание"
+                      width="600"
+                      height="450"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-cat__desc-wrap">
                   <svg class="teaser-cat__icon">
-                    <use href="/icons.svg#map"></use>
+                    <use href="./icons.svg#map"></use>
                   </svg>
                   <h3 class="teaser-cat__title">
                     Custom <br />
                     expedition
                   </h3>
                   <p class="teaser-cat__desc">
-                    Bespoke itineraries of any complexity, combining exclusive locations, professional guidance, and full immersion into the region’s unique atmosphere.
+                    Bespoke itineraries of any complexity, combining exclusive locations, professional guidance, and
+                    full immersion into the region’s unique atmosphere.
                   </p>
                 </div>
                 <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Custom expedition"></a>
@@ -541,24 +687,47 @@
 
               <div class="teaser-cat__item js-slide">
                 <div class="teaser-cat__img">
-                  <img
-                    src="./images/categories/camp.webp"
-                    width="1024"
-                    height="728"
-                    loading="lazy"
-                    alt="Custom expedition" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.avif   600w,
+                        ./images/teaser-categories/teaser-category-1200.avif 1200w,
+                        ./images/teaser-categories/teaser-category-1800.avif 1800w
+                      " />
+
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-categories/teaser-category-600.webp   600w,
+                        ./images/teaser-categories/teaser-category-1200.webp 1200w,
+                        ./images/teaser-categories/teaser-category-1800.webp 1800w
+                      " />
+
+                    <img
+                      src="./images/teaser-categories/teaser-category-1200.jpg"
+                      alt="Описание"
+                      width="600"
+                      height="450"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-cat__desc-wrap">
                   <svg class="teaser-cat__icon">
-                    <use href="/icons.svg#tent"></use>
+                    <use href="./icons.svg#tent"></use>
                   </svg>
                   <h3 class="teaser-cat__title">
                     Camp &<br />
                     Infrastructure
                   </h3>
                   <p class="teaser-cat__desc">
-                   Enjoy the wilderness without sacrificing comfort at our fully-equipped private camp with modern amenities.
-                  </div>
+                    Enjoy the wilderness without sacrificing comfort at our fully-equipped private camp with modern
+                    amenities.
+                  </p>
+                </div>
                 <a href="#" class="teaser-cat__link" aria-label="Смотреть туры: Custom expedition"></a>
               </div>
             </div>
@@ -584,28 +753,54 @@
       </section>
 
       <section class="promo-highlight">
-        
-          <div class="promo-highlight__img">
-            <img src="./images/lodge/sokmo-lodge.jpg" width="1086" height="400" loading="lazy" alt="Sokmo Lodge" />
+        <div class="promo-highlight__img">
+          <picture class="promo-highlight__img">
+            <source
+              type="image/avif"
+              sizes="(min-width: 768px) 57vw, 100vw"
+              srcset="
+                ./images/lodge/sokmo-450.avif   450w,
+                ./images/lodge/sokmo-800.avif   800w,
+                ./images/lodge/sokmo-1200.avif 1200w,
+                ./images/lodge/sokmo-1600.avif 1600w
+              " />
+
+            <source
+              type="image/webp"
+              sizes="(min-width: 768px) 57vw, 100vw"
+              srcset="
+                ./images/lodge/sokmo-450.webp   450w,
+                ./images/lodge/sokmo-800.webp   800w,
+                ./images/lodge/sokmo-1200.webp 1200w,
+                ./images/lodge/sokmo-1600.webp 1600w
+              " />
+
+            <img
+              src="./images/lodge/sokmo-1200.jpg"
+              alt="Sokmo Lodge"
+              width="1200"
+              height="515"
+              loading="lazy"
+              decoding="async" />
+          </picture>
+        </div>
+        <div class="promo-highlight__desc">
+          <div>
+            <h2 class="title title_light">Sokmo Lodge</h2>
+            <p>
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipisicing elit. <br />
+              Temporibus neque labore perferendis <br />
+              dolore iure autem.
+            </p>
+            <a href="" class="btn btn_light">
+              Book your stay
+              <svg class="icon">
+                <use href="#arrow"></use>
+              </svg>
+            </a>
           </div>
-          <div class="promo-highlight__desc">
-            <div>
-              <h2 class="title title_light">Sokmo Lodge</h2>
-              <p>
-                Lorem ipsum dolor sit amet, <br />
-                consectetur adipisicing elit. <br />
-                Temporibus neque labore perferendis <br />
-                dolore iure autem.
-              </p>
-              <a href="" class="btn btn_light">
-                Book your stay
-                <svg class="icon">
-                  <use href="#arrow"></use>
-                </svg>
-              </a>
-            </div>
-          </div>
-      
+        </div>
       </section>
 
       <section class="teaser-cards section-padding section-bg">
@@ -617,7 +812,31 @@
               <article class="teaser-cards__item teaser-card js-slide">
                 <a href="/url-to-tour" class="teaser-card__link" aria-label="Подробнее о туре: Название"></a>
                 <div class="teaser-card__img">
-                  <img src="./images/categories/horseback.jpg" width="1024" height="728" loading="lazy" alt="" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-cards/teaser-card-400.avif   400w,
+                        ./images/teaser-cards/teaser-card-800.avif   800w,
+                        ./images/teaser-cards/teaser-card-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-cards/teaser-card-400.webp   400w,
+                        ./images/teaser-cards/teaser-card-800.webp   800w,
+                        ./images/teaser-cards/teaser-card-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/teaser-cards/teaser-card-800.jpg"
+                      alt="Описание"
+                      width="400"
+                      height="300"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-card__desc">
                   <ul class="badges">
@@ -639,10 +858,35 @@
                   </span>
                 </div>
               </article>
+
               <article class="teaser-cards__item teaser-card js-slide">
                 <a href="/url-to-tour" class="teaser-card__link" aria-label="Подробнее о туре: Название"></a>
                 <div class="teaser-card__img">
-                  <img src="./images/categories/nomadic.jpg" width="1024" height="728" loading="lazy" alt="" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-cards/teaser-card-400.avif   400w,
+                        ./images/teaser-cards/teaser-card-800.avif   800w,
+                        ./images/teaser-cards/teaser-card-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-cards/teaser-card-400.webp   400w,
+                        ./images/teaser-cards/teaser-card-800.webp   800w,
+                        ./images/teaser-cards/teaser-card-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/teaser-cards/teaser-card-800.jpg"
+                      alt="Описание"
+                      width="400"
+                      height="300"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-card__desc">
                   <ul class="badges">
@@ -664,10 +908,35 @@
                   </span>
                 </div>
               </article>
+
               <article class="teaser-cards__item teaser-card js-slide">
                 <a href="/url-to-tour" class="teaser-card__link" aria-label="Подробнее о туре: Название"></a>
                 <div class="teaser-card__img">
-                  <img src="./images/categories/overland.jpg" width="1024" height="728" loading="lazy" alt="" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-cards/teaser-card-400.avif   400w,
+                        ./images/teaser-cards/teaser-card-800.avif   800w,
+                        ./images/teaser-cards/teaser-card-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-cards/teaser-card-400.webp   400w,
+                        ./images/teaser-cards/teaser-card-800.webp   800w,
+                        ./images/teaser-cards/teaser-card-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/teaser-cards/teaser-card-800.jpg"
+                      alt="Описание"
+                      width="400"
+                      height="300"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-card__desc">
                   <ul class="badges">
@@ -689,10 +958,35 @@
                   </span>
                 </div>
               </article>
+
               <article class="teaser-cards__item teaser-card js-slide">
                 <a href="/url-to-tour" class="teaser-card__link" aria-label="Подробнее о туре: Название"></a>
                 <div class="teaser-card__img">
-                  <img src="./images/categories/trekking.jpg" width="1024" height="728" loading="lazy" alt="" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-cards/teaser-card-400.avif   400w,
+                        ./images/teaser-cards/teaser-card-800.avif   800w,
+                        ./images/teaser-cards/teaser-card-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      srcset="
+                        ./images/teaser-cards/teaser-card-400.webp   400w,
+                        ./images/teaser-cards/teaser-card-800.webp   800w,
+                        ./images/teaser-cards/teaser-card-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/teaser-cards/teaser-card-800.jpg"
+                      alt="Описание"
+                      width="400"
+                      height="300"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <div class="teaser-card__desc">
                   <ul class="badges">
@@ -717,6 +1011,11 @@
             </div>
             <div class="slider__pagination js-pagination"></div>
           </div>
+          
+          <div class="teaser-cat__btn-wrap btn-wrap btn-wrap_centered">
+            <a href="#" class="btn">View all tours</a>
+          </div>
+          
         </div>
       </section>
 
@@ -730,7 +1029,31 @@
               <div class="reviews__slide js-slide">
                 <figure class="reviews__item">
                   <div class="reviews__photo">
-                    <img src="" alt="" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.avif   50w,
+                          ./images/reviews/user-100.avif 100w,
+                          ./images/reviews/user-150.avif 150w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.webp   50w,
+                          ./images/reviews/user-100.webp 100w,
+                          ./images/reviews/user-150.webp 150w
+                        " />
+                      <img
+                        src="./images/reviews/user-100.jpg"
+                        alt="John Doe"
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
                   </div>
                   <div class="reviews__text">
                     <blockquote>
@@ -744,7 +1067,31 @@
               <div class="reviews__slide js-slide">
                 <figure class="reviews__item">
                   <div class="reviews__photo">
-                    <img src="" alt="" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.avif   50w,
+                          ./images/reviews/user-100.avif 100w,
+                          ./images/reviews/user-150.avif 150w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.webp   50w,
+                          ./images/reviews/user-100.webp 100w,
+                          ./images/reviews/user-150.webp 150w
+                        " />
+                      <img
+                        src="./images/reviews/user-100.jpg"
+                        alt="John Doe"
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
                   </div>
                   <div class="reviews__text">
                     <blockquote>
@@ -758,7 +1105,31 @@
               <div class="reviews__slide js-slide">
                 <figure class="reviews__item">
                   <div class="reviews__photo">
-                    <img src="" alt="" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.avif   50w,
+                          ./images/reviews/user-100.avif 100w,
+                          ./images/reviews/user-150.avif 150w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.webp   50w,
+                          ./images/reviews/user-100.webp 100w,
+                          ./images/reviews/user-150.webp 150w
+                        " />
+                      <img
+                        src="./images/reviews/user-100.jpg"
+                        alt="John Doe"
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
                   </div>
                   <div class="reviews__text">
                     <blockquote>
@@ -772,7 +1143,31 @@
               <div class="reviews__slide js-slide">
                 <figure class="reviews__item">
                   <div class="reviews__photo">
-                    <img src="" alt="" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.avif   50w,
+                          ./images/reviews/user-100.avif 100w,
+                          ./images/reviews/user-150.avif 150w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.webp   50w,
+                          ./images/reviews/user-100.webp 100w,
+                          ./images/reviews/user-150.webp 150w
+                        " />
+                      <img
+                        src="./images/reviews/user-100.jpg"
+                        alt="John Doe"
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
                   </div>
                   <div class="reviews__text">
                     <blockquote>
@@ -786,7 +1181,31 @@
               <div class="reviews__slide js-slide">
                 <figure class="reviews__item">
                   <div class="reviews__photo">
-                    <img src="" alt="" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.avif   50w,
+                          ./images/reviews/user-100.avif 100w,
+                          ./images/reviews/user-150.avif 150w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="50px"
+                        srcset="
+                          ./images/reviews/user-50.webp   50w,
+                          ./images/reviews/user-100.webp 100w,
+                          ./images/reviews/user-150.webp 150w
+                        " />
+                      <img
+                        src="./images/reviews/user-100.jpg"
+                        alt="John Doe"
+                        width="50"
+                        height="50"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
                   </div>
                   <div class="reviews__text">
                     <blockquote>
@@ -851,7 +1270,7 @@
             <div class="footer__col">
               <a href="#" class="footer__contacts-link">
                 <svg class="icon">
-                  <use href="/icons.svg#instagram"></use>
+                  <use href="./icons.svg#instagram"></use>
                 </svg>
                 <div>
                   <h4 class="footer__contacts-title">Instagram</h4>
@@ -904,6 +1323,90 @@
       </div>
     </footer>
 
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="arrow" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M13.6 7.6q.4-.5.8 0l4 4 .5.4-.5.4-4 4a.6.6 0 0 1-.8-.8l2.9-3H6a.6.6 0 1 1 0-1.2h10.5l-3-3z" />
+      </symbol>
+      <symbol id="hamburger" viewBox="0 0 16 12">
+        <path
+          fill="currentColor"
+          d="M14.6 10c.1591 0 .3117.0632.4243.1757.1125.1126.1757.2652.1757.4243s-.0632.3117-.1757.4243c-.1126.1125-.2652.1757-.4243.1757H.6c-.15913 0-.311742-.0632-.424264-.1757C.0632141 10.9117 0 10.7591 0 10.6s.0632141-.3117.175736-.4243C.288258 10.0632.44087 10 .6 10zm0-5c.0788 0 .1568.01552.2296.04567s.139.07435.1947.13007c.0557.05571.0999.12185.13.19465.0302.07279.0457.15082.0457.22961s-.0155.15681-.0457.22961c-.0301.0728-.0743.13894-.13.19465-.0557.05572-.1219.09992-.1947.13007S14.6788 6.2 14.6 6.2H.6c-.078793 0-.156815-.01552-.22961-.04567s-.138939-.07435-.194654-.13007a.599884.599884 0 0 1-.1300641-.19465C.0155191 5.75681 0 5.67879 0 5.6s.0155191-.15682.0456719-.22961a.599884.599884 0 0 1 .1300641-.19465c.055715-.05572.121859-.09992.194654-.13007S.521207 5 .6 5zm0-5c.1591 0 .3117.0632141.4243.175736C15.1368.288258 15.2.44087 15.2.6s-.0632.311742-.1757.42426c-.1126.11253-.2652.17574-.4243.17574H.6c-.15913 0-.311742-.06321-.424264-.17574C.0632141.911742 0 .75913 0 .6S.0632141.288258.175736.175736C.288258.0632141.44087 0 .6 0z" />
+      </symbol>
+      <symbol id="cross" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M15 8a.6.6 0 0 1 1 1l-3.1 3 3 3a.6.6 0 0 1-.8 1L12 12.8l-3 3a.6.6 0 0 1-1-.8l3.1-3.1-3-3a.6.6 0 0 1 .8-1L12 11z" />
+      </symbol>
+      <symbol id="angle" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M15.6 9.6a.6.6 0 0 1 .8.8l-4 4-.4.5-.4-.5-4-4a.6.6 0 0 1 .8-.8L12 13z" />
+      </symbol>
+      <symbol id="headphone" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M11.2 19.6a1.2 1.2 0 1 1 0-2.3 1.2 1.2 0 0 1 0 2.3m0-1.8a.6.6 0 1 0 .5 1.1.6.6 0 0 0-.5-1" />
+        <path
+          fill="currentColor"
+          d="M18.6 9.9a6.7 6.7 0 0 0-13.2 0 2 2 0 0 0-1.7 2V14a2 2 0 0 0 1.5 2 7 7 0 0 0 5.2 2.7v-.6a7 7 0 0 1-4.5-2h.2q1-.1 1-1v-4.3a1 1 0 0 0-1-1H6a6.2 6.2 0 0 1 12 0 1 1 0 0 0-1 1v4.3q0 .9 1 1h.4c1.1 0 2-1 2-2.1v-2.1a2 2 0 0 0-1.7-2M6 10.4q.5 0 .5.5V15q0 .3-.5.4h-.4q-1.3-.2-1.5-1.5v-2.1q.2-1.4 1.5-1.5zM19.8 14a1.5 1.5 0 0 1-1.5 1.5h-.4a.4.4 0 0 1-.5-.5v-4.2q0-.3.5-.4h.4q1.4.1 1.5 1.5z" />
+      </symbol>
+      <symbol id="envelope" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M20.4 7q-.1-1.3-1.4-1.4H5Q3.7 5.7 3.6 7v10q.1 1.3 1.4 1.4h14q1.3-.1 1.4-1.4zm-2.7.8a.6.6 0 1 1 .9 1l-4.8 4.4c-1 1-2.6 1-3.6 0L5.5 8.7a.6.6 0 0 1 .8-.9l4.8 4.5q.9.8 1.8 0zm4 9.2c0 1.4-1.3 2.6-2.7 2.6H5A2.6 2.6 0 0 1 2.4 17V7c0-1.4 1.2-2.6 2.6-2.6h14c1.4 0 2.6 1.2 2.6 2.6z" />
+      </symbol>
+      <symbol id="whatsapp" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="m16 13.8-1.4-.7q-.4-.2-.6 0l-.7 1h-.5L11 12.9l-1.2-1.5.1-.5.4-.3.2-.4v-.4L9.8 8q-.3-.4-.5-.3h-.5l-.6.2a3 3 0 0 0-.8 1.9q0 1.4 1 2.3a10 10 0 0 0 3.8 3.4l1.3.5h1.4a2 2 0 0 0 1.5-1q.2-.5.1-1z" />
+        <path
+          fill="currentColor"
+          d="M18.3 5.6A9 9 0 0 0 12 3a9 9 0 0 0-7.8 4.5 9 9 0 0 0 0 8.9L3 21l4.8-1.2a9 9 0 0 0 12.6-4.4 9 9 0 0 0-2-9.8M12 19.3q-2.1 0-3.9-1l-.2-.2L5 19l.7-2.8-.2-.2a7.4 7.4 0 0 1 1.7-9.7A7.5 7.5 0 0 1 19 9q.5 1.4.5 2.8a7.4 7.4 0 0 1-7.4 7.4" />
+      </symbol>
+    </svg>
+    <div class="menu js-menu">
+      <div class="menu__sidebar">
+        <div class="menu__close js-menu-close">
+          <svg class="icon">
+            <use href="#cross"></use>
+          </svg>
+        </div>
+
+        <nav aria-label="Мобильная навигация">
+          <ul>
+            <li>
+              <a href="https://ak-sai.com/">Tours</a>
+              <ul>
+                <li>
+                  <a href="#">Trekking adventures</a>
+                </li>
+                <li>
+                  <a href="#">Horseback expedition</a>
+                </li>
+                <li>
+                  <a href="#">Overland jeep journeys</a>
+                </li>
+                <li>
+                  <a href="#">Nomadic heritage</a>
+                </li>
+                <li>
+                  <a href="#">Custom expedition</a>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#">Private tours</a></li>
+            <li><a href="#">Solmo lodge</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Gallery</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
     <script type="module" src="./js/main.js"></script>
+  
   </body>
 </html>

@@ -6,7 +6,7 @@ import * as sass from "sass";
 export default defineConfig({
   base: "./",
   root: "src",
-
+  publicDir: resolve(__dirname, "public"),
   css: {
     preprocessorOptions: {
       sass: {
@@ -25,6 +25,7 @@ export default defineConfig({
           return [];
         }
       },
+      
       transformIndexHtml: {
         order: "post",
         handler(html, ctx) {
@@ -84,6 +85,21 @@ export default defineConfig({
         },
       },
     },
+    {
+    name: 'force-defer-to-modules',
+    transformIndexHtml(html) {
+      // Ищем скрипты типа module и добавляем defer, если его там еще нет
+      return html.replace(
+        /<script type="module" (.*?)>/g,
+        (match, p1) => {
+          if (!p1.includes('defer')) {
+            return `<script type="module" ${p1} defer>`;
+          }
+          return match;
+        }
+      );
+    }
+  },
   ],
 
   build: {

@@ -8,12 +8,16 @@
     gap: v.$space-md
 
     &.js-slider-viewport
+      
       @include v.media(tablet)
         display: grid
         grid-template-columns: repeat(6, 1fr)
-        grid-auto-rows: v.to-rem(200)
+        grid-auto-rows: v.to-rem(175)
 
       @include v.media(laptop)
+        grid-auto-rows: v.to-rem(200)
+
+      @include v.media(desktop)
         grid-auto-rows: v.to-rem(260)
 
   &__item
@@ -21,8 +25,7 @@
     position: relative
     border-radius: v.$rad-lg
     overflow: hidden
-    aspect-ratio: 4/3
-
+    
     @include v.has-mouse
       &:hover
         .teaser-cat__img img,
@@ -31,10 +34,9 @@
           transform: translateY(v.to-rem(-5))
 
         .teaser-cat__img img
-          transform: translateY(v.to-rem(-5)) scale(1.02)
+          transform: scale(1.03)
 
     @include v.media(tablet)
-      aspect-ratio: inherit
 
       &:nth-child(1)
         grid-column: span 3 / span 3

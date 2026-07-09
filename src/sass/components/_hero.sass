@@ -58,20 +58,26 @@
     font-size: v.$fz-hero
     line-height: v.to-rem(40)
     font-weight: 400
+    
 
     @include v.media(tablet)
       font-size: v.to-rem(60)
       line-height: v.to-rem(60)
+    
+      @include v.is-touch
+        @include v.landscape
+          font-size: v.to-rem(40)
+          line-height: v.to-rem(40)
+      
 
   &__title-accent
     font-style: italic
-    font-weight: 400
 
   &__subtitle
     text-transform: uppercase
     color: #fff
     line-height: 1.6
-    font-weight: 600
+    font-weight: 500
     max-width: v.to-rem(360)
     width: 100%
 
