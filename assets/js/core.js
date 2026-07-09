@@ -1,7 +1,7 @@
 document.addEventListener(`DOMContentLoaded`,()=>{let e=document.querySelector(`.header`);e&&window.addEventListener(`scroll`,()=>{window.requestAnimationFrame(()=>{window.scrollY>0?e.classList.add(`header_bg`):e.classList.remove(`header_bg`)})},{passive:!0})});var e=document.querySelector(`.js-menu`),t=document.querySelector(`.js-hamburger`),n=document.querySelector(`body`),r=document.querySelector(`.js-menu-close`);t.addEventListener(`click`,()=>{n.classList.add(`scroll-locked`),e.classList.add(`menu_is-open`)}),r.addEventListener(`click`,()=>{n.classList.remove(`scroll-locked`),e.classList.remove(`menu_is-open`)}),document.addEventListener(`DOMContentLoaded`,()=>{document.querySelectorAll(`.menu nav li`).forEach(e=>{e.querySelector(`ul`)&&e.querySelector(`a`).insertAdjacentHTML(`afterend`,`
         <button class="js-trigger-submenu" type="button" aria-label="Открыть подменю">
-        <svg class="icon">
-          <use href="./icons.svg#angle"></use>
-        </svg>
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <path fill="#000" d="M15.5996 9.5996c.112-.05348.2377-.07092.36-.04994s.2351.07936.3228.16709c.0878.08774.1462.20051.1671.32285.021.1222.0036.248-.0499.36l-4 4-.4.5-.4-.5-4.00001-4c-.05347-.112-.07091-.2378-.04993-.36.02098-.12234.07936-.23511.16709-.32285.08774-.08773.20051-.14611.3228-.16709s.24808-.00354.36004.04994l3.60001 3.4z"/>
+          </svg>
       </button>
       `)}),document.querySelectorAll(`.js-trigger-submenu`).forEach(e=>{e.addEventListener(`click`,function(){let e=this.closest(`li`),t=e.querySelector(`ul`);e.classList.toggle(`is-droped`),e.classList.contains(`is-droped`)?t.style.height=t.scrollHeight+`px`:t.style.height=0})})});
