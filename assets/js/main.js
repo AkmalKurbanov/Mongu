@@ -1,1 +1,0 @@
-import"./core.js";import"./slider.js";document.addEventListener(`DOMContentLoaded`,()=>{let e=document.querySelector(`.header`);e&&window.addEventListener(`scroll`,()=>{window.requestAnimationFrame(()=>{window.scrollY>0?e.classList.add(`header_bg`):e.classList.remove(`header_bg`)})},{passive:!0})});
