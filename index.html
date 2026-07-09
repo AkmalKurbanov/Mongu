@@ -327,70 +327,110 @@
           </picture> -->
         
           <picture class="hero__poster">
-  <!-- 1. Десктоп и большие экраны (шире 1024px) -->
+            <source
+              type="image/avif"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="1080"
+              srcset="./assets/images/hero-large.avif 1920w, ./assets/images/hero-large-2x.avif 3840w" />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="1080"
+              srcset="./assets/images/hero-large.webp 1920w, ./assets/images/hero-large-2x.webp 3840w" />
+            <source
+              type="image/jpeg"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="1080"
+              srcset="./assets/images/hero-large.jpg 1920w, ./assets/images/hero-large-2x.jpg 3840w" />
+
             <source
               type="image/avif"
               media="(min-width: 1024px)"
               sizes="100vw"
-              srcset="./assets/images/hero-desktop.avif 1200w, ./assets/images/hero-desktop-2x.avif 2400w" />
+              width="1440"
+              height="900"
+              srcset="./assets/images/hero-desktop.avif 1440w, ./assets/images/hero-desktop-2x.avif 2880w" />
             <source
               type="image/webp"
               media="(min-width: 1024px)"
               sizes="100vw"
-              srcset="./assets/images/hero-desktop.webp 1200w, ./assets/images/hero-desktop-2x.webp 2400w" />
+              width="1440"
+              height="900"
+              srcset="./assets/images/hero-desktop.webp 1440w, ./assets/images/hero-desktop-2x.webp 2880w" />
             <source
               type="image/jpeg"
               media="(min-width: 1024px)"
               sizes="100vw"
-              srcset="./assets/images/hero-desktop.jpg 1200w, ./assets/images/hero-desktop-2x.jpg 2400w" />
+              width="1440"
+              height="900"
+              srcset="./assets/images/hero-desktop.jpg 1440w, ./assets/images/hero-desktop-2x.jpg 2880w" />
 
-            <!-- 2. СПАСЕНИЕ ДЛЯ LANDSCAPE: Любой экран меньше 1024px, но перевернутый горизонтально -->
-            <!-- Скармливаем ему ту же самую горизонтальную десктопную картинку! -->
             <source
               type="image/avif"
               media="(orientation: landscape)"
               sizes="100vw"
-              srcset="./assets/images/hero-desktop.avif 1200w, ./assets/images/hero-desktop-2x.avif 2400w" />
+              width="1440"
+              height="900"
+              srcset="./assets/images/hero-desktop.avif 1440w, ./assets/images/hero-desktop-2x.avif 2880w" />
             <source
               type="image/webp"
               media="(orientation: landscape)"
               sizes="100vw"
-              srcset="./assets/images/hero-desktop.webp 1200w, ./assets/images/hero-desktop-2x.webp 2400w" />
+              width="1440"
+              height="900"
+              srcset="./assets/images/hero-desktop.webp 1440w, ./assets/images/hero-desktop-2x.webp 2880w" />
             <source
               type="image/jpeg"
               media="(orientation: landscape)"
               sizes="100vw"
-              srcset="./assets/images/hero-desktop.jpg 1200w, ./assets/images/hero-desktop-2x.jpg 2400w" />
+              width="1440"
+              height="900"
+              srcset="./assets/images/hero-desktop.jpg 1440w, ./assets/images/hero-desktop-2x.jpg 2880w" />
 
-            <!-- 3. Планшеты строго в ПОРТРЕТНОЙ (вертикальной) ориентации (от 768px до 1023px) -->
             <source
               type="image/avif"
               media="(min-width: 768px)"
               sizes="100vw"
+              width="800"
+              height="1100"
               srcset="./assets/images/hero-tablet.avif 800w, ./assets/images/hero-tablet-2x.avif 1600w" />
             <source
               type="image/webp"
               media="(min-width: 768px)"
               sizes="100vw"
+              width="800"
+              height="1100"
               srcset="./assets/images/hero-tablet.webp 800w, ./assets/images/hero-tablet-2x.webp 1600w" />
             <source
               type="image/jpeg"
               media="(min-width: 768px)"
               sizes="100vw"
+              width="800"
+              height="1100"
               srcset="./assets/images/hero-tablet.jpg 800w, ./assets/images/hero-tablet-2x.jpg 1600w" />
 
-            <!-- 4. Телефоны строго в ПОРТРЕТНОЙ ориентации (Базовый фоллбек) -->
             <source
               type="image/avif"
               sizes="100vw"
+              width="450"
+              height="950"
               srcset="./assets/images/hero-mobile.avif 450w, ./assets/images/hero-mobile-2x.avif 900w" />
             <source
               type="image/webp"
               sizes="100vw"
+              width="450"
+              height="950"
               srcset="./assets/images/hero-mobile.webp 450w, ./assets/images/hero-mobile-2x.webp 900w" />
+
             <img
               src="./assets/images/hero-mobile.jpg"
-              alt="Конные туры по горам Кыргызстана"
+              alt="Discover Kyrgyzstan — авторские конные туры и экспедиции"
               class="hero__poster-img"
               width="450"
               height="950"
@@ -800,7 +840,7 @@
                   <picture>
                     <source
                       type="image/avif"
-                      sizes="(min-width: 1440px) 33vw, (min-width: 768px) 50vw, 100vw"
+                      sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
                       srcset="data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADrbWV0YQAAAAAAAAAhaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAAAAAAAOcGl0bQAAAAAAAQAAAB5pbG9jAAAAAEQAAAEAAQAAAAEAAAETAAAAWgAAAChpaW5mAAAAAAABAAAAGmluZmUCAAAAAAEAAGF2MDFDb2xvcgAAAABqaXBycAAAAEtpcGNvAAAAFGlzcGUAAAAAAAABkAAAASwAAAAQcGl4aQAAAAADCAgIAAAADGF2MUOBIAAAAAAAE2NvbHJuY2x4AAEADQAGgAAAABdpcG1hAAAAAAAAAAEAAQQBAoMEAAAAYm1kYXQSAAoJOCIx8raQENBpMksR4JjBMJJJJMoAAAAAwhApoeNr7LDAzdXMnXx1gHPIq79LCW0k9h5mSciTy/BPfDC4XA3Xk/vu/kREH1tDj+nCMq30o0zhkKhVQCA= 400w, data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADrbWV0YQAAAAAAAAAhaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAAAAAAAOcGl0bQAAAAAAAQAAAB5pbG9jAAAAAEQAAAEAAQAAAAEAAAETAAAAlAAAAChpaW5mAAAAAAABAAAAGmluZmUCAAAAAAEAAGF2MDFDb2xvcgAAAABqaXBycAAAAEtpcGNvAAAAFGlzcGUAAAAAAAADIAAAAlgAAAAQcGl4aQAAAAADCAgIAAAADGF2MUOBJAAAAAAAE2NvbHJuY2x4AAEADQAGgAAAABdpcG1hAAAAAAAAAAEAAQQBAoMEAAAAnG1kYXQSAAoKOSZx+V2kBDQaQDKDARgeCYwTCSSSTKAAAAAAO8IQKaHja+ywwM3VzJ18dYBzyKu/SwltJPYdc8mnJGPPqU2i9Zu0u07qJI+pheqaHz8KTuHiCIwn1/FhYMIQKaHja+ywwM3VzJ18dYBzyKu/SwltJPXbc1Sak4kel1GuFXT4iTh5vhTdm1riqSAWWw3C30R+ 800w, data:image/avif;base64,AAAAIGZ0eXBhdmlmAAAAAGF2aWZtaWYxbWlhZk1BMUEAAADrbWV0YQAAAAAAAAAhaGRscgAAAAAAAAAAcGljdAAAAAAAAAAAAAAAAAAAAAAOcGl0bQAAAAAAAQAAAB5pbG9jAAAAAEQAAAEAAQAAAAEAAAETAAABNAAAAChpaW5mAAAAAAABAAAAGmluZmUCAAAAAAEAAGF2MDFDb2xvcgAAAABqaXBycAAAAEtpcGNvAAAAFGlzcGUAAAAAAAAEsAAAA4QAAAAQcGl4aQAAAAADCAgIAAAADGF2MUOBKAAAAAAAE2NvbHJuY2x4AAEADQAGgAAAABdpcG1hAAAAAAAAAAEAAQQBAoMEAAABPG1kYXQSAAoKOiplfwbSAhoNIDKjAhrHgmMEwkkkkygAAAAAPsIQKaHja+ywwM3VzJ18dYBzyKu/SwltJPYdc8TtMGnCZ48RFTuB5Qj5g/cV1USJ411ULzTxBl3aGpOyJLI+gEjCECmh42vssMDN1cydfHWAc8irv0sJbST2HXPE7lgn1+t0wIXrZ0o9VayHe1eAPKvqqPB+qSUa7cnmKVkCr90S9NGB1nFhWv7AP8IQKaHja+ywwM3VzJ18dYBzyKu/SwltJPYdc8TtMGnCZ48RFTuB5Qj5g/cV1USJ411ULzTxBl3aGnq5yB+QkSDCECmh42vssMDN1cydfHWAc8irv0sJbST2HXPE7lgn1+t0wIXrZ0o9VayHe1eAPKvqqPB+qSUa7cnmKVkCr90S9NCRKqNuIu6tkA== 1200w" />
                     <source
                       type="image/webp"
