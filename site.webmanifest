@@ -1,6 +1,6 @@
 {
-  "name": "MONGU",
-  "short_name": "MONGU",
+  "name": "Mongu",
+  "short_name": "Mongu",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#efefef",
-  "background_color": "#ccc6c6",
+  "theme_color": "#6c613e", 
+  "background_color": "#6c613e",
   "display": "standalone"
 }
