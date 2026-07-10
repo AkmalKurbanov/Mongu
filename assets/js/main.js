@@ -1,0 +1,1 @@
+import"./core.js";import"./slider.js";document.fonts.ready.then(()=>{document.documentElement.classList.add(`fonts-loaded`)});
