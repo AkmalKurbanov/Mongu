@@ -761,35 +761,103 @@
     </svg>
     <div class="menu js-menu">
       <div class="menu__sidebar">
-        <div class="menu__close js-menu-close">
-          <svg class="icon">
-            <use href="#cross"></use>
-          </svg>
+        <div class="menu__sidebar-top">
+          <a href="/" class="menu__logo" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 213 198">
+              <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+              <path
+                fill="#000"
+                d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+            </svg>
+          </a>
+          <div class="menu__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media facebok">
+                  <svg class="icon">
+                    <use href="./icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media instagram">
+                  <svg class="icon">
+                    <use href="./icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="video-sharing platform youtube">
+                  <svg class="icon">
+                    <use href="./icons.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="messanger WhatsApp">
+                  <svg class="icon">
+                    <use href="#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__close js-menu-close">
+            <svg class="icon">
+              <use href="#cross"></use>
+            </svg>
+          </div>
         </div>
 
-        <nav aria-label="Мобильная навигация">
-          <ul>
-            <li>
-              <a href="https://ak-sai.com/">Tours</a>
-              <ul>
-                <li>
-                  <a href="#">Tour category1</a>
+        <nav class="menu__nav" aria-label="Мобильная навигация">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__item-link" href="https://ak-sai.com/">Tours</a>
+              <ul class="menu__submenu">
+                <li class="menu__subitem">
+                  <a class="menu__item-sublink" href="#">Trekking adventures</a>
                 </li>
-                <li>
-                  <a href="#">Tour category2</a>
+                <li class="menu__subitem">
+                  <a class="menu__item-sublink" href="#">Horseback expedition</a>
                 </li>
-                <li>
-                  <a href="#">Tour category3</a>
+                <li class="menu__subitem">
+                  <a class="menu__item-sublink" href="#">Overland jeep journeys</a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__item-sublink" href="#">Nomadic heritage</a>
+                </li>
+                <li class="menu__subitem">
+                  <a class="menu__item-sublink" href="#">Custom expedition</a>
                 </li>
               </ul>
             </li>
-            <li><a href="#">Private tours</a></li>
-            <li><a href="#">Solmo lodge</a></li>
-            <li><a href="#">Destination</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Private tours</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Solmo lodge</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Destination</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">About us</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Blog</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Contacts</a></li>
           </ul>
         </nav>
       </div>
