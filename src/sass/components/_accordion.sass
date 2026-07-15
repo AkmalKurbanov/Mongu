@@ -6,6 +6,8 @@
     grid-template-rows: 0fr
     transition: grid-template-rows .2s ease-out
     overflow: hidden
+    // content-visibility: auto
+    // contain-intrinsic-size: 0 40px
 
   &__item
     border-bottom: 1px solid #e2e2e9
@@ -22,7 +24,8 @@
     display: flex
     align-items: center
     justify-content: space-between
-
+    color: v.$clr-accent
+    
     @include v.has-mouse
       cursor: pointer
 
@@ -33,11 +36,48 @@
 
   &__body
     min-height: 0
-    
+    h2,h3,h4,h5,h6
+      font-family: v.$ff-accent
+      margin-top: v.to-rem(15)
     p
-      margin-bottom: v.to-rem(15)
-      &:last-child
-        margin-bottom: 0
-
+      margin-top: v.to-rem(15)
+      
   &__content[aria-hidden="false"]
     grid-template-rows: 1fr
+
+  &_timeline
+    .accordion__item
+      border: none
+      padding-left: v.$space-lg
+      position: relative
+
+      &:before
+        position: absolute
+        content: ''
+        background-color: v.$clr-accent
+        width: v.to-rem(1)
+        height: 100%
+        left: v.to-rem(7.5)
+        top: v.to-rem(32)
+      
+      &:last-child
+        &:before
+          display: none  
+
+    .accordion__header
+      position: relative
+      padding-left: v.$space-xs
+
+      &:before
+        position: absolute
+        content: ''
+        background-color: v.$clr-accent
+        width: v.to-rem(15)
+        height: v.to-rem(15)
+        border-radius: 100%
+        left: calc( 0px - v.$space-lg )
+        top: v.to-rem(8.5)
+        
+  &_active
+    .accordion__content
+      display: grid

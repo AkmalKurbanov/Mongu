@@ -1,6 +1,6 @@
-import "./header-fixed";
-import "./menu";
-import "./slider";
+import "./header-fixed?indexPage";
+import "./menu?indexPage";
+import "./slider?indexPage";
 
-import "/sass/core.sass";
 import "/sass/main.sass";
+

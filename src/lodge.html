@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Авторские туры по Кыргызстану | Mongu</title>
     <meta
       name="description"
       content="Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по самым красивым перевалам и озерам Кыргызстана с опытными гидами." />
-    <meta name="theme-color" content="#5a6b47" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Авторские туры по Кыргызстану — Mongu" />
     <meta property="og:description" content="Индивидуальные джип-туры и конные экспедиции по Кыргызстану." />
-    <meta property="og:url" content="https://yourdomain.com/" />
-    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://mongu.kg/" />
+    <meta property="og:image" content="https://mongu.kg/images/og-image.jpg" />
 
-    <link rel="canonical" href="https://yourdomain.com/" />
+    <meta name="theme-color" content="#6c613e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#3F3F25" media="(prefers-color-scheme: dark)" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://mongu.kg/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <script type="application/ld+json">
       {
@@ -24,12 +29,11 @@
         "@type": "TravelAgency",
         "name": "Mongu",
         "description": "Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по Кыргызстану.",
-        "url": "https://yourdomain.com/"
+        "url": "https://mongu.kg/"
       }
     </script>
   </head>
   <body>
-    
     <a
       href="https://wa.me/996555150795"
       class="whatsapp-float"
@@ -100,31 +104,31 @@
         <nav class="header__nav" aria-label="Основная навигация">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Tours</a>
+              <a href="/categories.html" class="header__nav-link">Tours</a>
               <ul class="header__nav-sublist">
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Trekking adventures</a>
+                  <a href="/category.html" class="header__nav-sublink">Trekking adventures</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Horseback expedition</a>
+                  <a href="/category.html" class="header__nav-sublink">Horseback expedition</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Overland jeep journeys</a>
+                  <a href="/category.html" class="header__nav-sublink">Overland jeep journeys</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Nomadic heritage</a>
+                  <a href="/category.html" class="header__nav-sublink">Nomadic heritage</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Custom expedition</a>
+                  <a href="/category.html" class="header__nav-sublink">Custom expedition</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Private tours</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Solmo lodge</a></li>
+            <li class="header__nav-item"><a href="/lodge.html" class="header__nav-link">Sokmo lodge</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Destination</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Blog</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Contacts</a></li>
+            <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
+            <li class="header__nav-item"><a href="/blog.html" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
         <div class="header__controls">
@@ -164,7 +168,7 @@
             </ul>
           </div>
 
-          <button type="button" class="hamburger js-hamburger">
+          <button type="button" aria-label="Mobile menu" class="hamburger js-hamburger">
             <svg class="icon">
               <use href="#hamburger"></use>
             </svg>
@@ -173,8 +177,8 @@
       </div>
     </header>
 
-    <main class="main-content">
-      <section class="hero">
+    <main class="main-content main-content_dark-bg lodge">
+      <section class="hero hero_inside">
         <div class="hero__media">
           <picture class="hero__poster">
             <source
@@ -182,72 +186,72 @@
               media="(min-width: 1200px)"
               width="1920"
               height="1080"
-              srcset="./images/hero/hero-large.avif 1x, ./images/hero/hero-large-2x.avif 2x" />
+              srcset="./images/lodge/sokmo-lodge-large.avif 1x, ./images/lodge/sokmo-lodge-large-2x.avif 2x" />
             <source
               type="image/webp"
               media="(min-width: 1200px)"
               width="1920"
               height="1080"
-              srcset="./images/hero/hero-large.webp 1x, ./images/hero/hero-large-2x.webp 2x" />
+              srcset="./images/lodge/sokmo-lodge-large.webp 1x, ./images/lodge/sokmo-lodge-large-2x.webp 2x" />
             <source
               type="image/jpeg"
               media="(min-width: 1200px)"
               width="1920"
               height="1080"
-              srcset="./images/hero/hero-large.jpg 1x, ./images/hero/hero-large-2x.jpg 2x" />
+              srcset="./images/lodge/sokmo-lodge-large.jpg 1x, ./images/lodge/sokmo-lodge-large-2x.jpg 2x" />
 
             <source
               type="image/avif"
               media="(min-width: 1024px)"
               width="1200"
               height="675"
-              srcset="./images/hero/hero-desktop.avif 1x, ./images/hero/hero-desktop-2x.avif 2x" />
+              srcset="./images/lodge/sokmo-lodge-desktop.avif 1x, ./images/lodge/sokmo-lodge-desktop-2x.avif 2x" />
             <source
               type="image/webp"
               media="(min-width: 1024px)"
               width="1200"
               height="675"
-              srcset="./images/hero/hero-desktop.webp 1x, ./images/hero/hero-desktop-2x.webp 2x" />
+              srcset="./images/lodge/sokmo-lodge-desktop.webp 1x, ./images/lodge/sokmo-lodge-desktop-2x.webp 2x" />
             <source
               type="image/jpeg"
               media="(min-width: 1024px)"
               width="1200"
               height="675"
-              srcset="./images/hero/hero-desktop.jpg 1x, ./images/hero/hero-desktop-2x.jpg 2x" />
+              srcset="./images/lodge/sokmo-lodge-desktop.jpg 1x, ./images/lodge/sokmo-lodge-desktop-2x.jpg 2x" />
 
             <source
               type="image/avif"
               media="(min-width: 768px)"
               width="1024"
               height="768"
-              srcset="./images/hero/hero-tablet.avif 1x, ./images/hero/hero-tablet-2x.avif 2x" />
+              srcset="./images/lodge/sokmo-lodge-tablet.avif 1x, ./images/lodge/sokmo-lodge-tablet-2x.avif 2x" />
             <source
               type="image/webp"
               media="(min-width: 768px)"
               width="1024"
               height="768"
-              srcset="./images/hero/hero-tablet.webp 1x, ./images/hero/hero-tablet-2x.webp 2x" />
+              srcset="./images/lodge/sokmo-lodge-tablet.webp 1x, ./images/lodge/sokmo-lodge-tablet-2x.webp 2x" />
             <source
               type="image/jpeg"
               media="(min-width: 768px)"
               width="1024"
               height="768"
-              srcset="./images/hero/hero-tablet.jpg 1x, ./images/hero/hero-tablet-2x.jpg 2x" />
+              srcset="./images/lodge/sokmo-lodge-tablet.jpg 1x, ./images/lodge/sokmo-lodge-tablet-2x.jpg 2x" />
 
             <source
               type="image/avif"
               width="768"
               height="1024"
-              srcset="./images/hero/hero-mobile.avif 1x, ./images/hero/hero-mobile-2x.avif 2x" />
+              srcset="./images/lodge/sokmo-lodge-mobile.avif 1x, ./images/lodge/sokmo-lodge-mobile-2x.avif 2x" />
             <source
               type="image/webp"
               width="768"
               height="1024"
-              srcset="./images/hero/hero-mobile.webp 1x, ./images/hero/hero-mobile-2x.webp 2x" />
+              srcset="./images/lodge/sokmo-lodge-mobile.webp 1x, ./images/lodge/sokmo-lodge-mobile-2x.webp 2x" />
 
             <img
-              src="./images/hero/hero-large.jpg"
-              srcset="./images/hero/hero-large-2x.jpg 2x"
+              src="./images/lodge/sokmo-lodge-large.jpg"
+              srcset="./images/lodge/sokmo-lodge-large-2x.jpg 2x"
               alt="Discover Kyrgyzstan"
               class="hero__poster-img"
               width="1920"
@@ -257,10 +261,10 @@
         </div>
 
         <div class="hero__content">
-          <div class="container">
-            <h1>
+          <div class="container container_wide">
+            <h1 class="hero__title">
               Sokmo Lodge: <br />
-              <span>Your private sanctuary</span>
+              <span class="hero__title-accent">Your private sanctuary</span>
             </h1>
 
             <p class="hero__subtitle">Eco-Luxary Amidst Alpine Splendor</p>
@@ -268,67 +272,431 @@
         </div>
       </section>
 
-      <section class="lodge section-padding">
+      <section class="section-padding">
         <div class="container">
-          <nav aria-label="Хлебные крошки" class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">
-                <a href="/">Главная</a>
-              </li>
-              <li class="breadcrumbs__item" aria-current="page">Sokmo lodge</li>
-            </ul>
-          </nav>
+          <div class="lodge__desc">
+            <div class="title-wrap">
+              <h2 class="title title_light title_centered">Eco-Luxary Amidst Alpine Splendor</h2>
+            </div>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nihil nostrum molestias placeat qui
+              explicabo? Exercitationem neque libero sint odit, expedita nobis quaerat molestias esse eos sed eum
+              possimus. Perferendis cumque numquam odit similique aliquid hic eaque, ducimus saepe necessitatibus
+              eveniet nisi voluptates. Assumenda eligendi voluptate dolorum nihil non officia commodi nobis, aliquam
+              doloremque. Repellendus ad omnis, nisi voluptate laboriosam illum quisquam eveniet aut necessitatibus
+              voluptas expedita dolor dolores dolorum recusandae fugiat maxime doloribus, tempore error itaque
+              consectetur, a amet perspiciatis saepe. Possimus vitae optio quibusdam? Culpa reiciendis deleniti
+              dignissimos, voluptate fugiat adipisci praesentium consequatur, voluptatum unde, quidem corporis labore.
+            </p>
+          </div>
         </div>
-        <div class="container">sas</div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container">
+          <div class="title-wrap">
+            <h2 class="title title_light title_centered">Eco-Luxary Amidst Alpine Splendor</h2>
+          </div>
+
+          <ul class="lodge__rooms">
+            <li class="lodge__rooms-item">
+              <article class="lodge__room-card">
+                <div class="lodge__card-header">
+                  <div class="lodge__room-img">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 400px, (min-width: 1024px) 300px, (min-width: 768px) 225px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/lodge/lodge-card-400.avif   400w,
+                          ./images/lodge/lodge-card-600.avif   600w,
+                          ./images/lodge/lodge-card-800.avif   800w,
+                          ./images/lodge/lodge-card-900.avif   900w,
+                          ./images/lodge/lodge-card-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/lodge/lodge-card-400.webp   400w,
+                          ./images/lodge/lodge-card-600.webp   600w,
+                          ./images/lodge/lodge-card-800.webp   800w,
+                          ./images/lodge/lodge-card-900.webp   900w,
+                          ./images/lodge/lodge-card-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/lodge/lodge-card-800.jpg"
+                        srcset="
+                          ./images/lodge/lodge-card-400.jpg   400w,
+                          ./images/lodge/lodge-card-600.jpg   600w,
+                          ./images/lodge/lodge-card-800.jpg   800w,
+                          ./images/lodge/lodge-card-900.jpg   900w,
+                          ./images/lodge/lodge-card-1200.jpg 1200w
+                        "
+                        alt="Описание"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="lodge__card-body">
+                  <h3 class="lodge__room-title">Название номера</h3>
+
+                  <ul class="lodge__features" aria-label="Удобства">
+                    <li class="lodge__feature">Wi-Fi</li>
+                    <li class="lodge__feature">Завтрак</li>
+                    <li class="lodge__feature">Завтрак</li>
+                    <li class="lodge__feature">Завтрак</li>
+                    <li class="lodge__feature">Завтрак</li>
+                  </ul>
+                </div>
+
+                <div class="lodge__card-footer">
+                  <div class="lodge__room-price">$2450</div>
+                  <a href="#" class="lodge__card-btn btn">BOOK NOW</a>
+                </div>
+              </article>
+            </li>
+            <li class="lodge__rooms-item">
+              <article class="lodge__room-card">
+                <div class="lodge__card-header">
+                  <div class="lodge__room-img">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 400px, (min-width: 1024px) 300px, (min-width: 768px) 225px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/lodge/lodge-card-400.avif   400w,
+                          ./images/lodge/lodge-card-600.avif   600w,
+                          ./images/lodge/lodge-card-800.avif   800w,
+                          ./images/lodge/lodge-card-900.avif   900w,
+                          ./images/lodge/lodge-card-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/lodge/lodge-card-400.webp   400w,
+                          ./images/lodge/lodge-card-600.webp   600w,
+                          ./images/lodge/lodge-card-800.webp   800w,
+                          ./images/lodge/lodge-card-900.webp   900w,
+                          ./images/lodge/lodge-card-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/lodge/lodge-card-800.jpg"
+                        srcset="
+                          ./images/lodge/lodge-card-400.jpg   400w,
+                          ./images/lodge/lodge-card-600.jpg   600w,
+                          ./images/lodge/lodge-card-800.jpg   800w,
+                          ./images/lodge/lodge-card-900.jpg   900w,
+                          ./images/lodge/lodge-card-1200.jpg 1200w
+                        "
+                        alt="Описание"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="lodge__card-body">
+                  <h3 class="lodge__room-title">Название номера</h3>
+
+                  <ul class="lodge__features" aria-label="Удобства">
+                    <li class="lodge__feature">Wi-Fi</li>
+                    <li class="lodge__feature">Завтрак</li>
+                    <li class="lodge__feature">Завтрак</li>
+                    <li class="lodge__feature">Завтрак</li>
+                    <li class="lodge__feature">Завтрак</li>
+                  </ul>
+                </div>
+
+                <div class="lodge__card-footer">
+                  <div class="lodge__room-price">$2450</div>
+                  <a href="#" class="lodge__card-btn btn">BOOK NOW</a>
+                </div>
+              </article>
+            </li>
+            <li class="lodge__rooms-item">
+              <article class="lodge__room-card">
+                <div class="lodge__card-header">
+                  <div class="lodge__room-img">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 400px, (min-width: 1024px) 300px, (min-width: 768px) 225px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/lodge/lodge-card-400.avif   400w,
+                          ./images/lodge/lodge-card-600.avif   600w,
+                          ./images/lodge/lodge-card-800.avif   800w,
+                          ./images/lodge/lodge-card-900.avif   900w,
+                          ./images/lodge/lodge-card-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 400px, (min-width: 1024px) 300px, (min-width: 768px) 225px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/lodge/lodge-card-400.webp   400w,
+                          ./images/lodge/lodge-card-600.webp   600w,
+                          ./images/lodge/lodge-card-800.webp   800w,
+                          ./images/lodge/lodge-card-900.webp   900w,
+                          ./images/lodge/lodge-card-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/lodge/lodge-card-800.jpg"
+                        sizes="(min-width: 1440px) 400px, (min-width: 1024px) 300px, (min-width: 768px) 225px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/lodge/lodge-card-400.jpg   400w,
+                          ./images/lodge/lodge-card-600.jpg   600w,
+                          ./images/lodge/lodge-card-800.jpg   800w,
+                          ./images/lodge/lodge-card-900.jpg   900w,
+                          ./images/lodge/lodge-card-1200.jpg 1200w
+                        "
+                        alt="Описание"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
+                </div>
+                <div class="lodge__card-body">
+                  <h3 class="lodge__room-title">Название номера</h3>
+
+                  <ul class="lodge__features" aria-label="Удобства">
+                    <li class="lodge__feature">Wi-Fi</li>
+                    <li class="lodge__feature">Завтрак</li>
+                    <li class="lodge__feature">Завтрак</li>
+                    <li class="lodge__feature">Завтрак</li>
+                    <li class="lodge__feature">Завтрак</li>
+                  </ul>
+                </div>
+
+                <div class="lodge__card-footer">
+                  <div class="lodge__room-price">$2450</div>
+                  <a href="#" class="lodge__card-btn btn">BOOK NOW</a>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section-padding">
+        <div class="container">
+          <div class="title-wrap">
+            <h2 class="title title_light title_centered">Eco-Luxary Amidst Alpine Splendor</h2>
+          </div>
+
+          <ul class="lodge__amenities">
+            <li class="lodge__amenities-item">
+              <article class="lodge__amenities-card">
+                <div class="lodge__amenities-img">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 400px, (min-width: 1024px) 300px, (min-width: 768px) 225px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/lodge/lodge-card-400.avif   400w,
+                        ./images/lodge/lodge-card-600.avif   600w,
+                        ./images/lodge/lodge-card-800.avif   800w,
+                        ./images/lodge/lodge-card-900.avif   900w,
+                        ./images/lodge/lodge-card-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/lodge/lodge-card-400.webp   400w,
+                        ./images/lodge/lodge-card-600.webp   600w,
+                        ./images/lodge/lodge-card-800.webp   800w,
+                        ./images/lodge/lodge-card-900.webp   900w,
+                        ./images/lodge/lodge-card-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/lodge/lodge-card-800.jpg"
+                      srcset="
+                        ./images/lodge/lodge-card-400.jpg   400w,
+                        ./images/lodge/lodge-card-600.jpg   600w,
+                        ./images/lodge/lodge-card-800.jpg   800w,
+                        ./images/lodge/lodge-card-900.jpg   900w,
+                        ./images/lodge/lodge-card-1200.jpg 1200w
+                      "
+                      alt="Описание"
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
+                </div>
+                <div class="lodge__amenities-desc">
+                  <h2 class="lodge__amenities-title">Panoramin terrace</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur accusantium voluptas quidem omnis,
+                    doloribus voluptatem beatae esse sit maxime. Suscipit vero voluptatum distinctio quae unde, ex
+                    dolores quisquam omnis, error veniam odit in delectus temporibus soluta nihil ad iusto dolorem.
+                    Dolorum aut eveniet molestiae esse vel quam voluptatibus dicta porro.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li class="lodge__amenities-item">
+              <article class="lodge__amenities-card">
+                <div class="lodge__amenities-img">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 400px, (min-width: 1024px) 300px, (min-width: 768px) 225px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/lodge/lodge-card-400.avif   400w,
+                        ./images/lodge/lodge-card-600.avif   600w,
+                        ./images/lodge/lodge-card-800.avif   800w,
+                        ./images/lodge/lodge-card-900.avif   900w,
+                        ./images/lodge/lodge-card-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/lodge/lodge-card-400.webp   400w,
+                        ./images/lodge/lodge-card-600.webp   600w,
+                        ./images/lodge/lodge-card-800.webp   800w,
+                        ./images/lodge/lodge-card-900.webp   900w,
+                        ./images/lodge/lodge-card-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/lodge/lodge-card-800.jpg"
+                      srcset="
+                        ./images/lodge/lodge-card-400.jpg   400w,
+                        ./images/lodge/lodge-card-600.jpg   600w,
+                        ./images/lodge/lodge-card-800.jpg   800w,
+                        ./images/lodge/lodge-card-900.jpg   900w,
+                        ./images/lodge/lodge-card-1200.jpg 1200w
+                      "
+                      alt="Описание"
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
+                </div>
+                <div class="lodge__amenities-desc">
+                  <h2 class="lodge__amenities-title">Gastronomy & traditional cuisine</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur accusantium voluptas quidem omnis,
+                    doloribus voluptatem beatae esse sit maxime. Suscipit vero voluptatum distinctio quae unde, ex
+                    dolores quisquam omnis, error veniam odit in delectus temporibus soluta nihil ad iusto dolorem.
+                    Dolorum aut eveniet molestiae esse vel quam voluptatibus dicta porro.
+                  </p>
+                </div>
+              </article>
+            </li>
+            <li class="lodge__amenities-item">
+              <article class="lodge__amenities-card">
+                <div class="lodge__amenities-img">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 400px, (min-width: 1024px) 300px, (min-width: 768px) 225px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/lodge/lodge-card-400.avif   400w,
+                        ./images/lodge/lodge-card-600.avif   600w,
+                        ./images/lodge/lodge-card-800.avif   800w,
+                        ./images/lodge/lodge-card-900.avif   900w,
+                        ./images/lodge/lodge-card-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/lodge/lodge-card-400.webp   400w,
+                        ./images/lodge/lodge-card-600.webp   600w,
+                        ./images/lodge/lodge-card-800.webp   800w,
+                        ./images/lodge/lodge-card-900.webp   900w,
+                        ./images/lodge/lodge-card-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/lodge/lodge-card-800.jpg"
+                      srcset="
+                        ./images/lodge/lodge-card-400.jpg   400w,
+                        ./images/lodge/lodge-card-600.jpg   600w,
+                        ./images/lodge/lodge-card-800.jpg   800w,
+                        ./images/lodge/lodge-card-900.jpg   900w,
+                        ./images/lodge/lodge-card-1200.jpg 1200w
+                      "
+                      alt="Описание"
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
+                </div>
+                <div class="lodge__amenities-desc">
+                  <h2 class="lodge__amenities-title">Dark Sky Sanctuary</h2>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur accusantium voluptas quidem omnis,
+                    doloribus voluptatem beatae esse sit maxime. Suscipit vero voluptatum distinctio quae unde, ex
+                    dolores quisquam omnis, error veniam odit in delectus temporibus soluta nihil ad iusto dolorem.
+                    Dolorum aut eveniet molestiae esse vel quam voluptatibus dicta porro.
+                  </p>
+                </div>
+              </article>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
 
     <footer class="footer">
       <div class="footer__top section-padding section-bg">
         <div class="container">
-          <div class="footer__top-flex-wrap">
-            <div class="footer__col">
+          <div class="footer__top-grid">
+            <div class="footer__grid-item">
               <h2 class="title">Plan your jorney</h2>
+            </div>
+            <div class="footer__grid-item">
               <p class="footer__subtitle">
                 Lorem ipsum dolor sit amet <br />
                 consectetur adipisicing.
               </p>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="tel:996555123456" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="#whatsapp"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Whatsapp</h4>
+                  <strong class="footer__contacts-title">Whatsapp</strong>
                   <span>+996 555 123 456</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="mailto:info@mongu.com" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="#envelope"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Email</h4>
+                  <strong class="footer__contacts-title">Email</strong>
                   <span>info@mongu.com</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="#" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="./icons.svg#instagram"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Instagram</h4>
+                  <strong class="footer__contacts-title">Instagram</strong>
                   <span>@mongu</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
-              <button type="button" class="btn">
+            <div class="footer__grid-item">
+              <button type="button" class="footer__btn btn">
                 Booking
                 <svg class="icon">
                   <use href="#arrow"></use>
@@ -356,14 +724,13 @@
 
             <nav aria-label="Основная навигация">
               <ul>
-                <li><a href="#">Tours</a></li>
+                <li><a href="/categories.html">Tours</a></li>
                 <li><a href="#">Private tours</a></li>
-                <li><a href="#">Solmo lodge</a></li>
+                <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="#">Destination</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
 
@@ -374,10 +741,10 @@
     </footer>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="arrow" viewBox="0 0 24 24">
+      <symbol viewBox="0 0 24 24">
         <path
           fill="currentColor"
-          d="M13.6 7.6q.4-.5.8 0l4 4 .5.4-.5.4-4 4a.6.6 0 0 1-.8-.8l2.9-3H6a.6.6 0 1 1 0-1.2h10.5l-3-3z" />
+          d="M14.1 7.3q.4-.6.9 0l4.4 4.4.6.4-.6.4L15 17h-.8v-.8l3.1-3.3H5.7l-.6-.4a1 1 0 0 1 .3-.9h11.9L14 8.1z" />
       </symbol>
       <symbol id="hamburger" viewBox="0 0 16 12">
         <path
@@ -414,42 +781,119 @@
           d="M18.3 5.6A9 9 0 0 0 12 3a9 9 0 0 0-7.8 4.5 9 9 0 0 0 0 8.9L3 21l4.8-1.2a9 9 0 0 0 12.6-4.4 9 9 0 0 0-2-9.8M12 19.3q-2.1 0-3.9-1l-.2-.2L5 19l.7-2.8-.2-.2a7.4 7.4 0 0 1 1.7-9.7A7.5 7.5 0 0 1 19 9q.5 1.4.5 2.8a7.4 7.4 0 0 1-7.4 7.4" />
       </symbol>
     </svg>
+
     <div class="menu js-menu">
       <div class="menu__sidebar">
-        <div class="menu__close js-menu-close">
-          <svg class="icon">
-            <use href="#cross"></use>
-          </svg>
+        <div class="menu__sidebar-top">
+          <a href="/" class="menu__logo" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 213 198">
+              <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+              <path
+                fill="#000"
+                d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+            </svg>
+          </a>
+          <div class="menu__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media facebok">
+                  <svg class="icon">
+                    <use href="/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media instagram">
+                  <svg class="icon">
+                    <use href="/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="video-sharing platform youtube">
+                  <svg class="icon">
+                    <use href="/icons.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="messanger WhatsApp">
+                  <svg class="icon">
+                    <use href="#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__close js-menu-close">
+            <svg class="icon">
+              <use href="#cross"></use>
+            </svg>
+          </div>
         </div>
 
-        <nav aria-label="Мобильная навигация">
-          <ul>
-            <li>
-              <a href="https://ak-sai.com/">Tours</a>
-              <ul>
-                <li>
-                  <a href="#">Tour category1</a>
-                </li>
-                <li>
-                  <a href="#">Tour category2</a>
-                </li>
-                <li>
-                  <a href="#">Tour category3</a>
-                </li>
-              </ul>
+        <nav class="menu__nav" aria-label="Мобильная навигация">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__item-link" href="/categories.html">Tours</a>
+
+              <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </button>
+              <div class="menu__submenu-wrapper">
+                <ul class="menu__submenu">
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Trekking adventures</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Horseback expedition</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Overland jeep journeys</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Nomadic heritage</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Custom expedition</a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li><a href="#">Private tours</a></li>
-            <li><a href="#">Solmo lodge</a></li>
-            <li><a href="#">Destination</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Private tours</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/lodge.html">Sokmo lodge</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Destination</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/blog.html">Blog</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
       </div>
     </div>
-    
+
     <script type="module" src="./js/lodge.js"></script>
   </body>
 </html>

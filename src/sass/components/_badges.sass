@@ -8,12 +8,13 @@
   &__badge
     border: v.to-rem(1) solid
     border-radius: v.to-rem(5)
-    padding: v.to-rem(2.5) v.to-rem(3)
+    padding: 0 v.$space-xs
+    min-height: v.to-rem(28)
     display: inline-flex
     align-items: center
     justify-content: center
     font-weight: 500
-    font-size: v.$fz-sm
+    font-size: v.$fz-md
     a
       text-decoration: none
       transition: color v.$tr-base
@@ -21,9 +22,18 @@
     &_category
       color: v.$clr-accent
       border-color: v.$clr-accent
-      transition: color v.$tr-base, border-color v.$tr-base
+      transition: border-color v.$tr-base
+      position: relative
+
       a
         color: v.$clr-accent
+        display: flex
+        align-items: center
+        justify-content: center
+        height: 100%
+
+      span  
+        transition: color v.$tr-base,
 
       @include v.has-mouse
         &:hover

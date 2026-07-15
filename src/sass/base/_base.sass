@@ -8,7 +8,6 @@ html, body
   height: 100%
 
 html
-  // scroll-behavior: smooth
   font-size: v.$fz-base
 
 body
@@ -18,6 +17,7 @@ body
   flex-direction: column
   line-height: 1.3
   background-color: #f9f9fb
+  min-height: 100vh
 
   main
     flex: 1 0 auto
@@ -26,15 +26,26 @@ body
     overflow: hidden
 
 h1, h2, h3
-  font-weight: 700
+  font-weight: 600
   line-height: 1.2
 
-.main-content
-  &_inner-page
-    padding-top: v.to-rem(50)
+.icon
+  width: v.to-rem(20)
+  height: v.to-rem(20)
 
-    @include v.media(tablet)
-      padding-top: v.to-rem(70)
+.logo
+  display: flex
+  align-items: center
+  justify-content: center
+  width: v.to-rem(100)
+  height: v.to-rem(30)
+  flex-shrink: 0
+
+img
+  width: 100%
+  height: auto
+  display: block
+  object-fit: cover
 
 .container
   margin: 0 auto
@@ -54,11 +65,15 @@ h1, h2, h3
   &_wide
     max-width: v.to-rem(1800)
 
-img
-  width: 100%
-  height: auto
-  display: block
-  object-fit: cover
+.main-content
+  &_inner-page
+    padding-top: v.to-rem(50)
+
+    @include v.media(tablet)
+      padding-top: v.to-rem(70)
+  
+  &_dark-bg
+    background-color: #162017
 
 .visually-hidden
   position: absolute
@@ -73,11 +88,13 @@ img
   overflow: hidden
 
 .title-wrap
-  margin-bottom: v.to-rem(30)
+  margin-bottom: v.$space-md
+  @include v.media(tablet)
+    margin-bottom: v.$space-xl
 
 .title
   font-size: v.to-rem(25)
-  font-weight: 600
+  font-weight: 400
   font-family: v.$ff-accent
   color: #111
 
@@ -98,26 +115,29 @@ img
   max-width: v.to-rem(600)
   margin-inline: auto
 
-.logo
-  display: flex
-  align-items: center
-  justify-content: center
-  width: v.to-rem(100)
-  height: v.to-rem(30)
-  flex-shrink: 0
-
 .section-padding
   padding: v.$section-padding-y
 
   @include v.media(desktop)
     padding: v.to-rem(60) 0
+  
+  &_sm-interval
+    padding: v.$space-xl 0
 
 .section-bg
   background-color: #f3f1ef
 
-.icon
-  width: v.to-rem(20)
-  height: v.to-rem(20)
+.more-btn
+  display: flex
+  align-items: center
+  column-gap: v.$space-xs
 
-.swiper-pagination-bullet-active
-  background-color: v.$clr-accent
+  .icon
+    transition: transform v.$tr-fast 
+  @include v.has-mouse
+    &:hover
+      .icon
+        transform: translateX(v.to-rem(5))
+
+a
+  text-decoration: none        

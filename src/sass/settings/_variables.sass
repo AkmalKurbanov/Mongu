@@ -2,7 +2,7 @@
 $clr-text: #1a1a1a
 $clr-text-muted: #6b6b73
 $clr-accent: #6C613E
-$clr-secondary: #6BBBEA
+$clr-secondary: #28a5ec
 $clr-accent-darker: #3F3F25
 $clr-bg-light: #f9f9fb
 $clr-bg-alt: #f3f1ef
@@ -45,5 +45,12 @@ $container-width: 31.875rem // 510px
 $container-padding: 1rem    // 16px
 $section-padding-y: 1.875rem 0 // 30px
 
-$ff-base: 'Montserrat', 'Montserrat-Fallback', sans-serif
-$ff-accent: 'PlayfairDisplay', 'PlayfairDisplay-Fallback', serif
+
+// Стандартный стек системных шрифтов
+$ff-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"
+
+// Системный шрифт с засечками (вместо Playfair)
+$ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
+
+// $ff-base: 'Montserrat', 'Montserrat-Fallback', sans-serif
+// $ff-accent: 'PlayfairDisplay', 'PlayfairDisplay-Fallback', serif

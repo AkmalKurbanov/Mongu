@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Авторские туры по Кыргызстану | Mongu</title>
     <meta
       name="description"
       content="Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по самым красивым перевалам и озерам Кыргызстана с опытными гидами." />
-    <meta name="theme-color" content="#5a6b47" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Авторские туры по Кыргызстану — Mongu" />
     <meta property="og:description" content="Индивидуальные джип-туры и конные экспедиции по Кыргызстану." />
-    <meta property="og:url" content="https://yourdomain.com/" />
-    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://mongu.kg/" />
+    <meta property="og:image" content="https://mongu.kg/images/og-image.jpg" />
 
-    <link rel="canonical" href="https://yourdomain.com/" />
+    <meta name="theme-color" content="#6c613e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#3F3F25" media="(prefers-color-scheme: dark)" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://mongu.kg/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <script type="application/ld+json">
       {
@@ -24,12 +29,11 @@
         "@type": "TravelAgency",
         "name": "Mongu",
         "description": "Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по Кыргызстану.",
-        "url": "https://yourdomain.com/"
+        "url": "https://mongu.kg/"
       }
     </script>
   </head>
   <body>
-    
     <a
       href="https://wa.me/996555150795"
       class="whatsapp-float"
@@ -66,7 +70,7 @@
       </svg>
     </a>
 
-    <header class="header header_inside">
+    <header class="header">
       <div class="header__container container container_wide">
         <div class="header__logo">
           <a href="/" class="logo" aria-label="На главную">
@@ -86,31 +90,31 @@
         <nav class="header__nav" aria-label="Основная навигация">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Tours</a>
+              <a href="/categories.html" class="header__nav-link">Tours</a>
               <ul class="header__nav-sublist">
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Trekking adventures</a>
+                  <a href="/category.html" class="header__nav-sublink">Trekking adventures</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Horseback expedition</a>
+                  <a href="/category.html" class="header__nav-sublink">Horseback expedition</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Overland jeep journeys</a>
+                  <a href="/category.html" class="header__nav-sublink">Overland jeep journeys</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Nomadic heritage</a>
+                  <a href="/category.html" class="header__nav-sublink">Nomadic heritage</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Custom expedition</a>
+                  <a href="/category.html" class="header__nav-sublink">Custom expedition</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Private tours</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Solmo lodge</a></li>
+            <li class="header__nav-item"><a href="/lodge.html" class="header__nav-link">Sokmo lodge</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Destination</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Blog</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Contacts</a></li>
+            <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
+            <li class="header__nav-item"><a href="/blog.html" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
         <div class="header__controls">
@@ -150,7 +154,7 @@
             </ul>
           </div>
 
-          <button type="button" class="hamburger js-hamburger">
+          <button type="button" aria-label="Mobile menu" class="hamburger js-hamburger">
             <svg class="icon">
               <use href="#hamburger"></use>
             </svg>
@@ -159,13 +163,53 @@
       </div>
     </header>
 
-    <main class="main-content main-content_inner-page">
+    <main class="main-content">
+      <section class="hero hero_inside">
+        <div class="hero__media">
+          <picture class="hero__poster">
+            <source
+              type="image/avif"
+              sizes="100vw"
+              srcset="
+                ./images/categories/hero-800.avif   800w,
+                ./images/categories/hero-1600.avif 1600w,
+                ./images/categories/hero-2400.avif 2400w,
+                ./images/categories/hero-3840.avif 3840w
+              " />
+
+            <source
+              type="image/webp"
+              sizes="100vw"
+              srcset="
+                ./images/categories/hero-800.webp   800w,
+                ./images/categories/hero-1600.webp 1600w,
+                ./images/categories/hero-2400.webp 2400w,
+                ./images/categories/hero-3840.webp 3840w
+              " />
+
+            <img
+              src="./images/categories/hero-1600.jpg"
+              alt="Discover Kyrgyzstan"
+              width="1920"
+              height="450"
+              loading="eager"
+              fetchpriority="high" />
+          </picture>
+        </div>
+
+        <div class="hero__content">
+          <div class="container">
+            <h1 class="hero__title">Категория</h1>
+          </div>
+        </div>
+      </section>
+
       <section>
         <div class="container">
           <nav aria-label="Хлебные крошки" class="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
-                <a href="/">Главная</a>
+                <a class="breadcrumbs__link" href="/">Главная</a>
               </li>
               <li class="breadcrumbs__item" aria-current="page">Категория</li>
             </ul>
@@ -173,480 +217,475 @@
         </div>
       </section>
 
-      <section class="section-padding">
+      <section class="section-padding section-padding_sm-interval">
         <div class="container">
           <div class="card-grid">
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
-                  <img
-                    src="./images/categories/trekking.jpg"
-                    alt="Альпинист на скале во время обучения в Ала-Арче"
-                    width="400"
-                    height="300"
-                    loading="lazy" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
+                      " />
+                    <img
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
+                      alt="Description"
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <ul class="badges">
                   <li class="badges__badge badges__badge_peak">
                     <svg class="icon">
                       <use href="./icons.svg#mountains"></use>
                     </svg>
-                    <span>4530 м | 5130 м</span>
+                    <span>4530 m | 5130 m</span>
                   </li>
-                  <li class="badges__badge badges__badge_price">От $600</li>
+                  <li class="badges__badge badges__badge_price">From $600</li>
                 </ul>
               </div>
 
               <div class="tour-card__body">
-                <h3 class="tour-card__title">Альпинистская подготовка в Ала-Арче</h3>
+                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
 
                 <p class="tour-card__desc">
-                  7-дневный практический курс по альпинизму, объединяющий скалолазание, ледолазание, работу с веревкой
-                  и...
+                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                 </p>
 
                 <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Сложность">
+                  <li class="tour-card__feature" title="Difficulty">
                     <svg class="icon">
                       <use href="./icons.svg#peak"></use>
                     </svg>
-                    <span class="feature__label">Сложность</span>
-                    <span class="feature__value">Базовая → Продвинутая</span>
+                    <span class="feature__label">Difficulty</span>
+                    <span class="feature__value">Basic → Advanced</span>
                   </li>
-                  <li class="tour-card__feature" title="Сезон">
+                  <li class="tour-card__feature" title="Season">
                     <svg class="icon">
                       <use href="./icons.svg#calendar"></use>
                     </svg>
-                    <span class="feature__label">Сезон</span>
-                    <span class="feature__value">Круглый год</span>
+                    <span class="feature__label">Season</span>
+                    <span class="feature__value">Year-round</span>
                   </li>
-                  <li class="tour-card__feature" title="Длительность">
+                  <li class="tour-card__feature" title="Duration">
                     <svg class="icon">
                       <use href="./icons.svg#clock"></use>
                     </svg>
-                    <span class="feature__label">Длительность</span>
-                    <span class="feature__value">7 дней / 6 ночей</span>
+                    <span class="feature__label">Duration</span>
+                    <span class="feature__value">7 days / 6 nights</span>
                   </li>
                 </ul>
               </div>
 
               <div class="tour-card__footer">
-                <a href="/tours/ala-archa" class="btn">Открыть тур</a>
+                <span class="tour-card__btn btn">View tour</span>
               </div>
-              <a href="#" class="tour-card__link"></a>
+              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
+
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
-                  <img
-                    src="./images/categories/trekking.jpg"
-                    alt="Альпинист на скале во время обучения в Ала-Арче"
-                    width="400"
-                    height="300"
-                    loading="lazy" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
+                      " />
+                    <img
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
+                      alt="Description"
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <ul class="badges">
                   <li class="badges__badge badges__badge_peak">
                     <svg class="icon">
                       <use href="./icons.svg#mountains"></use>
                     </svg>
-                    <span>4530 м | 5130 м</span>
+                    <span>4530 m | 5130 m</span>
                   </li>
-                  <li class="badges__badge badges__badge_price">От $600</li>
+                  <li class="badges__badge badges__badge_price">From $600</li>
                 </ul>
               </div>
 
               <div class="tour-card__body">
-                <h3 class="tour-card__title">Альпинистская подготовка в Ала-Арче</h3>
+                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
 
                 <p class="tour-card__desc">
-                  7-дневный практический курс по альпинизму, объединяющий скалолазание, ледолазание, работу с веревкой
-                  и...
+                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                 </p>
 
                 <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Сложность">
+                  <li class="tour-card__feature" title="Difficulty">
                     <svg class="icon">
                       <use href="./icons.svg#peak"></use>
                     </svg>
-                    <span class="feature__label">Сложность</span>
-                    <span class="feature__value">Базовая → Продвинутая</span>
+                    <span class="feature__label">Difficulty</span>
+                    <span class="feature__value">Basic → Advanced</span>
                   </li>
-                  <li class="tour-card__feature" title="Сезон">
+                  <li class="tour-card__feature" title="Season">
                     <svg class="icon">
                       <use href="./icons.svg#calendar"></use>
                     </svg>
-                    <span class="feature__label">Сезон</span>
-                    <span class="feature__value">Круглый год</span>
+                    <span class="feature__label">Season</span>
+                    <span class="feature__value">Year-round</span>
                   </li>
-                  <li class="tour-card__feature" title="Длительность">
+                  <li class="tour-card__feature" title="Duration">
                     <svg class="icon">
                       <use href="./icons.svg#clock"></use>
                     </svg>
-                    <span class="feature__label">Длительность</span>
-                    <span class="feature__value">7 дней / 6 ночей</span>
+                    <span class="feature__label">Duration</span>
+                    <span class="feature__value">7 days / 6 nights</span>
                   </li>
                 </ul>
               </div>
 
               <div class="tour-card__footer">
-                <a href="/tours/ala-archa" class="btn">Открыть тур</a>
+                <span class="tour-card__btn btn">View tour</span>
               </div>
-              <a href="#" class="tour-card__link"></a>
+              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
+
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
-                  <img
-                    src="./images/categories/trekking.jpg"
-                    alt="Альпинист на скале во время обучения в Ала-Арче"
-                    width="400"
-                    height="300"
-                    loading="lazy" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
+                      " />
+                    <img
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
+                      alt="Description"
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <ul class="badges">
                   <li class="badges__badge badges__badge_peak">
                     <svg class="icon">
                       <use href="./icons.svg#mountains"></use>
                     </svg>
-                    <span>4530 м | 5130 м</span>
+                    <span>4530 m | 5130 m</span>
                   </li>
-                  <li class="badges__badge badges__badge_price">От $600</li>
+                  <li class="badges__badge badges__badge_price">From $600</li>
                 </ul>
               </div>
 
               <div class="tour-card__body">
-                <h3 class="tour-card__title">Альпинистская подготовка в Ала-Арче</h3>
+                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
 
                 <p class="tour-card__desc">
-                  7-дневный практический курс по альпинизму, объединяющий скалолазание, ледолазание, работу с веревкой
-                  и...
+                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                 </p>
 
                 <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Сложность">
+                  <li class="tour-card__feature" title="Difficulty">
                     <svg class="icon">
                       <use href="./icons.svg#peak"></use>
                     </svg>
-                    <span class="feature__label">Сложность</span>
-                    <span class="feature__value">Базовая → Продвинутая</span>
+                    <span class="feature__label">Difficulty</span>
+                    <span class="feature__value">Basic → Advanced</span>
                   </li>
-                  <li class="tour-card__feature" title="Сезон">
+                  <li class="tour-card__feature" title="Season">
                     <svg class="icon">
                       <use href="./icons.svg#calendar"></use>
                     </svg>
-                    <span class="feature__label">Сезон</span>
-                    <span class="feature__value">Круглый год</span>
+                    <span class="feature__label">Season</span>
+                    <span class="feature__value">Year-round</span>
                   </li>
-                  <li class="tour-card__feature" title="Длительность">
+                  <li class="tour-card__feature" title="Duration">
                     <svg class="icon">
                       <use href="./icons.svg#clock"></use>
                     </svg>
-                    <span class="feature__label">Длительность</span>
-                    <span class="feature__value">7 дней / 6 ночей</span>
+                    <span class="feature__label">Duration</span>
+                    <span class="feature__value">7 days / 6 nights</span>
                   </li>
                 </ul>
               </div>
 
               <div class="tour-card__footer">
-                <a href="/tours/ala-archa" class="btn">Открыть тур</a>
+                <span class="tour-card__btn btn">View tour</span>
               </div>
-              <a href="#" class="tour-card__link"></a>
+              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
+
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
-                  <img
-                    src="./images/categories/trekking.jpg"
-                    alt="Альпинист на скале во время обучения в Ала-Арче"
-                    width="400"
-                    height="300"
-                    loading="lazy" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
+                      " />
+                    <img
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
+                      alt="Description"
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <ul class="badges">
                   <li class="badges__badge badges__badge_peak">
                     <svg class="icon">
                       <use href="./icons.svg#mountains"></use>
                     </svg>
-                    <span>4530 м | 5130 м</span>
+                    <span>4530 m | 5130 m</span>
                   </li>
-                  <li class="badges__badge badges__badge_price">От $600</li>
+                  <li class="badges__badge badges__badge_price">From $600</li>
                 </ul>
               </div>
 
               <div class="tour-card__body">
-                <h3 class="tour-card__title">Альпинистская подготовка в Ала-Арче</h3>
+                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
 
                 <p class="tour-card__desc">
-                  7-дневный практический курс по альпинизму, объединяющий скалолазание, ледолазание, работу с веревкой
-                  и...
+                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                 </p>
 
                 <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Сложность">
+                  <li class="tour-card__feature" title="Difficulty">
                     <svg class="icon">
                       <use href="./icons.svg#peak"></use>
                     </svg>
-                    <span class="feature__label">Сложность</span>
-                    <span class="feature__value">Базовая → Продвинутая</span>
+                    <span class="feature__label">Difficulty</span>
+                    <span class="feature__value">Basic → Advanced</span>
                   </li>
-                  <li class="tour-card__feature" title="Сезон">
+                  <li class="tour-card__feature" title="Season">
                     <svg class="icon">
                       <use href="./icons.svg#calendar"></use>
                     </svg>
-                    <span class="feature__label">Сезон</span>
-                    <span class="feature__value">Круглый год</span>
+                    <span class="feature__label">Season</span>
+                    <span class="feature__value">Year-round</span>
                   </li>
-                  <li class="tour-card__feature" title="Длительность">
+                  <li class="tour-card__feature" title="Duration">
                     <svg class="icon">
                       <use href="./icons.svg#clock"></use>
                     </svg>
-                    <span class="feature__label">Длительность</span>
-                    <span class="feature__value">7 дней / 6 ночей</span>
+                    <span class="feature__label">Duration</span>
+                    <span class="feature__value">7 days / 6 nights</span>
                   </li>
                 </ul>
               </div>
 
               <div class="tour-card__footer">
-                <a href="/tours/ala-archa" class="btn">Открыть тур</a>
+                <span class="tour-card__btn btn">View tour</span>
               </div>
-              <a href="#" class="tour-card__link"></a>
+              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
+
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
-                  <img
-                    src="./images/categories/trekking.jpg"
-                    alt="Альпинист на скале во время обучения в Ала-Арче"
-                    width="400"
-                    height="300"
-                    loading="lazy" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
+                      " />
+                    <img
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
+                      alt="Description"
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <ul class="badges">
                   <li class="badges__badge badges__badge_peak">
                     <svg class="icon">
                       <use href="./icons.svg#mountains"></use>
                     </svg>
-                    <span>4530 м | 5130 м</span>
+                    <span>4530 m | 5130 m</span>
                   </li>
-                  <li class="badges__badge badges__badge_price">От $600</li>
+                  <li class="badges__badge badges__badge_price">From $600</li>
                 </ul>
               </div>
 
               <div class="tour-card__body">
-                <h3 class="tour-card__title">Альпинистская подготовка в Ала-Арче</h3>
+                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
 
                 <p class="tour-card__desc">
-                  7-дневный практический курс по альпинизму, объединяющий скалолазание, ледолазание, работу с веревкой
-                  и...
+                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                 </p>
 
                 <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Сложность">
+                  <li class="tour-card__feature" title="Difficulty">
                     <svg class="icon">
                       <use href="./icons.svg#peak"></use>
                     </svg>
-                    <span class="feature__label">Сложность</span>
-                    <span class="feature__value">Базовая → Продвинутая</span>
+                    <span class="feature__label">Difficulty</span>
+                    <span class="feature__value">Basic → Advanced</span>
                   </li>
-                  <li class="tour-card__feature" title="Сезон">
+                  <li class="tour-card__feature" title="Season">
                     <svg class="icon">
                       <use href="./icons.svg#calendar"></use>
                     </svg>
-                    <span class="feature__label">Сезон</span>
-                    <span class="feature__value">Круглый год</span>
+                    <span class="feature__label">Season</span>
+                    <span class="feature__value">Year-round</span>
                   </li>
-                  <li class="tour-card__feature" title="Длительность">
+                  <li class="tour-card__feature" title="Duration">
                     <svg class="icon">
                       <use href="./icons.svg#clock"></use>
                     </svg>
-                    <span class="feature__label">Длительность</span>
-                    <span class="feature__value">7 дней / 6 ночей</span>
+                    <span class="feature__label">Duration</span>
+                    <span class="feature__value">7 days / 6 nights</span>
                   </li>
                 </ul>
               </div>
 
               <div class="tour-card__footer">
-                <a href="/tours/ala-archa" class="btn">Открыть тур</a>
+                <span class="tour-card__btn btn">View tour</span>
               </div>
-              <a href="#" class="tour-card__link"></a>
+              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
+
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
-                  <img
-                    src="./images/categories/trekking.jpg"
-                    alt="Альпинист на скале во время обучения в Ала-Арче"
-                    width="400"
-                    height="300"
-                    loading="lazy" />
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
+                      " />
+                    <img
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
+                      alt="Description"
+                      width="1920"
+                      height="1080"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
                 </div>
                 <ul class="badges">
                   <li class="badges__badge badges__badge_peak">
                     <svg class="icon">
                       <use href="./icons.svg#mountains"></use>
                     </svg>
-                    <span>4530 м | 5130 м</span>
+                    <span>4530 m | 5130 m</span>
                   </li>
-                  <li class="badges__badge badges__badge_price">От $600</li>
+                  <li class="badges__badge badges__badge_price">From $600</li>
                 </ul>
               </div>
 
               <div class="tour-card__body">
-                <h3 class="tour-card__title">Альпинистская подготовка в Ала-Арче</h3>
+                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
 
                 <p class="tour-card__desc">
-                  7-дневный практический курс по альпинизму, объединяющий скалолазание, ледолазание, работу с веревкой
-                  и...
+                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                 </p>
 
                 <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Сложность">
+                  <li class="tour-card__feature" title="Difficulty">
                     <svg class="icon">
                       <use href="./icons.svg#peak"></use>
                     </svg>
-                    <span class="feature__label">Сложность</span>
-                    <span class="feature__value">Базовая → Продвинутая</span>
+                    <span class="feature__label">Difficulty</span>
+                    <span class="feature__value">Basic → Advanced</span>
                   </li>
-                  <li class="tour-card__feature" title="Сезон">
+                  <li class="tour-card__feature" title="Season">
                     <svg class="icon">
                       <use href="./icons.svg#calendar"></use>
                     </svg>
-                    <span class="feature__label">Сезон</span>
-                    <span class="feature__value">Круглый год</span>
+                    <span class="feature__label">Season</span>
+                    <span class="feature__value">Year-round</span>
                   </li>
-                  <li class="tour-card__feature" title="Длительность">
+                  <li class="tour-card__feature" title="Duration">
                     <svg class="icon">
                       <use href="./icons.svg#clock"></use>
                     </svg>
-                    <span class="feature__label">Длительность</span>
-                    <span class="feature__value">7 дней / 6 ночей</span>
+                    <span class="feature__label">Duration</span>
+                    <span class="feature__value">7 days / 6 nights</span>
                   </li>
                 </ul>
               </div>
 
               <div class="tour-card__footer">
-                <a href="/tours/ala-archa" class="btn">Открыть тур</a>
+                <span class="tour-card__btn btn">View tour</span>
               </div>
-              <a href="#" class="tour-card__link"></a>
-            </article>
-            <article class="tour-card">
-              <div class="tour-card__head">
-                <div class="tour-card__img">
-                  <img
-                    src="./images/categories/trekking.jpg"
-                    alt="Альпинист на скале во время обучения в Ала-Арче"
-                    width="400"
-                    height="300"
-                    loading="lazy" />
-                </div>
-                <ul class="badges">
-                  <li class="badges__badge badges__badge_peak">
-                    <svg class="icon">
-                      <use href="./icons.svg#mountains"></use>
-                    </svg>
-                    <span>4530 м | 5130 м</span>
-                  </li>
-                  <li class="badges__badge badges__badge_price">От $600</li>
-                </ul>
-              </div>
-
-              <div class="tour-card__body">
-                <h3 class="tour-card__title">Альпинистская подготовка в Ала-Арче</h3>
-
-                <p class="tour-card__desc">
-                  7-дневный практический курс по альпинизму, объединяющий скалолазание, ледолазание, работу с веревкой
-                  и...
-                </p>
-
-                <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Сложность">
-                    <svg class="icon">
-                      <use href="./icons.svg#peak"></use>
-                    </svg>
-                    <span class="feature__label">Сложность</span>
-                    <span class="feature__value">Базовая → Продвинутая</span>
-                  </li>
-                  <li class="tour-card__feature" title="Сезон">
-                    <svg class="icon">
-                      <use href="./icons.svg#calendar"></use>
-                    </svg>
-                    <span class="feature__label">Сезон</span>
-                    <span class="feature__value">Круглый год</span>
-                  </li>
-                  <li class="tour-card__feature" title="Длительность">
-                    <svg class="icon">
-                      <use href="./icons.svg#clock"></use>
-                    </svg>
-                    <span class="feature__label">Длительность</span>
-                    <span class="feature__value">7 дней / 6 ночей</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="tour-card__footer">
-                <a href="/tours/ala-archa" class="btn">Открыть тур</a>
-              </div>
-              <a href="#" class="tour-card__link"></a>
-            </article>
-            <article class="tour-card">
-              <div class="tour-card__head">
-                <div class="tour-card__img">
-                  <img
-                    src="./images/categories/trekking.jpg"
-                    alt="Альпинист на скале во время обучения в Ала-Арче"
-                    width="400"
-                    height="300"
-                    loading="lazy" />
-                </div>
-                <ul class="badges">
-                  <li class="badges__badge badges__badge_peak">
-                    <svg class="icon">
-                      <use href="./icons.svg#mountains"></use>
-                    </svg>
-                    <span>4530 м | 5130 м</span>
-                  </li>
-                  <li class="badges__badge badges__badge_price">От $600</li>
-                </ul>
-              </div>
-
-              <div class="tour-card__body">
-                <h3 class="tour-card__title">Альпинистская подготовка в Ала-Арче</h3>
-
-                <p class="tour-card__desc">
-                  7-дневный практический курс по альпинизму, объединяющий скалолазание, ледолазание, работу с веревкой
-                  и...
-                </p>
-
-                <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Сложность">
-                    <svg class="icon">
-                      <use href="./icons.svg#peak"></use>
-                    </svg>
-                    <span class="feature__label">Сложность</span>
-                    <span class="feature__value">Базовая → Продвинутая</span>
-                  </li>
-                  <li class="tour-card__feature" title="Сезон">
-                    <svg class="icon">
-                      <use href="./icons.svg#calendar"></use>
-                    </svg>
-                    <span class="feature__label">Сезон</span>
-                    <span class="feature__value">Круглый год</span>
-                  </li>
-                  <li class="tour-card__feature" title="Длительность">
-                    <svg class="icon">
-                      <use href="./icons.svg#clock"></use>
-                    </svg>
-                    <span class="feature__label">Длительность</span>
-                    <span class="feature__value">7 дней / 6 ночей</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="tour-card__footer">
-                <a href="/tours/ala-archa" class="btn">Открыть тур</a>
-              </div>
-              <a href="#" class="tour-card__link"></a>
+              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
           </div>
         </div>
@@ -656,49 +695,51 @@
     <footer class="footer">
       <div class="footer__top section-padding section-bg">
         <div class="container">
-          <div class="footer__top-flex-wrap">
-            <div class="footer__col">
+          <div class="footer__top-grid">
+            <div class="footer__grid-item">
               <h2 class="title">Plan your jorney</h2>
+            </div>
+            <div class="footer__grid-item">
               <p class="footer__subtitle">
                 Lorem ipsum dolor sit amet <br />
                 consectetur adipisicing.
               </p>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="tel:996555123456" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="#whatsapp"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Whatsapp</h4>
+                  <strong class="footer__contacts-title">Whatsapp</strong>
                   <span>+996 555 123 456</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="mailto:info@mongu.com" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="#envelope"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Email</h4>
+                  <strong class="footer__contacts-title">Email</strong>
                   <span>info@mongu.com</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="#" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="./icons.svg#instagram"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Instagram</h4>
+                  <strong class="footer__contacts-title">Instagram</strong>
                   <span>@mongu</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
-              <button type="button" class="btn">
+            <div class="footer__grid-item">
+              <button type="button" class="footer__btn btn">
                 Booking
                 <svg class="icon">
                   <use href="#arrow"></use>
@@ -726,14 +767,13 @@
 
             <nav aria-label="Основная навигация">
               <ul>
-                <li><a href="#">Tours</a></li>
+                <li><a href="/categories.html">Tours</a></li>
                 <li><a href="#">Private tours</a></li>
-                <li><a href="#">Solmo lodge</a></li>
+                <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="#">Destination</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
 
@@ -744,10 +784,10 @@
     </footer>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="arrow" viewBox="0 0 24 24">
+      <symbol viewBox="0 0 24 24">
         <path
           fill="currentColor"
-          d="M13.6 7.6q.4-.5.8 0l4 4 .5.4-.5.4-4 4a.6.6 0 0 1-.8-.8l2.9-3H6a.6.6 0 1 1 0-1.2h10.5l-3-3z" />
+          d="M14.1 7.3q.4-.6.9 0l4.4 4.4.6.4-.6.4L15 17h-.8v-.8l3.1-3.3H5.7l-.6-.4a1 1 0 0 1 .3-.9h11.9L14 8.1z" />
       </symbol>
       <symbol id="hamburger" viewBox="0 0 16 12">
         <path
@@ -784,37 +824,114 @@
           d="M18.3 5.6A9 9 0 0 0 12 3a9 9 0 0 0-7.8 4.5 9 9 0 0 0 0 8.9L3 21l4.8-1.2a9 9 0 0 0 12.6-4.4 9 9 0 0 0-2-9.8M12 19.3q-2.1 0-3.9-1l-.2-.2L5 19l.7-2.8-.2-.2a7.4 7.4 0 0 1 1.7-9.7A7.5 7.5 0 0 1 19 9q.5 1.4.5 2.8a7.4 7.4 0 0 1-7.4 7.4" />
       </symbol>
     </svg>
+
     <div class="menu js-menu">
       <div class="menu__sidebar">
-        <div class="menu__close js-menu-close">
-          <svg class="icon">
-            <use href="#cross"></use>
-          </svg>
+        <div class="menu__sidebar-top">
+          <a href="/" class="menu__logo" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 213 198">
+              <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+              <path
+                fill="#000"
+                d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+            </svg>
+          </a>
+          <div class="menu__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media facebok">
+                  <svg class="icon">
+                    <use href="/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media instagram">
+                  <svg class="icon">
+                    <use href="/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="video-sharing platform youtube">
+                  <svg class="icon">
+                    <use href="/icons.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="messanger WhatsApp">
+                  <svg class="icon">
+                    <use href="#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__close js-menu-close">
+            <svg class="icon">
+              <use href="#cross"></use>
+            </svg>
+          </div>
         </div>
 
-        <nav aria-label="Мобильная навигация">
-          <ul>
-            <li>
-              <a href="https://ak-sai.com/">Tours</a>
-              <ul>
-                <li>
-                  <a href="#">Tour category1</a>
-                </li>
-                <li>
-                  <a href="#">Tour category2</a>
-                </li>
-                <li>
-                  <a href="#">Tour category3</a>
-                </li>
-              </ul>
+        <nav class="menu__nav" aria-label="Мобильная навигация">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__item-link" href="/categories.html">Tours</a>
+
+              <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </button>
+              <div class="menu__submenu-wrapper">
+                <ul class="menu__submenu">
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Trekking adventures</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Horseback expedition</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Overland jeep journeys</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Nomadic heritage</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Custom expedition</a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li><a href="#">Private tours</a></li>
-            <li><a href="#">Solmo lodge</a></li>
-            <li><a href="#">Destination</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Private tours</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/lodge.html">Sokmo lodge</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Destination</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/blog.html">Blog</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
       </div>

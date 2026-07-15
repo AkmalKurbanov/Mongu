@@ -1,101 +1,28 @@
 @use '../settings/shared' as v
 
 .about
-  &__title
-    @include v.media(laptop)
-      text-align: left
-
-  &__flex-container
-    display: flex
-    flex-direction: column
-    gap: v.$space-xl
-    margin: 0 auto
-    text-align: center
-
-    @include v.media(laptop)
-      flex-direction: row-reverse
-      justify-content: center
-      align-items: flex-start
-      text-align: left
-
-    @include v.media(tablet)
-      justify-content: space-between
-
-  &__desc
-    max-width: v.to-rem(500)
-    width: 100%
-    margin: 0 auto
-
-    @include v.media(laptop)
-      flex-basis: v.to-rem(300)
-      margin-left: 0
-
+  
   &__link
-    text-transform: uppercase
     text-decoration: none
-    font-weight: 500
-    margin-top: v.$space-lg
-    display: inline-flex
-    align-items: center
     transition: color v.$tr-base
-    color: v.$clr-text
+    color: v.$clr-accent
+    
+    @include v.media(laptop)
+      color: v.$clr-text
+      
 
     .icon
       transition: transform v.$tr-base
 
-    @include v.has-mouse
-      &:hover
-        color: v.$clr-accent
-        .icon
-          transform: translateX(v.to-rem(3))
-
-  &__features
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
-    column-gap: v.$space-sm
-    row-gap: v.to-rem(30)
-    text-align: center
-    list-style: none
-    margin: 0 auto
-    max-width: v.to-rem(350)
-    width: 100%
-
-    @include v.media(tablet)
-      max-width: v.to-rem(820)
-      column-gap: 0
-
   &__features-item
-    width: calc( 50% - v.to-rem(5) )
-    color: v.$clr-accent
-
-    @include v.media(tablet)
-      width: 20%
-      border-right: v.to-rem(1) solid v.$clr-accent
-      padding: 0 v.to-rem(5)
-
-      &:last-child
-        border: none
+    @include v.media(desktop)
+      border-right: v.to-rem(1) solid #00000048
 
     .icon
-      width: v.to-rem(50)
-      height: v.to-rem(50)
-      fill: v.$clr-accent
+      color: v.$clr-accent
 
     p
-      font-weight: 500
-      font-size: v.$fz-sm
-
-      @include v.media(tablet)
-        font-size: v.$fz-md
-
+      color: #00000056
 
   &__features-title
-    font-size: v.$fz-sm
-    font-weight: 500
-    text-transform: uppercase
-    color: v.$clr-accent
-    margin-bottom: v.$space-xs
-
-    @include v.media(tablet)
-      font-size: v.$fz-base
+    color: v.$clr-accent  

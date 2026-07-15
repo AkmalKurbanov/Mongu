@@ -1,28 +1,27 @@
 @use '../settings/shared' as v
-
 .card-grid
   display: flex
   flex-wrap: wrap
-  gap: v.to-rem(20)
+  gap: v.$space-lg
 
   @include v.media(desktop)
-    gap: v.to-rem(30)
+    gap: v.$space-xl
 
   .tour-card
     @include v.media(tablet)
-      width: calc( (100% - v.to-rem(20) ) / 2 )
+      width: calc( (100% - v.$space-lg ) / 2 )
 
     @include v.media(laptop)
-      width: calc( (100% - (2 * v.to-rem(20))) / 3 )
+      width: calc( (100% - (2 * v.$space-lg)) / 3 )
 
     @include v.media(desktop)
-      width: calc( (100% - (3 * v.to-rem(30))) / 4 )
+      width: calc( (100% - (2 * v.$space-xl)) / 3 )
 
 .tour-card
   position: relative
   background-color: #fff
-  border-radius: v.to-rem(12)
-  box-shadow: 0 10px 26px rgba(12,21,38,.06)
+  border-radius: v.$rad-md
+  box-shadow: v.$shadow-lg
   overflow: hidden
   transition: transform v.$tr-base
   width: 100%
@@ -39,54 +38,60 @@
     .badges
       justify-content: space-between
       position: absolute
-      top: v.to-rem(20)
-      left: v.to-rem(20)
-      right: v.to-rem(20)
+      top: v.$space-lg
+      left: v.$space-lg
+      right: v.$space-lg
 
   &__img
-    aspect-ratio: 16/9
+    display: block
+    position: relative
+    width: 100%
+    aspect-ratio: 16 / 9
+    background: #eee
     overflow: hidden
+    
     img
       width: 100%
       height: 100%
+      object-fit: cover
       transition: transform v.$tr-base
-
+      
   &__body
     display: flex
     flex-direction: column
-    row-gap: v.to-rem(10)
-    padding: v.to-rem(16)
+    row-gap: v.$space-sm
+    padding: v.$space-md
 
     @include v.media(tablet)
-      padding: v.to-rem(24)
+      padding: v.$space-lg
 
   &__title
-    font-size: v.to-rem(17)
+    font-size: v.$fz-lg
 
   &__desc
-    font-size: v.to-rem(14)
+    font-size: v.$fz-md
 
   &__footer
-    padding: 0 v.to-rem(16) v.to-rem(16)
+    padding: 0 v.$space-md v.$space-md
 
     @include v.media(tablet)
-      padding: 0 v.to-rem(24) v.to-rem(24)
+      padding: 0 v.$space-lg v.$space-lg
 
-    .btn
-      width: 100%
-      border-radius: v.to-rem(12)
+  &__btn
+    width: 100%
+    border-radius: v.$rad-md
 
   &__features
     display: flex
-    column-gap: v.to-rem(20)
+    column-gap: v.$space-lg
     text-align: center
 
   &__feature
     display: flex
     flex-direction: column
     align-items: center
-    row-gap: v.to-rem(5)
-    width: calc( (100% - (2 * v.to-rem(20))) / 3 )
+    row-gap: v.$space-xs
+    width: calc( (100% - (2 * v.$space-lg)) / 3 )
 
   .feature
 
@@ -96,13 +101,13 @@
       height: v.to-rem(22)
 
     &__label
-      font-size: v.to-rem(10)
+      font-size: v.$fz-xs
       color: #737995
       font-weight: 500
       text-transform: uppercase
 
     &__value
-      font-size: v.to-rem(12)
+      font-size: v.$fz-sm
       font-weight: 500
 
   &__link

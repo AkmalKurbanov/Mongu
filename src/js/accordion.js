@@ -1,11 +1,11 @@
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.js-accordion').forEach(accordion => {
-    accordion.addEventListener('click', e => {
-      const header = e.target.closest('.accordion__header');
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".js-accordion").forEach(accordion => {
+    accordion.addEventListener("click", e => {
+      const header = e.target.closest(".accordion__header");
       if (!header) return;
 
-      const content = document.getElementById(header.getAttribute('aria-controls'));
-      const isExpanded = header.getAttribute('aria-expanded') === 'true';
+      const content = document.getElementById(header.getAttribute("aria-controls"));
+      const isExpanded = header.getAttribute("aria-expanded") === "true";
 
       // Закрытие при открытии новой
       /*
@@ -15,9 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       */
 
-      
-      header.setAttribute('aria-expanded', !isExpanded);
-      content.setAttribute('aria-hidden', isExpanded);
+      header.setAttribute("aria-expanded", !isExpanded);
+      content.setAttribute("aria-hidden", isExpanded);
+      accordion.classList.toggle("accordion_active", !isExpanded);
     });
   });
 });

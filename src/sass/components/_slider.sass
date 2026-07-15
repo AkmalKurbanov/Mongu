@@ -63,13 +63,11 @@
           background-color: v.$clr-secondary
 
   &__thumbnails
-    display: flex
-    overflow-x: auto
-    scrollbar-width: none
-    -ms-overflow-style: none
+    display: grid
+    grid-template-columns: repeat(5, 1fr)
+    gap: v.$space-xs
+    margin-top: v.$space-sm
 
-    &::-webkit-scrollbar
-      display: none
 
   &__thumb
     flex-shrink: 0
@@ -77,6 +75,8 @@
     cursor: pointer
     opacity: 0.6
     transition: opacity v.$tr-base, border v.$tr-base
+    aspect-ratio: 16 / 9
+    
 
     @include v.has-mouse
       &:hover
@@ -90,6 +90,7 @@
       height: 100%
       object-fit: cover
       display: block
+      pointer-events: none
 
 .js-slider-viewport
   display: flex
@@ -97,18 +98,11 @@
   scroll-snap-type: x mandatory
   scrollbar-width: none
   scroll-behavior: smooth
+  
+
 
   &::-webkit-scrollbar
     display: none
-
-  @include v.has-mouse
-    cursor: grab
-
-  &.is-dragging
-    scroll-snap-type: none
-    scroll-behavior: auto
-    cursor: grabbing
-    user-select: none
 
 .js-slide
   scroll-snap-align: start

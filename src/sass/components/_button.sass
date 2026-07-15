@@ -9,6 +9,7 @@
   display: inline-flex
   align-items: center
   justify-content: center
+  column-gap: v.$space-xs
   padding: v.$space-sm v.$space-md
   font-size: v.$fz-sm
   background-color: v.$clr-accent
@@ -17,10 +18,11 @@
   font-weight: 500
   transition: background-color v.$tr-base
   text-transform: uppercase
-  letter-spacing: 1px
+  letter-spacing: v.to-rem(1)
   border: none
   cursor: pointer
-  line-height: normal
+  line-height: auto
+  
 
   @include v.media(laptop)
     padding: v.$space-md v.$space-xl
@@ -31,12 +33,11 @@
       background-color: rgb(v.$clr-accent, 70%)
 
       .icon
-        transform: translateX(5px)
+        transform: translateX(v.to-rem(5))
 
   .icon
     width: v.to-rem(24)
     height: v.to-rem(24)
-    margin-left: v.to-rem(6)
     transition: transform v.$tr-base
     color: currentColor
     flex-shrink: 0
@@ -51,7 +52,7 @@
 
   &_bordered
     background-color: transparent
-    border: 1px solid v.$clr-accent
+    border: v.to-rem(1) solid v.$clr-accent
     color: v.$clr-accent
 
     @include v.has-mouse

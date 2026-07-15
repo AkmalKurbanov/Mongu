@@ -3,20 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Авторские туры по Кыргызстану | Mongu</title>
     <meta
       name="description"
       content="Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по самым красивым перевалам и озерам Кыргызстана с опытными гидами." />
-    <meta name="theme-color" content="#5a6b47" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Авторские туры по Кыргызстану — Mongu" />
     <meta property="og:description" content="Индивидуальные джип-туры и конные экспедиции по Кыргызстану." />
-    <meta property="og:url" content="https://yourdomain.com/" />
-    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:url" content="https://mongu.kg/" />
+    <meta property="og:image" content="https://mongu.kg/images/og-image.jpg" />
 
-    <link rel="canonical" href="https://yourdomain.com/" />
+    <meta name="theme-color" content="#6c613e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#3F3F25" media="(prefers-color-scheme: dark)" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://mongu.kg/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <script type="application/ld+json">
       {
@@ -24,12 +29,11 @@
         "@type": "TravelAgency",
         "name": "Mongu",
         "description": "Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по Кыргызстану.",
-        "url": "https://yourdomain.com/"
+        "url": "https://mongu.kg/"
       }
     </script>
   </head>
   <body>
-    
     <a
       href="https://wa.me/996555150795"
       class="whatsapp-float"
@@ -86,31 +90,31 @@
         <nav class="header__nav" aria-label="Основная навигация">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Tours</a>
+              <a href="/categories.html" class="header__nav-link">Tours</a>
               <ul class="header__nav-sublist">
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Trekking adventures</a>
+                  <a href="/category.html" class="header__nav-sublink">Trekking adventures</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Horseback expedition</a>
+                  <a href="/category.html" class="header__nav-sublink">Horseback expedition</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Overland jeep journeys</a>
+                  <a href="/category.html" class="header__nav-sublink">Overland jeep journeys</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Nomadic heritage</a>
+                  <a href="/category.html" class="header__nav-sublink">Nomadic heritage</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Custom expedition</a>
+                  <a href="/category.html" class="header__nav-sublink">Custom expedition</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Private tours</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Solmo lodge</a></li>
+            <li class="header__nav-item"><a href="/lodge.html" class="header__nav-link">Sokmo lodge</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Destination</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Blog</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Contacts</a></li>
+            <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
+            <li class="header__nav-item"><a href="/blog.html" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
         <div class="header__controls">
@@ -150,7 +154,7 @@
             </ul>
           </div>
 
-          <button type="button" class="hamburger js-hamburger">
+          <button type="button" aria-label="Mobile menu" class="hamburger js-hamburger">
             <svg class="icon">
               <use href="#hamburger"></use>
             </svg>
@@ -164,7 +168,7 @@
         <nav aria-label="Хлебные крошки" class="breadcrumbs">
           <ul class="breadcrumbs__list">
             <li class="breadcrumbs__item">
-              <a href="/">Главная</a>
+              <a class="breadcrumbs__link" href="/">Главная</a>
             </li>
             <li class="breadcrumbs__item" aria-current="page">Туры</li>
           </ul>
@@ -187,28 +191,216 @@
                 <div class="tour__slider-wrap">
                   <div class="tour__gallery-flex-wrap js-slider-viewport">
                     <div class="tour__gallery-item js-slide" data-index="0">
-                      <img src="./images/categories/trekking.jpg" alt="Trekking thumb" loading="lazy" />
+                      <picture>
+                        <source
+                          type="image/avif"
+                          sizes="(min-width: 1440px) 760px, (min-width: 1024px) 550px, (min-width: 768px) 700px, calc(100vw - 32px)"
+                          srcset="
+                            ./images/tour-slider/slide-400.avif   400w,
+                            ./images/tour-slider/slide-800.avif   800w,
+                            ./images/tour-slider/slide-1100.avif 1100w,
+                            ./images/tour-slider/slide-1440.avif 1440w,
+                            ./images/tour-slider/slide-1520.avif 1520w
+                          " />
+
+                        <source
+                          type="image/webp"
+                          sizes="100vw"
+                          srcset="
+                            ./images/tour-slider/slide-400.webp   400w,
+                            ./images/tour-slider/slide-800.webp   800w,
+                            ./images/tour-slider/slide-1100.webp 1100w,
+                            ./images/tour-slider/slide-1440.webp 1440w,
+                            ./images/tour-slider/slide-1520.webp 1520w
+                          " />
+
+                        <img
+                          src="./images/tour-slider/slide-1100.jpg"
+                          alt="Tour slider"
+                          width="760"
+                          height="450"
+                          loading="eager"
+                          fetchpriority="high" />
+                      </picture>
                     </div>
+
                     <div class="tour__gallery-item js-slide" data-index="1">
-                      <img src="./images/categories/horseback.jpg" alt="Trekking thumb" loading="lazy" />
+                      <picture>
+                        <source
+                          type="image/avif"
+                          sizes="(min-width: 1440px) 760px, (min-width: 1024px) 550px, (min-width: 768px) 700px, calc(100vw - 32px)"
+                          srcset="
+                            ./images/tour-slider/slide-400.avif   400w,
+                            ./images/tour-slider/slide-800.avif   800w,
+                            ./images/tour-slider/slide-1100.avif 1100w,
+                            ./images/tour-slider/slide-1440.avif 1440w,
+                            ./images/tour-slider/slide-1520.avif 1520w
+                          " />
+
+                        <source
+                          type="image/webp"
+                          sizes="100vw"
+                          srcset="
+                            ./images/tour-slider/slide-400.webp   400w,
+                            ./images/tour-slider/slide-800.webp   800w,
+                            ./images/tour-slider/slide-1100.webp 1100w,
+                            ./images/tour-slider/slide-1440.webp 1440w,
+                            ./images/tour-slider/slide-1520.webp 1520w
+                          " />
+
+                        <img
+                          src="./images/tour-slider/slide-1100.jpg"
+                          alt="Tour slider"
+                          width="760"
+                          height="450"
+                          loading="lazy"
+                          fetchpriority="auto" />
+                      </picture>
                     </div>
+
                     <div class="tour__gallery-item js-slide" data-index="2">
-                      <img src="./images/categories/overland.jpg" alt="Trekking thumb" loading="lazy" />
+                      <picture>
+                        <source
+                          type="image/avif"
+                          sizes="(min-width: 1440px) 760px, (min-width: 1024px) 550px, (min-width: 768px) 700px, calc(100vw - 32px)"
+                          srcset="
+                            ./images/tour-slider/slide-400.avif   400w,
+                            ./images/tour-slider/slide-800.avif   800w,
+                            ./images/tour-slider/slide-1100.avif 1100w,
+                            ./images/tour-slider/slide-1440.avif 1440w,
+                            ./images/tour-slider/slide-1520.avif 1520w
+                          " />
+
+                        <source
+                          type="image/webp"
+                          sizes="100vw"
+                          srcset="
+                            ./images/tour-slider/slide-400.webp   400w,
+                            ./images/tour-slider/slide-800.webp   800w,
+                            ./images/tour-slider/slide-1100.webp 1100w,
+                            ./images/tour-slider/slide-1440.webp 1440w,
+                            ./images/tour-slider/slide-1520.webp 1520w
+                          " />
+
+                        <img
+                          src="./images/tour-slider/slide-1100.jpg"
+                          alt="Tour slider"
+                          width="760"
+                          height="450"
+                          loading="lazy"
+                          fetchpriority="auto" />
+                      </picture>
                     </div>
+
                     <div class="tour__gallery-item js-slide" data-index="3">
-                      <img src="./images/categories/nomadic.jpg" alt="Trekking thumb" loading="lazy" />
+                      <picture>
+                        <source
+                          type="image/avif"
+                          sizes="(min-width: 1440px) 760px, (min-width: 1024px) 550px, (min-width: 768px) 700px, calc(100vw - 32px)"
+                          srcset="
+                            ./images/tour-slider/slide-400.avif   400w,
+                            ./images/tour-slider/slide-800.avif   800w,
+                            ./images/tour-slider/slide-1100.avif 1100w,
+                            ./images/tour-slider/slide-1440.avif 1440w,
+                            ./images/tour-slider/slide-1520.avif 1520w
+                          " />
+
+                        <source
+                          type="image/webp"
+                          sizes="100vw"
+                          srcset="
+                            ./images/tour-slider/slide-400.webp   400w,
+                            ./images/tour-slider/slide-800.webp   800w,
+                            ./images/tour-slider/slide-1100.webp 1100w,
+                            ./images/tour-slider/slide-1440.webp 1440w,
+                            ./images/tour-slider/slide-1520.webp 1520w
+                          " />
+
+                        <img
+                          src="./images/tour-slider/slide-1100.jpg"
+                          alt="Tour slider"
+                          width="760"
+                          height="450"
+                          loading="lazy"
+                          fetchpriority="auto" />
+                      </picture>
                     </div>
+
                     <div class="tour__gallery-item js-slide" data-index="4">
-                      <img src="./images/categories/custom.avif" alt="Trekking thumb" loading="lazy" />
+                      <picture>
+                        <source
+                          type="image/avif"
+                          sizes="(min-width: 1440px) 760px, (min-width: 1024px) 550px, (min-width: 768px) 700px, calc(100vw - 32px)"
+                          srcset="
+                            ./images/tour-slider/slide-400.avif   400w,
+                            ./images/tour-slider/slide-800.avif   800w,
+                            ./images/tour-slider/slide-1100.avif 1100w,
+                            ./images/tour-slider/slide-1440.avif 1440w,
+                            ./images/tour-slider/slide-1520.avif 1520w
+                          " />
+
+                        <source
+                          type="image/webp"
+                          sizes="100vw"
+                          srcset="
+                            ./images/tour-slider/slide-400.webp   400w,
+                            ./images/tour-slider/slide-800.webp   800w,
+                            ./images/tour-slider/slide-1100.webp 1100w,
+                            ./images/tour-slider/slide-1440.webp 1440w,
+                            ./images/tour-slider/slide-1520.webp 1520w
+                          " />
+
+                        <img
+                          src="./images/tour-slider/slide-1100.jpg"
+                          alt="Tour slider"
+                          width="760"
+                          height="450"
+                          loading="lazy"
+                          fetchpriority="auto" />
+                      </picture>
+                    </div>
+
+                    <div class="tour__gallery-item js-slide" data-index="5">
+                      <picture>
+                        <source
+                          type="image/avif"
+                          sizes="(min-width: 1440px) 760px, (min-width: 1024px) 550px, (min-width: 768px) 700px, calc(100vw - 32px)"
+                          srcset="
+                            ./images/tour-slider/slide-400.avif   400w,
+                            ./images/tour-slider/slide-800.avif   800w,
+                            ./images/tour-slider/slide-1100.avif 1100w,
+                            ./images/tour-slider/slide-1440.avif 1440w,
+                            ./images/tour-slider/slide-1520.avif 1520w
+                          " />
+
+                        <source
+                          type="image/webp"
+                          sizes="100vw"
+                          srcset="
+                            ./images/tour-slider/slide-400.webp   400w,
+                            ./images/tour-slider/slide-800.webp   800w,
+                            ./images/tour-slider/slide-1100.webp 1100w,
+                            ./images/tour-slider/slide-1440.webp 1440w,
+                            ./images/tour-slider/slide-1520.webp 1520w
+                          " />
+
+                        <img
+                          src="./images/tour-slider/slide-1100.jpg"
+                          alt="Tour slider"
+                          width="760"
+                          height="450"
+                          loading="lazy"
+                          fetchpriority="auto" />
+                      </picture>
                     </div>
                   </div>
                   <div class="tour__gallery-nav slider__nav">
-                    <div class="slider__btn slider__btn_prev js-slider-prev">
+                    <div class="slider__btn slider__btn_prev js-slider-prev" aria-label="Previous slide">
                       <svg class="icon">
                         <use href="#angle"></use>
                       </svg>
                     </div>
-                    <div class="slider__btn slider__btn_next js-slider-next">
+                    <div class="slider__btn slider__btn_next js-slider-next" aria-label="Next slide">
                       <svg class="icon">
                         <use href="#angle"></use>
                       </svg>
@@ -219,19 +411,138 @@
 
                 <div class="tour__gallery-thumbs slider__thumbnails js-slider-thumbnails">
                   <div class="tour__gallery-thumb slider__thumb js-thumb-item" data-index="0">
-                    <img src="./images/categories/trekking.jpg" alt="Trekking thumb" loading="lazy" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 768px) 150px, 65px"
+                        srcset="
+                          ./images/tour-slider/thumb-80.avif   80w,
+                          ./images/tour-slider/thumb-160.avif 160w,
+                          ./images/tour-slider/thumb-150.avif 150w,
+                          ./images/tour-slider/thumb-300.avif 300w
+                        " />
+
+                      <source
+                        type="image/webp"
+                        sizes="100vw"
+                        srcset="
+                          ./images/tour-slider/thumb-80.webp   80w,
+                          ./images/tour-slider/thumb-160.webp 160w,
+                          ./images/tour-slider/thumb-150.webp 150w,
+                          ./images/tour-slider/thumb-300.webp 300w
+                        " />
+
+                      <img
+                        src="./images/tour-slider/thumb-150.jpg"
+                        alt="Tour slider"
+                        width="150"
+                        height="100"
+                        fetchpriority="high" />
+                    </picture>
                   </div>
+
                   <div class="tour__gallery-thumb slider__thumb js-thumb-item" data-index="1">
-                    <img src="./images/categories/horseback.jpg" alt="Horseback thumb" loading="lazy" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 768px) 150px, 65px"
+                        srcset="
+                          ./images/tour-slider/thumb-80.avif   80w,
+                          ./images/tour-slider/thumb-160.avif 160w,
+                          ./images/tour-slider/thumb-150.avif 150w,
+                          ./images/tour-slider/thumb-300.avif 300w
+                        " />
+
+                      <source
+                        type="image/webp"
+                        sizes="100vw"
+                        srcset="
+                          ./images/tour-slider/thumb-80.webp   80w,
+                          ./images/tour-slider/thumb-160.webp 160w,
+                          ./images/tour-slider/thumb-150.webp 150w,
+                          ./images/tour-slider/thumb-300.webp 300w
+                        " />
+
+                      <img src="./images/tour-slider/thumb-150.jpg" alt="Tour slider" width="150" height="100" />
+                    </picture>
                   </div>
+
                   <div class="tour__gallery-thumb slider__thumb js-thumb-item" data-index="2">
-                    <img src="./images/categories/overland.jpg" alt="Horseback thumb" loading="lazy" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 768px) 150px, 65px"
+                        srcset="
+                          ./images/tour-slider/thumb-80.avif   80w,
+                          ./images/tour-slider/thumb-160.avif 160w,
+                          ./images/tour-slider/thumb-150.avif 150w,
+                          ./images/tour-slider/thumb-300.avif 300w
+                        " />
+
+                      <source
+                        type="image/webp"
+                        sizes="100vw"
+                        srcset="
+                          ./images/tour-slider/thumb-80.webp   80w,
+                          ./images/tour-slider/thumb-160.webp 160w,
+                          ./images/tour-slider/thumb-150.webp 150w,
+                          ./images/tour-slider/thumb-300.webp 300w
+                        " />
+
+                      <img src="./images/tour-slider/thumb-150.jpg" alt="Tour slider" width="150" height="100" />
+                    </picture>
                   </div>
+
                   <div class="tour__gallery-thumb slider__thumb js-thumb-item" data-index="3">
-                    <img src="./images/categories/nomadic.jpg" alt="Nomadic thumb" loading="lazy" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 768px) 150px, 65px"
+                        srcset="
+                          ./images/tour-slider/thumb-80.avif   80w,
+                          ./images/tour-slider/thumb-160.avif 160w,
+                          ./images/tour-slider/thumb-150.avif 150w,
+                          ./images/tour-slider/thumb-300.avif 300w
+                        " />
+
+                      <source
+                        type="image/webp"
+                        sizes="100vw"
+                        srcset="
+                          ./images/tour-slider/thumb-80.webp   80w,
+                          ./images/tour-slider/thumb-160.webp 160w,
+                          ./images/tour-slider/thumb-150.webp 150w,
+                          ./images/tour-slider/thumb-300.webp 300w
+                        " />
+
+                      <img src="./images/tour-slider/thumb-150.jpg" alt="Tour slider" width="150" height="100" />
+                    </picture>
                   </div>
+
                   <div class="tour__gallery-thumb slider__thumb js-thumb-item" data-index="4">
-                    <img src="./images/categories/custom.avif" alt="Nomadic thumb" loading="lazy" />
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 768px) 150px, 65px"
+                        srcset="
+                          ./images/tour-slider/thumb-80.avif   80w,
+                          ./images/tour-slider/thumb-160.avif 160w,
+                          ./images/tour-slider/thumb-150.avif 150w,
+                          ./images/tour-slider/thumb-300.avif 300w
+                        " />
+
+                      <source
+                        type="image/webp"
+                        sizes="100vw"
+                        srcset="
+                          ./images/tour-slider/thumb-80.webp   80w,
+                          ./images/tour-slider/thumb-160.webp 160w,
+                          ./images/tour-slider/thumb-150.webp 150w,
+                          ./images/tour-slider/thumb-300.webp 300w
+                        " />
+
+                      <img src="./images/tour-slider/thumb-150.jpg" alt="Tour slider" width="150" height="100" />
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -303,7 +614,7 @@
                     aria-selected="true"
                     aria-controls="panel-1"
                     id="tab-1">
-                    Описание
+                    Description
                   </button>
                   <button
                     class="tabs__tab js-slide"
@@ -312,7 +623,7 @@
                     aria-controls="panel-2"
                     id="tab-2"
                     tabindex="-1">
-                    Цены
+                    Prices
                   </button>
                   <button
                     class="tabs__tab js-slide"
@@ -321,7 +632,7 @@
                     aria-controls="panel-3"
                     id="tab-3"
                     tabindex="-2">
-                    Даты
+                    Dates
                   </button>
                   <button
                     class="tabs__tab js-slide"
@@ -330,7 +641,7 @@
                     aria-controls="panel-4"
                     id="tab-4"
                     tabindex="-3">
-                    Доп информация
+                    Additional information
                   </button>
                   <button
                     class="tabs__tab js-slide"
@@ -339,14 +650,14 @@
                     aria-controls="panel-5"
                     id="tab-5"
                     tabindex="-4">
-                    Карта
+                    Map
                   </button>
                 </div>
 
                 <div class="tabs__panels">
                   <div class="tabs__panel" role="tabpanel" id="panel-1" aria-labelledby="tab-1">
                     <div class="tour-tabs__desc">
-                      <h2>Описание</h2>
+                      <h2>Description</h2>
                       <div class="tour-tabs__text">
                         <p>
                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non aliquid numquam inventore, nobis
@@ -369,53 +680,54 @@
                       </div>
                     </div>
 
-                    <h2>Программа</h2>
-                    <div class="accordion js-accordion">
+                    <h2>Itinerary</h2>
+                    <div class="accordion accordion_timeline js-accordion">
                       <div class="accordion__item">
                         <button class="accordion__header" aria-expanded="false" aria-controls="content-1">
-                          <span>День 1. Бишкек – Каркыра</span>
+                          <span>Day 1. Bishkek – Karkyra</span>
                           <svg class="icon">
                             <use href="#angle"></use>
                           </svg>
                         </button>
-                        <div class="accordion__content" id="content-1" hidden>
+                        <div class="accordion__content" id="content-1" hidden="">
                           <div class="accordion__body">
+                            <h3>Arrival in <strong>Bishkek</strong> and meeting at Manas Airport.</h3>
                             <p>
-                              Прибытие в <strong>Бишкек</strong> и встреча в аэропорту Манас. После короткого отдыха и
-                              проверки багажа – <strong>трансфер в лагерь Каркыра</strong>, расположенный на высоте
-                              <strong>2200 метров</strong> в живописной долине на восточной границе Кыргызстана. По пути
-                              вы сможете насладиться первыми видами величественных гор, чистым горным воздухом и
-                              живописными пейзажами.
+                              After a short rest and luggage check – <strong>transfer to the Karkyra camp</strong>,
+                              located at an altitude of <strong>2200 meters</strong> in a picturesque valley on the
+                              eastern border of Kyrgyzstan. Along the way, you will enjoy the first views of majestic
+                              mountains, clean mountain air, and picturesque landscapes.
                             </p>
                             <p>
-                              По прибытии – <strong>размещение в комфортабельных юртах</strong>, где предусмотрены все
-                              удобства для отдыха после дороги.
+                              Upon arrival – <strong>accommodation in comfortable yurts</strong>, which have all the
+                              amenities to relax after the trip.
                             </p>
-                            <p>Вечером можно насладиться атмосферой зимнего лагеря.</p>
+                            <p>In the evening, you can enjoy the atmosphere of the winter camp.</p>
                           </div>
                         </div>
                       </div>
 
                       <div class="accordion__item">
                         <button class="accordion__header" aria-expanded="false" aria-controls="content-2">
-                          <span>Дни 2-7. Каркыра</span>
+                          <span>Days 2-7. Karkyra</span>
                           <svg class="icon">
                             <use href="#angle"></use>
                           </svg>
                         </button>
-                        <div class="accordion__content" id="content-2" hidden>
+                        <div class="accordion__content" id="content-2" hidden="">
                           <div class="accordion__body">
                             <p>
-                              В эти дни вас ждёт ски-туринг в районах урочища
-                              <strong>Чааркудук, ущелий Тюп, Туз и Уч-Кашка</strong>.
-                              <strong>Склоны с перепадом высот 300–800 метров</strong> позволяют сочетать активное
-                              катание с наслаждением живописными горными пейзажами и чистой, нетронутой природой.
+                              During these days, you will enjoy ski touring in the areas of
+                              <strong>Chaarkuduk tract, Tyup, Tuz, and Uch-Kashka gorges</strong>.
+                              <strong>Slopes with an elevation difference of 300–800 meters</strong> allow you to
+                              combine active skiing with enjoying scenic mountain landscapes and pristine, untouched
+                              nature.
                             </p>
                             <p>
-                              <strong>В лагере Каркыра</strong> вас ждёт уютное размещение в отапливаемых юртах и полный
-                              комфорт: трёхразовое питание в формате шведского стола, а также тёплая атмосфера общения с
-                              другими участниками тура. Каждый вечер – возможность восстановить силы, поделиться
-                              впечатлениями и просто насладиться магией гор.
+                              <strong>At the Karkyra camp</strong>, you will find cozy accommodation in heated yurts and
+                              full comfort: three meals a day in a buffet format, as well as a warm atmosphere of
+                              communication with other tour participants. Every evening is an opportunity to restore
+                              energy, share impressions, and simply enjoy the magic of the mountains.
                             </p>
                           </div>
                         </div>
@@ -423,295 +735,292 @@
 
                       <div class="accordion__item">
                         <button class="accordion__header" aria-expanded="false" aria-controls="content-3">
-                          <span>День 8. Каркыра – Бишкек</span>
+                          <span>Day 8. Karkyra – Bishkek</span>
                           <svg class="icon">
                             <use href="#angle"></use>
                           </svg>
                         </button>
-                        <div class="accordion__content" id="content-3" hidden>
+                        <div class="accordion__content" id="content-3" hidden="">
                           <div class="accordion__body">
                             <p>
-                              После завтрака – <strong>трансфер в Бишкек</strong>. По прибытии в столицу вас ждёт
-                              <strong>ужин в приятной обстановке</strong>, где можно подвести итоги путешествия и
-                              поделиться впечатлениями. После ужина – <strong>трансфер в аэропорт Манас</strong> для
-                              вылета домой.
+                              After breakfast – <strong>transfer to Bishkek</strong>. Upon arrival in the capital, a
+                              <strong>dinner in a pleasant atmosphere</strong> awaits you, where you can summarize the
+                              trip and share impressions. After dinner – <strong>transfer to Manas Airport</strong> for
+                              your flight home.
                             </p>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="tabs__panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden>
+
+                  <div class="tabs__panel" role="tabpanel" id="panel-2" aria-labelledby="tab-2" hidden="">
                     <div class="tour-tabs__desc">
-                      <h2>Цена тура на одного человека</h2>
+                      <h2>Tour price per person</h2>
                       <table>
                         <tbody>
                           <tr>
-                            <td>При двухместном размещении</td>
+                            <td>For double occupancy</td>
                             <td>1300 USD</td>
                           </tr>
                           <tr>
-                            <td>При одноместном размещении</td>
+                            <td>For single occupancy</td>
                             <td>+170 USD</td>
                           </tr>
                           <tr>
-                            <td>При одноместном размещении в палатке</td>
+                            <td>For single occupancy in a tent</td>
                             <td>+180 USD</td>
                           </tr>
                         </tbody>
                       </table>
                       <div class="editor_price">
                         <br />
-                        <p><b>Транспорт на переездах:</b></p>
+                        <p><b>Transport during transfers:</b></p>
                         <br />
                         <ul>
                           <li class="p6">
-                            <strong>Для 3-9 человек:</strong> 1 микроавтобус Mercedes Sprinter (17 мест, с A/C)
+                            <strong>For 3-9 people:</strong> 1 Mercedes Sprinter minibus (17 seats, with A/C)
                           </li>
                           <li class="p6">
-                            <strong>Для 10 — 14 человек:</strong> 2 микроавтобуса Mercedes Sprinter (17 мест, с A/C)
+                            <strong>For 10-14 people:</strong> 2 Mercedes Sprinter minibuses (17 seats, with A/C)
                           </li>
                         </ul>
                         <p>&nbsp;</p>
-                        <p><b>Сопровождение: </b>Трекковый гид</p>
+                        <p><b>Escort: </b>Trekking guide</p>
                         <p>&nbsp;</p>
                         <p>
-                          <strong>Виза и визовая поддержка:</strong>
+                          <strong>Visa and visa support:</strong>
                           <span style="font-weight: 400"
-                            >Гражданам Европейского Союза не требуется виза и визовая поддержка для въезда в Кыргызстан.
-                            Бесплатный визовый режим до 60 дней.</span
+                            >Citizens of the European Union do not need a visa or visa support to enter Kyrgyzstan. Free
+                            visa regime for up to 60 days.</span
                           >
                         </p>
                         <p>&nbsp;</p>
-                        <p><strong>Питание:</strong> Полный пансион</p>
+                        <p><strong>Meals:</strong> Full board</p>
                         <p>&nbsp;</p>
-                        <p><strong>Включено в стоимость тура:</strong></p>
+                        <p><strong>Included in the tour price:</strong></p>
                         <ul>
-                          <li data-pm-slice="0 0 []">Проживание на базе TWIN/DBL в отелях и палатках – 13 ночей</li>
                           <li data-pm-slice="0 0 []">
-                            Питание — полный пансион (З – 14, О – 13, У – 13), включая услуги повара в дни треккинга
-                          </li>
-                          <li data-pm-slice="0 0 []">Транспортные услуги от прибытия до отъезда</li>
-                          <li data-pm-slice="0 0 []">
-                            Бутилированная вода (1 литр/день/пакс) во время части треккинга – кипяченая вода
-                            (пожалуйста, возьмите свои фляжки / бутылки)
-                          </li>
-                          <li data-pm-slice="0 0 []">Входные и экологические сборы во время всего тура</li>
-                          <li data-pm-slice="0 0 []">
-                            Услуги коневодов и вьючных животных (вес упакованного рюкзака во время похода должен быть не
-                            более 12 кг личных вещей. Если вес свыше 12 кг, то доплата за 1 кг – 20 USD)
+                            Accommodation on a TWIN/DBL basis in hotels and tents – 13 nights
                           </li>
                           <li data-pm-slice="0 0 []">
-                            Пограничный пропуск для посещения специальных охраняемых или приграничных территорий
+                            Meals — full board (B – 14, L – 13, D – 13), including cook services on trekking days
                           </li>
+                          <li data-pm-slice="0 0 []">Transport services from arrival to departure</li>
+                          <li data-pm-slice="0 0 []">
+                            Bottled water (1 liter/day/pax) during the trekking part – boiled water (please bring your
+                            own flasks / bottles)
+                          </li>
+                          <li data-pm-slice="0 0 []">Entrance and ecological fees during the entire tour</li>
+                          <li data-pm-slice="0 0 []">
+                            Services of horsemen and pack animals (the weight of the packed backpack during the trek
+                            must be no more than 12 kg of personal belongings. If the weight is over 12 kg, the
+                            surcharge per 1 kg is 20 USD)
+                          </li>
+                          <li data-pm-slice="0 0 []">Border permit for visiting specially protected or border areas</li>
                         </ul>
                         <p>&nbsp;</p>
-                        <p><strong>Не включено</strong> <strong>в стоимость тура:</strong></p>
+                        <p><strong>Not included in the tour price:</strong></p>
                         <ul>
-                          <li>Одноместное размещение в палатках</li>
-                          <li>Питание, не включенное в программу, алкогольные напитки</li>
-                          <li>Страховки</li>
-                          <li>Спальные мешки</li>
-                          <li>Все тарифы на авиабилеты</li>
-                          <li>Плата за фото/видеосъемку в музеях</li>
-                          <li>Личные расходы, чаевые, плата носильщикам в отелях</li>
-                          <li>Визовый сбор и сбор за визовую поддержку (при необходимости)</li>
+                          <li>Single accommodation in tents</li>
+                          <li>Meals not included in the program, alcoholic beverages</li>
+                          <li>Insurance</li>
+                          <li>Sleeping bags</li>
+                          <li>All airfares</li>
+                          <li>Fee for photo/video shooting in museums</li>
+                          <li>Personal expenses, tips, porterage fees in hotels</li>
+                          <li>Visa fee and visa support fee (if necessary)</li>
                         </ul>
                       </div>
                     </div>
                   </div>
-                  <div class="tabs__panel" role="tabpanel" id="panel-3" aria-labelledby="tab-5" hidden>
+
+                  <div class="tabs__panel" role="tabpanel" id="panel-3" aria-labelledby="tab-5" hidden="">
                     <div class="tour-tabs__desc">
-                      <h2>Даты на 2026</h2>
+                      <h2>Dates for 2026</h2>
                       <table class="tour-tabs__table-booking">
-                        <tr>
-                          <td>18 июля 2026</td>
-                          <td>$1300</td>
-                          <td><button class="tour-tabs__table-btn btn" type="button">Забронировать</button></td>
-                        </tr>
-                        <tr>
-                          <td>18 июля 2026</td>
-                          <td>$1300</td>
-                          <td><button class="tour-tabs__table-btn btn" type="button">Забронировать</button></td>
-                        </tr>
-                        <tr>
-                          <td>18 июля 2026</td>
-                          <td>$1300</td>
-                          <td><button class="tour-tabs__table-btn btn" type="button">Забронировать</button></td>
-                        </tr>
-                        <tr>
-                          <td>18 июля 2026</td>
-                          <td>$1300</td>
-                          <td><button class="tour-tabs__table-btn btn" type="button">Забронировать</button></td>
-                        </tr>
+                        <tbody>
+                          <tr>
+                            <td>July 18, 2026</td>
+                            <td>$1300</td>
+                            <td><button class="tour-tabs__table-btn btn" type="button">Book now</button></td>
+                          </tr>
+                          <tr>
+                            <td>July 18, 2026</td>
+                            <td>$1300</td>
+                            <td><button class="tour-tabs__table-btn btn" type="button">Book now</button></td>
+                          </tr>
+                          <tr>
+                            <td>July 18, 2026</td>
+                            <td>$1300</td>
+                            <td><button class="tour-tabs__table-btn btn" type="button">Book now</button></td>
+                          </tr>
+                          <tr>
+                            <td>July 18, 2026</td>
+                            <td>$1300</td>
+                            <td><button class="tour-tabs__table-btn btn" type="button">Book now</button></td>
+                          </tr>
+                        </tbody>
                       </table>
                     </div>
                   </div>
-                  <div class="tabs__panel" role="tabpanel" id="panel-4" aria-labelledby="tab-3" hidden>
+
+                  <div class="tabs__panel" role="tabpanel" id="panel-4" aria-labelledby="tab-3" hidden="">
                     <div class="accordion js-accordion">
                       <div class="accordion__item">
                         <button class="accordion__header" aria-expanded="false" aria-controls="additional-info-1">
-                          <span>Что нужно знать перед треккингом</span>
+                          <span>What you need to know before trekking</span>
                           <svg class="icon">
                             <use href="#angle"></use>
                           </svg>
                         </button>
-                        <div class="accordion__content" id="additional-info-1" hidden>
+                        <div class="accordion__content" id="additional-info-1" hidden="">
                           <div class="accordion__body">
                             <p>
-                              Отели могут изменяться в зависимости от наличия свободных мест, при этом категория жилья
-                              сохраняется на прежнем уровне.
+                              Hotels may change depending on availability, while the accommodation category remains at
+                              the same level.
+                            </p>
+                            <p>Some trekking days may be adjusted for safety reasons or weather conditions.</p>
+                            <p>The tour is accompanied by a Russian-speaking guide.</p>
+                            <p>Transfer times are approximate and depend on road and weather conditions.</p>
+                            <p>
+                              The duration of the hikes is also approximate and varies depending on the weather and
+                              physical fitness of the participants.
+                            </p>
+                            <p>The maximum altitude of the route reaches 4390 meters.</p>
+                            <p>
+                              Lunch boxes are organized in a buffet style: after breakfast, each participant
+                              independently selects food for lunch from a diverse assortment.
                             </p>
                             <p>
-                              Некоторые дни треккинга могут корректироваться по соображениям безопасности или погодных
-                              условий.
-                            </p>
-                            <p>Тур сопровождает русскоговорящий гид.</p>
-                            <p>
-                              Время трансферов указано ориентировочно и зависит от состояния дорог и погодных условий.
-                            </p>
-                            <p>
-                              Продолжительность переходов также примерная и варьируется в зависимости от погоды и
-                              физической подготовки участников.
-                            </p>
-                            <p>Максимальная высота маршрута достигает 4390 метров.</p>
-                            <p>
-                              Ланч-боксы организованы в формате шведского стола: после завтрака каждый участник
-                              самостоятельно набирает продукты для обеда из разнообразного ассортимента.
-                            </p>
-                            <p>
-                              Рекомендуется иметь личную фляжку для воды, поскольку во время треккинга предоставляется
-                              только кипячёная вода.
+                              It is recommended to have a personal water flask, as only boiled water is provided during
+                              the trek.
                             </p>
 
-                            <p><strong>Транспорт на переездах:</strong></p>
+                            <p><strong>Transport during transfers:</strong></p>
                             <ul>
+                              <li><strong>For 3-9 people:</strong> 1 Mercedes Sprinter minibus (17 seats, with A/C)</li>
                               <li>
-                                <strong>Для 3-9 человек:</strong> 1 микроавтобус Mercedes Sprinter (17 мест, с A/C)
-                              </li>
-                              <li>
-                                <strong>Для 10 — 14 человек:</strong> 2 микроавтобуса Mercedes Sprinter (17 мест, с A/C)
+                                <strong>For 10-14 people:</strong> 2 Mercedes Sprinter minibuses (17 seats, with A/C)
                               </li>
                             </ul>
 
-                            <p><strong>Сопровождение:</strong> Трекковый гид</p>
+                            <p><strong>Escort:</strong> Trekking guide</p>
 
                             <p>
-                              <strong>Виза и визовая поддержка:</strong> Гражданам Европейского Союза не требуется виза
-                              и визовая поддержка для въезда в Кыргызстан. Бесплатный визовый режим до 60 дней.
+                              <strong>Visa and visa support:</strong> Citizens of the European Union do not need a visa
+                              and visa support to enter Kyrgyzstan. Free visa regime for up to 60 days.
                             </p>
 
-                            <p><strong>Питание:</strong> Полный пансион</p>
+                            <p><strong>Meals:</strong> Full board</p>
 
-                            <p><strong>Включено в стоимость тура:</strong></p>
+                            <p><strong>Included in the tour price:</strong></p>
                             <ul>
-                              <li>Проживание на базе TWIN/DBL в отелях и палатках – 13 ночей</li>
+                              <li>Accommodation on a TWIN/DBL basis in hotels and tents – 13 nights</li>
                               <li>
-                                Питание — полный пансион (З – 14, О – 13, У – 13), включая услуги повара в дни треккинга
+                                Meals — full board (B – 14, L – 13, D – 13), including cook services on trekking days
                               </li>
-                              <li>Транспортные услуги от прибытия до отъезда</li>
+                              <li>Transport services from arrival to departure</li>
                               <li>
-                                Бутилированная вода (1 литр/день/пакс) во время части треккинга – кипяченая вода
-                                (пожалуйста, возьмите свои фляжки / бутылки)
+                                Bottled water (1 liter/day/pax) during the trekking part – boiled water (please bring
+                                your own flasks / bottles)
                               </li>
-                              <li>Входные и экологические сборы во время всего тура</li>
+                              <li>Entrance and ecological fees during the entire tour</li>
                               <li>
-                                Услуги коневодов и вьючных животных (вес упакованного рюкзака во время похода должен
-                                быть не более 12 кг личных вещей. Если вес свыше 12 кг, то доплата за 1 кг – 20 USD)
+                                Services of horsemen and pack animals (the weight of the packed backpack during the trek
+                                must be no more than 12 kg of personal belongings. If the weight is over 12 kg, the
+                                surcharge per 1 kg is 20 USD)
                               </li>
-                              <li>
-                                Пограничный пропуск для посещения специальных охраняемых или приграничных территорий
-                              </li>
+                              <li>Border permit for visiting specially protected or border areas</li>
                             </ul>
 
-                            <p><strong>Не включено в стоимость тура:</strong></p>
+                            <p><strong>Not included in the tour price:</strong></p>
                             <ul>
-                              <li>Одноместное размещение в палатках</li>
-                              <li>Питание, не включенное в программу, алкогольные напитки</li>
-                              <li>Страховки</li>
-                              <li>Спальные мешки</li>
-                              <li>Все тарифы на авиабилеты</li>
-                              <li>Плата за фото/видеосъемку в музеях</li>
-                              <li>Личные расходы, чаевые, плата носильщикам в отелях</li>
-                              <li>Визовый сбор и сбор за визовую поддержку (при необходимости)</li>
+                              <li>Single accommodation in tents</li>
+                              <li>Meals not included in the program, alcoholic beverages</li>
+                              <li>Insurance</li>
+                              <li>Sleeping bags</li>
+                              <li>All airfares</li>
+                              <li>Fee for photo/video shooting in museums</li>
+                              <li>Personal expenses, tips, porterage fees in hotels</li>
+                              <li>Visa fee and visa support fee (if necessary)</li>
                             </ul>
                           </div>
                         </div>
                       </div>
+
                       <div class="accordion__item">
                         <button class="accordion__header" aria-expanded="false" aria-controls="additional-info-2">
-                          <span>Палаточные лагеря на маршруте</span>
+                          <span>Tent camps on the route</span>
                           <svg class="icon">
                             <use href="#angle"></use>
                           </svg>
                         </button>
-                        <div class="accordion__content" id="additional-info-2" hidden>
+                        <div class="accordion__content" id="additional-info-2" hidden="">
                           <div class="accordion__body">
                             <p>
-                              Мы устанавливаем <strong>стационарные палаточные лагеря</strong> вдоль всего маршрута.
-                              Каждый год мы улучшаем инфраструктуру и повышаем комфорт для участников тура.
+                              We set up <strong>stationary tent camps</strong> along the entire route. Every year we
+                              improve the infrastructure and increase comfort for tour participants.
                             </p>
                             <p>
-                              Если вы бронируете этот маршрут, вы получаете доступ ко всем удобствам наших лагерей на
-                              протяжении всего тура.
+                              If you book this route, you get access to all the amenities of our camps throughout the
+                              tour.
                             </p>
-                            <p><strong>Что это даёт вам:</strong></p>
+                            <p><strong>What this gives you:</strong></p>
                             <ul>
                               <li>
                                 <p>
-                                  <strong>Легкость и комфорт в пути</strong><br />Вы не несёте продукты и бивачное
-                                  снаряжение – всё уже организовано
+                                  <strong>Ease and comfort on the way</strong><br />You do not carry food and bivouac
+                                  equipment – everything is already organized
                                 </p>
                               </li>
                               <li>
                                 <p>
-                                  <strong>Экономия на сопровождении</strong><br />Не нужно нанимать портеров и повара –
-                                  меньше расходов, больше свободы
+                                  <strong>Savings on escort</strong><br />No need to hire porters and a cook – less
+                                  expenses, more freedom
                                 </p>
                               </li>
                               <li>
                                 <p>
-                                  <strong>Безопасность</strong><br />В каждом лагере есть связь, а также вы получаете
-                                  подробную карту маршрута
+                                  <strong>Safety</strong><br />There is communication in every camp, and you also get a
+                                  detailed map of the route
                                 </p>
                               </li>
                             </ul>
 
-                            <h3>Что входит в оснащение каждого стационарного палаточного лагеря</h3>
+                            <h3>What is included in the equipment of each stationary tent camp</h3>
                             <ul>
                               <li>
-                                Палатки марки <strong>RED FOX</strong> – вместимость 4 человека, но рассчитаны на
-                                проживание по 2 человека в каждой.
+                                <strong>RED FOX</strong> tents – capacity 4 people, but designed for accommodation of 2
+                                people in each.
                               </li>
-                              <li>Обеденная палатка <strong>TEAM FOX</strong> – вместимость 10–20 человек.</li>
+                              <li><strong>TEAM FOX</strong> dining tent – capacity 10–20 people.</li>
+                              <li>Tents provide 5-centimeter mattresses and sleeping pads for a comfortable sleep.</li>
                               <li>
-                                В палатках предоставляются 5-сантиметровые матрасы и спальные коврики для комфортного
-                                сна.
-                              </li>
-                              <li>
-                                Электричество (от генератора) работает с 19:00 до 22:00 – для зарядки телефонов,
-                                планшетов и других устройств.
+                                Electricity (from a generator) is available from 19:00 to 22:00 – for charging phones,
+                                tablets, and other devices.
                               </li>
                               <li>
-                                Есть туалетная палатка и душевая палатка. Для душа предоставляется небольшой тазик,
-                                ковшик и тёплая вода (обратите внимание, что при плохой погоде обеспечить тёплую воду
-                                может быть сложно).
+                                There is a toilet tent and a shower tent. For the shower, a small basin, a ladle, and
+                                warm water are provided (please note that in bad weather, providing warm water can be
+                                difficult).
                               </li>
-                              <li>Бесплатно чай, кофе, сладости и печенье.</li>
+                              <li>Free tea, coffee, sweets, and cookies.</li>
                               <li>
-                                Бар с алкоголем и напитками (водка, вино, коньяк, соки и др.) – за дополнительную плату.
+                                Bar with alcohol and drinks (vodka, wine, cognac, juices, etc.) – for an additional fee.
                               </li>
-                              <li>Кухонные принадлежности, столы и стулья для удобства гостей.</li>
+                              <li>Kitchen utensils, tables, and chairs for the convenience of guests.</li>
                             </ul>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                  <div class="tabs__panel" role="tabpanel" id="panel-5" aria-labelledby="tab-4" hidden>
+
+                  <div class="tabs__panel" role="tabpanel" id="panel-5" aria-labelledby="tab-4" hidden="">
                     <div class="tour-tabs__desc">
-                      <h2>Карта тура</h2>
-                      <img src="./images/map.jpg" alt="" />
+                      <h2>Tour map</h2>
+                      <img src="/assets/images/map.jpg" alt="" />
                     </div>
                   </div>
                 </div>
@@ -725,49 +1034,51 @@
     <footer class="footer">
       <div class="footer__top section-padding section-bg">
         <div class="container">
-          <div class="footer__top-flex-wrap">
-            <div class="footer__col">
+          <div class="footer__top-grid">
+            <div class="footer__grid-item">
               <h2 class="title">Plan your jorney</h2>
+            </div>
+            <div class="footer__grid-item">
               <p class="footer__subtitle">
                 Lorem ipsum dolor sit amet <br />
                 consectetur adipisicing.
               </p>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="tel:996555123456" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="#whatsapp"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Whatsapp</h4>
+                  <strong class="footer__contacts-title">Whatsapp</strong>
                   <span>+996 555 123 456</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="mailto:info@mongu.com" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="#envelope"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Email</h4>
+                  <strong class="footer__contacts-title">Email</strong>
                   <span>info@mongu.com</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="#" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="./icons.svg#instagram"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Instagram</h4>
+                  <strong class="footer__contacts-title">Instagram</strong>
                   <span>@mongu</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
-              <button type="button" class="btn">
+            <div class="footer__grid-item">
+              <button type="button" class="footer__btn btn">
                 Booking
                 <svg class="icon">
                   <use href="#arrow"></use>
@@ -795,14 +1106,13 @@
 
             <nav aria-label="Основная навигация">
               <ul>
-                <li><a href="#">Tours</a></li>
+                <li><a href="/categories.html">Tours</a></li>
                 <li><a href="#">Private tours</a></li>
-                <li><a href="#">Solmo lodge</a></li>
+                <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="#">Destination</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
 
@@ -813,10 +1123,10 @@
     </footer>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="arrow" viewBox="0 0 24 24">
+      <symbol viewBox="0 0 24 24">
         <path
           fill="currentColor"
-          d="M13.6 7.6q.4-.5.8 0l4 4 .5.4-.5.4-4 4a.6.6 0 0 1-.8-.8l2.9-3H6a.6.6 0 1 1 0-1.2h10.5l-3-3z" />
+          d="M14.1 7.3q.4-.6.9 0l4.4 4.4.6.4-.6.4L15 17h-.8v-.8l3.1-3.3H5.7l-.6-.4a1 1 0 0 1 .3-.9h11.9L14 8.1z" />
       </symbol>
       <symbol id="hamburger" viewBox="0 0 16 12">
         <path
@@ -866,37 +1176,114 @@
           clip-rule="evenodd" />
       </symbol>
     </svg>
+
     <div class="menu js-menu">
       <div class="menu__sidebar">
-        <div class="menu__close js-menu-close">
-          <svg class="icon">
-            <use href="#cross"></use>
-          </svg>
+        <div class="menu__sidebar-top">
+          <a href="/" class="menu__logo" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 213 198">
+              <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+              <path
+                fill="#000"
+                d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+            </svg>
+          </a>
+          <div class="menu__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media facebok">
+                  <svg class="icon">
+                    <use href="/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media instagram">
+                  <svg class="icon">
+                    <use href="/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="video-sharing platform youtube">
+                  <svg class="icon">
+                    <use href="/icons.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="messanger WhatsApp">
+                  <svg class="icon">
+                    <use href="#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__close js-menu-close">
+            <svg class="icon">
+              <use href="#cross"></use>
+            </svg>
+          </div>
         </div>
 
-        <nav aria-label="Мобильная навигация">
-          <ul>
-            <li>
-              <a href="https://ak-sai.com/">Tours</a>
-              <ul>
-                <li>
-                  <a href="#">Tour category1</a>
-                </li>
-                <li>
-                  <a href="#">Tour category2</a>
-                </li>
-                <li>
-                  <a href="#">Tour category3</a>
-                </li>
-              </ul>
+        <nav class="menu__nav" aria-label="Мобильная навигация">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__item-link" href="/categories.html">Tours</a>
+
+              <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </button>
+              <div class="menu__submenu-wrapper">
+                <ul class="menu__submenu">
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Trekking adventures</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Horseback expedition</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Overland jeep journeys</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Nomadic heritage</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Custom expedition</a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li><a href="#">Private tours</a></li>
-            <li><a href="#">Solmo lodge</a></li>
-            <li><a href="#">Destination</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Private tours</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/lodge.html">Sokmo lodge</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Destination</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/blog.html">Blog</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
       </div>

@@ -1,35 +1,29 @@
 @use '../settings/shared' as v
 
 .categories
+  
   &__flex-wrap
     display: flex
     flex-wrap: wrap
-    gap: v.to-rem(30)
+    gap: v.$space-xl
     align-items: stretch
 
     @include v.media(tablet)
-      gap: v.to-rem(20)
+      gap: v.$space-lg
 
   &__item  
     position: relative
     
     @include v.media(tablet)
-      width: calc((100% - v.to-rem(20)) / 2)
-
-    @include v.media(laptop)
-      width: calc((100% - (3 * v.to-rem(20))) / 4)
+      width: calc((100% - v.$space-lg) / 2)
 
   &__img
     overflow: hidden
     height: 100%
     aspect-ratio: 16/9
     position: relative
-    border-radius: v.to-rem(16)
+    border-radius: v.$rad-lg
     
-    @include v.media(tablet)
-      border-radius: v.to-rem(24)
-    
-
     &::before
       position: absolute
       content: ''
@@ -45,7 +39,7 @@
     left: 0
     bottom: 0
     width: 100%
-    padding: 0 v.to-rem(20) v.to-rem(20)
+    padding: 0 v.$space-lg v.$space-lg
 
   &__title
     color: #fff

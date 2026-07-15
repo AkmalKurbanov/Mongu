@@ -21,8 +21,23 @@
     background-color: rgba(0,0,0,0.5)
     z-index: 2
 
+  &__poster
+    @include wh
+    object-fit: cover
+
+    @include v.media(tablet)
+      aspect-ratio: 800 / 1100
+
+    @include v.media(laptop)
+      aspect-ratio: 1440 / 900
+
+    @include v.media(desktop)
+      aspect-ratio: 1920 / 1080
+
+    @include v.landscape
+      aspect-ratio: 1440 / 900
+
   &__media,
-  &__poster,
   &__video
     @include wh
     position: absolute
@@ -58,20 +73,20 @@
     font-size: v.$fz-hero
     line-height: v.to-rem(40)
     font-weight: 400
-    
 
     @include v.media(tablet)
       font-size: v.to-rem(60)
       line-height: v.to-rem(60)
-    
+
       @include v.is-touch
         @include v.landscape
           font-size: v.to-rem(40)
           line-height: v.to-rem(40)
-      
 
   &__title-accent
     font-style: italic
+    font-weight: 300
+    font-size: 80%
 
   &__subtitle
     text-transform: uppercase
@@ -94,17 +109,33 @@
     @include v.media(desktop)
       flex-direction: row
 
+  // &__btn
+  //   justify-content: space-between
+
+  //   &_accent
+  //     min-width: v.to-rem(185)
+
+  //     @include v.media(laptop)
+  //       min-width: v.to-rem(250)
+
+  //   &_light
+  //     min-width: v.to-rem(235)
+
+  //     @include v.media(laptop)
+  //       min-width: v.to-rem(310)
+
   &_inside
-    height: v.to-rem(400)
+    height: v.to-rem(450)
     display: flex
     justify-content: flex-end
     flex-direction: column
-
-    @include v.media(tablet)
-      height: v.to-rem(500)
 
     .hero
       &__content
         padding-bottom: v.$space-xl
         height: auto
         width: 100%
+
+  &_without-darkening
+    &::before
+      display: none

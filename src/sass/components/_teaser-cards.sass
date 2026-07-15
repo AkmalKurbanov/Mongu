@@ -1,12 +1,17 @@
 @use '../settings/shared' as v
 .teaser-cards
+  position: relative
+
+  &__slider
+    position: relative
+
   &__grid
-    padding: v.$space-xl 0
     gap: v.$space-sm
+    
 
     @include v.media(tablet)
       gap: v.$space-lg
-      flex-wrap: wrap
+      // flex-wrap: wrap
     
     @include v.media(laptop)
       gap: v.$space-sm
@@ -45,7 +50,7 @@
 
   &__desc
     padding: v.$space-md
-
+    
     .badges
       margin-bottom: v.$space-sm
 
@@ -71,10 +76,9 @@
     gap: v.$space-xs
     cursor: pointer
     color: v.$clr-secondary
-    transition: color v.$tr-base
-
+    
     .icon
-      transition: color v.$tr-base, transform v.$tr-base
+      transition: transform v.$tr-base
 
   &__link
     position: absolute
@@ -85,21 +89,10 @@
   @include v.has-mouse
     &:hover
       transform: translateY(v.to-rem(-5))
-      
-      .teaser-card__img img
-        transform: scale(1.02) 
-
-      .teaser-card__more
-        color: v.$clr-accent-darker
-        .icon
-          transform: translateX(v.to-rem(5))
-    &:hover
-      transform: translateY(v.to-rem(-5))
       .teaser-card__img
         img
           transform: scale(1.02)
 
       .teaser-card__more
-        color: v.$clr-accent-darker
         .icon
           transform: translateX(v.to-rem(5))

@@ -27,12 +27,31 @@
     width: 100%
     display: flex
     align-items: center
-    padding: v.to-rem(70) 0 v.to-rem(30)
+    flex-direction: column
+    // padding: v.to-rem(70) 0 v.to-rem(30)
+
+  &__sidebar-top
+    display: flex
+    align-items: center
+    margin-bottom: v.$space-xl
+    width: 100%
+    padding: v.$space-xl v.$space-md 0
+
+  &__logo
+    width: v.to-rem(32)
+    height: v.to-rem(32)
+    display: flex
+    align-items: center
+    justify-content: center
+    
+    svg
+      width: 100%
+      height: 100%
+
+  &__social
+    flex-grow: 1
 
   &__close
-    position: absolute
-    top: v.to-rem(16)
-    right: v.to-rem(16)
     width: v.to-rem(40)
     height: v.to-rem(40)
     color: #fff
@@ -46,102 +65,93 @@
     .icon
       width: 100%
       height: 100%
-
-  nav
+ 
+  &__nav
     display: flex
     width: 100%
     height: 100%
     overflow-y: auto
 
-    ul
-      display: flex
-      flex-direction: column
-      width: 100%
+  &__list
+    display: flex
+    flex-direction: column
+    width: 100%
 
-      @include v.media(tablet)
-        justify-content: flex-start
-        display: inline-flex
-        width: auto
+    @include v.media(tablet)
+      justify-content: flex-start
+      display: inline-flex
+      width: auto
 
-      li
-        list-style: none
-        margin-bottom: v.to-rem(10)
-        position: relative
-        padding: 0 v.to-rem(16)
+  &__item
+    list-style: none
+    margin-bottom: v.$space-md
+    position: relative
+    padding: 0 v.to-rem(16)
 
-        @include v.media(tablet)
-          justify-content: flex-start
+    @include v.media(tablet)
+      justify-content: flex-start
 
-        &:has(ul)
-          display: inline-flex
-          align-items: center
-          flex-wrap: wrap
-          justify-content: space-between
+    &:has(ul)
+      display: inline-flex
+      align-items: center
+      flex-wrap: wrap
+      justify-content: space-between
 
-        &:last-child
-          margin-bottom: 0
+    &:last-child
+      margin-bottom: 0
 
-        a
-          text-decoration: none
-          color: v.$clr-text
-          transition: color v.$tr-base
-          font-weight: 500
-          font-size: v.to-rem(30)
-          line-height: normal
-          display: block
+    // Теперь анимируем обертку
+    &.is-droped
+      .menu__submenu-wrapper
+        grid-template-rows: 1fr
+        opacity: 1
 
-          @include v.has-mouse
-            &:hover
-              color: v.$clr-accent
+  &__item-link
+    text-decoration: none
+    color: v.$clr-text
+    font-weight: 500
+    font-size: v.$fz-base
+    line-height: normal
+    display: block
 
-        ul
-          height: 0
-          transition: height v.$tr-base, opacity v.$tr-base
-          overflow: hidden
-          opacity: 0
-          width: 100%
+  &__submenu-wrapper
+    display: grid
+    grid-template-rows: 0fr // Скрыто по умолчанию
+    transition: grid-template-rows v.$tr-base, opacity v.$tr-base
+    opacity: 0
+    width: 100%  
 
-          li
-            margin-top: v.to-rem(10)
-            display: block
-            margin-bottom: 0
+  &__submenu
+    overflow: hidden
+    min-height: 0
+    width: 100%
+    padding-left: v.$space-md
 
-            a
-              font-size: v.to-rem(16)
-              display: inline-block
+  &__subitem
+    margin-top: v.to-rem(10)
+    display: block
+    margin-bottom: 0
 
-        button
-          flex-grow: 1
-          display: flex
-          justify-content: flex-end
-          align-items: center
-          border: none
-          outline: none
-          cursor: pointer
-          background: none
-          z-index: 20
-
-          @include v.media(tablet)
-            flex-grow: 0
-
-          .icon
-            width: v.to-rem(32)
-            height: v.to-rem(32)
-            transition: color v.$tr-base
-            top: v.to-rem(6)
-            pointer-events: none
-            right: v.to-rem(8)
-
-        &.is-droped
-          ul
-            height: auto
-            opacity: 1
+  &__item-sublink
+    font-size: v.to-rem(16)
+    display: inline-block
+    text-decoration: none
+    color: v.$clr-text
 
   &__submenu-trigger
+    flex-grow: 1
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    border: none
+    outline: none
+    cursor: pointer
+    background: none
+    z-index: 20
     height: v.to-rem(24)
     position: relative
-    &::after
-      content: ''
-      display: inline-block
-      border: v.to-rem(7) solid transparent 
-      border-top: v.to-rem(6) solid v.$clr-accent
+
+    @include v.media(tablet)
+      flex-grow: 0
+
+   

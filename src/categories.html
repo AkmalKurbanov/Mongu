@@ -3,19 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Авторские туры по Кыргызстану | Mongu</title>
     <meta
       name="description"
       content="Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по самым красивым перевалам и озерам Кыргызстана с опытными гидами." />
-    <meta name="theme-color" content="#5a6b47" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Авторские туры по Кыргызстану — Mongu" />
     <meta property="og:description" content="Индивидуальные джип-туры и конные экспедиции по Кыргызстану." />
-    <meta property="og:url" content="https://yourdomain.com/" />
-    <meta property="og:image" content="https://yourdomain.com/images/og-image.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <link rel="canonical" href="https://yourdomain.com/" />
+    <meta property="og:url" content="https://mongu.kg/" />
+    <meta property="og:image" content="https://mongu.kg/images/og-image.jpg" />
+
+    <meta name="theme-color" content="#6c613e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#3F3F25" media="(prefers-color-scheme: dark)" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://mongu.kg/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 
     <script type="application/ld+json">
       {
@@ -23,12 +29,11 @@
         "@type": "TravelAgency",
         "name": "Mongu",
         "description": "Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по Кыргызстану.",
-        "url": "https://yourdomain.com/"
+        "url": "https://mongu.kg/"
       }
     </script>
   </head>
   <body>
-    
     <a
       href="https://wa.me/996555150795"
       class="whatsapp-float"
@@ -99,31 +104,31 @@
         <nav class="header__nav" aria-label="Основная навигация">
           <ul class="header__nav-list">
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Tours</a>
+              <a href="/categories.html" class="header__nav-link">Tours</a>
               <ul class="header__nav-sublist">
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Trekking adventures</a>
+                  <a href="/category.html" class="header__nav-sublink">Trekking adventures</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Horseback expedition</a>
+                  <a href="/category.html" class="header__nav-sublink">Horseback expedition</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Overland jeep journeys</a>
+                  <a href="/category.html" class="header__nav-sublink">Overland jeep journeys</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Nomadic heritage</a>
+                  <a href="/category.html" class="header__nav-sublink">Nomadic heritage</a>
                 </li>
                 <li class="header__nav-subitem">
-                  <a href="#" class="header__nav-sublink">Custom expedition</a>
+                  <a href="/category.html" class="header__nav-sublink">Custom expedition</a>
                 </li>
               </ul>
             </li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Private tours</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Solmo lodge</a></li>
+            <li class="header__nav-item"><a href="/lodge.html" class="header__nav-link">Sokmo lodge</a></li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Destination</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Blog</a></li>
-            <li class="header__nav-item"><a href="#" class="header__nav-link">Contacts</a></li>
+            <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
+            <li class="header__nav-item"><a href="/blog.html" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
         <div class="header__controls">
@@ -163,7 +168,7 @@
             </ul>
           </div>
 
-          <button type="button" aria-labelledby="mobile menu" class="hamburger js-hamburger">
+          <button type="button" aria-label="Mobile menu" class="hamburger js-hamburger">
             <svg class="icon">
               <use href="#hamburger"></use>
             </svg>
@@ -178,86 +183,37 @@
           <picture class="hero__poster">
             <source
               type="image/avif"
-              media="(min-width: 1200px)"
-              width="1920"
-              height="1080"
-              srcset="./images/hero/hero-large.avif 1x, ./images/hero/hero-large-2x.avif 2x" />
-            <source
-              type="image/webp"
-              media="(min-width: 1200px)"
-              width="1920"
-              height="1080"
-              srcset="./images/hero/hero-large.webp 1x, ./images/hero/hero-large-2x.webp 2x" />
-            <source
-              type="image/jpeg"
-              media="(min-width: 1200px)"
-              width="1920"
-              height="1080"
-              srcset="./images/hero/hero-large.jpg 1x, ./images/hero/hero-large-2x.jpg 2x" />
+              sizes="100vw"
+              srcset="
+                ./images/categories/hero-800.avif   800w,
+                ./images/categories/hero-1600.avif 1600w,
+                ./images/categories/hero-2400.avif 2400w,
+                ./images/categories/hero-3840.avif 3840w
+              " />
 
             <source
-              type="image/avif"
-              media="(min-width: 1024px)"
-              width="1200"
-              height="675"
-              srcset="./images/hero/hero-desktop.avif 1x, ./images/hero/hero-desktop-2x.avif 2x" />
-            <source
               type="image/webp"
-              media="(min-width: 1024px)"
-              width="1200"
-              height="675"
-              srcset="./images/hero/hero-desktop.webp 1x, ./images/hero/hero-desktop-2x.webp 2x" />
-            <source
-              type="image/jpeg"
-              media="(min-width: 1024px)"
-              width="1200"
-              height="675"
-              srcset="./images/hero/hero-desktop.jpg 1x, ./images/hero/hero-desktop-2x.jpg 2x" />
-
-            <source
-              type="image/avif"
-              media="(min-width: 768px)"
-              width="1024"
-              height="768"
-              srcset="./images/hero/hero-tablet.avif 1x, ./images/hero/hero-tablet-2x.avif 2x" />
-            <source
-              type="image/webp"
-              media="(min-width: 768px)"
-              width="1024"
-              height="768"
-              srcset="./images/hero/hero-tablet.webp 1x, ./images/hero/hero-tablet-2x.webp 2x" />
-            <source
-              type="image/jpeg"
-              media="(min-width: 768px)"
-              width="1024"
-              height="768"
-              srcset="./images/hero/hero-tablet.jpg 1x, ./images/hero/hero-tablet-2x.jpg 2x" />
-
-            <source
-              type="image/avif"
-              width="768"
-              height="1024"
-              srcset="./images/hero/hero-mobile.avif 1x, ./images/hero/hero-mobile-2x.avif 2x" />
-            <source
-              type="image/webp"
-              width="768"
-              height="1024"
-              srcset="./images/hero/hero-mobile.webp 1x, ./images/hero/hero-mobile-2x.webp 2x" />
+              sizes="100vw"
+              srcset="
+                ./images/categories/hero-800.webp   800w,
+                ./images/categories/hero-1600.webp 1600w,
+                ./images/categories/hero-2400.webp 2400w,
+                ./images/categories/hero-3840.webp 3840w
+              " />
 
             <img
-              src="./images/hero/hero-large.jpg"
-              srcset="./images/hero/hero-large-2x.jpg 2x"
+              src="./images/categories/hero-1600.jpg"
               alt="Discover Kyrgyzstan"
-              class="hero__poster-img"
               width="1920"
-              height="1080"
+              height="450"
+              loading="eager"
               fetchpriority="high" />
           </picture>
         </div>
 
         <div class="hero__content">
           <div class="container">
-            <h1>Tours</h1>
+            <h1 class="hero__title">Tours</h1>
           </div>
         </div>
       </section>
@@ -267,7 +223,7 @@
           <nav aria-label="Хлебные крошки" class="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
-                <a href="/">Главная</a>
+                <a class="breadcrumbs__link" href="/">Главная</a>
               </li>
               <li class="breadcrumbs__item" aria-current="page">Туры</li>
             </ul>
@@ -275,108 +231,227 @@
         </div>
       </section>
 
-      <section class="categories section-padding">
+      <section class="categories section-padding_sm-interval">
         <div class="container">
           <div class="categories__flex-wrap">
             <div class="categories__item">
               <div class="categories__img">
-                <img
-                  src="./images/categories/trekking.jpg"
-                  width="1024"
-                  height="728"
-                  loading="lazy"
-                  alt="Trekking adventures" />
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-450.avif 450w,
+                      ./images/categories/category-700.avif 700w,
+                      ./images/categories/category-900.avif 900w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-400.webp 450w,
+                      ./images/categories/category-700.webp 700w,
+                      ./images/categories/category-900.webp 900w
+                    " />
+                  <img
+                    src="./images/categories/category-700.jpg"
+                    alt="Описание"
+                    width="1920"
+                    height="1080"
+                    loading="eager"
+                    fetchpriority="high" />
+                </picture>
               </div>
               <div class="categories__desc">
-                <h3 class="categories__title">Trekking adventures</h3>
+                <h2 class="categories__title">Trekking adventures</h3>
               </div>
               <a href="#" aria-label="Смотреть туры: Trekking adventures" class="categories__link"></a>
             </div>
 
             <div class="categories__item">
               <div class="categories__img">
-                <img
-                  src="./images/categories/horseback.jpg"
-                  width="1024"
-                  height="728"
-                  loading="lazy"
-                  alt="Horseback expedition" />
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-450.avif 450w,
+                      ./images/categories/category-700.avif 700w,
+                      ./images/categories/category-900.avif 900w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-400.webp 450w,
+                      ./images/categories/category-700.webp 700w,
+                      ./images/categories/category-900.webp 900w
+                    " />
+                  <img
+                    src="./images/categories/category-700.jpg"
+                    alt="Описание"
+                    width="1920"
+                    height="1080"/>
+                </picture>
               </div>
               <div class="categories__desc">
-                <h3 class="categories__title">Horseback expedition</h3>
+                <h2 class="categories__title">Trekking adventures</h2>
               </div>
-              <a href="#" class="categories__link" aria-label="Смотреть туры: Horseback expedition"></a>
+              <a href="#" aria-label="Смотреть туры: Trekking adventures" class="categories__link"></a>
             </div>
 
             <div class="categories__item">
               <div class="categories__img">
-                <img
-                  src="./images/categories/overland.jpg"
-                  width="1024"
-                  height="728"
-                  loading="lazy"
-                  alt="Overland & jeep journeys" />
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-450.avif 450w,
+                      ./images/categories/category-700.avif 700w,
+                      ./images/categories/category-900.avif 900w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-400.webp 450w,
+                      ./images/categories/category-700.webp 700w,
+                      ./images/categories/category-900.webp 900w
+                    " />
+                  <img
+                    src="./images/categories/category-700.jpg"
+                    alt="Описание"
+                    width="1920"
+                    height="1080"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
               </div>
               <div class="categories__desc">
-                <h3 class="categories__title">Overland & jeep journeys</h3>
+                <h2 class="categories__title">Trekking adventures</h2>
               </div>
-              <a href="#" class="categories__link" aria-label="Смотреть туры: Overland & jeep journeys"></a>
+              <a href="#" aria-label="Смотреть туры: Trekking adventures" class="categories__link"></a>
             </div>
 
             <div class="categories__item">
               <div class="categories__img">
-                <img
-                  src="./images/categories/nomadic.jpg"
-                  width="1024"
-                  height="728"
-                  loading="lazy"
-                  alt="Nomadic heritage" />
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-450.avif 450w,
+                      ./images/categories/category-700.avif 700w,
+                      ./images/categories/category-900.avif 900w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-400.webp 450w,
+                      ./images/categories/category-700.webp 700w,
+                      ./images/categories/category-900.webp 900w
+                    " />
+                  <img
+                    src="./images/categories/category-700.jpg"
+                    alt="Описание"
+                    width="1920"
+                    height="1080"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
               </div>
               <div class="categories__desc">
-                <h3 class="categories__title">Nomadic heritage</h3>
+                <h2 class="categories__title">Trekking adventures</h2>
               </div>
-              <a href="#" class="categories__link" aria-label="Смотреть туры: Nomadic heritage"></a>
+              <a href="#" aria-label="Смотреть туры: Trekking adventures" class="categories__link"></a>
             </div>
 
             <div class="categories__item">
               <div class="categories__img">
-                <img
-                  src="./images/categories/custom.avif"
-                  width="1024"
-                  height="728"
-                  loading="lazy"
-                  alt="Custom expedition" />
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-450.avif 450w,
+                      ./images/categories/category-700.avif 700w,
+                      ./images/categories/category-900.avif 900w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1024px) 435px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                    srcset="
+                      ./images/categories/category-400.webp 450w,
+                      ./images/categories/category-700.webp 700w,
+                      ./images/categories/category-900.webp 900w
+                    " />
+                  <img
+                    src="./images/categories/category-700.jpg"
+                    alt="Описание"
+                    width="1920"
+                    height="1080"
+                    loading="eager"
+                    fetchpriority="high" />
+                </picture>
               </div>
               <div class="categories__desc">
-                <h3 class="categories__title">Custom expedition</h3>
+                <h2 class="categories__title">Trekking adventures</h2>
               </div>
-              <a href="#" class="categories__link" aria-label="Смотреть туры: Custom expedition"></a>
+              <a href="#" aria-label="Смотреть туры: Trekking adventures" class="categories__link"></a>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="promo-highlight section-padding">
-        <div class="container">
-          <div class="promo-highlight__img">
-            <img src="./images/lodge/sokmo-lodge.jpg" width="1086" height="400" loading="lazy" alt="Sokmo Lodge" />
-          </div>
-          <div class="promo-highlight__desc">
-            <div>
-              <h2 class="title title_light">Sokmo Lodge</h2>
-              <p>
-                Lorem ipsum dolor sit amet, <br />
-                consectetur adipisicing elit. <br />
-                Temporibus neque labore perferendis <br />
-                dolore iure autem.
-              </p>
-              <a href="" class="btn btn_light">
-                Book your stay
-                <svg class="icon">
-                  <use href="#arrow"></use>
-                </svg>
-              </a>
-            </div>
+      <section class="promo-highlight">
+        <div class="promo-highlight__img">
+          <picture class="promo-highlight__img">
+            <source
+              type="image/avif"
+              sizes="(min-width: 768px) 57vw, 100vw"
+              srcset="
+                ./images/lodge/sokmo-450.avif   450w,
+                ./images/lodge/sokmo-800.avif   800w,
+                ./images/lodge/sokmo-1200.avif 1200w,
+                ./images/lodge/sokmo-1600.avif 1600w
+              " />
+
+            <source
+              type="image/webp"
+              sizes="(min-width: 768px) 57vw, 100vw"
+              srcset="
+                ./images/lodge/sokmo-450.webp   450w,
+                ./images/lodge/sokmo-800.webp   800w,
+                ./images/lodge/sokmo-1200.webp 1200w,
+                ./images/lodge/sokmo-1600.webp 1600w
+              " />
+
+            <img
+              src="./images/lodge/sokmo-1200.jpg"
+              alt="Sokmo Lodge"
+              width="1200"
+              height="515"
+              loading="lazy"
+              decoding="async" />
+          </picture>
+        </div>
+        <div class="promo-highlight__desc">
+          <div>
+            <h2 class="title title_light">Sokmo Lodge</h2>
+            <p>
+              Lorem ipsum dolor sit amet, <br />
+              consectetur adipisicing elit. <br />
+              Temporibus neque labore perferendis <br />
+              dolore iure autem.
+            </p>
+            <a href="" class="btn btn_light more-btn">
+              Book your stay
+              <svg class="icon">
+                <use href="#arrow"></use>
+              </svg>
+            </a>
           </div>
         </div>
       </section>
@@ -385,49 +460,51 @@
     <footer class="footer">
       <div class="footer__top section-padding section-bg">
         <div class="container">
-          <div class="footer__top-flex-wrap">
-            <div class="footer__col">
+          <div class="footer__top-grid">
+            <div class="footer__grid-item">
               <h2 class="title">Plan your jorney</h2>
+            </div>
+            <div class="footer__grid-item">
               <p class="footer__subtitle">
                 Lorem ipsum dolor sit amet <br />
                 consectetur adipisicing.
               </p>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="tel:996555123456" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="#whatsapp"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Whatsapp</h4>
+                  <strong class="footer__contacts-title">Whatsapp</strong>
                   <span>+996 555 123 456</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="mailto:info@mongu.com" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="#envelope"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Email</h4>
+                  <strong class="footer__contacts-title">Email</strong>
                   <span>info@mongu.com</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
+            <div class="footer__grid-item">
               <a href="#" class="footer__contacts-link">
                 <svg class="icon">
                   <use href="./icons.svg#instagram"></use>
                 </svg>
                 <div>
-                  <h4 class="footer__contacts-title">Instagram</h4>
+                  <strong class="footer__contacts-title">Instagram</strong>
                   <span>@mongu</span>
                 </div>
               </a>
             </div>
-            <div class="footer__col">
-              <button type="button" class="btn">
+            <div class="footer__grid-item">
+              <button type="button" class="footer__btn btn">
                 Booking
                 <svg class="icon">
                   <use href="#arrow"></use>
@@ -455,14 +532,13 @@
 
             <nav aria-label="Основная навигация">
               <ul>
-                <li><a href="#">Tours</a></li>
+                <li><a href="/categories.html">Tours</a></li>
                 <li><a href="#">Private tours</a></li>
-                <li><a href="#">Solmo lodge</a></li>
+                <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="#">Destination</a></li>
-                <li><a href="#">Gallery</a></li>
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
 
@@ -473,11 +549,9 @@
     </footer>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="arrow" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M13.6 7.6q.4-.5.8 0l4 4 .5.4-.5.4-4 4a.6.6 0 0 1-.8-.8l2.9-3H6a.6.6 0 1 1 0-1.2h10.5l-3-3z" />
-      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+  <path fill="currentColor" d="M14.1 7.3q.4-.6.9 0l4.4 4.4.6.4-.6.4L15 17h-.8v-.8l3.1-3.3H5.7l-.6-.4a1 1 0 0 1 .3-.9h11.9L14 8.1z"/>
+</symbol>
       <symbol id="hamburger" viewBox="0 0 16 12">
         <path
           fill="currentColor"
@@ -513,37 +587,114 @@
           d="M18.3 5.6A9 9 0 0 0 12 3a9 9 0 0 0-7.8 4.5 9 9 0 0 0 0 8.9L3 21l4.8-1.2a9 9 0 0 0 12.6-4.4 9 9 0 0 0-2-9.8M12 19.3q-2.1 0-3.9-1l-.2-.2L5 19l.7-2.8-.2-.2a7.4 7.4 0 0 1 1.7-9.7A7.5 7.5 0 0 1 19 9q.5 1.4.5 2.8a7.4 7.4 0 0 1-7.4 7.4" />
       </symbol>
     </svg>
+
     <div class="menu js-menu">
       <div class="menu__sidebar">
-        <div class="menu__close js-menu-close">
-          <svg class="icon">
-            <use href="#cross"></use>
-          </svg>
+        <div class="menu__sidebar-top">
+          <a href="/" class="menu__logo" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 213 198">
+              <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+              <path
+                fill="#000"
+                d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+            </svg>
+          </a>
+          <div class="menu__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media facebok">
+                  <svg class="icon">
+                    <use href="/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media instagram">
+                  <svg class="icon">
+                    <use href="/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="video-sharing platform youtube">
+                  <svg class="icon">
+                    <use href="/icons.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="messanger WhatsApp">
+                  <svg class="icon">
+                    <use href="#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__close js-menu-close">
+            <svg class="icon">
+              <use href="#cross"></use>
+            </svg>
+          </div>
         </div>
 
-        <nav aria-label="Мобильная навигация">
-          <ul>
-            <li>
-              <a href="https://ak-sai.com/">Tours</a>
-              <ul>
-                <li>
-                  <a href="#">Tour category1</a>
-                </li>
-                <li>
-                  <a href="#">Tour category2</a>
-                </li>
-                <li>
-                  <a href="#">Tour category3</a>
-                </li>
-              </ul>
+        <nav class="menu__nav" aria-label="Мобильная навигация">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__item-link" href="/categories.html">Tours</a>
+              
+              <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </button>
+              <div class="menu__submenu-wrapper">
+                <ul class="menu__submenu">
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Trekking adventures</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Horseback expedition</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Overland jeep journeys</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Nomadic heritage</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">Custom expedition</a>
+                  </li>
+                </ul>
+              </div>
             </li>
-            <li><a href="#">Private tours</a></li>
-            <li><a href="#">Solmo lodge</a></li>
-            <li><a href="#">Destination</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contacts</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Private tours</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/lodge.html">Sokmo lodge</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Destination</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/blog.html">Blog</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
       </div>

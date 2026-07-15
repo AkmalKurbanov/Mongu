@@ -27,6 +27,7 @@
   list-style: none
   border-radius: v.$rad-sm
   box-shadow: v.$shadow-sm
+  overflow: hidden
 
   .header__nav-sublink,
   .header__callback-link
@@ -59,6 +60,9 @@
   left: 0
   right: 0
   margin: 0 auto
+  opacity: 0
+  transition: opacity v.$tr-fast 
+  transition-delay: .25s
 
   &__container
     display: flex
@@ -146,13 +150,13 @@
     height: 100%
 
     @include v.media(tablet)
-      font-size: v.$fz-sm
-
-    @include v.media(laptop)
       font-size: v.$fz-md
 
-    @include v.media(desktop)
+    @include v.media(laptop)
       font-size: v.$fz-lg
+
+    @include v.media(desktop)
+      font-size: v.$fz-xl
 
     @include v.has-mouse
       &:hover
@@ -177,8 +181,17 @@
       @include flex-center
       cursor: pointer
       color: #fff
+      margin-left: v.$space-xs
+      
       @include v.media(tablet)
         display: none
+
+  &__btn
+    width: v.to-rem(85)
+    transition: min-width v.$tr-fast
+
+    @include v.media(laptop)
+      width: v.to-rem(110)
 
   &__btn, &__callback-wrap
     @include flex-center
@@ -222,7 +235,7 @@
       padding: 0 v.$space-md
 
   &_inside,
-  &_bg
+  &_reduced
     .header__container
       background-color: #f9f9fb
       box-shadow: v.$shadow-sm
@@ -238,15 +251,17 @@
         &:hover
           color: v.$clr-accent-darker
 
-  &_bg
-
+  &_reduced
+    opacity: 1 
     .header__container
-      max-width: calc( v.to-rem(1200) - (v.$container-padding * 3) )
-      padding: 0 v.$space-md
+      padding: 0 v.$space-xs
+      
+      @media (min-width: 340px)
+        padding: 0 v.$space-md
+      
 
-    .header__btn
-      @include v.media(laptop)
-        font-size: v.$fz-xs
+      @include v.media(desktop)
+        max-width: calc( v.to-rem(1200) - (v.$container-padding * 3) )
 
     .logo
       flex-shrink: 0
@@ -257,3 +272,9 @@
 
     .header__nav-link
       text-transform: inherit
+
+  &_glued
+    opacity: 1
+
+   
+     

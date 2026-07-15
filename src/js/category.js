@@ -1,5 +1,5 @@
-import "./header-fixed";
-import "./menu";
+import "./header-fixed?categoryPage";
+import "./menu?categoryPage";
 
-import "/sass/core.sass";
+
 import "/sass/category.sass";

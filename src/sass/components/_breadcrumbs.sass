@@ -2,37 +2,46 @@
 
 .breadcrumbs
   margin-top: v.to-rem(30)
-  ul
+  &__list
     display: flex
     flex-wrap: wrap
     column-gap: 5px
 
-    li
-      list-style: none
-      color: v.$clr-accent
-      font-weight: 500
-      position: relative
-      font-size: v.to-rem(12)
+  &__item
+    list-style: none
+    color: v.$clr-accent
+    font-weight: 500
+    position: relative
+    font-size: v.to-rem(12)
+
+    &::after
+      padding-left: v.to-rem(5)
+      content: '/'
+
+    &:last-child
+      @include v.has-mouse
+        &:hover
+          cursor: default
+
       &::after
-        padding-left: v.to-rem(5)
-        content: '/'
+        display: none
 
-      &:last-child
-        @include v.has-mouse
-          &:hover
-            cursor: default
-
-        &::after
-          display: none
-
-      a
-        text-decoration: none
-        color: currentColor
-        transition: color v.$tr-base
-
-        @include v.has-mouse
-          &:hover
-            color: v.$clr-secondary
-
-      &:last-child
+    &:last-child
+      color: v.$clr-accent-darker
+      
+  &__link
+    text-decoration: none
+    color: currentColor
+    transition: color v.$tr-base
+    
+    @include v.has-mouse
+      &:hover
         color: v.$clr-secondary
+
+  &_light
+    .breadcrumbs__item
+      &:last-child
+        color: v.$clr-accent
+
+    .breadcrumbs__link
+      color: #fff
