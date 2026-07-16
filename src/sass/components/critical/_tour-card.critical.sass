@@ -1,0 +1,107 @@
+@use '../../settings/shared' as v
+
+.card-grid
+
+  @include v.media(tablet)
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: v.$space-lg
+
+  @include v.media(laptop)
+    grid-template-columns: repeat(3, 1fr)
+
+  .tour-card
+    margin-bottom: v.$space-lg
+
+    &:last-child
+      margin-bottom: 0
+
+    @include v.media(tablet)
+      margin: 0
+
+.tour-card
+  position: relative
+  background-color: #fff
+  border-radius: v.$rad-md
+  overflow: hidden
+  width: 100%
+
+  &__head
+    position: relative
+    .badges
+      justify-content: space-between
+      position: absolute
+      top: v.$space-lg
+      left: v.$space-lg
+      right: v.$space-lg
+
+  &__img
+    display: block
+    position: relative
+    width: 100%
+    aspect-ratio: 16 / 9
+    background: #eee
+    overflow: hidden
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+  &__body
+    display: flex
+    flex-direction: column
+    row-gap: v.$space-sm
+    padding: v.$space-md
+
+    @include v.media(tablet)
+      padding: v.$space-lg
+
+  &__title
+    font-size: v.$fz-lg
+
+  &__desc
+    font-size: v.$fz-md
+
+  &__footer
+    padding: 0 v.$space-md v.$space-md
+
+    @include v.media(tablet)
+      padding: 0 v.$space-lg v.$space-lg
+
+  &__btn
+    width: 100%
+    border-radius: v.$rad-md
+
+  &__features
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    column-gap: v.$space-lg
+    text-align: center
+
+  &__feature
+    display: flex
+    flex-direction: column
+    align-items: center
+    row-gap: v.$space-xs
+
+  .feature
+
+    .icon
+      width: v.to-rem(22)
+      height: v.to-rem(22)
+
+    &__label
+      font-size: v.$fz-xs
+      font-weight: 500
+      text-transform: uppercase
+
+    &__value
+      font-size: v.$fz-sm
+      font-weight: 500
+
+  &__link
+    position: absolute
+    inset: 0
+    width: 100%
+    height: 100%

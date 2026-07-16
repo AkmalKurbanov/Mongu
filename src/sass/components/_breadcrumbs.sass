@@ -1,21 +1,21 @@
 @use '../settings/shared' as v
 
 .breadcrumbs
-  margin-top: v.to-rem(30)
+  margin-top: v.$space-xl
+
   &__list
     display: flex
     flex-wrap: wrap
-    column-gap: 5px
+    column-gap: v.$space-xs
 
   &__item
-    list-style: none
     color: v.$clr-accent
     font-weight: 500
     position: relative
-    font-size: v.to-rem(12)
+    font-size: v.$fz-md
 
     &::after
-      padding-left: v.to-rem(5)
+      padding-left: v.$space-xs
       content: '/'
 
     &:last-child

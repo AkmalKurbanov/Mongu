@@ -1,20 +1,11 @@
 @use '../settings/shared' as v
 
 .badges
-  display: flex
-  flex-wrap: wrap
-  gap: v.$space-xs
+  
 
   &__badge
-    border: v.to-rem(1) solid
     border-radius: v.to-rem(5)
-    padding: 0 v.$space-xs
-    min-height: v.to-rem(28)
-    display: inline-flex
-    align-items: center
-    justify-content: center
-    font-weight: 500
-    font-size: v.$fz-md
+    
     a
       text-decoration: none
       transition: color v.$tr-base
@@ -23,14 +14,11 @@
       color: v.$clr-accent
       border-color: v.$clr-accent
       transition: border-color v.$tr-base
-      position: relative
+      
 
       a
         color: v.$clr-accent
-        display: flex
-        align-items: center
-        justify-content: center
-        height: 100%
+        
 
       span  
         transition: color v.$tr-base,
@@ -53,9 +41,7 @@
     &_peak
       background-color: #fff
       border-color: #fff
-      display: flex
-      column-gap: v.$space-xs
-
+      
       .icon
         color: v.$clr-accent
 

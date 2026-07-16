@@ -3,20 +3,26 @@
 .categories
   
   &__flex-wrap
-    display: flex
-    flex-wrap: wrap
-    gap: v.$space-xl
-    align-items: stretch
 
     @include v.media(tablet)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
       gap: v.$space-lg
+      align-items: stretch
+
 
   &__item  
     position: relative
-    
-    @include v.media(tablet)
-      width: calc((100% - v.$space-lg) / 2)
+    margin-bottom: v.$space-lg
 
+    @include v.media(tablet)
+      margin-bottom: 0
+      
+    &:last-child
+      margin-bottom: 0
+
+
+    
   &__img
     overflow: hidden
     height: 100%
@@ -46,6 +52,10 @@
     text-transform: uppercase  
     display: flex
     align-items: center
+    font-size: v.$fz-xl
+
+    @include v.media(desktop)
+      font-size: v.$fz-xxl
 
   &__link
     position: absolute

@@ -1,0 +1,104 @@
+@use '../../settings/shared' as v
+.about
+  &__link
+    text-transform: uppercase
+    font-weight: 500
+    display: inline-flex
+    width: max-content
+    align-items: center
+    margin: 0 auto
+
+    @include v.media(laptop)
+      justify-content: flex-start
+      margin: 0
+
+  &__title
+    @include v.media(laptop)
+      text-align: left
+      grid-column: 1 / -1
+      grid-row: 1
+
+  &__grid
+    display: flex
+    flex-direction: column
+    gap: v.$space-lg
+    margin: 0 auto
+
+    @include v.media(laptop)
+      display: grid
+      grid-template-columns: 1fr 2fr
+      grid-rows: 3
+
+      @include v.media(desktop)
+        grid-template-columns: 1fr 2.7fr
+
+  &__desc
+    max-width: v.to-rem(500)
+    width: 100%
+    margin: 0 auto
+    display: none
+
+    @include v.media(laptop)
+      display: block
+      grid-column: 1
+      grid-row: 2
+      max-width: v.to-rem(300)
+      margin-left: 0
+
+  &__features
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    column-gap: v.$space-sm
+    row-gap: v.$space-md
+    text-align: center
+    list-style: none
+    margin: 0 auto
+    max-width: v.to-rem(400)
+    width: 100%
+
+    @include v.media(tablet)
+      max-width: v.to-rem(600)
+      column-gap: 0
+
+    @include v.media(laptop)
+      max-width: 100%
+      grid-template-columns: repeat(3, 1fr)
+      margin-top: v.to-rem(-7)
+      grid-column: 2
+      grid-row: 1 / 4
+
+    @include v.media(desktop)
+      grid-template-columns: repeat(6, 1fr)
+      grid-row: 2 / 3
+
+  &__features-item
+    text-align: center
+    
+    @include v.media(tablet)
+      padding: 0 v.to-rem(5)
+
+      &:last-child
+        border: none
+    
+    @include v.media(desktop)
+      border-right: v.to-rem(1) solid #00000048
+
+    .icon
+      width: v.to-rem(50)
+      height: v.to-rem(50)
+
+    p
+      font-weight: 500
+      font-size: v.$fz-sm
+
+      @include v.media(tablet)
+        font-size: v.$fz-md
+
+  &__features-title
+    font-size: v.$fz-sm
+    font-weight: 500
+    text-transform: uppercase
+    margin-bottom: v.$space-xs
+
+    @include v.media(tablet)
+      font-size: v.$fz-base

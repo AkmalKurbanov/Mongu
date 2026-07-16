@@ -3,7 +3,6 @@
 .about
   
   &__link
-    text-decoration: none
     transition: color v.$tr-base
     color: v.$clr-accent
     
@@ -15,9 +14,7 @@
       transition: transform v.$tr-base
 
   &__features-item
-    @include v.media(desktop)
-      border-right: v.to-rem(1) solid #00000048
-
+    
     .icon
       color: v.$clr-accent
 

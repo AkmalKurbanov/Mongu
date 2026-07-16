@@ -1,15 +1,12 @@
 @use '../settings/shared' as v
 
 .menu
-  position: fixed
   width: 100%
   height: 100%
   inset: 0
   backdrop-filter: blur(10px)
   z-index: 5
   transition: opacity v.$tr-base
-  pointer-events: none
-  opacity: 0
 
   &_is-open
     opacity: 1

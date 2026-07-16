@@ -1,0 +1,204 @@
+@use '../../settings/shared' as v
+
+@mixin flex-center
+  display: flex
+  align-items: center
+
+@mixin pseudo-element
+  &::after
+    position: absolute
+    content: ''
+    width: 100%
+    height: v.to-rem(10)
+    top: 100%
+    left: 0
+
+.header
+  width: calc( 100% - (v.$space-md * 2) )
+  z-index: 4
+  position: fixed
+  top: v.$space-md
+  left: 0
+  right: 0
+  margin: 0 auto
+  opacity: 0
+  transition: opacity v.$tr-fast 
+  transition-delay: .25s
+
+  &__container
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    column-gap: v.$space-xs
+    height: v.to-rem(50)
+    border-radius: v.$rad-sm
+
+    @include v.media(tablet)
+      box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .2)
+
+    &.container
+      padding: 0
+      @include v.media(tablet)
+        padding: 0 v.$space-md
+
+  .header__logo
+    @include flex-center
+
+    @include v.media(tablet)
+      width: v.to-rem(30)
+
+    @include v.media(laptop)
+      width: auto
+
+  .logo
+    display: flex
+    color: #fff
+
+    @include v.media(desktop)
+      width: v.to-rem(130)
+      height: v.to-rem(40)
+
+    .hidden-elem
+      @include v.media(tablet)
+        display: none
+
+      @include v.media(laptop)
+        display: flex
+
+    svg
+      width: 100%
+      height: 100%
+
+  &__nav
+    display: none
+
+    @include v.media(tablet)
+      display: flex
+      justify-content: center
+      flex-grow: 1
+
+  &__nav-list
+    column-gap: v.$space-xs
+
+    @include v.media(tablet)
+      column-gap: v.$space-md
+      display: flex
+      align-items: stretch
+      list-style: none
+      justify-content: space-around
+
+  &__nav-item
+    @include flex-center
+    gap: v.$space-xs
+    position: relative
+    flex-direction: column
+
+    @include pseudo-element
+
+  &__nav-link
+    @include flex-center
+    text-decoration: none
+    font-weight: 500
+    height: 100%
+    color: #fff
+
+    @include v.media(tablet)
+      font-size: v.$fz-md
+
+    @include v.media(laptop)
+      font-size: v.$fz-lg
+
+    @include v.media(desktop)
+      font-size: v.$fz-xl
+
+  &__nav-sublist,
+  &__callback-list
+    opacity: 0
+    position: absolute
+    pointer-events: none
+
+  &__controls
+    @include flex-center
+    gap: v.$space-xs
+
+    .hamburger
+      color: #fff
+      
+      @include flex-center
+      margin-left: v.$space-xs
+
+      @include v.media(tablet)
+        display: none
+
+  &__btn
+    width: v.to-rem(85)
+
+    @include v.media(laptop)
+      width: v.to-rem(110)
+
+  &__btn, &__callback-wrap
+    @include flex-center
+    border-radius: v.$rad-sm
+    border: v.to-rem(1) solid #fff
+    position: relative
+    height: v.to-rem(30)
+    font-size: v.$fz-xs
+    padding: 0 v.$space-xs
+    white-space: nowrap
+    background-color: v.$clr-accent
+    color: #fff
+
+    @include v.media(laptop)
+      font-size: v.$fz-md
+
+  &__callback
+    height: 100%
+    @include flex-center
+    position: relative
+    @include pseudo-element
+
+  &_inside
+    .header__container
+      padding: 0 v.$space-md
+
+  &_inside,
+  &_reduced
+    .header__container
+      background-color: #f9f9fb
+      box-shadow: v.$shadow-sm
+
+    .logo
+      color: #000
+
+    .hamburger
+      color: v.$clr-accent
+
+    .header__nav-link
+      color: v.$clr-text
+      @include v.has-mouse
+        &:hover
+          color: v.$clr-accent-darker
+
+  &_reduced
+    opacity: 1 
+    .header__container
+      padding: 0 v.$space-xs
+
+      @media (min-width: 340px)
+        padding: 0 v.$space-md
+
+      @include v.media(desktop)
+        max-width: calc( v.to-rem(1200) - (v.$container-padding * 3) )
+
+    .logo
+      flex-shrink: 0
+
+      @include v.media(desktop)
+        width: v.to-rem(100)
+        height: v.to-rem(30)
+
+    .header__nav-link
+      text-transform: inherit
+
+  &_glued
+    opacity: 1
