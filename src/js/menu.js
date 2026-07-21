@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export const initMenu = () => {
   const menu = document.querySelector(".js-menu");
   const hamburger = document.querySelector(".js-hamburger");
   const body = document.querySelector("body");
@@ -18,11 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Только слушаем клики, никаких createElement и appendChild
   const triggersSubmenu = document.querySelectorAll(".js-trigger-submenu");
   triggersSubmenu.forEach(trigger => {
     trigger.addEventListener("click", function () {
       this.closest("li").classList.toggle("is-droped");
     });
   });
-});
+};

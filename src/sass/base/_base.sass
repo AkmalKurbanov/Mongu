@@ -1,21 +1,74 @@
 @use '../settings/shared' as v
 
-body
-  color: v.$clr-text
+body.content-loaded
+  main
+    opacity: 1
+.main-content
+  &_inner-page
+    padding-top: v.to-rem(50)
+
+    @include v.media(tablet)
+      padding-top: v.to-rem(70)
+
+  &_dark-bg
+    background-color: #162017
+
+.title-wrap
+  margin-bottom: v.$space-md
+  @include v.media(tablet)
+    margin-bottom: v.$space-xl
 
 .title
   color: #111
+  font-size: v.to-rem(25)
+  font-weight: 400
+  font-family: v.$ff-accent
+
+  &_centered
+    text-align: center
+
+  @include v.media('tablet')
+    font-size: v.to-rem(30)
 
   &_light
     color: #fff
 
 .subtitle
   color: v.$clr-accent
+  text-align: center
+  font-size: v.to-rem(16)
+  margin-top: v.to-rem(12)
+  max-width: v.to-rem(600)
+  margin-inline: auto
 
 .more-btn
+  display: flex
+  align-items: center
+  column-gap: v.$space-xs
+
   .icon
     transition: transform v.$tr-fast
   @include v.has-mouse
     &:hover
       .icon
         transform: translateX(v.to-rem(5))
+
+.section-padding
+  padding: v.$section-padding-y
+
+  @include v.media(desktop)
+    padding: v.to-rem(60) 0
+
+  &_sm-interval
+    padding: v.$space-xl 0
+
+.section-bg
+  background-color: #f3f1ef
+
+a
+  text-decoration: none
+
+ul
+  padding: 0
+  li
+    list-style: none

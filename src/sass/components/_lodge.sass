@@ -1,17 +1,196 @@
 @use '../settings/shared' as v
-
 .lodge
   p
     color: #fff
 
+  &__breadcrumbs
+    margin-top: 0
+
+  &__desc
+    text-align: center
+    p
+      line-height: 1.6
+      font-weight: 400  
+
+    &__rooms
+      @include v.media(tablet)
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: v.$space-xs
+
+  &__rooms-item
+    margin-bottom: v.to-rem(30)
+    list-style: none
+
+    &:last-child
+      margin-bottom: 0
+
+    @include v.media(tablet)
+      margin: 0     
+
   &__room-card
+    display: flex
+    flex-direction: column
+    border: v.to-rem(1) solid #ffffff2e
+    border-radius: v.$rad-md    
     color: #fff
+
+    @include v.media(tablet)
+      height: 100% 
+
+  &__room-img
+    aspect-ratio: 16/9
+    border-radius: v.$rad-md v.$rad-md 0 0
+    overflow: hidden
+
+    img
+      height: 100%    
+
+  &__card-body
+    height: 100%
+    padding: v.$space-xl
+
+    @include v.media(tablet)
+      padding: v.$space-md v.$space-sm
+
+    @include v.media(laptop)
+      padding: v.$space-md
+
+    @include v.media(desktop)
+      padding: v.$space-xl    
+
+  &__room-title
+    text-transform: uppercase
+    font-size: v.$fz-xl
+    margin-bottom: v.$space-sm
+
+    @include v.media(tablet)
+      font-size: v.$fz-md
+
+    @include v.media(laptop)
+      font-size: v.$fz-lg
+
+    @include v.media(desktop)
+      font-size: v.$fz-xl    
+
+  &__features
+    border-bottom: v.to-rem(1) solid #ffffff2e
+    padding-left: v.$space-lg
+
+    &:last-child
+      border: none    
+
+  &__feature
+    margin-bottom: v.$space-xs
+
+    @include v.media(tablet)
+      font-size: v.$fz-sm
+
+    @include v.media(laptop)
+      font-size: v.$fz-md
+
+    @include v.media(desktop)
+      font-size: v.$fz-base
+
+    &:last-child
+      margin-bottom: 0    
+
+  &__card-footer
+    padding: v.$space-sm v.$space-xl v.$space-xl
+
+    @include v.media(tablet)
+      padding: v.$space-sm v.$space-sm v.$space-md
+
+    @include v.media(laptop)
+      padding: v.$space-sm v.$space-md v.$space-md
+
+    @include v.media(desktop)
+      padding: v.$space-sm v.$space-xl v.$space-xl
+
+  &__room-price
+    font-size: v.$fz-xxl
+    font-weight: 600
+    border-bottom: v.to-rem(1) solid #ffffff2e
+    padding-bottom: v.$space-sm
+
+    @include v.media(tablet)
+      font-size: v.$fz-xl
+
+    @include v.media(desktop)
+      font-size: v.$fz-xxl   
+
+  &__card-btn
+    margin-top: v.$space-md
+    width: 100%     
 
   &__amenities
     color: #fff
+    
+  &__amenities-item
+    background-color: v.$clr-accent
+    margin-bottom: v.$space-md
+    list-style: none
 
-  
+    &:last-child
+      margin-bottom: 0
 
+    &:nth-child(even)
+      @include v.media(tablet)
+        .lodge__amenities-card
+          flex-direction: row-reverse 
+
+  &__amenities-card
+
+    @include v.media(tablet)
+      display: flex
+      align-items: flex-start         
+
+  &__amenities-img
+    aspect-ratio: 16/9
+
+    @include v.media(tablet)
+      width: 50%
+
+    img
+      height: 100%    
+
+  &__amenities-desc
+    padding: v.$space-lg
+
+    @include v.media(tablet)
+      width: 50%
+      aspect-ratio: 16/9
+      padding: v.$space-md
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+    p
+      font-size: v.$fz-md
+
+      @include v.media(tablet)
+        font-size: v.$fz-sm
+
+      @include v.media(laptop)
+        font-size: v.$fz-md
+
+      @include v.media(desktop)
+        font-size: v.$fz-lg    
+
+  &__amenities-title
+    font-size: v.$fz-xxl
+    margin-bottom: v.$space-md
+
+    @include v.media(tablet)
+      font-size: v.$fz-xl
+      margin-bottom: v.$space-sm
+
+    @include v.media(laptop)
+      font-size: v.$fz-xxl
+      margin-bottom: v.$space-md
+
+    @include v.media(desktop)
+      font-size: v.$fz-hero      
   
 
   

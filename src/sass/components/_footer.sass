@@ -1,10 +1,95 @@
 @use '../settings/shared' as v
 
 .footer
+  &__top-grid
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    row-gap: v.$space-md
+    column-gap: v.$space-sm
+    margin: 0 auto
+
+    @include v.media(tablet)
+      grid-template-columns: repeat(3, 1fr)
+
+    @include v.media(desktop)
+      grid-template-columns: repeat(5, 1fr)
+
+  &__grid-item
+    display: flex
+    align-items: center
+    grid-column: span 2 / span 2
+
+    @include v.media(tablet)
+      grid-column: span 1 / span 1
+      justify-content: center
+
+    @include v.media(desktop)
+      grid-row-start: 2
+
+    &:first-child
+      grid-row-start: 1
+
+    &:first-child,
+    &:nth-child(2)
+      grid-column: span 4 / span 4
+      justify-content: center
+      text-align: center
+
+      @include v.media(desktop)
+        justify-content: flex-start
+
+    &:nth-child(2)
+      grid-row-start: 2
+
+      @include v.media(desktop)
+        grid-column: span 1 / span 1
+        text-align: left
+
+    &:last-child
+      grid-column: span 2 / span 2
+
+      @include v.media(tablet)
+        grid-column: span 3 / span 3
+
+      @include v.media(desktop)
+        grid-column: span 1 / span 1
+
+  &__btn
+    width: 100%
+    @include v.media(tablet)
+      max-width: v.to-rem(230)
+      margin: 0 auto
+
+  &__subtitle
+    font-weight: 400
+
   &__contacts-link
+    position: relative
+    display: flex
+    column-gap: v.$space-sm
     color: v.$clr-text
 
+  &__contacts-link
+
+    @include v.media(tablet)
+      column-gap: v.$space-lg
+      align-items: center
+
+    .icon
+      flex-shrink: 0
+      width: v.to-rem(24)
+      height: v.to-rem(24)
+
+      @include v.media(tablet)
+        width: v.to-rem(32)
+        height: v.to-rem(32)
+
+    strong
+      display: block
+
     span
+      font-weight: 500
+      font-size: v.$fz-sm
       transition: color v.$tr-base
 
     @include v.has-mouse
@@ -12,18 +97,62 @@
         span
           color: v.$clr-accent
 
+  &__contacts-title
+    text-transform: uppercase
+    font-weight: 500
+    font-size: v.$fz-sm
+
+    @include v.media(tablet)
+      font-size: v.$fz-lg
+      margin-bottom: v.to-rem(3)
+
   &__bottom
-    
+    padding: v.$space-md 0
+    background-color: v.$clr-accent-darker
+
     .logo
+      width: v.to-rem(100)
+      margin-bottom: v.$space-lg
       color: #fff
 
+      @include v.media(laptop)
+        margin-bottom: 0
+
     nav
+
       ul
+        display: flex
+        flex-wrap: wrap
+        gap: v.$space-sm
+
         li
+          list-style: none
+          width: calc((100% - v.$space-sm) / 2)
+
+          @include v.media(tablet)
+            width: calc((100% - (2 * v.$space-sm)) / 3)
+
+          @include v.media(laptop)
+            width: auto
+
           a
+            text-transform: uppercase
+            font-size: v.$fz-sm
             color: #fff
 
-  
+  &__bottom-flex-wrap
+    @include v.media(laptop)
+      display: flex
+      justify-content: space-between
+      align-items: center
 
   &__copyright
+    margin-top: v.$space-lg
+    text-align: center
     color: #fff
+
+    @include v.media(laptop)
+      margin-top: 0
+
+    @include v.media(laptop)
+      font-size: v.$fz-sm

@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export const initSliders = () => {
   document.querySelectorAll(".js-slider").forEach(sliderContainer => {
     const slider = sliderContainer.querySelector(".js-slider-viewport");
     const slides = slider ? slider.querySelectorAll(".js-slide") : [];
@@ -6,12 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnPrev = sliderContainer.querySelector(".js-slider-prev");
     const btnNext = sliderContainer.querySelector(".js-slider-next");
     if (!slider || slides.length === 0) return;
+    
     let sliderWidth = slider.clientWidth;
     const updateSliderWidth = () => {
       sliderWidth = slider.clientWidth;
     };
+    
     const resizeObserver = new ResizeObserver(() => updateSliderWidth());
     resizeObserver.observe(slider);
+
     function syncNavigators(activeIndex) {
       navItems.forEach(item => {
         const isActive = item.getAttribute("data-index") === activeIndex;
@@ -23,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     }
+
     navItems.forEach(item => {
       item.addEventListener("click", () => {
         const targetIndex = item.getAttribute("data-index");
@@ -33,16 +37,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     });
+
     if (btnNext) {
       btnNext.addEventListener("click", () => {
         slider.scrollBy({ left: sliderWidth, behavior: "smooth" });
       });
     }
+
     if (btnPrev) {
       btnPrev.addEventListener("click", () => {
         slider.scrollBy({ left: -sliderWidth, behavior: "smooth" });
       });
     }
+
     const observer = new IntersectionObserver(
       entries => {
         entries.forEach(entry => {
@@ -53,6 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       { root: slider, threshold: 0.6 }
     );
+    
     slides.forEach(slide => observer.observe(slide));
   });
-});
+};

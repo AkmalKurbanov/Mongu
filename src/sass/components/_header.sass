@@ -53,24 +53,14 @@
   top: calc(100% + v.to-rem(5))
 
 .header
-
-  &__container
-    transition: background-color v.$tr-base, max-width v.$tr-base, padding v.$tr-base
-
-  .logo
-    svg
-      transition: color v.$tr-fast
-
   &__nav-item
-
+    @include pseudo-element
     @include v.has-mouse
       &:hover
         .header__nav-sublist
           @include dropdown-active
 
   &__nav-link
-    transition: color v.$tr-base
-
     @include v.has-mouse
       &:hover
         color: #ddd
@@ -86,22 +76,23 @@
   &__nav-sublink
     text-transform: inherit
 
-  &__controls
+  &__nav-sublist,
+  &__callback-list
+    opacity: 0
+    position: absolute
+    pointer-events: none
 
+  &__controls
     @include v.has-mouse
       cursor: pointer
 
-  &__btn
-    transition: min-width v.$tr-fast
-
-  &__btn, &__callback-wrap
-
-    transition: font-size v.$tr-base
-
+  &__btn, 
+  &__callback-wrap
     @include v.has-mouse
       cursor: pointer
 
   &__callback
+    @include pseudo-element
     &:hover
       .header__callback-list
         @include dropdown-active
@@ -109,3 +100,49 @@
   &__callback-list
     @include dropdown-menu
     right: 0
+
+  &_inside
+    .header__container
+      padding: 0 v.$space-md
+
+  &_inside,
+  &_reduced
+    .header__container
+      background-color: #f9f9fb
+      box-shadow: v.$shadow-sm
+
+    .logo
+      color: #000
+
+    .hamburger
+      color: v.$clr-accent
+
+    .header__nav-link
+      color: v.$clr-text
+      @include v.has-mouse
+        &:hover
+          color: v.$clr-accent-darker
+
+  &_reduced
+    opacity: 1
+    .header__container
+      padding: 0 v.$space-xs
+
+      @media (min-width: 340px)
+        padding: 0 v.$space-md
+
+      @include v.media(desktop)
+        max-width: calc( v.to-rem(1200) - (v.$container-padding * 3) )
+
+    .logo
+      flex-shrink: 0
+
+      @include v.media(desktop)
+        width: v.to-rem(100)
+        height: v.to-rem(30)
+
+    .header__nav-link
+      text-transform: inherit
+
+  &_glued
+    opacity: 1

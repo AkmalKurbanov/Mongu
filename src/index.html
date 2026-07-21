@@ -118,7 +118,7 @@
           </ul>
         </nav>
         <div class="header__controls">
-          <button type="button" class="btn header__btn">Book now</button>
+          <button type="button" class="header__btn">Book now</button>
 
           <div class="header__callback">
             <div class="header__callback-wrap">
@@ -163,67 +163,69 @@
       </div>
     </header>
 
-    <main class="main-content">
-      <section class="hero">
-        <div class="hero__media">
-          <picture class="hero__poster hero__poster_bottom-right-bg">
-            <source
-              type="image/avif"
-              media="(min-width: 1440px)"
-              sizes="100vw"
-              width="1920"
-              height="1080"
-              srcset="./images/hero/hero-large.avif 1920w, ./images/hero/hero-large-2x.avif 3840w" />
-            <source
-              type="image/webp"
-              media="(min-width: 1440px)"
-              sizes="100vw"
-              width="1920"
-              height="1080"
-              srcset="./images/hero/hero-large.webp 1920w, ./images/hero/hero-large-2x.webp 3840w" />
+    <section class="hero">
+      <div class="hero__media">
+        <div class="hero__poster hero__poster_bottom-right-bg">
 
-            <source
-              type="image/avif"
-              media="(min-width: 1024px), (orientation: landscape)"
-              sizes="100vw"
-              width="1440"
-              height="900"
-              srcset="./images/hero/hero-desktop.avif 1440w, ./images/hero/hero-desktop-2x.avif 2880w" />
-            <source
-              type="image/webp"
-              media="(min-width: 1024px), (orientation: landscape)"
-              sizes="100vw"
-              width="1440"
-              height="900"
-              srcset="./images/hero/hero-desktop.webp 1440w, ./images/hero/hero-desktop-2x.webp 2880w" />
+       
+        <picture >
+          <source
+            type="image/avif"
+            media="(min-width: 1440px)"
+            sizes="100vw"
+            width="1920"
+            height="1080"
+            srcset="./images/hero/hero-large.avif 1920w, ./images/hero/hero-large-2x.avif 3840w" />
+          <source
+            type="image/webp"
+            media="(min-width: 1440px)"
+            sizes="100vw"
+            width="1920"
+            height="1080"
+            srcset="./images/hero/hero-large.webp 1920w, ./images/hero/hero-large-2x.webp 3840w" />
 
-            <source
-              type="image/avif"
-              media="(min-width: 768px)"
-              sizes="100vw"
-              width="800"
-              height="1100"
-              srcset="./images/hero/hero-tablet.avif 800w, ./images/hero/hero-tablet-2x.avif 1600w" />
-            <source
-              type="image/webp"
-              media="(min-width: 768px)"
-              sizes="100vw"
-              width="800"
-              height="1100"
-              srcset="./images/hero/hero-tablet.webp 800w, ./images/hero/hero-tablet-2x.webp 1600w" />
+          <source
+            type="image/avif"
+            media="(min-width: 1024px), (orientation: landscape)"
+            sizes="100vw"
+            width="1440"
+            height="900"
+            srcset="./images/hero/hero-desktop.avif 1440w, ./images/hero/hero-desktop-2x.avif 2880w" />
+          <source
+            type="image/webp"
+            media="(min-width: 1024px), (orientation: landscape)"
+            sizes="100vw"
+            width="1440"
+            height="900"
+            srcset="./images/hero/hero-desktop.webp 1440w, ./images/hero/hero-desktop-2x.webp 2880w" />
 
-            <source
-              type="image/avif"
-              sizes="100vw"
-              width="450"
-              height="950"
-              srcset="./images/hero/hero-mobile.avif 450w" />
-            <source
-              type="image/webp"
-              sizes="100vw"
-              width="450"
-              height="950"
-              srcset="./images/hero/hero-mobile.webp 450w" />
+          <source
+            type="image/avif"
+            media="(min-width: 768px)"
+            sizes="100vw"
+            width="800"
+            height="1100"
+            srcset="./images/hero/hero-tablet.avif 800w, ./images/hero/hero-tablet-2x.avif 1600w" />
+          <source
+            type="image/webp"
+            media="(min-width: 768px)"
+            sizes="100vw"
+            width="800"
+            height="1100"
+            srcset="./images/hero/hero-tablet.webp 800w, ./images/hero/hero-tablet-2x.webp 1600w" />
+
+          <source
+            type="image/avif"
+            sizes="100vw"
+            width="450"
+            height="950"
+            srcset="./images/hero/hero-mobile.avif 450w" />
+          <source
+            type="image/webp"
+            sizes="100vw"
+            width="450"
+            height="950"
+            srcset="./images/hero/hero-mobile.webp 450w" />
 
             <img
               src="./images/hero/hero-mobile.jpg"
@@ -232,40 +234,43 @@
               width="450"
               height="950"
               fetchpriority="high"
-              decoding="async" />
+              loading="eager" />
+               </div>
           </picture>
-        </div>
-        <!-- <video class="hero__video" autoplay loop muted playsinline preload="none">
-          <source src="video/hero-video.mp4" type="video/mp4" />
-        </video> -->
+      </div>
+      <!-- <video class="hero__video" autoplay loop muted playsinline preload="none">
+        <source src="video/hero-video.mp4" type="video/mp4" />
+      </video> -->
 
-        <div class="hero__content">
-          <div class="container container_wide">
-            <h1 class="hero__title">
-              Discover <br />
-              Kyrgyzstan <br />
-              <span class="hero__title-accent">Beyond the Ordinary</span>
-            </h1>
+      <div class="hero__content">
+        <div class="container container_wide">
+          <h1 class="hero__title">
+            Discover <br />
+            Kyrgyzstan <br />
+            <span class="hero__title-accent">Beyond the Ordinary</span>
+          </h1>
 
-            <p class="hero__subtitle">Authentic adventures. Local guides. unforgettable memories.</p>
+          <p class="hero__subtitle">Authentic adventures. Local guides. unforgettable memories.</p>
 
-            <div class="hero__btn-links">
-              <a href="#" class="hero__btn hero__btn_accent btn more-btn"
-                >Explore tours
-                <svg class="icon">
-                  <use href="#arrow"></use>
-                </svg>
-              </a>
-              <a href="#" class="hero__btn hero__btn_light btn btn_light more-btn"
-                >Stay at Sokmo lodge
-                <svg class="icon">
-                  <use href="#arrow"></use>
-                </svg>
-              </a>
-            </div>
+          <div class="hero__btn-links">
+            <a href="#" class="hero__btn hero__btn_accent btn more-btn"
+              >Explore tours
+              <svg class="icon">
+                <use href="#arrow"></use>
+              </svg>
+            </a>
+            <a href="#" class="hero__btn hero__btn_light btn btn_light more-btn"
+              >Stay at Sokmo lodge
+              <svg class="icon">
+                <use href="#arrow"></use>
+              </svg>
+            </a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+
+    <main class="main-content">
 
       <section class="about section-padding">
         <div class="container">

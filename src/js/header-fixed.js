@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+export const initHeader = () => {
   const header = document.querySelector('.header');
   if (!header) return;
 
@@ -30,4 +30,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
   handleScroll();
   window.addEventListener('scroll', handleScroll, { passive: true });
-});
+};
