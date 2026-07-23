@@ -1,0 +1,1 @@
+import{n as e,t}from"./menu-Cb4YATN3.js";document.addEventListener(`DOMContentLoaded`,()=>{e(),t()});

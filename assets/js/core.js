@@ -1,7 +1,0 @@
-document.addEventListener(`DOMContentLoaded`,()=>{let e=document.querySelector(`.header`);e&&window.addEventListener(`scroll`,()=>{window.requestAnimationFrame(()=>{window.scrollY>0?e.classList.add(`header_bg`):e.classList.remove(`header_bg`)})},{passive:!0})});var e=document.querySelector(`.js-menu`),t=document.querySelector(`.js-hamburger`),n=document.querySelector(`body`),r=document.querySelector(`.js-menu-close`);t.addEventListener(`click`,()=>{n.classList.add(`scroll-locked`),e.classList.add(`menu_is-open`)}),r.addEventListener(`click`,()=>{n.classList.remove(`scroll-locked`),e.classList.remove(`menu_is-open`)}),document.addEventListener(`DOMContentLoaded`,()=>{document.querySelectorAll(`.menu nav li`).forEach(e=>{e.querySelector(`ul`)&&e.querySelector(`a`).insertAdjacentHTML(`afterend`,`
-        <button class="js-trigger-submenu" type="button" aria-label="Открыть подменю">
-        <svg class="icon">
-          <use href="/icons.svg#angle"></use>
-        </svg>
-      </button>
-      `)}),document.querySelectorAll(`.js-trigger-submenu`).forEach(e=>{e.addEventListener(`click`,function(){let e=this.closest(`li`),t=e.querySelector(`ul`);e.classList.toggle(`is-droped`),e.classList.contains(`is-droped`)?t.style.height=t.scrollHeight+`px`:t.style.height=0})})});
