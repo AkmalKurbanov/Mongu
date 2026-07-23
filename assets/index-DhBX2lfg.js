@@ -1,1 +1,0 @@
-import{n as e,t}from"./menu-DI7eqdmL.js";import{t as n}from"./slider-CR2KWrJy.js";document.addEventListener(`DOMContentLoaded`,()=>{e(),t(),`requestIdleCallback`in window?requestIdleCallback(()=>n(),{timeout:1e3}):setTimeout(n,200)});
