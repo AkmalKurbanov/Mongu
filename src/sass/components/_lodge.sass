@@ -12,11 +12,11 @@
       line-height: 1.6
       font-weight: 400  
 
-    &__rooms
-      @include v.media(tablet)
-        display: grid
-        grid-template-columns: repeat(3, 1fr)
-        gap: v.$space-xs
+  &__rooms
+    @include v.media(tablet)
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: v.$space-xs
 
   &__rooms-item
     margin-bottom: v.to-rem(30)
@@ -82,7 +82,8 @@
 
   &__feature
     margin-bottom: v.$space-xs
-
+    list-style: disc
+    
     @include v.media(tablet)
       font-size: v.$fz-sm
 

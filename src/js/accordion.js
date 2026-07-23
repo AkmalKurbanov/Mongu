@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", () => {
+export const initAccordion = () => {
   document.querySelectorAll(".js-accordion").forEach(accordion => {
     accordion.addEventListener("click", e => {
       const header = e.target.closest(".accordion__header");
@@ -20,4 +20,4 @@ document.addEventListener("DOMContentLoaded", () => {
       accordion.classList.toggle("accordion_active", !isExpanded);
     });
   });
-});
+};

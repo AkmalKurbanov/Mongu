@@ -126,6 +126,7 @@
     @include v.media(laptop)
       width: v.to-rem(110)
 
+
   &__btn, 
   &__callback-wrap
     @include flex-center
@@ -143,7 +144,60 @@
     @include v.media(laptop)
       font-size: v.$fz-md
 
+  &__btn
+    transition: background-color v.$tr-base
+
+    @include v.has-mouse
+      &:hover
+        background-color: rgb(v.$clr-accent, 20%)
+        
   &__callback
     height: 100%
     @include flex-center
     position: relative
+
+  &_inside
+    .header__container
+      padding: 0 v.$space-md
+
+  &_inside,
+  &_reduced
+    .header__container
+      background-color: #f9f9fb
+      box-shadow: v.$shadow-sm
+
+    .logo
+      color: #000
+
+    .hamburger
+      color: v.$clr-accent
+
+    .header__nav-link
+      color: v.$clr-text
+      @include v.has-mouse
+        &:hover
+          color: v.$clr-accent-darker
+          
+  &_reduced
+    opacity: 1
+    .header__container
+      padding: 0 v.$space-xs
+
+      @media (min-width: 340px)
+        padding: 0 v.$space-md
+
+      @include v.media(desktop)
+        max-width: calc( v.to-rem(1200) - (v.$container-padding * 3) )
+
+    .logo
+      flex-shrink: 0
+
+      @include v.media(desktop)
+        width: v.to-rem(100)
+        height: v.to-rem(30)
+
+    .header__nav-link
+      text-transform: inherit
+
+  &_glued
+    opacity: 1  
