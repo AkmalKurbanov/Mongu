@@ -16,16 +16,21 @@
       color: v.$clr-text
       justify-content: flex-start
       margin: 0
+      grid-column: 1
+      grid-row: 3
 
     .icon
       transition: transform v.$tr-base
 
   &__title
     @include v.media(laptop)
-      text-align: left
-      grid-column: 1 / -1
+      grid-column: 1
       grid-row: 1
-  
+
+    &.title
+      @include v.media(laptop)
+        text-align: left
+    
   &__grid
     display: flex
     flex-direction: column

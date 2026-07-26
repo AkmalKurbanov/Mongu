@@ -6,12 +6,7 @@
 
 .hero
   position: relative
-
-  @include v.is-touch
-    @include v.landscape
-      height: auto
-      padding-bottom: v.$space-xl
-
+ 
   &::before
     @include wh
     position: absolute
@@ -20,15 +15,6 @@
     background-color: rgba(0,0,0,0.5)
     z-index: 2
 
-  &:after
-    content: ''
-    position: absolute
-    left: 0
-    right: 0
-    bottom: -1px
-    height: 190px
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 34%, rgba(255, 255, 255, .16) 50%, rgba(255, 255, 255, .38) 64%, rgba(255, 255, 255, .62) 76%, rgba(255, 255, 255, .82) 86%, rgba(255, 255, 255, .92) 94%, rgba(255, 255, 255, .97) 98%, rgba(255, 255, 255, 1) 100%)
-    z-index: 1
 
   &__poster
     @include wh
@@ -43,10 +29,14 @@
     &_top-bg
       img
         object-position: top
-
-    &_center-bg
+   
+    &_right-bg
       img
-        object-position: center
+        object-position: right
+    
+    &_bottom-bg
+      img
+        object-position: bottom
 
   &__media,
   &__video
@@ -57,21 +47,23 @@
   &__content
     position: relative
     z-index: 3
-    min-height: 100svh
+    min-height: 75vh
+    padding-top: v.to-rem(85)
+    padding-bottom: v.to-rem(120)
     display: flex
-    padding-top: v.to-rem(70)
+    align-items: flex-start
 
+    @include v.landscape
+      padding-bottom: v.$space-xl
+      height: auto
+    
     @include v.media(tablet)
-      padding-top: v.to-rem(160)
-
-      @include v.landscape
-        padding-top: v.to-rem(80)
-
+      min-height: 100svh
+      
     @include v.media(laptop)
-      @include v.has-mouse
-        @include v.landscape
-          padding-bottom: v.to-rem(120)
-          align-items: flex-end
+      align-items: flex-end
+      padding-bottom: v.to-rem(100)
+   
 
   &__title
     font-family: v.$ff-accent
@@ -84,10 +76,8 @@
       font-size: v.to-rem(60)
       line-height: v.to-rem(60)
 
-      @include v.is-touch
-        @include v.landscape
-          font-size: v.to-rem(40)
-          line-height: v.to-rem(40)
+      
+      
 
   &__title-accent
     font-style: italic
@@ -95,6 +85,7 @@
     font-size: 80%
 
   &__subtitle
+    margin-top: v.$space-lg
     text-transform: uppercase
     color: #fff
     line-height: 1.6
@@ -102,19 +93,17 @@
     max-width: v.to-rem(360)
     width: 100%
 
-  &__subtitle,
-  &__btn-links
-    margin-top: v.$space-lg
-
   &__btn-links
     display: flex
     flex-direction: column
     align-items: flex-start
-    gap: v.$space-md
+    gap: v.$space-sm
+    margin-top: v.$space-sm
 
-    @include v.media(desktop)
+    @include v.media(tablet)
       flex-direction: row
 
   &_inside
     .hero__content
       min-height: v.to-rem(400)
+      align-items: flex-end

@@ -96,6 +96,7 @@
 
     @include v.media(tablet)
       font-size: v.$fz-md
+      
 
     @include v.media(laptop)
       font-size: v.$fz-lg
@@ -118,16 +119,15 @@
 
   &__btn
     transition: min-width v.$tr-fast
-    width: v.to-rem(85)
+    width: v.to-rem(75)
     display: flex
     align-items: center
     justify-content: center
-    
+
     @include v.media(laptop)
       width: v.to-rem(110)
 
-
-  &__btn, 
+  &__btn,
   &__callback-wrap
     @include flex-center
     transition: font-size v.$tr-base
@@ -149,8 +149,8 @@
 
     @include v.has-mouse
       &:hover
-        background-color: rgb(v.$clr-accent, 20%)
-        
+        background-color: rgb(v.$clr-accent, 70%)
+
   &__callback
     height: 100%
     @include flex-center
@@ -177,7 +177,7 @@
       @include v.has-mouse
         &:hover
           color: v.$clr-accent-darker
-          
+
   &_reduced
     opacity: 1
     .header__container
@@ -200,4 +200,4 @@
       text-transform: inherit
 
   &_glued
-    opacity: 1  
+    opacity: 1
