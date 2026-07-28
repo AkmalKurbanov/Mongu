@@ -69,6 +69,33 @@
     @include dropdown-menu
     left: 0
 
+    &_full-width
+      width: max-content
+      left: 50%
+      transform: translateX(-50%)
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      row-gap: v.$space-lg
+      padding: v.$space-sm
+
+      .header__nav-sublink  
+        transition: opacity v.$tr-base 
+        display: flex
+        align-items: center
+        column-gap: v.$space-sm
+
+        @include v.has-mouse
+          &:hover
+            opacity: 0.8
+            background: none
+            color: v.$clr-accent
+
+      .icon
+        width: v.to-rem(58)
+        height: v.to-rem(32)
+
+
+
   &__nav-subitem
     &:after
       display: none

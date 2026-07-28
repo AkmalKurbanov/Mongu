@@ -127,6 +127,9 @@
     width: 100%
     padding-left: v.$space-md
 
+    &_without-indents
+      padding: 0
+
   &__subitem
     margin-top: v.to-rem(10)
     display: block
@@ -134,9 +137,15 @@
 
   &__item-sublink
     font-size: v.to-rem(16)
-    display: inline-block
     text-decoration: none
     color: v.$clr-text
+    display: inline-flex
+    align-items: center
+    column-gap: v.$space-sm
+    margin-bottom: 0
+    .icon
+      width: v.to-rem(36.25)
+      height: v.to-rem(20)
 
   &__submenu-trigger
     flex-grow: 1

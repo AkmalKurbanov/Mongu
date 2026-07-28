@@ -240,125 +240,86 @@
     </header>
 
     <section class="hero hero_inside">
-      <div class="hero__media">
-        <div class="hero__poster hero__poster_bottom-bg">
-        <picture>
-          
-          <source
-            type="image/avif"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-1920.avif 1920w, 
-              ./images/hero-categories/horseback-hero-3840.avif 3840w"
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-1920.webp 1920w, 
-              ./images/hero-categories/horseback-hero-3840.webp 3840w" 
-            />
+        <div class="hero__media">
+          <picture class="hero__poster">
+            
+            <source
+              type="image/avif"
+              media="(min-width: 1440px)"
+              width="1920"
+              height="450"
+              srcset="./images/categories/hero-large.avif 1920w, ./images/categories/hero-large-2x.avif 3840w" />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              width="1920"
+              height="450"
+              srcset="./images/categories/hero-large.webp 1920w, ./images/categories/hero-large-2x.webp 3840w" />
 
-          <source
-            type="image/avif"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-1440.avif 1440w, 
-              ./images/hero-categories/horseback-hero-2880.avif 2880w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-1440.webp 1440w,
-              ./images/hero-categories/horseback-hero-2880.webp 2880w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 1024px)"
+              width="1440"
+              height="450"
+              srcset="./images/categories/hero-desktop.avif 1440w, ./images/categories/hero-desktop-2x.avif 2880w" />
+            <source
+              type="image/webp"
+              media="(min-width: 1024px)"
+              width="1440"
+              height="450"
+              srcset="./images/categories/hero-desktop.webp 1440w, ./images/categories/hero-desktop-2x.webp 2880w" />
 
-          <source
-            type="image/avif"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-800.avif 800w, 
-              ./images/hero-categories/horseback-hero-1600.avif 1600w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-800.webp 800w, 
-              ./images/hero-categories/horseback-hero-1600.webp 1600w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 768px)"
+              width="800"
+              height="450"
+              srcset="./images/categories/hero-tablet.avif 800w, ./images/categories/hero-tablet-2x.avif 1600w" />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              width="800"
+              height="450"
+              srcset="./images/categories/hero-tablet.webp 800w, ./images/categories/hero-tablet-2x.webp 1600w" />
 
-          <source
-            type="image/avif"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-450.avif 450w, 
-              ./images/hero-categories/horseback-hero-900.avif 900w" 
-            />
-          <source
-            type="image/webp"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-450.webp 450w, 
-              ./images/hero-categories/horseback-hero-900.webp 900w" 
-            />
+            <source
+              type="image/avif"
+              width="450"
+              height="450"
+              srcset="./images/categories/hero-mobile.avif 450w, ./images/categories/hero-mobile-2x.avif 900w" />
+            <source
+              type="image/webp"
+              width="450"
+              height="450"
+              srcset="./images/categories/hero-mobile.webp 450w, ./images/categories/hero-mobile-2x.webp 900w" />
 
-          <img
-            src="./images/hero-categories/horseback-hero-1440.jpg"
-            alt="Категория"
-            class="hero__poster-img"
-            width="450"
-            height="400"
-            fetchpriority="high"
-              loading="eager" />
-        </picture>
+            <img
+              src="./images/categories/hero-mobile.jpg"
+              alt="Категория"
+              class="hero__poster-img"
+              width="450"
+              height="450"
+              fetchpriority="high"
+              decoding="async" />
+          </picture>
         </div>
-      </div>
 
-      <div class="hero__content">
-        <div class="container">
-          <h1 class="hero__title">Horseback expedition</h1>
+        <div class="hero__content">
+          <div class="container">
+            <h1 class="hero__title">Private tours</h1>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
     <main class="main-content">
-      
-
       <section>
         <div class="container">
           <nav aria-label="Хлебные крошки" class="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="/">Home</a>
+                <a class="breadcrumbs__link" href="/">Главная</a>
               </li>
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="/categories.html">Tours</a>
-              </li>
-              <li class="breadcrumbs__item" aria-current="page">Horseback expedition</li>
+              <li class="breadcrumbs__item" aria-current="page">Категория</li>
             </ul>
           </nav>
         </div>
@@ -367,31 +328,28 @@
       <section class="section-padding section-padding_sm-interval">
         <div class="container">
           <div class="card-grid">
-            
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
                   <picture>
                     <source
                       type="image/avif"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card1-400.avif   400w,
-                        ./images/tour-card/tour-card1-600.avif   600w,
-                        ./images/tour-card/tour-card1-800.avif   800w,
-                        ./images/tour-card/tour-card1-1200.avif 1200w
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
                       " />
                     <source
                       type="image/webp"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card1-400.webp   400w,
-                        ./images/tour-card/tour-card1-600.webp   600w,
-                        ./images/tour-card/tour-card1-800.webp   800w,
-                        ./images/tour-card/tour-card1-1200.webp 1200w
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
                       " />
                     <img
-                      src="./images/tour-card/tour-card1-800.jpg"
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
                       alt="Description"
                       width="1920"
                       height="1080"
@@ -454,24 +412,22 @@
                   <picture>
                     <source
                       type="image/avif"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card2-400.avif   400w,
-                        ./images/tour-card/tour-card2-600.avif   600w,
-                        ./images/tour-card/tour-card2-800.avif   800w,
-                        ./images/tour-card/tour-card2-1200.avif 1200w
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
                       " />
                     <source
                       type="image/webp"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card2-400.webp   400w,
-                        ./images/tour-card/tour-card2-600.webp   600w,
-                        ./images/tour-card/tour-card2-800.webp   800w,
-                        ./images/tour-card/tour-card2-1200.webp 1200w
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
                       " />
                     <img
-                      src="./images/tour-card/tour-card2-800.jpg"
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
                       alt="Description"
                       width="1920"
                       height="1080"
@@ -534,24 +490,22 @@
                   <picture>
                     <source
                       type="image/avif"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card3-400.avif   400w,
-                        ./images/tour-card/tour-card3-600.avif   600w,
-                        ./images/tour-card/tour-card3-800.avif   800w,
-                        ./images/tour-card/tour-card3-1200.avif 1200w
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
                       " />
                     <source
                       type="image/webp"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card3-400.webp   400w,
-                        ./images/tour-card/tour-card3-600.webp   600w,
-                        ./images/tour-card/tour-card3-800.webp   800w,
-                        ./images/tour-card/tour-card3-1200.webp 1200w
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
                       " />
                     <img
-                      src="./images/tour-card/tour-card3-800.jpg"
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
                       alt="Description"
                       width="1920"
                       height="1080"
@@ -614,24 +568,22 @@
                   <picture>
                     <source
                       type="image/avif"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card4-400.avif   400w,
-                        ./images/tour-card/tour-card4-600.avif   600w,
-                        ./images/tour-card/tour-card4-800.avif   800w,
-                        ./images/tour-card/tour-card4-1200.avif 1200w
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
                       " />
                     <source
                       type="image/webp"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card4-400.webp   400w,
-                        ./images/tour-card/tour-card4-600.webp   600w,
-                        ./images/tour-card/tour-card4-800.webp   800w,
-                        ./images/tour-card/tour-card4-1200.webp 1200w
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
                       " />
                     <img
-                      src="./images/tour-card/tour-card4-800.jpg"
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
                       alt="Description"
                       width="1920"
                       height="1080"
@@ -694,24 +646,22 @@
                   <picture>
                     <source
                       type="image/avif"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card5-400.avif   400w,
-                        ./images/tour-card/tour-card5-600.avif   600w,
-                        ./images/tour-card/tour-card5-800.avif   800w,
-                        ./images/tour-card/tour-card5-1200.avif 1200w
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
                       " />
                     <source
                       type="image/webp"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card5-400.webp   400w,
-                        ./images/tour-card/tour-card5-600.webp   600w,
-                        ./images/tour-card/tour-card5-800.webp   800w,
-                        ./images/tour-card/tour-card5-1200.webp 1200w
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
                       " />
                     <img
-                      src="./images/tour-card/tour-card5-800.jpg"
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
                       alt="Description"
                       width="1920"
                       height="1080"
@@ -774,24 +724,22 @@
                   <picture>
                     <source
                       type="image/avif"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card1-400.avif   400w,
-                        ./images/tour-card/tour-card1-600.avif   600w,
-                        ./images/tour-card/tour-card1-800.avif   800w,
-                        ./images/tour-card/tour-card1-1200.avif 1200w
+                        ./images/tour-card/tour-card-400-16X9.avif   400w,
+                        ./images/tour-card/tour-card-800-16X9.avif   800w,
+                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
                       " />
                     <source
                       type="image/webp"
-                      sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
                       srcset="
-                        ./images/tour-card/tour-card1-400.webp   400w,
-                        ./images/tour-card/tour-card1-600.webp   600w,
-                        ./images/tour-card/tour-card1-800.webp   800w,
-                        ./images/tour-card/tour-card1-1200.webp 1200w
+                        ./images/tour-card/tour-card-400-16X9.webp   400w,
+                        ./images/tour-card/tour-card-800-16X9.webp   800w,
+                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
                       " />
                     <img
-                      src="./images/tour-card/tour-card1-800.jpg"
+                      src="./images/tour-card/tour-card-800-16X9.jpg"
                       alt="Description"
                       width="1920"
                       height="1080"
@@ -847,7 +795,6 @@
               </div>
               <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
-            
           </div>
         </div>
       </section>
