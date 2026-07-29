@@ -109,7 +109,7 @@
                 </li>
               </ul>
             </li>
-            <li class="header__nav-item"><a href="/private.html" class="header__nav-link">Private tours</a></li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Private tours</a></li>
             <li class="header__nav-item"><a href="/lodge.html" class="header__nav-link">Sokmo lodge</a></li>
             <li class="header__nav-item">
               <a href="#" class="header__nav-link">Destination</a>
@@ -241,559 +241,507 @@
 
     <section class="hero hero_inside">
       <div class="hero__media">
-        <picture class="hero__poster">
-          <source
-            type="image/avif"
-            media="(min-width: 1440px)"
-            width="1920"
-            height="450"
-            srcset="./images/categories/hero-large.avif 1920w, ./images/categories/hero-large-2x.avif 3840w" />
-          <source
-            type="image/webp"
-            media="(min-width: 1440px)"
-            width="1920"
-            height="450"
-            srcset="./images/categories/hero-large.webp 1920w, ./images/categories/hero-large-2x.webp 3840w" />
+        <div class="hero__poster">
+          <picture>
+            <source
+              type="image/avif"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-1920.avif 1920w,
+                ./images/hero-categories/trekking-hero-3840.avif 3840w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-1920.webp 1920w,
+                ./images/hero-categories/trekking-hero-3840.webp 3840w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 1024px)"
-            width="1440"
-            height="450"
-            srcset="./images/categories/hero-desktop.avif 1440w, ./images/categories/hero-desktop-2x.avif 2880w" />
-          <source
-            type="image/webp"
-            media="(min-width: 1024px)"
-            width="1440"
-            height="450"
-            srcset="./images/categories/hero-desktop.webp 1440w, ./images/categories/hero-desktop-2x.webp 2880w" />
+            <source
+              type="image/avif"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-1440.avif 1440w,
+                ./images/hero-categories/trekking-hero-2880.avif 2880w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-1440.webp 1440w,
+                ./images/hero-categories/trekking-hero-2880.webp 2880w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 768px)"
-            width="800"
-            height="450"
-            srcset="./images/categories/hero-tablet.avif 800w, ./images/categories/hero-tablet-2x.avif 1600w" />
-          <source
-            type="image/webp"
-            media="(min-width: 768px)"
-            width="800"
-            height="450"
-            srcset="./images/categories/hero-tablet.webp 800w, ./images/categories/hero-tablet-2x.webp 1600w" />
+            <source
+              type="image/avif"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-800.avif   800w,
+                ./images/hero-categories/trekking-hero-1600.avif 1600w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-800.webp   800w,
+                ./images/hero-categories/trekking-hero-1600.webp 1600w
+              " />
 
-          <source
-            type="image/avif"
-            width="450"
-            height="450"
-            srcset="./images/categories/hero-mobile.avif 450w, ./images/categories/hero-mobile-2x.avif 900w" />
-          <source
-            type="image/webp"
-            width="450"
-            height="450"
-            srcset="./images/categories/hero-mobile.webp 450w, ./images/categories/hero-mobile-2x.webp 900w" />
+            <source
+              type="image/avif"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-450.avif 450w,
+                ./images/hero-categories/trekking-hero-900.avif 900w
+              " />
+            <source
+              type="image/webp"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-450.webp 450w,
+                ./images/hero-categories/trekking-hero-900.webp 900w
+              " />
 
-          <img
-            src="./images/categories/hero-mobile.jpg"
-            alt="Категория"
-            class="hero__poster-img"
-            width="450"
-            height="450"
-            fetchpriority="high"
-            decoding="async" />
-        </picture>
+            <img
+              src="./images/hero-categories/trekking-hero-1440.jpg"
+              alt="Категория"
+              class="hero__poster-img"
+              width="450"
+              height="400"
+              fetchpriority="high"
+              loading="eager" />
+          </picture>
+        </div>
       </div>
 
       <div class="hero__content">
         <div class="container">
-          <h1 class="hero__title">Private tours</h1>
+          <h1 class="hero__title">Booking</h1>
         </div>
       </div>
     </section>
 
     <main class="main-content">
-      <section>
-        <div class="container">
-          <nav aria-label="Хлебные крошки" class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="/">Главная</a>
-              </li>
-              <li class="breadcrumbs__item" aria-current="page">Категория</li>
-            </ul>
-          </nav>
-        </div>
-      </section>
+      <div class="container">
+        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
+            <li class="breadcrumbs__item" aria-current="page">Booking</li>
+          </ul>
+        </nav>
+      </div>
 
       <section class="section-padding section-padding_sm-interval">
         <div class="container">
-          <div class="card-grid">
-            <article class="tour-card">
-              <div class="tour-card__head">
-                <div class="tour-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.avif   400w,
-                        ./images/tour-card/tour-card-800-16X9.avif   800w,
-                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.webp   400w,
-                        ./images/tour-card/tour-card-800-16X9.webp   800w,
-                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
-                      " />
-                    <img
-                      src="./images/tour-card/tour-card-800-16X9.jpg"
-                      alt="Description"
-                      width="1920"
-                      height="1080"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+          <div class="title-wrap">
+            <h1 class="title">Create your journey</h1>
+          </div>
+
+          <div class="js-booking-container">
+            <!-- === ЭКРАН 0: Выбор пути (Интро) === -->
+            <div class="booking-intro js-booking-intro">
+              <div class="booking-intro__grid">
+                <!-- Путь 1: WhatsApp -->
+                <div class="booking-intro__card booking-intro__card_wa">
+                  <div>
+                    <svg class="icon"><use href="/icons.svg#whatsapp"></use></svg>
+                    <h3 class="booking-intro__title">Fast booking via WhatsApp</h3>
+                    <p class="booking-intro__desc">
+                      Get instant confirmation and chat with our trip <br />
+                      specialist in 1 click.
+                    </p>
+                  </div>
+                  <a
+                    href="https://wa.me/996555150795"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn_light js-whatsapp-fast-btn">
+                    Chat on WhatsApp
+                  </a>
                 </div>
-                <ul class="badges">
-                  <li class="badges__badge badges__badge_peak">
-                    <svg class="icon">
-                      <use href="./icons.svg#mountains"></use>
-                    </svg>
-                    <span>4530 m | 5130 m</span>
-                  </li>
-                  <li class="badges__badge badges__badge_price">From $600</li>
-                </ul>
-              </div>
 
-              <div class="tour-card__body">
-                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
-
-                <p class="tour-card__desc">
-                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
-                </p>
-
-                <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Difficulty">
-                    <svg class="icon">
-                      <use href="./icons.svg#peak"></use>
-                    </svg>
-                    <span class="feature__label">Difficulty</span>
-                    <span class="feature__value">Basic → Advanced</span>
-                  </li>
-                  <li class="tour-card__feature" title="Season">
-                    <svg class="icon">
-                      <use href="./icons.svg#calendar"></use>
-                    </svg>
-                    <span class="feature__label">Season</span>
-                    <span class="feature__value">Year-round</span>
-                  </li>
-                  <li class="tour-card__feature" title="Duration">
-                    <svg class="icon">
-                      <use href="./icons.svg#clock"></use>
-                    </svg>
-                    <span class="feature__label">Duration</span>
-                    <span class="feature__value">7 days / 6 nights</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="tour-card__footer">
-                <span class="tour-card__btn btn">View tour</span>
-              </div>
-              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
-            </article>
-
-            <article class="tour-card">
-              <div class="tour-card__head">
-                <div class="tour-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.avif   400w,
-                        ./images/tour-card/tour-card-800-16X9.avif   800w,
-                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.webp   400w,
-                        ./images/tour-card/tour-card-800-16X9.webp   800w,
-                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
-                      " />
-                    <img
-                      src="./images/tour-card/tour-card-800-16X9.jpg"
-                      alt="Description"
-                      width="1920"
-                      height="1080"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+                <!-- Путь 2: Сайт -->
+                <div class="booking-intro__card booking-intro__card_form">
+                  <div>
+                    <svg class="icon"><use href="/icons.svg#form"></use></svg>
+                    <h3 class="booking-intro__title">Book on Website</h3>
+                    <p class="booking-intro__desc">
+                      Select dates, customize your trip with add-ons, and fill out the details yourself.
+                    </p>
+                  </div>
+                  <button type="button" class="btn js-start-wizard">Continue on Website</button>
                 </div>
-                <ul class="badges">
-                  <li class="badges__badge badges__badge_peak">
-                    <svg class="icon">
-                      <use href="./icons.svg#mountains"></use>
-                    </svg>
-                    <span>4530 m | 5130 m</span>
-                  </li>
-                  <li class="badges__badge badges__badge_price">From $600</li>
-                </ul>
               </div>
+            </div>
 
-              <div class="tour-card__body">
-                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
-
-                <p class="tour-card__desc">
-                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
-                </p>
-
-                <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Difficulty">
-                    <svg class="icon">
-                      <use href="./icons.svg#peak"></use>
-                    </svg>
-                    <span class="feature__label">Difficulty</span>
-                    <span class="feature__value">Basic → Advanced</span>
-                  </li>
-                  <li class="tour-card__feature" title="Season">
-                    <svg class="icon">
-                      <use href="./icons.svg#calendar"></use>
-                    </svg>
-                    <span class="feature__label">Season</span>
-                    <span class="feature__value">Year-round</span>
-                  </li>
-                  <li class="tour-card__feature" title="Duration">
-                    <svg class="icon">
-                      <use href="./icons.svg#clock"></use>
-                    </svg>
-                    <span class="feature__label">Duration</span>
-                    <span class="feature__value">7 days / 6 nights</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="tour-card__footer">
-                <span class="tour-card__btn btn">View tour</span>
-              </div>
-              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
-            </article>
-
-            <article class="tour-card">
-              <div class="tour-card__head">
-                <div class="tour-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.avif   400w,
-                        ./images/tour-card/tour-card-800-16X9.avif   800w,
-                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.webp   400w,
-                        ./images/tour-card/tour-card-800-16X9.webp   800w,
-                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
-                      " />
-                    <img
-                      src="./images/tour-card/tour-card-800-16X9.jpg"
-                      alt="Description"
-                      width="1920"
-                      height="1080"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+            <!-- === САМ WIZARD (Изначально скрыт) === -->
+            <div class="booking js-booking-wizard hidden-elem">
+              <!-- ЛЕВАЯ ЧАСТЬ: Шаги бронирования -->
+              <div class="booking__main">
+                <!-- Прогресс-бар -->
+                <div class="booking__progress">
+                  <div class="booking__step booking__step_active" data-step="1">1. Selection</div>
+                  <div class="booking__step" data-step="2">2. Details</div>
+                  <div class="booking__step" data-step="3">3. Add-ons</div>
+                  <div class="booking__step" data-step="4">4. Guest Info</div>
                 </div>
-                <ul class="badges">
-                  <li class="badges__badge badges__badge_peak">
-                    <svg class="icon">
-                      <use href="./icons.svg#mountains"></use>
-                    </svg>
-                    <span>4530 m | 5130 m</span>
-                  </li>
-                  <li class="badges__badge badges__badge_price">From $600</li>
-                </ul>
-              </div>
 
-              <div class="tour-card__body">
-                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
+                <!-- Контейнер с панелями шагов -->
+                <div class="booking__panels">
+                  <!-- ШАГ 1: Что бронируем -->
+                  <div class="booking__panel js-booking-panel" data-panel="1">
+                    <h2 class="booking__panel-title">What would you like to book?</h2>
+                    <div class="booking__types booking__types_grid-flexible">
+                      <!-- 1. Trekking adventures -->
+                      <label class="booking-card">
+                        <input
+                          type="radio"
+                          name="booking_type"
+                          value="trekking"
+                          class="booking-card__input hidden-elem"
+                          checked />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#trekking"></use></svg>
+                          <span class="booking-card__title">Trekking adventures</span>
+                          <span class="booking-card__desc">Guided group & private treks</span>
+                        </span>
+                      </label>
 
-                <p class="tour-card__desc">
-                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
-                </p>
+                      <!-- 2. Horseback expedition -->
+                      <label class="booking-card">
+                        <input
+                          type="radio"
+                          name="booking_type"
+                          value="horseback"
+                          class="booking-card__input hidden-elem" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#horse"></use></svg>
+                          <span class="booking-card__title">Horseback expedition</span>
+                          <span class="booking-card__desc">Nomad mountain trails</span>
+                        </span>
+                      </label>
 
-                <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Difficulty">
-                    <svg class="icon">
-                      <use href="./icons.svg#peak"></use>
-                    </svg>
-                    <span class="feature__label">Difficulty</span>
-                    <span class="feature__value">Basic → Advanced</span>
-                  </li>
-                  <li class="tour-card__feature" title="Season">
-                    <svg class="icon">
-                      <use href="./icons.svg#calendar"></use>
-                    </svg>
-                    <span class="feature__label">Season</span>
-                    <span class="feature__value">Year-round</span>
-                  </li>
-                  <li class="tour-card__feature" title="Duration">
-                    <svg class="icon">
-                      <use href="./icons.svg#clock"></use>
-                    </svg>
-                    <span class="feature__label">Duration</span>
-                    <span class="feature__value">7 days / 6 nights</span>
-                  </li>
-                </ul>
-              </div>
+                      <!-- 3. Overland jeep journeys -->
+                      <label class="booking-card">
+                        <input type="radio" name="booking_type" value="jeep" class="booking-card__input hidden-elem" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#car"></use></svg>
+                          <span class="booking-card__title">Overland jeep journeys</span>
+                          <span class="booking-card__desc">Passes & lake expeditions</span>
+                        </span>
+                      </label>
 
-              <div class="tour-card__footer">
-                <span class="tour-card__btn btn">View tour</span>
-              </div>
-              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
-            </article>
+                      <!-- 4. Nomadic heritage -->
+                      <label class="booking-card">
+                        <input
+                          type="radio"
+                          name="booking_type"
+                          value="nomadic"
+                          class="booking-card__input hidden-elem" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#nomadic"></use></svg>
+                          <span class="booking-card__title">Nomadic heritage</span>
+                          <span class="booking-card__desc">Authentic cultural experiences</span>
+                        </span>
+                      </label>
 
-            <article class="tour-card">
-              <div class="tour-card__head">
-                <div class="tour-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.avif   400w,
-                        ./images/tour-card/tour-card-800-16X9.avif   800w,
-                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.webp   400w,
-                        ./images/tour-card/tour-card-800-16X9.webp   800w,
-                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
-                      " />
-                    <img
-                      src="./images/tour-card/tour-card-800-16X9.jpg"
-                      alt="Description"
-                      width="1920"
-                      height="1080"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+                      <!-- 5. Custom expedition -->
+                      <label class="booking-card">
+                        <input
+                          type="radio"
+                          name="booking_type"
+                          value="custom"
+                          class="booking-card__input hidden-elem" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#map"></use></svg>
+                          <span class="booking-card__title">Custom expedition</span>
+                          <span class="booking-card__desc">Pre-designed unique itineraries</span>
+                        </span>
+                      </label>
+
+                      <!-- 6. Sokmo Lodge / Hotel -->
+                      <label class="booking-card">
+                        <input type="radio" name="booking_type" value="lodge" class="booking-card__input hidden-elem" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#tent"></use></svg>
+                          <span class="booking-card__title">Sokmo Lodge & Mongu hotel</span>
+                          <span class="booking-card__desc">Alpine camp & city stays</span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="btn-wrap">
+                      <button type="button" class="btn js-next-step">Continue</button>
+                    </div>
+                  </div>
+                  <!-- ШАГ 2: Даты и гости -->
+                  <div class="booking__panel js-booking-panel hidden-elem" data-panel="2">
+                    <h2 class="booking__panel-title">Select dates & guests</h2>
+                    <div class="booking-form">
+                      <div class="booking-form__row">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Select Tour</label>
+
+                          <!-- КАСТОМНЫЙ СЕЛЕКТ -->
+                          <div class="custom-select js-custom-select">
+                            <select name="tour_id" class="custom-select__native js-custom-select-native" hidden>
+                              <option value="" disabled selected data-price="0">Choose a tour...</option>
+                              <option value="ala-archa" data-price="600">Mountaineering in Ala-Archa</option>
+                              <option value="karkyra" data-price="1300">Karkyra Horseback Expedition</option>
+                              <!-- Представь, что тут еще 100 туров -->
+                            </select>
+
+                            <div class="custom-select__trigger js-custom-select-trigger" tabindex="0">
+                              <span class="custom-select__value js-custom-select-value">Choose a tour...</span>
+                              <svg class="icon custom-select__arrow"><use href="/icons.svg#angle"></use></svg>
+                            </div>
+
+                            <div class="custom-select__dropdown">
+                              <!-- НОВЫЙ БЛОК ПОИСКА -->
+                              <div class="custom-select__search-wrap">
+                                <input
+                                  type="text"
+                                  class="custom-select__search js-custom-select-search"
+                                  placeholder="Search tour..." />
+                              </div>
+
+                              <!-- Оборачиваем список туров, чтобы скроллились только они, а поиск висел на месте -->
+                              <ul class="custom-select__list js-custom-select-list">
+                                <li class="custom-select__option js-custom-select-option" data-value="ala-archa">
+                                  Mountaineering in Ala-Archa
+                                </li>
+                                <li class="custom-select__option js-custom-select-option" data-value="karkyra">
+                                  Karkyra Horseback Expedition
+                                </li>
+                                <!-- еще 100 туров -->
+                              </ul>
+                            </div>
+                          </div>
+                          <!-- Конец кастомного селекта -->
+                        </div>
+                      </div>
+
+                      <div class="booking-form__row booking-form__row_col-2">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label"
+                            >Date <span style="font-weight: 400; color: #999">(Optional)</span></label
+                          >
+                          <input type="date" class="booking-form__input" name="booking_date" />
+                          <span class="booking-form__hint js-availability-hint"></span>
+                        </div>
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Guests</label>
+                          <div class="pax-counter">
+                            <button type="button" class="pax-counter__btn js-pax-minus">-</button>
+                            <input
+                              type="number"
+                              class="pax-counter__input js-pax-input"
+                              name="guests"
+                              value="1"
+                              readonly />
+                            <button type="button" class="pax-counter__btn js-pax-plus">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-wrap">
+                      <button type="button" class="btn btn_bordered js-prev-step">
+                        <svg class="icon">
+                          <use href="/icons.svg#arrow"></use>
+                        </svg>
+                        Back
+                      </button>
+                      <button type="button" class="btn js-next-step">
+                        Continue
+                        <svg class="icon">
+                          <use href="/icons.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- ШАГ 3: Дополнения -->
+                  <div class="booking__panel js-booking-panel hidden-elem" data-panel="3">
+                    <h2 class="booking__panel-title">Enhance your trip</h2>
+                    <div class="booking-addons">
+                      <label class="booking-addon">
+                        <input
+                          type="checkbox"
+                          name="addon_tent"
+                          value="180"
+                          class="booking-addon__input hidden-elem js-addon-checkbox" />
+                        <span class="booking-addon__content">
+                          <span class="booking-addon__info">
+                            <span class="booking-addon__title">Single Tent Accommodation</span>
+                            <span class="booking-addon__desc">Private tent for the entire trek (per person)</span>
+                          </span>
+                          <span class="booking-addon__price">+$180</span>
+                        </span>
+                      </label>
+
+                      <label class="booking-addon">
+                        <input
+                          type="checkbox"
+                          name="addon_transfer"
+                          value="50"
+                          class="booking-addon__input hidden-elem js-addon-checkbox" />
+                        <span class="booking-addon__content">
+                          <span class="booking-addon__info">
+                            <span class="booking-addon__title">Airport Transfer</span>
+                            <span class="booking-addon__desc">Meet & Greet at Manas Airport (round trip)</span>
+                          </span>
+                          <span class="booking-addon__price">+$50</span>
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="booking-form__group" style="margin-top: 1.5rem">
+                      <label class="booking-form__label">Dietary Requirements</label>
+
+                      <!-- КАСТОМНЫЙ СЕЛЕКТ ДЛЯ ДИЕТЫ -->
+                      <div class="custom-select js-custom-select">
+                        <select name="dietary" class="custom-select__native js-custom-select-native" hidden>
+                          <option value="none" selected>No special requirements</option>
+                          <option value="vegetarian">Vegetarian</option>
+                          <option value="vegan">Vegan</option>
+                        </select>
+
+                        <div class="custom-select__trigger js-custom-select-trigger" tabindex="0">
+                          <span class="custom-select__value js-custom-select-value">No special requirements</span>
+                          <svg class="icon custom-select__arrow"><use href="/icons.svg#angle"></use></svg>
+                        </div>
+
+                        <ul class="custom-select__dropdown">
+                          <li
+                            class="custom-select__option custom-select__option_selected js-custom-select-option"
+                            data-value="none">
+                            No special requirements
+                          </li>
+                          <li class="custom-select__option js-custom-select-option" data-value="vegetarian">
+                            Vegetarian
+                          </li>
+                          <li class="custom-select__option js-custom-select-option" data-value="vegan">Vegan</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="btn-wrap" style="margin-top: 2rem">
+                      <button type="button" class="btn btn_bordered js-prev-step">
+                        <svg class="icon">
+                          <use href="/icons.svg#arrow"></use>
+                        </svg>
+                        Back
+                      </button>
+                      <button type="button" class="btn js-next-step">
+                        Continue
+                        <svg class="icon">
+                          <use href="/icons.svg#arrow"></use>
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- ШАГ 4: Данные -->
+                  <div class="booking__panel js-booking-panel hidden-elem" data-panel="4">
+                    <h2 class="booking__panel-title">Your Details</h2>
+                    <div class="booking-form">
+                      <div class="booking-form__row">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Full Name</label>
+                          <input type="text" class="booking-form__input" name="full_name" placeholder="John Doe" />
+                        </div>
+                      </div>
+                      <div class="booking-form__row booking-form__row_col-2">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Email Address</label>
+                          <input type="email" class="booking-form__input" name="email" placeholder="john@example.com" />
+                        </div>
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Phone / WhatsApp</label>
+                          <input type="tel" class="booking-form__input" name="phone" placeholder="+1 234 567 8900" />
+                        </div>
+                      </div>
+                      <div class="booking-form__row">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Additional Comments</label>
+                          <textarea
+                            class="booking-form__input"
+                            name="comments"
+                            rows="3"
+                            placeholder="Any questions or special requests?"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-wrap">
+                      <button type="button" class="btn btn_bordered js-prev-step">Back</button>
+                    </div>
+                  </div>
                 </div>
-                <ul class="badges">
-                  <li class="badges__badge badges__badge_peak">
-                    <svg class="icon">
-                      <use href="./icons.svg#mountains"></use>
-                    </svg>
-                    <span>4530 m | 5130 m</span>
-                  </li>
-                  <li class="badges__badge badges__badge_price">From $600</li>
-                </ul>
               </div>
 
-              <div class="tour-card__body">
-                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
+              <!-- ПРАВАЯ ЧАСТЬ: Итоговая смета -->
+              <aside class="booking__sidebar">
+                <div class="order-summary">
+                  <h3 class="order-summary__title">Booking Summary</h3>
+                  <div class="order-summary__content">
+                    <div class="order-summary__item">
+                      <span class="order-summary__label">Type:</span>
+                      <span class="order-summary__val js-summary-type">Not selected</span>
+                    </div>
+                    <div class="order-summary__item">
+                      <span class="order-summary__label">Date:</span>
+                      <span class="order-summary__val js-summary-date">—</span>
+                    </div>
+                    <div class="order-summary__item">
+                      <span class="order-summary__label">Guests:</span>
+                      <span class="order-summary__val js-summary-pax">1 pax</span>
+                    </div>
+                    <div class="js-summary-addons-container"></div>
+                    <hr class="order-summary__divider" />
+                    <div class="order-summary__total">
+                      <span>Total:</span>
+                      <span class="order-summary__price js-summary-total">$0</span>
+                    </div>
+                  </div>
 
-                <p class="tour-card__desc">
-                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
-                </p>
-
-                <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Difficulty">
-                    <svg class="icon">
-                      <use href="./icons.svg#peak"></use>
-                    </svg>
-                    <span class="feature__label">Difficulty</span>
-                    <span class="feature__value">Basic → Advanced</span>
-                  </li>
-                  <li class="tour-card__feature" title="Season">
-                    <svg class="icon">
-                      <use href="./icons.svg#calendar"></use>
-                    </svg>
-                    <span class="feature__label">Season</span>
-                    <span class="feature__value">Year-round</span>
-                  </li>
-                  <li class="tour-card__feature" title="Duration">
-                    <svg class="icon">
-                      <use href="./icons.svg#clock"></use>
-                    </svg>
-                    <span class="feature__label">Duration</span>
-                    <span class="feature__value">7 days / 6 nights</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="tour-card__footer">
-                <span class="tour-card__btn btn">View tour</span>
-              </div>
-              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
-            </article>
-
-            <article class="tour-card">
-              <div class="tour-card__head">
-                <div class="tour-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.avif   400w,
-                        ./images/tour-card/tour-card-800-16X9.avif   800w,
-                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.webp   400w,
-                        ./images/tour-card/tour-card-800-16X9.webp   800w,
-                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
-                      " />
-                    <img
-                      src="./images/tour-card/tour-card-800-16X9.jpg"
-                      alt="Description"
-                      width="1920"
-                      height="1080"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+                  <a
+                    href="https://wa.me/996555150795"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn order-summary__wa-btn js-whatsapp-fast-btn">
+                    <svg class="icon"><use href="/icons.svg#whatsapp"></use></svg>
+                    Book via WhatsApp
+                  </a>
+                  <div class="booking__divider-text"><span>or</span></div>
+                  <button type="submit" class="btn btn_bordered order-summary__btn js-submit-booking">
+                    Send Request
+                  </button>
+                  <p class="order-summary__note">No payment required at this step.</p>
                 </div>
-                <ul class="badges">
-                  <li class="badges__badge badges__badge_peak">
-                    <svg class="icon">
-                      <use href="./icons.svg#mountains"></use>
-                    </svg>
-                    <span>4530 m | 5130 m</span>
-                  </li>
-                  <li class="badges__badge badges__badge_price">From $600</li>
-                </ul>
-              </div>
-
-              <div class="tour-card__body">
-                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
-
-                <p class="tour-card__desc">
-                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
-                </p>
-
-                <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Difficulty">
-                    <svg class="icon">
-                      <use href="./icons.svg#peak"></use>
-                    </svg>
-                    <span class="feature__label">Difficulty</span>
-                    <span class="feature__value">Basic → Advanced</span>
-                  </li>
-                  <li class="tour-card__feature" title="Season">
-                    <svg class="icon">
-                      <use href="./icons.svg#calendar"></use>
-                    </svg>
-                    <span class="feature__label">Season</span>
-                    <span class="feature__value">Year-round</span>
-                  </li>
-                  <li class="tour-card__feature" title="Duration">
-                    <svg class="icon">
-                      <use href="./icons.svg#clock"></use>
-                    </svg>
-                    <span class="feature__label">Duration</span>
-                    <span class="feature__value">7 days / 6 nights</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="tour-card__footer">
-                <span class="tour-card__btn btn">View tour</span>
-              </div>
-              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
-            </article>
-
-            <article class="tour-card">
-              <div class="tour-card__head">
-                <div class="tour-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.avif   400w,
-                        ./images/tour-card/tour-card-800-16X9.avif   800w,
-                        ./images/tour-card/tour-card-1200-16X9.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1440px) 370px, (min-width: 1024px) 300px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/tour-card/tour-card-400-16X9.webp   400w,
-                        ./images/tour-card/tour-card-800-16X9.webp   800w,
-                        ./images/tour-card/tour-card-1200-16X9.webp 1200w
-                      " />
-                    <img
-                      src="./images/tour-card/tour-card-800-16X9.jpg"
-                      alt="Description"
-                      width="1920"
-                      height="1080"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
-                </div>
-                <ul class="badges">
-                  <li class="badges__badge badges__badge_peak">
-                    <svg class="icon">
-                      <use href="./icons.svg#mountains"></use>
-                    </svg>
-                    <span>4530 m | 5130 m</span>
-                  </li>
-                  <li class="badges__badge badges__badge_price">From $600</li>
-                </ul>
-              </div>
-
-              <div class="tour-card__body">
-                <h3 class="tour-card__title">Mountaineering training in Ala-Archa</h3>
-
-                <p class="tour-card__desc">
-                  A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
-                </p>
-
-                <ul class="tour-card__features feature">
-                  <li class="tour-card__feature" title="Difficulty">
-                    <svg class="icon">
-                      <use href="./icons.svg#peak"></use>
-                    </svg>
-                    <span class="feature__label">Difficulty</span>
-                    <span class="feature__value">Basic → Advanced</span>
-                  </li>
-                  <li class="tour-card__feature" title="Season">
-                    <svg class="icon">
-                      <use href="./icons.svg#calendar"></use>
-                    </svg>
-                    <span class="feature__label">Season</span>
-                    <span class="feature__value">Year-round</span>
-                  </li>
-                  <li class="tour-card__feature" title="Duration">
-                    <svg class="icon">
-                      <use href="./icons.svg#clock"></use>
-                    </svg>
-                    <span class="feature__label">Duration</span>
-                    <span class="feature__value">7 days / 6 nights</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div class="tour-card__footer">
-                <span class="tour-card__btn btn">View tour</span>
-              </div>
-              <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
-            </article>
+              </aside>
+            </div>
           </div>
         </div>
       </section>
@@ -1127,6 +1075,6 @@
       </div>
     </div>
 
-    <script type="module" src="./js/category.js"></script>
+    <script type="module" src="./js/booking.js"></script>
   </body>
 </html>

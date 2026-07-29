@@ -1,0 +1,540 @@
+@use '../settings/shared' as v
+
+.hidden-elem
+  display: none !important
+
+// --- ИНТРО (Экран выбора) ---
+.booking-intro
+  max-width: v.to-rem(800)
+  margin: 0 auto
+
+  &__grid
+    
+    @include v.media(tablet)
+      gap: v.$space-lg
+      display: grid
+      grid-template-columns: 1fr 1fr
+
+  &__card
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    text-align: center
+    padding: v.to-rem(40) v.$space-lg
+    border-radius: v.$rad-lg
+    box-shadow: v.$shadow-lg
+    margin-bottom: v.$space-lg
+
+    @include v.media(tablet)
+      margin-bottom: 0
+
+    &:last-child
+      margin-bottom: 0
+
+    .icon
+      width: v.to-rem(48)
+      height: v.to-rem(48)
+      margin-bottom: v.$space-md
+
+    &_wa
+      background: linear-gradient(135deg, #23b33a 0%, #1da832 100%)
+      color: #fff
+      
+      .btn
+        background-color: #fff
+        color: #1da832
+
+    &_form
+      background-color: #fff
+      border: 1px solid #e2e2e9
+      color: v.$clr-text
+      .icon
+        color: v.$clr-accent
+      
+
+  &__title
+    font-size: v.$fz-xl
+    font-weight: 600
+    margin-bottom: v.$space-sm
+
+  &__desc
+    font-size: v.$fz-sm
+    opacity: 0.9
+    margin-bottom: v.$space-xl
+    line-height: 1.5
+
+// --- ОСНОВНАЯ СЕТКА БРОНИРОВАНИЯ ---
+.booking
+  display: flex
+  flex-direction: column
+  gap: v.$space-xl
+
+  @include v.media(laptop)
+    flex-direction: row
+    align-items: flex-start
+    gap: v.to-rem(40)
+
+  &__main
+    flex: 1
+    width: 100%
+
+  &__sidebar
+    width: 100%
+
+    @include v.media(laptop)
+      width: v.to-rem(380)
+      flex-shrink: 0
+      position: sticky
+      top: v.to-rem(100)
+
+  // --- Прогресс-бар ---
+  &__progress
+    display: flex
+    column-gap: v.$space-xs
+    margin-bottom: v.$space-xl
+
+    @include v.media(tablet)
+      column-gap: v.$space-md
+
+  &__step
+    flex: 1
+    padding-bottom: v.$space-sm
+    border-bottom: v.to-rem(3) solid #e2e2e9
+    color: v.$clr-text-muted
+    font-size: v.$fz-xs
+    font-weight: 600
+    text-transform: uppercase
+    transition: color v.$tr-base, border-color v.$tr-base
+
+    @include v.media(tablet)
+      font-size: v.$fz-sm
+
+    &_active
+      color: v.$clr-accent
+      border-color: v.$clr-accent
+
+  &__panel-title
+    font-size: v.$fz-xl
+    margin-bottom: v.$space-lg
+    font-weight: 600
+
+  &__types
+    display: grid
+    gap: v.$space-sm
+    margin-bottom: v.$space-xl
+    grid-template-columns: repeat(2, 1fr)
+
+    @include v.media(tablet)
+      grid-template-columns: repeat(3, 1fr)
+      gap: v.$space-md
+
+  .btn-wrap
+    column-gap: v.$space-xs
+    .btn 
+      &_bordered 
+        .icon
+          transform: rotate(180deg)
+        @include v.has-mouse
+          &:hover
+           .icon
+              transform: translateX(v.to-rem(-5)) rotate(180deg) !important
+// --- Карточки выбора типа ---
+.booking-card
+  display: block
+  cursor: pointer
+  
+  &__input
+    position: absolute
+    opacity: 0
+
+  &__input:checked + .booking-card__content
+    border-color: v.$clr-accent
+    background-color: rgba(v.$clr-accent, 0.05)
+    .icon
+      color: v.$clr-accent
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    row-gap: v.$space-xs
+    padding: v.$space-md v.$space-sm
+    border: v.to-rem(2) solid #e2e2e9
+    border-radius: v.$rad-md
+    background-color: #fff
+    transition: border-color v.$tr-fast, background-color v.$tr-fast
+    height: 100%
+    
+    @include v.media(tablet)
+      padding: v.$space-xl v.$space-sm
+
+    @include v.has-mouse
+      &:hover
+        border-color: rgba(v.$clr-accent, 0.5)
+
+    .icon
+      width: v.to-rem(40)
+      height: v.to-rem(40)
+      color: v.$clr-text-muted
+      margin-bottom: v.$space-sm
+      transition: color v.$tr-fast
+
+  &__title
+    font-size: v.$fz-sm
+    font-weight: 600
+    color: v.$clr-text
+    
+    @include v.media(tablet)
+      font-size: v.$fz-md
+
+  &__desc
+    font-size: v.$fz-xs
+    color: v.$clr-text-muted
+
+// --- Формы внутри шагов ---
+.booking-form
+  margin-bottom: v.$space-xl
+
+  &__row
+    margin-bottom: v.$space-md
+
+    &_col-2
+      @include v.media(tablet)
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: v.$space-md
+
+  &__group
+    display: flex
+    flex-direction: column
+
+  &__label
+    font-size: v.$fz-sm
+    font-weight: 600
+    margin-bottom: v.to-rem(8)
+    color: v.$clr-text
+
+  &__input
+    width: 100%
+    padding: v.to-rem(12) v.$space-sm
+    border: v.to-rem(1) solid #ccc
+    border-radius: v.$rad-sm
+    font-family: v.$ff-base
+    font-size: v.$fz-md
+    color: v.$clr-text
+    outline: none
+    transition: border-color v.$tr-fast
+
+    &:focus
+      border-color: v.$clr-accent
+
+  &__hint
+    font-size: v.$fz-xs
+    margin-top: v.to-rem(6)
+    font-weight: 500
+
+// --- КАСТОМНЫЙ СЕЛЕКТ ---
+.custom-select
+  position: relative
+  width: 100%
+  user-select: none
+
+  &__trigger
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: v.to-rem(12) v.$space-sm
+    background-color: #fff
+    border: v.to-rem(1) solid #ccc
+    border-radius: v.$rad-sm
+    cursor: pointer
+    transition: border-color v.$tr-fast, box-shadow v.$tr-fast
+    outline: none
+
+    &:hover, &:focus
+      border-color: v.$clr-accent
+
+  &__value
+    font-size: v.$fz-md
+    color: v.$clr-text
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+  &__arrow
+    width: v.to-rem(20)
+    height: v.to-rem(20)
+    color: v.$clr-text-muted
+    transition: transform v.$tr-base ease
+
+  &_open &__trigger
+    border-color: v.$clr-accent
+    box-shadow: 0 0 0 v.to-rem(3) rgba(35, 179, 58, 0.1)
+
+  &_open &__arrow
+    transform: rotate(180deg)
+
+  &__dropdown
+    position: absolute
+    top: calc(100% + 8px)
+    left: 0
+    right: 0
+    background: #fff
+    border: v.to-rem(1) solid #e2e2e9
+    border-radius: v.$rad-sm
+    box-shadow: v.$shadow-lg
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-10px)
+    transition: opacity v.$tr-fast, transform v.$tr-fast, visibility v.$tr-fast
+    z-index: 10
+    list-style: none
+    padding: v.$space-xs 0
+    max-height: v.to-rem(250)
+    overflow-y: auto
+
+  &_open &__dropdown
+    opacity: 1
+    visibility: visible
+    transform: translateY(0)
+
+  &__option
+    padding: v.$space-sm v.$space-md
+    font-size: v.$fz-md
+    color: v.$clr-text
+    cursor: pointer
+    transition: background-color v.$tr-fast, color v.$tr-fast
+
+    @include v.has-mouse
+      &:hover
+        background-color: #f9f9fb
+        color: v.$clr-accent
+
+    &_selected
+      background-color: rgba(35, 179, 58, 0.05)
+      color: v.$clr-accent
+      font-weight: 600
+
+  // Внутри .custom-select добавляем:
+  &__dropdown
+    // ... (твои старые стили)
+    padding: 0 // Убираем паддинг, чтобы поиск был на всю ширину
+    overflow: hidden // Скролл переносим на сам список
+
+  &__search-wrap
+    padding: v.$space-sm
+    border-bottom: 1px solid #e2e2e9
+    background-color: #f9f9fb
+
+  &__search
+    width: 100%
+    padding: v.to-rem(8) v.$space-sm
+    border: 1px solid #ccc
+    border-radius: v.$rad-sm
+    font-family: v.$ff-base
+    font-size: v.$fz-sm
+    outline: none
+    transition: border-color v.$tr-fast
+
+    &:focus
+      border-color: v.$clr-accent
+
+  &__list
+    list-style: none
+    margin: 0
+    padding: v.$space-xs 0
+    max-height: v.to-rem(220)
+    overflow-y: auto
+// --- Кастомный счетчик людей ---
+.pax-counter
+  display: flex
+  align-items: center
+  border: v.to-rem(1) solid #ccc
+  border-radius: v.$rad-sm
+  overflow: hidden
+  height: v.to-rem(46)
+
+  &__btn
+    width: v.to-rem(46)
+    height: 100%
+    background-color: #f9f9fb
+    border: none
+    font-size: v.$fz-lg
+    color: v.$clr-text
+    cursor: pointer
+    transition: background-color v.$tr-fast
+
+    @include v.has-mouse
+      &:hover
+        background-color: #e2e2e9
+
+  &__input
+    flex: 1
+    height: 100%
+    border: none
+    text-align: center
+    font-weight: 600
+    font-size: v.$fz-md
+    outline: none
+    -moz-appearance: textfield
+
+// --- Дополнительные опции (Add-ons) ---
+.booking-addons
+  display: flex
+  flex-direction: column
+  gap: v.$space-sm
+
+.booking-addon
+  display: block
+  cursor: pointer
+
+  &__input:checked + .booking-addon__content
+    border-color: v.$clr-accent
+    background-color: rgba(v.$clr-accent, 0.05)
+
+    .booking-addon__price
+      color: v.$clr-accent
+
+  &__content
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: v.$space-md
+    border: v.to-rem(1) solid #e2e2e9
+    border-radius: v.$rad-sm
+    transition: border-color v.$tr-fast, background-color v.$tr-fast
+
+    @include v.has-mouse
+      &:hover
+        border-color: rgba(v.$clr-accent, 0.5)
+
+  &__info
+    display: flex
+    flex-direction: column
+    gap: v.to-rem(4)
+
+  &__title
+    font-weight: 600
+    color: v.$clr-text
+    font-size: v.$fz-md
+
+  &__desc
+    font-size: v.$fz-xs
+    color: v.$clr-text-muted
+
+  &__price
+    font-weight: 600
+    font-size: v.$fz-md
+    color: v.$clr-text-muted
+    transition: color v.$tr-fast
+
+// --- Боковая смета (Summary) ---
+.order-summary
+  background-color: #fff
+  border-radius: v.$rad-lg
+  padding: v.$space-lg
+  box-shadow: v.$shadow-lg
+  border: v.to-rem(1) solid #e2e2e9
+
+  &__title
+    font-size: v.$fz-lg
+    font-weight: 600
+    margin-bottom: v.$space-md
+    padding-bottom: v.$space-sm
+    border-bottom: v.to-rem(1) solid #e2e2e9
+
+  &__content
+    display: flex
+    flex-direction: column
+    gap: v.$space-sm
+
+  &__item
+    display: flex
+    justify-content: space-between
+    font-size: v.$fz-sm
+
+  &__label
+    color: v.$clr-text-muted
+
+  &__val
+    font-weight: 500
+    text-align: right
+    max-width: 60%
+
+  &__addon-item
+    display: flex
+    justify-content: space-between
+    font-size: v.$fz-xs
+    color: v.$clr-text-muted
+    margin-top: v.to-rem(4)
+
+  &__divider
+    border: none
+    border-top: v.to-rem(1) dashed #ccc
+    margin: v.$space-sm 0
+
+  &__total
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: v.$fz-xl
+    font-weight: 600
+    color: v.$clr-text
+    margin-bottom: v.$space-lg
+
+  &__price
+    color: v.$clr-accent
+
+  &__wa-btn
+    width: 100%
+    background-color: #23b33a
+    color: #fff
+    font-size: v.$fz-md
+
+    @include v.has-mouse
+      &:hover
+        background-color: #1da832
+        color: #fff
+
+        .icon
+          transform: none
+
+  &__btn
+    width: 100%
+    font-size: v.$fz-md
+
+  &__note
+    text-align: center
+    font-size: v.$fz-xs
+    color: v.$clr-text-muted
+    margin-top: v.$space-sm
+
+.booking__divider-text
+  text-align: center
+  position: relative
+  margin: v.$space-sm 0
+  color: v.$clr-text-muted
+  font-size: v.$fz-xs
+  text-transform: uppercase
+  font-weight: 600
+
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    width: calc(50% - 30px)
+    height: v.to-rem(1)
+    background-color: #e2e2e9
+
+  &::before
+    left: 0
+
+  &::after
+    right: 0
+
+  span
+    background-color: #fff
+    padding: 0 v.$space-sm
