@@ -161,8 +161,8 @@ export class BookingSystem {
 
   hideIntroShowWizard() {
     if (this.introBlock && this.wizardBlock) {
-      this.introBlock.classList.add('hidden-elem');
-      this.wizardBlock.classList.remove('hidden-elem');
+      this.introBlock.classList.add('booking-hidden-elem');
+      this.wizardBlock.classList.remove('booking-hidden-elem');
     }
   }
 
@@ -254,7 +254,7 @@ export class BookingSystem {
 
   updateView() {
     this.panels.forEach(panel => {
-      panel.classList.toggle('hidden-elem', parseInt(panel.dataset.panel) !== this.state.step);
+      panel.classList.toggle('booking-hidden-elem', parseInt(panel.dataset.panel) !== this.state.step);
     });
 
     this.steps.forEach(step => {
