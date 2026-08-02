@@ -630,7 +630,10 @@ src/
       thumb-80.webp
     map.jpg
   js/
+    about.js
     accordion.js
+    booking-system.js
+    booking.js
     categories.critical.js
     categories.js
     category.js
@@ -651,8 +654,10 @@ src/
       _fonts.sass
     components/
       _about-section.sass
+      _about.sass
       _accordion.sass
       _badges.sass
+      _booking.sass
       _breadcrumbs.sass
       _button.sass
       _categories-teaser.sass
@@ -682,6 +687,10 @@ src/
     tools/
       _functions.sass
       _mixins.sass
+    about.critical.sass
+    about.sass
+    booking.critical.sass
+    booking.sass
     categories.critical.sass
     categories.sass
     category.critical.sass
@@ -705,6 +714,8 @@ src/
     tour.sass
     trekking-category.critical.sass
     trekking-category.sass
+  about.html
+  booking.html
   categories.html
   category.html
   custom-category.html
@@ -720,6 +731,769 @@ src/
 
 <files>
 This section contains the contents of the repository's files.
+
+<file path="src/js/about.js">
+import { initHeader } from "./header-fixed?aboutPage";
+import { initMenu } from "./menu?aboutPage";
+import "/sass/about.sass";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initHeader();
+  initMenu();
+});
+</file>
+
+<file path="src/sass/components/_about.sass">
+@use '../settings/shared' as v
+
+.about
+  &__hero
+    margin-bottom: 48px
+
+    @media (min-width: 768px)
+      margin-bottom: 96px
+      text-align: center
+
+  &__title
+    margin: 0 0 16px
+    font-size: 32px
+    font-weight: 700
+    line-height: 1.2
+    color: #1a1a1a
+
+    @media (min-width: 768px)
+      font-size: 56px
+      margin-bottom: 24px
+
+  &__description
+    margin: 0 0 32px
+    font-size: 16px
+    line-height: 1.5
+    color: #4a4a4a
+
+    @media (min-width: 768px)
+      margin: 0 auto 48px
+      max-width: 700px
+      font-size: 20px
+
+  &__picture
+    display: block
+    width: 100%
+    border-radius: 12px
+    overflow: hidden
+    background-color: #f3f4f6
+    aspect-ratio: 4 / 5 // Защита от сдвига макета на мобильных (соответствует width:320 height:400)
+
+    @media (min-width: 768px)
+      aspect-ratio: 21 / 9 // Панорамные пропорции для десктопа (Hero изображение)
+      border-radius: 24px
+
+  &__image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+
+  &__values
+    padding: 40px 0
+    background-color: #f9fafb
+    border-radius: 16px
+
+    @media (min-width: 768px)
+      padding: 80px
+
+  &__values-grid
+    display: grid
+    grid-template-columns: 1fr
+    gap: 32px
+
+    @media (min-width: 768px)
+      grid-template-columns: 1fr 1fr
+      align-items: center
+      gap: 64px
+
+  &__subtitle
+    margin: 0 0 24px
+    font-size: 28px
+    font-weight: 700
+    color: #1a1a1a
+
+    @media (min-width: 768px)
+      font-size: 40px
+
+  &__text
+    margin: 0 0 32px
+    font-size: 16px
+    line-height: 1.6
+    color: #4a4a4a
+
+  &__stats
+    display: flex
+    flex-direction: column
+    gap: 24px
+    padding: 0
+    margin: 0
+    list-style: none
+
+    @media (min-width: 768px)
+      flex-direction: row
+      gap: 48px
+
+  &__stat-item
+    display: flex
+    flex-direction: column
+    gap: 8px
+
+  &__stat-value
+    font-size: 48px
+    font-weight: 700
+    line-height: 1
+    color: #059669 // Природный зеленый цвет для туристической тематики
+
+  &__stat-label
+    font-size: 14px
+    font-weight: 500
+    color: #6b7280
+    text-transform: uppercase
+    letter-spacing: 0.05em
+
+  &__values-picture
+    display: block
+    width: 100%
+    border-radius: 12px
+    overflow: hidden
+    background-color: #e5e7eb
+    aspect-ratio: 4 / 3 // Жестко фиксируем пропорции для устранения CLS
+
+  &__values-image
+    display: block
+    width: 100%
+    height: 100%
+    object-fit: cover
+</file>
+
+<file path="src/sass/about.critical.sass">
+@use './core-critical'
+</file>
+
+<file path="src/sass/about.sass">
+@use './components/breadcrumbs' 
+@use './components/about' 
+@use './core'
+</file>
+
+<file path="src/about.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Авторские туры по Кыргызстану | Mongu</title>
+    <meta
+      name="description"
+      content="Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по самым красивым перевалам и озерам Кыргызстана с опытными гидами." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Авторские туры по Кыргызстану — Mongu" />
+    <meta property="og:description" content="Индивидуальные джип-туры и конные экспедиции по Кыргызстану." />
+    <meta property="og:url" content="https://mongu.kg/" />
+    <meta property="og:image" content="https://mongu.kg/images/og-image.jpg" />
+
+    <meta name="theme-color" content="#6c613e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#3F3F25" media="(prefers-color-scheme: dark)" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://mongu.kg/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Mongu",
+        "description": "Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по Кыргызстану.",
+        "url": "https://mongu.kg/"
+      }
+    </script>
+  </head>
+  <body>
+    <a
+      href="https://wa.me/996555150795"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Написать в WhatsApp">
+      <!-- SVG WhatsApp Float оставлен инлайном для мгновенной загрузки -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.22 175.55">
+        <defs>
+          <linearGradient id="b" x1="85.92" x2="86.53" y1="32.57" y2="137.09" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#57d163" />
+            <stop offset="1" stop-color="#23b33a" />
+          </linearGradient>
+          <filter id="a" width="1.11" height="1.11" x="-.06" y="-.06" color-interpolation-filters="sRGB">
+            <feGaussianBlur stdDeviation="3.53" />
+          </filter>
+        </defs>
+        <path fill="#b3b3b3" d="m54.53 138.45 2.24 1.32a61 61 0 0 0 31.12 8.53h.03a61.23 61.23 0 0 0 61.15-61.14c0-16.33-6.35-31.7-17.9-43.25a60.8 60.8 0 0 0-43.23-17.93 61.23 61.23 0 0 0-61.18 61.13 61 61 0 0 0 9.35 32.54l1.46 2.31-6.18 22.56zm-40.8 23.54 10.43-38.11a73.4 73.4 0 0 1-9.82-36.77c.02-40.56 33.02-73.55 73.58-73.55 19.68 0 38.15 7.67 52.04 21.57s21.54 32.38 21.53 52.04c-.01 40.55-33.02 73.55-73.57 73.55h-.04a73.5 73.5 0 0 1-35.15-8.95zm0 0" filter="url(#a)" />
+        <path fill="#fff" d="m12.97 161.24 10.43-38.12a73.4 73.4 0 0 1-9.82-36.77C13.6 45.8 46.61 12.8 87.16 12.8c19.68.01 38.16 7.67 52.05 21.57s21.54 32.39 21.53 52.04c-.02 40.55-33.03 73.55-73.58 73.55h-.03a73.5 73.5 0 0 1-35.16-8.95z" />
+        <path fill="url(#b)" d="M87.18 25.23a61.23 61.23 0 0 0-61.17 61.13 61 61 0 0 0 9.34 32.53l1.46 2.31-6.18 22.56 23.15-6.07 2.23 1.33a61 61 0 0 0 31.13 8.52h.02a61.23 61.23 0 0 0 61.15-61.13 60.8 60.8 0 0 0-17.9-43.25 60.8 60.8 0 0 0-43.23-17.93" />
+        <path fill="#fff" fill-rule="evenodd" d="M68.77 55.6c-1.38-3.06-2.83-3.12-4.13-3.17l-3.53-.05c-1.22 0-3.22.46-4.9 2.3s-6.44 6.3-6.44 15.34 6.6 17.78 7.51 19 12.72 20.39 31.4 27.76c15.53 6.12 18.7 4.9 22.07 4.6s10.87-4.45 12.4-8.74 1.54-7.97 1.08-8.74-1.69-1.23-3.53-2.15-10.88-5.36-12.56-5.98-2.91-.92-4.14.92-4.74 5.98-5.82 7.2-2.14 1.39-3.98.47-7.76-2.86-14.78-9.12c-5.47-4.88-9.16-10.9-10.23-12.73s-.12-2.84.8-3.75c.83-.83 1.84-2.15 2.77-3.22s1.22-1.84 1.83-3.07.3-2.3-.15-3.22-4.03-10.01-5.67-13.65" />
+      </svg>
+    </a>
+
+    <header class="header">
+      <div class="header__container container container_wide">
+        <div class="header__logo">
+          <a href="/" class="logo" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 708 198">
+              <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+              <path
+                class="hidden-elem"
+                fill="currentColor"
+                d="M658.6 164a50 50 0 0 1-36.4-13q-13-13-13-37.6V49.7h21v62.8q0 17.3 7.4 25.4 7.5 7.8 21.2 7.8 13.8 0 21.1-8t7.4-25.2V49.7H708v63.5q0 24.6-13.2 37.7a49 49 0 0 1-36.2 13m-120.3 0q-12.6.2-24.4-4a56 56 0 0 1-36.3-53.9q-.1-12.1 4.4-23.2 4.6-10.6 12.7-18.3a58 58 0 0 1 19.6-12.2q11.8-4.5 24.3-4.3 14.4 0 25.8 4.7a51 51 0 0 1 19.5 13.7l-13.2 12.8a43 43 0 0 0-31.2-12.8 46 46 0 0 0-16.4 2.9A38 38 0 0 0 501.6 90a43 43 0 0 0 8.5 44.5q5.6 5.3 12.8 8.1 8 3 16.5 3t16.1-2.5q8.5-3.1 15-9.2l12 15.8a63 63 0 0 1-20.7 10.7 81 81 0 0 1-23.5 3.6m44.2-14.3-19.9-2.8v-42.2h19.9zM355 162.4V49.5h17.3l70.7 86.8h-8.5V49.6h20.8v112.8H438l-70.6-86.8h8.6v86.8zm-82.9 1.5q-12.6.2-24.4-4.3a56 56 0 0 1-36.5-53.6q0-12.5 4.4-23 4.5-10.3 12.8-18.2a58 58 0 0 1 19.3-12.3Q259.5 48 272 48a65 65 0 0 1 24.2 4.4A58 58 0 0 1 328.3 83q4.6 11 4.5 23 0 12.7-4.5 23.2t-12.7 18.4a60 60 0 0 1-19.4 12.1q-11.6 4.5-24 4.3m-.2-18.3q8.6 0 15.8-2.9a37 37 0 0 0 20.8-20.8q3-7.2 3-16a39 39 0 0 0-11.2-28.2 36 36 0 0 0-12.6-8.4q-7.6-3-15.8-2.9-8.6 0-15.8 2.9-7.1 3-12.5 8.4a39 39 0 0 0-11.3 28.3q0 8.5 2.9 15.7a37 37 0 0 0 21 21q7.6 3 15.7 2.9" />
+              <path class="hidden-elem" fill="currentColor" d="m202.6 67.4 142.1 66.1-5.6 12-142.1-66z" />
+              <path
+                fill="currentColor"
+                d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+            </svg>
+          </a>
+        </div>
+        <nav class="header__nav" aria-label="Основная навигация">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="/categories.html" class="header__nav-link">Tours</a>
+              <ul class="header__nav-sublist">
+                <li class="header__nav-subitem"><a href="/trekking-category.html" class="header__nav-sublink">Trekking adventures</a></li>
+                <li class="header__nav-subitem"><a href="/horseback-category.html" class="header__nav-sublink">Horseback expedition</a></li>
+                <li class="header__nav-subitem"><a href="/offroad-category.html" class="header__nav-sublink">Overland jeep journeys</a></li>
+                <li class="header__nav-subitem"><a href="/nomadic-category.html" class="header__nav-sublink">Nomadic heritage</a></li>
+                <li class="header__nav-subitem"><a href="/custom-category.html" class="header__nav-sublink">Custom expedition</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Private tours</a></li>
+            <li class="header__nav-item"><a href="/lodge.html" class="header__nav-link">Sokmo lodge</a></li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Destination</a>
+              <ul class="header__nav-sublist header__nav-sublist_full-width">
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#ik"></use></svg><span>Issyk-Kul</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#nr"></use></svg><span>Naryn</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#chui"></use></svg><span>Chuy</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#tl"></use></svg><span>Talas</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#dj"></use></svg><span>Jalal-Abad</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#osh"></use></svg><span>Osh</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#bt"></use></svg><span>Batken</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#tj"></use></svg><span>Tajikistan</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#kz"></use></svg><span>Kazakhstan</span></a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
+            <li class="header__nav-item"><a href="/blog.html" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="header__controls">
+          <a href="/booking.html" type="button" class="header__btn">Book now</a>
+          <div class="header__callback">
+            <div class="header__callback-wrap">
+              <svg class="icon icon_headphones"><use href="#headphone"></use></svg>
+              <svg class="icon icon_angle"><use href="#angle"></use></svg>
+            </div>
+            <ul class="header__callback-list">
+              <li class="header__callback-item">
+                <a class="header__callback-link" href="https://wa.me/996555150795" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon"><use href="/icons.svg#whatsapp"></use></svg>Chat on WhatsApp
+                </a>
+              </li>
+              <li class="header__callback-item">
+                <a class="header__callback-link" href="mailto:info@mongu.kg">
+                  <svg class="icon"><use href="/icons.svg#envelope"></use></svg>Email a Trip Specialist
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button type="button" aria-label="Mobile menu" class="hamburger js-hamburger">
+            <svg class="icon"><use href="#hamburger"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero_inside">
+      <div class="hero__media">
+        <div class="hero__poster">
+          <picture>
+            <source type="image/avif" media="(min-width: 1024px)" srcset="./images/hero-categories/trekking-hero-1440.avif" />
+            <source type="image/webp" media="(min-width: 1024px)" srcset="./images/hero-categories/trekking-hero-1440.webp" />
+            <img src="./images/hero-categories/trekking-hero-1440.jpg" alt="Booking" class="hero__poster-img" width="1440" height="400" fetchpriority="high" loading="eager" />
+          </picture>
+        </div>
+      </div>
+      <div class="hero__content">
+        <div class="container">
+          <h1 class="hero__title">About</h1>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-content about">
+      <div class="container">
+        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
+            <li class="breadcrumbs__item" aria-current="page">About</li>
+          </ul>
+        </nav>
+      </div>
+
+      
+  <!-- Главный экран -->
+  <section class="about__hero">
+    <div class="container">
+      <h1 class="about__title">О нашей компании</h1>
+      <p class="about__description">Мы организуем авторские туры, открывая для вас самые живописные и труднодоступные уголки природы. Безопасность, комфорт и незабываемые впечатления — наши главные приоритеты.</p>
+      
+      <!-- 
+        Идеальная реализация изображения первого экрана. 
+        Добавлен fetchpriority="high" для LCP (Largest Contentful Paint).
+        loading="eager" гарантирует немедленную загрузку.
+      -->
+      <picture class="about__picture">
+        <!-- Десктоп (AVIF & WebP) -->
+        <source 
+          media="(min-width: 768px)" 
+          srcset="img/about-hero-desktop.avif 1x, img/about-hero-desktop@2x.avif 2x" 
+          type="image/avif"
+        >
+        <source 
+          media="(min-width: 768px)" 
+          srcset="img/about-hero-desktop.webp 1x, img/about-hero-desktop@2x.webp 2x" 
+          type="image/webp"
+        >
+        <!-- Мобилка (AVIF & WebP) -->
+        <source 
+          media="(max-width: 767px)" 
+          srcset="img/about-hero-mobile.avif 1x, img/about-hero-mobile@2x.avif 2x" 
+          type="image/avif"
+        >
+        <source 
+          media="(max-width: 767px)" 
+          srcset="img/about-hero-mobile.webp 1x, img/about-hero-mobile@2x.webp 2x" 
+          type="image/webp"
+        >
+        <!-- Fallback (JPEG) -->
+        <img 
+          class="about__image" 
+          src="img/about-hero-mobile.jpg" 
+          srcset="img/about-hero-mobile@2x.jpg 2x" 
+          alt="Группа туристов на вершине горы на фоне рассвета" 
+          fetchpriority="high"
+          loading="eager" 
+          decoding="async" 
+          width="320" 
+          height="400"
+        >
+      </picture>
+    </div>
+  </section>
+
+  <!-- Блок с ценностями и статистикой -->
+  <section class="about__values">
+    <div class="container">
+      <div class="about__values-grid">
+        <div class="about__values-content">
+          <h2 class="about__subtitle">Почему выбирают наши туры</h2>
+          <p class="about__text">Каждый маршрут проверен нашими гидами сотни раз. Мы берем на себя всю логистику, проживание и питание, чтобы вы могли просто наслаждаться путешествием.</p>
+          
+          <ul class="about__stats">
+            <li class="about__stat-item">
+              <span class="about__stat-value">50+</span>
+              <span class="about__stat-label">Уникальных маршрутов</span>
+            </li>
+            <li class="about__stat-item">
+              <span class="about__stat-value">5k+</span>
+              <span class="about__stat-label">Довольных туристов</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 
+          Изображение ниже линии сгиба (Below the fold). 
+          Обязательно loading="lazy".
+        -->
+        <picture class="about__values-picture">
+          <source media="(min-width: 768px)" srcset="img/team-desktop.avif 1x, img/team-desktop@2x.avif 2x" type="image/avif">
+          <source media="(min-width: 768px)" srcset="img/team-desktop.webp 1x, img/team-desktop@2x.webp 2x" type="image/webp">
+          <source media="(max-width: 767px)" srcset="img/team-mobile.avif 1x, img/team-mobile@2x.avif 2x" type="image/avif">
+          <source media="(max-width: 767px)" srcset="img/team-mobile.webp 1x, img/team-mobile@2x.webp 2x" type="image/webp">
+          <img 
+            class="about__values-image" 
+            src="img/team-mobile.jpg" 
+            srcset="img/team-mobile@2x.jpg 2x" 
+            alt="Команда наших опытных гидов у костра" 
+            loading="lazy" 
+            decoding="async" 
+            width="320" 
+            height="240"
+          >
+        </picture>
+      </div>
+    </div>
+  </section>
+
+
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top section-padding section-bg">
+        <div class="container">
+          <div class="footer__top-grid">
+            <div class="footer__grid-item">
+              <h2 class="title">Plan your jorney</h2>
+            </div>
+            <div class="footer__grid-item">
+              <p class="footer__subtitle">
+                Lorem ipsum dolor sit amet <br />
+                consectetur adipisicing.
+              </p>
+            </div>
+            <div class="footer__grid-item">
+              <a href="tel:996555123456" class="footer__contacts-link">
+                <svg class="icon">
+                  <use href="#whatsapp"></use>
+                </svg>
+                <div>
+                  <strong class="footer__contacts-title">Whatsapp</strong>
+                  <span>+996 555 123 456</span>
+                </div>
+              </a>
+            </div>
+            <div class="footer__grid-item">
+              <a href="mailto:info@mongu.com" class="footer__contacts-link">
+                <svg class="icon">
+                  <use href="#envelope"></use>
+                </svg>
+                <div>
+                  <strong class="footer__contacts-title">Email</strong>
+                  <span>info@mongu.com</span>
+                </div>
+              </a>
+            </div>
+            <div class="footer__grid-item">
+              <a href="#" class="footer__contacts-link">
+                <svg class="icon">
+                  <use href="./icons.svg#instagram"></use>
+                </svg>
+                <div>
+                  <strong class="footer__contacts-title">Instagram</strong>
+                  <span>@mongu</span>
+                </div>
+              </a>
+            </div>
+            <div class="footer__grid-item">
+              <button type="button" class="footer__btn btn">
+                Booking
+                <svg class="icon">
+                  <use href="/icons.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-flex-wrap">
+            <a href="/" class="logo" aria-label="На главную">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 708 198">
+                <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+                <path
+                  fill="currentColor"
+                  d="M658.6 164a50 50 0 0 1-36.4-13q-13-13-13-37.6V49.7h21v62.8q0 17.3 7.4 25.4 7.5 7.8 21.2 7.8 13.8 0 21.1-8t7.4-25.2V49.7H708v63.5q0 24.6-13.2 37.7a49 49 0 0 1-36.2 13m-120.3 0q-12.6.2-24.4-4a56 56 0 0 1-36.3-53.9q-.1-12.1 4.4-23.2 4.6-10.6 12.7-18.3a58 58 0 0 1 19.6-12.2q11.8-4.5 24.3-4.3 14.4 0 25.8 4.7a51 51 0 0 1 19.5 13.7l-13.2 12.8a43 43 0 0 0-31.2-12.8 46 46 0 0 0-16.4 2.9A38 38 0 0 0 501.6 90a43 43 0 0 0 8.5 44.5q5.6 5.3 12.8 8.1 8 3 16.5 3t16.1-2.5q8.5-3.1 15-9.2l12 15.8a63 63 0 0 1-20.7 10.7 81 81 0 0 1-23.5 3.6m44.2-14.3-19.9-2.8v-42.2h19.9zM355 162.4V49.5h17.3l70.7 86.8h-8.5V49.6h20.8v112.8H438l-70.6-86.8h8.6v86.8zm-82.9 1.5q-12.6.2-24.4-4.3a56 56 0 0 1-36.5-53.6q0-12.5 4.4-23 4.5-10.3 12.8-18.2a58 58 0 0 1 19.3-12.3Q259.5 48 272 48a65 65 0 0 1 24.2 4.4A58 58 0 0 1 328.3 83q4.6 11 4.5 23 0 12.7-4.5 23.2t-12.7 18.4a60 60 0 0 1-19.4 12.1q-11.6 4.5-24 4.3m-.2-18.3q8.6 0 15.8-2.9a37 37 0 0 0 20.8-20.8q3-7.2 3-16a39 39 0 0 0-11.2-28.2 36 36 0 0 0-12.6-8.4q-7.6-3-15.8-2.9-8.6 0-15.8 2.9-7.1 3-12.5 8.4a39 39 0 0 0-11.3 28.3q0 8.5 2.9 15.7a37 37 0 0 0 21 21q7.6 3 15.7 2.9" />
+                <path fill="currentColor" d="m202.6 67.4 142.1 66.1-5.6 12-142.1-66z" />
+                <path
+                  fill="currentColor"
+                  d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+              </svg>
+            </a>
+
+            <nav aria-label="Основная навигация">
+              <ul>
+                <li><a href="/categories.html">Tours</a></li>
+                <li><a href="#">Private tours</a></li>
+                <li><a href="/lodge.html">Sokmo lodge</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
+              </ul>
+            </nav>
+
+            <p class="footer__copyright">&copy; MONGU 2026</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M14.1 7.3q.4-.6.9 0l4.4 4.4.6.4-.6.4L15 17h-.8v-.8l3.1-3.3H5.7l-.6-.4a1 1 0 0 1 .3-.9h11.9L14 8.1z"/>
+      </symbol>
+      <symbol id="hamburger" viewBox="0 0 16 12">
+        <path
+          fill="currentColor"
+          d="M14.6 10c.1591 0 .3117.0632.4243.1757.1125.1126.1757.2652.1757.4243s-.0632.3117-.1757.4243c-.1126.1125-.2652.1757-.4243.1757H.6c-.15913 0-.311742-.0632-.424264-.1757C.0632141 10.9117 0 10.7591 0 10.6s.0632141-.3117.175736-.4243C.288258 10.0632.44087 10 .6 10zm0-5c.0788 0 .1568.01552.2296.04567s.139.07435.1947.13007c.0557.05571.0999.12185.13.19465.0302.07279.0457.15082.0457.22961s-.0155.15681-.0457.22961c-.0301.0728-.0743.13894-.13.19465-.0557.05572-.1219.09992-.1947.13007S14.6788 6.2 14.6 6.2H.6c-.078793 0-.156815-.01552-.22961-.04567s-.138939-.07435-.194654-.13007a.599884.599884 0 0 1-.1300641-.19465C.0155191 5.75681 0 5.67879 0 5.6s.0155191-.15682.0456719-.22961a.599884.599884 0 0 1 .1300641-.19465c.055715-.05572.121859-.09992.194654-.13007S.521207 5 .6 5zm0-5c.1591 0 .3117.0632141.4243.175736C15.1368.288258 15.2.44087 15.2.6s-.0632.311742-.1757.42426c-.1126.11253-.2652.17574-.4243.17574H.6c-.15913 0-.311742-.06321-.424264-.17574C.0632141.911742 0 .75913 0 .6S.0632141.288258.175736.175736C.288258.0632141.44087 0 .6 0z" />
+      </symbol>
+      <symbol id="cross" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M15 8a.6.6 0 0 1 1 1l-3.1 3 3 3a.6.6 0 0 1-.8 1L12 12.8l-3 3a.6.6 0 0 1-1-.8l3.1-3.1-3-3a.6.6 0 0 1 .8-1L12 11z" />
+      </symbol>
+      <symbol id="angle" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M15.6 9.6a.6.6 0 0 1 .8.8l-4 4-.4.5-.4-.5-4-4a.6.6 0 0 1 .8-.8L12 13z" />
+      </symbol>
+      <symbol id="headphone" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M11.2 19.6a1.2 1.2 0 1 1 0-2.3 1.2 1.2 0 0 1 0 2.3m0-1.8a.6.6 0 1 0 .5 1.1.6.6 0 0 0-.5-1" />
+        <path
+          fill="currentColor"
+          d="M18.6 9.9a6.7 6.7 0 0 0-13.2 0 2 2 0 0 0-1.7 2V14a2 2 0 0 0 1.5 2 7 7 0 0 0 5.2 2.7v-.6a7 7 0 0 1-4.5-2h.2q1-.1 1-1v-4.3a1 1 0 0 0-1-1H6a6.2 6.2 0 0 1 12 0 1 1 0 0 0-1 1v4.3q0 .9 1 1h.4c1.1 0 2-1 2-2.1v-2.1a2 2 0 0 0-1.7-2M6 10.4q.5 0 .5.5V15q0 .3-.5.4h-.4q-1.3-.2-1.5-1.5v-2.1q.2-1.4 1.5-1.5zM19.8 14a1.5 1.5 0 0 1-1.5 1.5h-.4a.4.4 0 0 1-.5-.5v-4.2q0-.3.5-.4h.4q1.4.1 1.5 1.5z" />
+      </symbol>
+      <symbol id="envelope" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M20.4 7q-.1-1.3-1.4-1.4H5Q3.7 5.7 3.6 7v10q.1 1.3 1.4 1.4h14q1.3-.1 1.4-1.4zm-2.7.8a.6.6 0 1 1 .9 1l-4.8 4.4c-1 1-2.6 1-3.6 0L5.5 8.7a.6.6 0 0 1 .8-.9l4.8 4.5q.9.8 1.8 0zm4 9.2c0 1.4-1.3 2.6-2.7 2.6H5A2.6 2.6 0 0 1 2.4 17V7c0-1.4 1.2-2.6 2.6-2.6h14c1.4 0 2.6 1.2 2.6 2.6z" />
+      </symbol>
+      <symbol id="whatsapp" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="m16 13.8-1.4-.7q-.4-.2-.6 0l-.7 1h-.5L11 12.9l-1.2-1.5.1-.5.4-.3.2-.4v-.4L9.8 8q-.3-.4-.5-.3h-.5l-.6.2a3 3 0 0 0-.8 1.9q0 1.4 1 2.3a10 10 0 0 0 3.8 3.4l1.3.5h1.4a2 2 0 0 0 1.5-1q.2-.5.1-1z" />
+        <path
+          fill="currentColor"
+          d="M18.3 5.6A9 9 0 0 0 12 3a9 9 0 0 0-7.8 4.5 9 9 0 0 0 0 8.9L3 21l4.8-1.2a9 9 0 0 0 12.6-4.4 9 9 0 0 0-2-9.8M12 19.3q-2.1 0-3.9-1l-.2-.2L5 19l.7-2.8-.2-.2a7.4 7.4 0 0 1 1.7-9.7A7.5 7.5 0 0 1 19 9q.5 1.4.5 2.8a7.4 7.4 0 0 1-7.4 7.4" />
+      </symbol>
+    </svg>
+
+    <div class="menu js-menu">
+      <div class="menu__sidebar">
+        <div class="menu__sidebar-top">
+          <a href="/" class="menu__logo" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 213 198">
+              <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+              <path
+                fill="#000"
+                d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+            </svg>
+          </a>
+          <div class="menu__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media facebok">
+                  <svg class="icon">
+                    <use href="/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media instagram">
+                  <svg class="icon">
+                    <use href="/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="video-sharing platform youtube">
+                  <svg class="icon">
+                    <use href="/icons.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="messanger WhatsApp">
+                  <svg class="icon">
+                    <use href="/icons.svg#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__close js-menu-close">
+            <svg class="icon">
+              <use href="/icons.svg#cross"></use>
+            </svg>
+          </div>
+        </div>
+
+        <nav class="menu__nav" aria-label="Мобильная навигация">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__item-link" href="/categories.html">Tours</a>
+
+              <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </button>
+              <div class="menu__submenu-wrapper">
+                <ul class="menu__submenu">
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/trekking-category.html">Trekking adventures</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/horseback-category.html">Horseback expedition</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/offroad-category.html">Overland jeep journeys</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/nomadic-category.html">Nomadic heritage</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/custom-category.html">Custom expedition</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Private tours</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/lodge.html">Sokmo lodge</a></li>
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">Destination</a>
+              <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </button>
+              <div class="menu__submenu-wrapper">
+                <ul class="menu__submenu menu__submenu_without-indents">
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#ik"></use>
+                      </svg>
+                      Issyk-Kul
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#nr"></use>
+                      </svg>
+                      Naryn
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#chui"></use>
+                      </svg>
+                      Chuy
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#tl"></use>
+                      </svg>
+                      Talas
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#dj"></use>
+                      </svg>
+                      Jalal-Abad
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#osh"></use>
+                      </svg>
+                      Osh
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#bt"></use>
+                      </svg>
+                      Batken
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#tj"></use>
+                      </svg>
+                      Tajikistan
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#kz"></use>
+                      </svg>
+                      Kazakhstan
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/blog.html">Blog</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script type="module" src="./js/about.js"></script>
+  </body>
+</html>
+</file>
+
+<file path="src/js/booking.js">
+import { initHeader } from "./header-fixed?bookingPage";
+import { initMenu } from "./menu?bookingPage";
+import { BookingSystem } from "./booking-system?bookingPage";
+// import { initSliders } from "./slider?indexPage";
+import "/sass/booking.sass";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initHeader();
+  initMenu();
+  new BookingSystem('.js-booking-container');
+  // if ("requestIdleCallback" in window) {
+  //   requestIdleCallback(() => initSliders(), { timeout: 1000 });
+  // } else {
+  //   setTimeout(initSliders, 200);
+  // }
+});
+</file>
 
 <file path="src/js/index.critical.js">
 import "./header-fixed?indexPage";
@@ -918,6 +1692,16 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
     padding: v.to-rem(100) 0
 </file>
 
+<file path="src/sass/booking.critical.sass">
+@use './core-critical'
+</file>
+
+<file path="src/sass/booking.sass">
+@use './components/breadcrumbs' 
+@use './components/booking' 
+@use './core'
+</file>
+
 <file path="src/sass/core-critical.sass">
 @use '../../node_modules/modern-normalize/modern-normalize'
 @use './generic/reset'
@@ -989,6 +1773,190 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
 @use './components/breadcrumbs'
 @use './components/tour-card'  
 @use './core'
+</file>
+
+<file path="src/js/categories.critical.js">
+
+</file>
+
+<file path="src/js/tabs.js">
+export const initTabs = () => {
+  document.querySelectorAll('.js-tabs').forEach(wrapper => {
+    const tabList = wrapper.querySelector('[role="tablist"]');
+    const tabs = wrapper.querySelectorAll('[role="tab"]');
+    const panels = wrapper.querySelectorAll('[role="tabpanel"]');
+
+    tabList.addEventListener('click', e => {
+      const clickedTab = e.target.closest('[role="tab"]');
+      if (!clickedTab) return;
+
+     
+      tabs.forEach(tab => {
+        tab.setAttribute('aria-selected', 'false');
+        tab.classList.remove('tabs__tab_active')
+        tab.setAttribute('tabindex', '-1');
+      });
+
+      
+      clickedTab.setAttribute('aria-selected', 'true');
+      clickedTab.classList.add('tabs__tab_active')
+      clickedTab.setAttribute('tabindex', '0');
+
+     
+      const targetPanelId = clickedTab.getAttribute('aria-controls');
+      panels.forEach(panel => {
+        panel.hidden = panel.id !== targetPanelId;
+      });
+    });
+
+    
+    tabList.addEventListener('keydown', e => {
+      const index = Array.from(tabs).indexOf(document.activeElement);
+      if (e.key === 'ArrowRight' && index < tabs.length - 1) tabs[index + 1].focus();
+      if (e.key === 'ArrowLeft' && index > 0) tabs[index - 1].focus();
+    });
+  });
+};
+</file>
+
+<file path="src/js/tour.critical.js">
+
+</file>
+
+<file path="src/sass/components/_social.sass">
+@use '../settings/shared' as v
+.social
+  
+  &__list  
+    display: flex
+    align-items: center
+    justify-content: center
+    column-gap: v.$space-md
+
+  &__link 
+    color: #fff
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    background-color: v.$clr-accent
+    width: v.to-rem(24)
+    height: v.to-rem(24)
+    border-radius: v.to-rem(4)
+
+    .icon
+      width: v.to-rem(20)
+      height: v.to-rem(20)
+</file>
+
+<file path="src/sass/components/_tabs.sass">
+@use '../settings/shared' as v
+
+.tabs
+
+  &__list
+    column-gap: v.to-rem(20)
+    display: flex
+    margin-bottom: v.to-rem(20)
+    border-bottom: 1px solid #e2e2e9
+
+  &__tab
+    border: none
+    background: none
+    outline: none
+    text-transform: uppercase
+    font-size: v.to-rem(13)
+    font-weight: 600
+    transition: color v.$tr-base
+    padding-bottom: v.to-rem(10)
+    position: relative
+    white-space: nowrap
+
+    &:after
+      position: absolute
+      content: ''
+      width: 0
+      height: v.to-rem(1)
+      background-color: v.$clr-accent
+      left: 50%
+      transform: translateX(-50%)
+      bottom: 0
+      transition: width v.$tr-base
+
+    @include v.has-mouse
+      cursor: pointer
+
+      &:hover
+        color: v.$clr-accent
+
+        &:after
+          width: calc( 100% - v.to-rem(20) )
+
+    &_active
+      color: v.$clr-accent
+      pointer-events: none
+
+      &:after
+        width: calc( 100% - v.to-rem(20) )
+</file>
+
+<file path="src/sass/settings/_variables.sass">
+// Цвета
+$clr-text: #1a1a1a
+$clr-text-muted: #6b6b73
+$clr-accent: #6C613E
+$clr-secondary: #28a5ec
+$clr-accent-darker: #3F3F25
+$clr-bg-light: #f9f9fb
+$clr-bg-alt: #f3f1ef
+
+$base-fsize: 16
+
+// Типографика (шкала)
+$fz-xs: 0.625rem    // 10px
+$fz-sm: 0.75rem     // 12px
+$fz-md: 0.875rem    // 14px
+$fz-base: 1rem      // 16px
+$fz-lg: 1.0625rem   // 17px
+$fz-xl: 1.25rem     // 20px
+$fz-xxl: 1.5625rem  // 25px
+$fz-hero: 2.1875rem // 35px
+
+// Отступы (шаг сетки)
+$space-xs: 0.3125rem // 5px
+$space-sm: 0.625rem  // 10px
+$space-md: 1rem      // 16px
+$space-lg: 1.25rem   // 20px
+$space-xl: 1.875rem  // 30px
+
+// Скругления 
+$rad-sm: 0.5rem      // 8px
+$rad-md: 0.75rem     // 12px
+$rad-lg: 1rem        // 16px
+
+// Тени
+$shadow-sm: 0 0.25rem 0.75rem rgba(0,0,0,0.1)
+$shadow-md: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.05)
+$shadow-lg: 0 0.625rem 1.625rem rgba(12,21,38,.06)
+             
+// Анимации
+$tr-fast: .2s ease-in-out
+$tr-base: .3s ease
+
+// Размеры контейнера
+$container-width: 31.875rem // 510px
+$container-padding: 1rem    // 16px
+$section-padding-y: 1.875rem 0 // 30px
+
+
+// Стандартный стек системных шрифтов
+$ff-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"
+
+// Системный шрифт с засечками (вместо Playfair)
+$ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
+
+// $ff-base: 'Montserrat', 'Montserrat-Fallback', sans-serif
+// $ff-accent: 'PlayfairDisplay', 'PlayfairDisplay-Fallback', serif
 </file>
 
 <file path="src/custom-category.html">
@@ -1188,8 +2156,9 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
           </ul>
         </nav>
         <div class="header__controls">
+          
           <a href="/booking.html" type="button" class="header__btn">Book now</a>
-
+          
           <div class="header__callback">
             <div class="header__callback-wrap">
               <svg class="icon icon_headphones">
@@ -2423,76 +3392,75 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
     </header>
 
     <section class="hero hero_inside">
-        <div class="hero__media">
-          <picture class="hero__poster">
-            
-            <source
-              type="image/avif"
-              media="(min-width: 1440px)"
-              width="1920"
-              height="450"
-              srcset="./images/categories/hero-large.avif 1920w, ./images/categories/hero-large-2x.avif 3840w" />
-            <source
-              type="image/webp"
-              media="(min-width: 1440px)"
-              width="1920"
-              height="450"
-              srcset="./images/categories/hero-large.webp 1920w, ./images/categories/hero-large-2x.webp 3840w" />
+      <div class="hero__media">
+        <picture class="hero__poster">
+          <source
+            type="image/avif"
+            media="(min-width: 1440px)"
+            width="1920"
+            height="450"
+            srcset="./images/categories/hero-large.avif 1920w, ./images/categories/hero-large-2x.avif 3840w" />
+          <source
+            type="image/webp"
+            media="(min-width: 1440px)"
+            width="1920"
+            height="450"
+            srcset="./images/categories/hero-large.webp 1920w, ./images/categories/hero-large-2x.webp 3840w" />
 
-            <source
-              type="image/avif"
-              media="(min-width: 1024px)"
-              width="1440"
-              height="450"
-              srcset="./images/categories/hero-desktop.avif 1440w, ./images/categories/hero-desktop-2x.avif 2880w" />
-            <source
-              type="image/webp"
-              media="(min-width: 1024px)"
-              width="1440"
-              height="450"
-              srcset="./images/categories/hero-desktop.webp 1440w, ./images/categories/hero-desktop-2x.webp 2880w" />
+          <source
+            type="image/avif"
+            media="(min-width: 1024px)"
+            width="1440"
+            height="450"
+            srcset="./images/categories/hero-desktop.avif 1440w, ./images/categories/hero-desktop-2x.avif 2880w" />
+          <source
+            type="image/webp"
+            media="(min-width: 1024px)"
+            width="1440"
+            height="450"
+            srcset="./images/categories/hero-desktop.webp 1440w, ./images/categories/hero-desktop-2x.webp 2880w" />
 
-            <source
-              type="image/avif"
-              media="(min-width: 768px)"
-              width="800"
-              height="450"
-              srcset="./images/categories/hero-tablet.avif 800w, ./images/categories/hero-tablet-2x.avif 1600w" />
-            <source
-              type="image/webp"
-              media="(min-width: 768px)"
-              width="800"
-              height="450"
-              srcset="./images/categories/hero-tablet.webp 800w, ./images/categories/hero-tablet-2x.webp 1600w" />
+          <source
+            type="image/avif"
+            media="(min-width: 768px)"
+            width="800"
+            height="450"
+            srcset="./images/categories/hero-tablet.avif 800w, ./images/categories/hero-tablet-2x.avif 1600w" />
+          <source
+            type="image/webp"
+            media="(min-width: 768px)"
+            width="800"
+            height="450"
+            srcset="./images/categories/hero-tablet.webp 800w, ./images/categories/hero-tablet-2x.webp 1600w" />
 
-            <source
-              type="image/avif"
-              width="450"
-              height="450"
-              srcset="./images/categories/hero-mobile.avif 450w, ./images/categories/hero-mobile-2x.avif 900w" />
-            <source
-              type="image/webp"
-              width="450"
-              height="450"
-              srcset="./images/categories/hero-mobile.webp 450w, ./images/categories/hero-mobile-2x.webp 900w" />
+          <source
+            type="image/avif"
+            width="450"
+            height="450"
+            srcset="./images/categories/hero-mobile.avif 450w, ./images/categories/hero-mobile-2x.avif 900w" />
+          <source
+            type="image/webp"
+            width="450"
+            height="450"
+            srcset="./images/categories/hero-mobile.webp 450w, ./images/categories/hero-mobile-2x.webp 900w" />
 
-            <img
-              src="./images/categories/hero-mobile.jpg"
-              alt="Категория"
-              class="hero__poster-img"
-              width="450"
-              height="450"
-              fetchpriority="high"
-              decoding="async" />
-          </picture>
+          <img
+            src="./images/categories/hero-mobile.jpg"
+            alt="Категория"
+            class="hero__poster-img"
+            width="450"
+            height="450"
+            fetchpriority="high"
+            decoding="async" />
+        </picture>
+      </div>
+
+      <div class="hero__content">
+        <div class="container">
+          <h1 class="hero__title">Private tours</h1>
         </div>
-
-        <div class="hero__content">
-          <div class="container">
-            <h1 class="hero__title">Private tours</h1>
-          </div>
-        </div>
-      </section>
+      </div>
+    </section>
 
     <main class="main-content">
       <section>
@@ -3316,188 +4284,2312 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
 </html>
 </file>
 
-<file path="src/js/categories.critical.js">
+<file path="src/js/accordion.js">
+export const initAccordion = () => {
+  document.querySelectorAll(".js-accordion").forEach(accordion => {
+    accordion.addEventListener("click", e => {
+      const header = e.target.closest(".accordion__header");
+      if (!header) return;
 
-</file>
+      const content = document.getElementById(header.getAttribute("aria-controls"));
+      const isExpanded = header.getAttribute("aria-expanded") === "true";
 
-<file path="src/js/tabs.js">
-export const initTabs = () => {
-  document.querySelectorAll('.js-tabs').forEach(wrapper => {
-    const tabList = wrapper.querySelector('[role="tablist"]');
-    const tabs = wrapper.querySelectorAll('[role="tab"]');
-    const panels = wrapper.querySelectorAll('[role="tabpanel"]');
-
-    tabList.addEventListener('click', e => {
-      const clickedTab = e.target.closest('[role="tab"]');
-      if (!clickedTab) return;
-
-     
-      tabs.forEach(tab => {
-        tab.setAttribute('aria-selected', 'false');
-        tab.classList.remove('tabs__tab_active')
-        tab.setAttribute('tabindex', '-1');
+      // Закрытие при открытии новой
+      /*
+      accordion.querySelectorAll('.accordion__header').forEach(h => {
+        h.setAttribute('aria-expanded', 'false');
+        document.getElementById(h.getAttribute('aria-controls')).hidden = true;
       });
+      */
 
-      
-      clickedTab.setAttribute('aria-selected', 'true');
-      clickedTab.classList.add('tabs__tab_active')
-      clickedTab.setAttribute('tabindex', '0');
-
-     
-      const targetPanelId = clickedTab.getAttribute('aria-controls');
-      panels.forEach(panel => {
-        panel.hidden = panel.id !== targetPanelId;
-      });
-    });
-
-    
-    tabList.addEventListener('keydown', e => {
-      const index = Array.from(tabs).indexOf(document.activeElement);
-      if (e.key === 'ArrowRight' && index < tabs.length - 1) tabs[index + 1].focus();
-      if (e.key === 'ArrowLeft' && index > 0) tabs[index - 1].focus();
+      header.setAttribute("aria-expanded", !isExpanded);
+      content.setAttribute("aria-hidden", isExpanded);
+      accordion.classList.toggle("accordion_active", !isExpanded);
     });
   });
 };
 </file>
 
-<file path="src/js/tour.critical.js">
+<file path="src/js/booking-system.js">
+class CustomSelect {
+  constructor(container) {
+    this.container = container;
+    this.nativeSelect = this.container.querySelector('.js-custom-select-native');
+    this.trigger = this.container.querySelector('.js-custom-select-trigger');
+    this.valueEl = this.container.querySelector('.js-custom-select-value');
+    this.options = this.container.querySelectorAll('.js-custom-select-option');
+    this.searchInput = this.container.querySelector('.js-custom-select-search'); 
+    this.isOpen = false;
+    this.init();
+  }
 
+  init() {
+    this.trigger.addEventListener('click', () => this.toggle());
+
+    this.options.forEach(option => {
+      option.addEventListener('click', (e) => this.selectOption(e.target));
+    });
+
+    if (this.searchInput) {
+      this.searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase();
+        this.options.forEach(option => {
+          const text = option.textContent.toLowerCase();
+          option.style.display = text.includes(query) ? 'block' : 'none';
+        });
+      });
+    }
+
+    document.addEventListener('click', (e) => {
+      if (!this.container.contains(e.target) && this.isOpen) {
+        this.close();
+      }
+    });
+  }
+
+  toggle() {
+    this.isOpen = !this.isOpen;
+    this.container.classList.toggle('custom-select_open', this.isOpen);
+    if (this.isOpen && this.searchInput) {
+      this.searchInput.value = '';
+      this.options.forEach(opt => opt.style.display = 'block');
+      setTimeout(() => this.searchInput.focus(), 50);
+    }
+  }
+
+  close() {
+    this.isOpen = false;
+    this.container.classList.remove('custom-select_open');
+  }
+
+  selectOption(optionEl) {
+    const value = optionEl.dataset.value;
+    const text = optionEl.textContent;
+
+    this.valueEl.textContent = text;
+    this.nativeSelect.value = value;
+    this.nativeSelect.dispatchEvent(new Event('change', { bubbles: true }));
+
+    this.options.forEach(opt => opt.classList.remove('custom-select__option_selected'));
+    optionEl.classList.add('custom-select__option_selected');
+
+    this.close();
+  }
+
+  setValue(value) {
+    const optionToSelect = Array.from(this.options).find(opt => opt.dataset.value === value);
+    if (optionToSelect) {
+      this.selectOption(optionToSelect);
+    }
+  }
+}
+
+export class BookingSystem {
+  constructor(containerSelector) {
+    this.container = document.querySelector(containerSelector);
+    if (!this.container) return;
+
+    // Ищем форму, а не просто див
+    this.form = this.container.querySelector('#js-booking-form');
+    if (!this.form) return;
+
+    this.customSelects = Array.from(this.container.querySelectorAll('.js-custom-select'))
+      .map(el => new CustomSelect(el));
+
+    this.panels = Array.from(this.container.querySelectorAll('.js-booking-panel'));
+    this.steps = Array.from(this.container.querySelectorAll('.booking__step'));
+    
+    this.currentStep = 1;
+
+    this.init();
+  }
+
+  init() {
+    // Ставим минимальную дату
+    const dateInput = this.form.querySelector('input[name="booking_date"]');
+    if (dateInput) {
+      dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
+    }
+    
+    this.bindEvents();
+    this.updateSummary();
+  }
+
+  bindEvents() {
+    // Делегирование кликов
+    this.container.addEventListener('click', (e) => {
+      // Переход из интро в форму
+      if (e.target.closest('.js-start-wizard')) {
+        this.container.querySelector('.js-booking-intro').classList.add('booking-hidden-elem');
+        this.form.classList.remove('booking-hidden-elem');
+      }
+      
+      // Навигация по шагам
+      if (e.target.closest('.js-next-step')) this.navigate(1);
+      if (e.target.closest('.js-prev-step')) this.navigate(-1);
+
+      // Кнопки плюс/минус
+      const btnMinus = e.target.closest('.js-pax-minus');
+      const btnPlus = e.target.closest('.js-pax-plus');
+      if (btnMinus || btnPlus) {
+        const input = this.form.querySelector('.js-pax-input');
+        if (input) {
+          let val = parseInt(input.value) || 1;
+          input.value = btnMinus ? Math.max(1, val - 1) : Math.min(15, val + 1);
+          this.updateSummary(); // Сразу пересчитываем смету
+        }
+      }
+    });
+
+    // Единый слушатель на изменение формы (радио, селекты, чекбоксы)
+    this.form.addEventListener('change', () => this.updateSummary());
+
+    // Перехват отправки формы (для будущего October CMS)
+    this.form.addEventListener('submit', (e) => {
+      e.preventDefault(); 
+      const formData = new FormData(this.form);
+      console.log('Данные формы готовы к отправке:', Object.fromEntries(formData.entries()));
+      // Здесь будет fetch запрос к твоему бэкенду
+    });
+  }
+
+  navigate(direction) {
+    const next = this.currentStep + direction;
+    if (next >= 1 && next <= this.panels.length) {
+      this.currentStep = next;
+      // Показываем нужную панель
+      this.panels.forEach(p => p.classList.toggle('booking-hidden-elem', parseInt(p.dataset.panel) !== this.currentStep));
+      // Обновляем прогресс-бар
+      this.steps.forEach(s => s.classList.toggle('booking__step_active', parseInt(s.dataset.step) <= this.currentStep));
+    }
+  }
+
+  updateSummary() {
+    const formData = new FormData(this.form);
+    const guests = parseInt(formData.get('guests')) || 1;
+    const date = formData.get('booking_date');
+    
+    // Получаем текущую радиокнопку и читаем её data-атрибуты
+    const checkedRadio = this.form.querySelector('input[name="booking_type"]:checked');
+    const typeValue = checkedRadio ? checkedRadio.value : '';
+    const itemType = checkedRadio ? checkedRadio.dataset.itemType : 'tour'; // tour, custom, accommodation
+    
+    let categoryTitle = checkedRadio 
+      ? checkedRadio.closest('.booking-card').querySelector('.booking-card__title').textContent.trim() 
+      : '';
+      
+    let total = 0;
+    const isAccommodation = itemType === 'accommodation';
+    const isCustom = itemType === 'custom';
+
+    // 1. Скрытие/показ селекта туров (если это только жилье - скрываем)
+    const tourWrap = this.form.querySelector('.js-tour-select-wrap');
+    if (tourWrap) tourWrap.style.display = isAccommodation ? 'none' : 'block';
+
+    // 2. Расчет базовой цены
+    if (!isAccommodation && !isCustom) {
+      const tourSelect = this.form.querySelector('select[name="tour_id"]');
+      if (tourSelect && tourSelect.value) {
+        const option = tourSelect.options[tourSelect.selectedIndex];
+        categoryTitle = option.textContent;
+        total += (parseFloat(option.dataset.price) || 0) * guests;
+      }
+    }
+
+    // 3. Универсальный расчет доп. услуг на основе data-атрибутов
+    const addonsContainer = this.form.querySelector('.js-summary-addons-container');
+    addonsContainer.innerHTML = '';
+
+    this.form.querySelectorAll('.js-addon-wrap').forEach(wrap => {
+      // Читаем список исключений (например, "mongu,sokmo")
+      const excludeOn = (wrap.dataset.excludeOn || '').split(',');
+      const shouldHide = excludeOn.includes(typeValue);
+      
+      // Скрываем или показываем весь блок
+      wrap.classList.toggle('booking-hidden-elem', shouldHide);
+      
+      const checkbox = wrap.querySelector('.js-addon-checkbox');
+      
+      if (shouldHide && checkbox) {
+        checkbox.checked = false; // Тихо снимаем галочку, если блок скрыт
+      } else if (checkbox && checkbox.checked) {
+        const price = parseFloat(checkbox.value) || 0;
+        
+        // Главная логика: читаем из HTML тип расчета
+        const itemTotal = checkbox.dataset.calcType === 'fixed' ? price : price * guests;
+        total += itemTotal;
+
+        addonsContainer.innerHTML += `
+          <div class="order-summary__addon-item">
+            <span>+ ${checkbox.dataset.title}</span>
+            <span>$${itemTotal}</span>
+          </div>
+        `;
+      }
+    });
+
+    // 4. Обновление текстовых данных в сайдбаре
+    const render = (selector, text) => {
+      const el = this.form.querySelector(selector);
+      if (el) el.textContent = text;
+    };
+
+    render('.js-summary-type', categoryTitle);
+    render('.js-summary-date', date ? new Date(date).toLocaleDateString('en-US', { day: 'numeric', month: 'short', year: 'numeric' }) : 'Flexible / TBD');
+    render('.js-summary-pax', `${guests} pax`);
+
+    const elTotal = this.form.querySelector('.js-summary-total');
+    if (elTotal) {
+      if (isCustom || isAccommodation) {
+        elTotal.textContent = 'On request';
+        elTotal.style.fontSize = '1.25rem';
+      } else {
+        elTotal.textContent = `$${total}`;
+        elTotal.style.fontSize = '';
+      }
+    }
+
+    // 5. Обновление ссылок WhatsApp
+    this.updateWhatsAppLink(categoryTitle, date, guests);
+  }
+
+  updateWhatsAppLink(title, date, guests) {
+    const btns = this.container.querySelectorAll('.js-whatsapp-fast-btn');
+    if (!btns.length) return;
+
+    const msg = `Hello! I would like to book a trip with MONGU.\n\n` +
+                `Selected: ${title}\n` +
+                `Date: ${date ? date : 'Flexible / TBD'}\n` +
+                `Guests: ${guests}`;
+
+    btns.forEach(btn => {
+      btn.href = `https://wa.me/996555150795?text=${encodeURIComponent(msg)}`;
+    });
+  }
+}
 </file>
 
-<file path="src/sass/components/_social.sass">
-@use '../settings/shared' as v
-.social
-  
-  &__list  
-    display: flex
-    align-items: center
-    justify-content: center
-    column-gap: v.$space-md
+<file path="src/js/categories.js">
+import { initHeader } from "./header-fixed?categoriesPage";
+import { initMenu } from "./menu?categoriesPage";         
+import "/sass/categories.sass";
 
-  &__link 
-    color: #fff
-    padding: 0
+document.addEventListener("DOMContentLoaded", () => {
+
+  initHeader();
+  initMenu();
+
+});
+</file>
+
+<file path="src/js/lodge.js">
+import { initHeader } from "./header-fixed?indexPage";
+import { initMenu } from "./menu?indexPage";
+import "/sass/lodge.sass";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initHeader();
+  initMenu();
+});
+</file>
+
+<file path="src/js/slider.js">
+export const initSliders = () => {
+  document.querySelectorAll(".js-slider").forEach(sliderContainer => {
+    const slider = sliderContainer.querySelector(".js-slider-viewport");
+    const slides = slider ? slider.querySelectorAll(".js-slide") : [];
+    const navItems = sliderContainer.querySelectorAll("[data-index]");
+    const btnPrev = sliderContainer.querySelector(".js-slider-prev");
+    const btnNext = sliderContainer.querySelector(".js-slider-next");
+    if (!slider || slides.length === 0) return;
+    
+    let sliderWidth = slider.clientWidth;
+    const updateSliderWidth = () => {
+      sliderWidth = slider.clientWidth;
+    };
+    
+    const resizeObserver = new ResizeObserver(() => updateSliderWidth());
+    resizeObserver.observe(slider);
+
+    function syncNavigators(activeIndex) {
+      navItems.forEach(item => {
+        const isActive = item.getAttribute("data-index") === activeIndex;
+        if (item.classList.contains("pagination-dot")) {
+          item.classList.toggle("pagination-dot--active", isActive);
+        }
+        if (item.classList.contains("js-thumb-item")) {
+          item.classList.toggle("slider__thumb--active", isActive);
+        }
+      });
+    }
+
+    navItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const targetIndex = item.getAttribute("data-index");
+        const targetSlide = slider.querySelector(`.js-slide[data-index="${targetIndex}"]`);
+        if (targetSlide) {
+          targetSlide.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
+          syncNavigators(targetIndex);
+        }
+      });
+    });
+
+    if (btnNext) {
+      btnNext.addEventListener("click", () => {
+        slider.scrollBy({ left: sliderWidth, behavior: "smooth" });
+      });
+    }
+
+    if (btnPrev) {
+      btnPrev.addEventListener("click", () => {
+        slider.scrollBy({ left: -sliderWidth, behavior: "smooth" });
+      });
+    }
+
+    const observer = new IntersectionObserver(
+      entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            syncNavigators(entry.target.getAttribute("data-index"));
+          }
+        });
+      },
+      { root: slider, threshold: 0.6 }
+    );
+    
+    slides.forEach(slide => observer.observe(slide));
+  });
+};
+</file>
+
+<file path="src/sass/base/_fonts.sass">
+// @font-face
+//   font-family: 'Montserrat-Fallback'
+//   src: local('Arial')
+//   size-adjust: 104%
+//   ascent-override: 95%
+//   descent-override: 26%
+//   line-gap-override: 0%
+
+// @font-face
+//   font-family: 'PlayfairDisplay-Fallback'
+//   src: local('Times New Roman')
+//   size-adjust: 110%
+//   ascent-override: 98%
+//   descent-override: 28%
+//   line-gap-override: 0%
+
+// @font-face
+//   font-family: 'PlayfairDisplay-Fallback'
+//   src: local('Times New Roman')
+//   font-style: italic
+//   size-adjust: 110%
+//   ascent-override: 98%
+//   descent-override: 28%
+//   line-gap-override: 0%
+
+// @font-face
+//   font-family: 'Montserrat'
+//   src: url('../../assets/fonts/Montserrat-Regular.woff2') format('woff2')
+//   font-weight: 400
+//   font-style: normal
+//   font-display: swap
+
+// @font-face
+//   font-family: 'Montserrat'
+//   src: url('../../assets/fonts/Montserrat-Medium.woff2') format('woff2')
+//   font-weight: 500
+//   font-style: normal
+//   font-display: swap
+
+// @font-face
+//   font-family: 'Montserrat'
+//   src: url('../../assets/fonts/Montserrat-SemiBold.woff2') format('woff2')
+//   font-weight: 600
+//   font-style: normal
+//   font-display: swap
+
+// @font-face
+//   font-family: 'PlayfairDisplay'
+//   src: url('../../assets/fonts/PlayfairDisplay-Regular.woff2') format('woff2')
+//   font-weight: 400
+//   font-style: normal
+//   font-display: swap
+
+// @font-face
+//   font-family: 'PlayfairDisplay'
+//   src: url('../../assets/fonts/PlayfairDisplay-Italic.woff2') format('woff2')
+//   font-weight: 400
+//   font-style: italic
+//   font-display: swap
+</file>
+
+<file path="src/sass/components/_booking.sass">
+@use '../settings/shared' as v
+
+// --- ИНТРО (Экран выбора) ---
+.booking-intro
+  max-width: v.to-rem(800)
+  margin: 0 auto
+
+  &__grid
+    @include v.media(tablet)
+      gap: v.$space-lg
+      display: grid
+      grid-template-columns: 1fr 1fr
+
+  &__card
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    text-align: center
+    padding: v.to-rem(40) v.$space-lg
+    border-radius: v.$rad-lg
+    box-shadow: v.$shadow-lg
+    margin-bottom: v.$space-lg
+
+    @include v.media(tablet)
+      margin-bottom: 0
+
+    &:last-child
+      margin-bottom: 0
+
+    .icon
+      width: v.to-rem(48)
+      height: v.to-rem(48)
+      margin-bottom: v.$space-md
+
+    &_wa
+      background: linear-gradient(135deg, #23b33a 0%, #1da832 100%)
+      color: #fff
+      
+      .btn
+        background-color: #fff
+        color: #1da832
+
+    &_form
+      background-color: #fff
+      border: 1px solid #e2e2e9
+      color: v.$clr-text
+      .icon
+        color: v.$clr-accent
+
+  &__title
+    font-size: v.$fz-xl
+    font-weight: 600
+    margin-bottom: v.$space-sm
+
+  &__desc
+    font-size: v.$fz-sm
+    opacity: 0.9
+    margin-bottom: v.$space-xl
+    line-height: 1.5
+
+// --- ОСНОВНАЯ СЕТКА БРОНИРОВАНИЯ ---
+.booking
+  display: flex
+  flex-direction: column
+  gap: v.$space-xl
+
+  @include v.media(laptop)
+    flex-direction: row
+    align-items: flex-start
+    gap: v.to-rem(40)
+
+  &__main
+    flex: 1
+    width: 100%
+
+  &__sidebar
+    width: 100%
+
+    @include v.media(laptop)
+      width: v.to-rem(380)
+      flex-shrink: 0
+      position: sticky
+      top: v.to-rem(100)
+
+  // --- Прогресс-бар ---
+  &__progress
+    display: flex
+    column-gap: v.$space-xs
+    margin-bottom: v.$space-xl
+
+    @include v.media(tablet)
+      column-gap: v.$space-md
+
+  &__step
+    flex: 1
+    padding-bottom: v.$space-sm
+    border-bottom: v.to-rem(3) solid #e2e2e9
+    color: v.$clr-text-muted
+    font-size: v.$fz-xs
+    font-weight: 600
+    text-transform: uppercase
+    transition: color v.$tr-base, border-color v.$tr-base
+
+    @include v.media(tablet)
+      font-size: v.$fz-sm
+
+    &_active
+      color: v.$clr-accent
+      border-color: v.$clr-accent
+
+  &__panel-title
+    font-size: v.$fz-xl
+    margin-bottom: v.$space-lg
+    font-weight: 600
+
+  &__types
+    display: grid
+    gap: v.$space-sm
+    margin-bottom: v.$space-xl
+    grid-template-columns: repeat(2, 1fr)
+
+    @include v.media(tablet)
+      grid-template-columns: repeat(3, 1fr)
+      gap: v.$space-md
+
+  .btn-wrap
+    column-gap: v.$space-xs
+    .btn 
+      &_bordered 
+        .icon
+          transform: rotate(180deg)
+        @include v.has-mouse
+          &:hover
+            .icon
+              transform: translateX(v.to-rem(-5)) rotate(180deg) !important
+
+// --- Карточки выбора типа (Шаг 1) ---
+.booking-card
+  position: relative
+  display: block
+  cursor: pointer
+  height: 100%
+  
+  &__input
+    position: absolute
+    width: 0
+    height: 0
+    opacity: 0
+    appearance: none
+
+    &:checked + .booking-card__content
+      border-color: v.$clr-accent
+      background-color: rgba(v.$clr-accent, 0.05)
+      .icon
+        color: v.$clr-accent
+
+  &__content
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    row-gap: v.$space-xs
+    padding: v.$space-md v.$space-sm
+    border: v.to-rem(2) solid #e2e2e9
+    border-radius: v.$rad-md
+    background-color: #fff
+    transition: border-color v.$tr-fast, background-color v.$tr-fast
+    height: 100%
+    
+    @include v.media(tablet)
+      padding: v.$space-xl v.$space-sm
+
+    @include v.has-mouse
+      &:hover
+        border-color: rgba(v.$clr-accent, 0.5)
+
+    .icon
+      width: v.to-rem(40)
+      height: v.to-rem(40)
+      color: v.$clr-text-muted
+      margin-bottom: v.$space-sm
+      transition: color v.$tr-fast
+
+  &__title
+    font-size: v.$fz-sm
+    font-weight: 600
+    color: v.$clr-text
+    
+    @include v.media(tablet)
+      font-size: v.$fz-md
+
+  &__desc
+    font-size: v.$fz-xs
+    color: v.$clr-text-muted
+
+// --- Формы внутри шагов ---
+.booking-form
+  margin-bottom: v.$space-xl
+
+  &__row
+    margin-bottom: v.$space-md
+
+    &_col-2
+      @include v.media(tablet)
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: v.$space-md
+
+  &__group
+    display: flex
+    flex-direction: column
+
+  &__label
+    font-size: v.$fz-sm
+    font-weight: 600
+    margin-bottom: v.to-rem(8)
+    color: v.$clr-text
+
+  &__input
+    width: 100%
+    padding: v.to-rem(12) v.$space-sm
+    border: v.to-rem(1) solid #ccc
+    border-radius: v.$rad-sm
+    font-family: v.$ff-base
+    font-size: v.$fz-md
+    color: v.$clr-text
+    outline: none
+    transition: border-color v.$tr-fast
+
+    &:focus
+      border-color: v.$clr-accent
+
+// --- КАСТОМНЫЙ СЕЛЕКТ ---
+.custom-select
+  position: relative
+  width: 100%
+  user-select: none
+
+  &__trigger
     display: flex
     align-items: center
-    justify-content: center
-    background-color: v.$clr-accent
-    width: v.to-rem(24)
-    height: v.to-rem(24)
-    border-radius: v.to-rem(4)
+    justify-content: space-between
+    padding: v.to-rem(12) v.$space-sm
+    background-color: #fff
+    border: v.to-rem(1) solid #ccc
+    border-radius: v.$rad-sm
+    cursor: pointer
+    transition: border-color v.$tr-fast, box-shadow v.$tr-fast
+    outline: none
+
+    &:hover, &:focus
+      border-color: v.$clr-accent
+
+  &__value
+    font-size: v.$fz-md
+    color: v.$clr-text
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+  &__arrow
+    width: v.to-rem(20)
+    height: v.to-rem(20)
+    color: v.$clr-text-muted
+    transition: transform v.$tr-base ease
+
+  &_open &__trigger
+    border-color: v.$clr-accent
+    box-shadow: 0 0 0 v.to-rem(3) rgba(35, 179, 58, 0.1)
+
+  &_open &__arrow
+    transform: rotate(180deg)
+
+  &__dropdown
+    position: absolute
+    top: calc(100% + 8px)
+    left: 0
+    right: 0
+    background: #fff
+    border: v.to-rem(1) solid #e2e2e9
+    border-radius: v.$rad-sm
+    box-shadow: v.$shadow-lg
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-10px)
+    transition: opacity v.$tr-fast, transform v.$tr-fast, visibility v.$tr-fast
+    z-index: 10
+    padding: 0
+    overflow: hidden
+
+  &_open &__dropdown
+    opacity: 1
+    visibility: visible
+    transform: translateY(0)
+
+  &__search-wrap
+    padding: v.$space-sm
+    border-bottom: 1px solid #e2e2e9
+    background-color: #f9f9fb
+
+  &__search
+    width: 100%
+    padding: v.to-rem(8) v.$space-sm
+    border: 1px solid #ccc
+    border-radius: v.$rad-sm
+    font-family: v.$ff-base
+    font-size: v.$fz-sm
+    outline: none
+    transition: border-color v.$tr-fast
+
+    &:focus
+      border-color: v.$clr-accent
+
+  &__list
+    list-style: none
+    margin: 0
+    padding: v.$space-xs 0
+    max-height: v.to-rem(220)
+    overflow-y: auto
+
+  &__option
+    padding: v.$space-sm v.$space-md
+    font-size: v.$fz-md
+    color: v.$clr-text
+    cursor: pointer
+    transition: background-color v.$tr-fast, color v.$tr-fast
+
+    @include v.has-mouse
+      &:hover
+        background-color: #f9f9fb
+        color: v.$clr-accent
+
+    &_selected
+      background-color: rgba(35, 179, 58, 0.05)
+      color: v.$clr-accent
+      font-weight: 600
+
+// --- Кастомный счетчик людей ---
+.pax-counter
+  display: flex
+  align-items: center
+  border: v.to-rem(1) solid #ccc
+  border-radius: v.$rad-sm
+  overflow: hidden
+  height: v.to-rem(46)
+
+  &__btn
+    width: v.to-rem(46)
+    height: 100%
+    background-color: #f9f9fb
+    border: none
+    font-size: v.$fz-lg
+    color: v.$clr-text
+    cursor: pointer
+    transition: background-color v.$tr-fast
+
+    @include v.has-mouse
+      &:hover
+        background-color: #e2e2e9
+
+  &__input
+    flex: 1
+    height: 100%
+    border: none
+    text-align: center
+    font-weight: 600
+    font-size: v.$fz-md
+    outline: none
+    -moz-appearance: textfield
+
+// --- Дополнительные опции (Add-ons) ---
+.booking-addons
+  display: flex
+  flex-direction: column
+  gap: v.$space-sm
+
+.booking-addon
+  position: relative
+  display: block
+  cursor: pointer
+
+  &__input
+    position: absolute
+    width: 0
+    height: 0
+    opacity: 0
+    appearance: none
+
+    &:checked + .booking-addon__content
+      border-color: v.$clr-accent
+      background-color: rgba(v.$clr-accent, 0.3)
+      .booking-addon__price
+        color: v.$clr-accent
+
+  &__content
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: v.$space-md
+    border: v.to-rem(1) solid #e2e2e9
+    border-radius: v.$rad-sm
+    background-color: #fff
+    transition: border-color v.$tr-fast, background-color v.$tr-fast, box-shadow v.$tr-fast
+
+    @include v.has-mouse
+      &:hover
+        border-color: rgba(v.$clr-accent, 0.5)
+
+  &__info
+    display: flex
+    flex-direction: column
+    gap: v.to-rem(4)
+
+  &__title
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    gap: v.$space-xs
+    font-weight: 600
+    color: v.$clr-text
+    font-size: v.$fz-md
+
+  &__desc
+    font-size: v.$fz-xs
+    color: v.$clr-text-muted
+
+  &__price
+    font-weight: 600
+    font-size: v.$fz-md
+    color: v.$clr-text-muted
+    transition: color v.$tr-fast
+
+// --- VIP Блок-рекомендация (Кросс-сейл отеля) ---
+.booking-recommendation
+  background-color: #fff
+  border-radius: v.$rad-md
+  margin-bottom: v.$space-md
+  overflow: hidden
+  box-shadow: 0 v.to-rem(8) v.to-rem(24) rgba(#6c613e, 0.12)
+  border: v.to-rem(2) solid #6c613e
+  
+  &__header
+    background: linear-gradient(135deg, #6c613e 0%, #4a422a 100%)
+    color: #fff
+    padding: v.$space-sm v.$space-md
+    display: flex
+    align-items: center
+    column-gap: v.$space-sm
+    font-weight: 600
+    font-size: v.$fz-sm
+    text-transform: uppercase
+    letter-spacing: 0.05em
 
     .icon
       width: v.to-rem(20)
       height: v.to-rem(20)
-</file>
 
-<file path="src/sass/components/_tabs.sass">
-@use '../settings/shared' as v
-
-.tabs
-
-  &__list
-    column-gap: v.to-rem(20)
-    display: flex
-    margin-bottom: v.to-rem(20)
-    border-bottom: 1px solid #e2e2e9
-
-  &__tab
+  .booking-addon__content
     border: none
-    background: none
-    outline: none
-    text-transform: uppercase
-    font-size: v.to-rem(13)
-    font-weight: 600
-    transition: color v.$tr-base
-    padding-bottom: v.to-rem(10)
-    position: relative
-    white-space: nowrap
+    border-radius: 0
+    background-color: #f9f9fb
 
-    &:after
-      position: absolute
-      content: ''
-      width: 0
-      height: v.to-rem(1)
-      background-color: v.$clr-accent
-      left: 50%
-      transform: translateX(-50%)
-      bottom: 0
-      transition: width v.$tr-base
+  .booking-addon__input:checked + .booking-addon__content
+    background-color: rgba(#6c613e, 0.05)
+    box-shadow: inset 0 v.to-rem(4) v.to-rem(10) rgba(0,0,0,0.05)
+
+  .booking-addon__badge
+    background-color: #23b33a
+    color: #fff
+    font-size: v.to-rem(10)
+    font-weight: 700
+    text-transform: uppercase
+    padding: v.to-rem(3) v.to-rem(8)
+    border-radius: v.to-rem(20)
+    letter-spacing: 0.05em
+
+// --- Боковая смета (Summary) ---
+.order-summary
+  background-color: #fff
+  border-radius: v.$rad-lg
+  padding: v.$space-lg
+  box-shadow: v.$shadow-lg
+  border: v.to-rem(1) solid #e2e2e9
+
+  &__title
+    font-size: v.$fz-lg
+    font-weight: 600
+    margin-bottom: v.$space-md
+    padding-bottom: v.$space-sm
+    border-bottom: v.to-rem(1) solid #e2e2e9
+
+  &__content
+    display: flex
+    flex-direction: column
+    gap: v.$space-sm
+
+  &__item
+    display: flex
+    justify-content: space-between
+    font-size: v.$fz-sm
+
+  &__label
+    color: v.$clr-text-muted
+
+  &__val
+    font-weight: 500
+    text-align: right
+    max-width: 60%
+
+  &__addon-item
+    display: flex
+    justify-content: space-between
+    font-size: v.$fz-xs
+    color: v.$clr-text-muted
+    margin-top: v.to-rem(4)
+
+  &__divider
+    border: none
+    border-top: v.to-rem(1) dashed #ccc
+    margin: v.$space-sm 0
+
+  &__total
+    display: flex
+    justify-content: space-between
+    align-items: center
+    font-size: v.$fz-xl
+    font-weight: 600
+    color: v.$clr-text
+    margin-bottom: v.$space-lg
+
+  &__price
+    color: v.$clr-accent
+
+  &__wa-btn
+    width: 100%
+    background-color: #23b33a
+    color: #fff
+    font-size: v.$fz-md
 
     @include v.has-mouse
-      cursor: pointer
-
       &:hover
-        color: v.$clr-accent
+        background-color: #1da832
+        color: #fff
 
-        &:after
-          width: calc( 100% - v.to-rem(20) )
+  &__btn
+    width: 100%
+    font-size: v.$fz-md
 
-    &_active
-      color: v.$clr-accent
-      pointer-events: none
+  &__note
+    text-align: center
+    font-size: v.$fz-xs
+    color: v.$clr-text-muted
+    margin-top: v.$space-sm
 
-      &:after
-        width: calc( 100% - v.to-rem(20) )
+.booking__divider-text
+  text-align: center
+  position: relative
+  margin: v.$space-sm 0
+  color: v.$clr-text-muted
+  font-size: v.$fz-xs
+  text-transform: uppercase
+  font-weight: 600
+
+  &::before,
+  &::after
+    content: ''
+    position: absolute
+    top: 50%
+    width: calc(50% - 30px)
+    height: v.to-rem(1)
+    background-color: #e2e2e9
+
+  &::before
+    left: 0
+
+  &::after
+    right: 0
+
+  span
+    background-color: #fff
+    padding: 0 v.$space-sm
+
+.booking-hidden-elem
+  display: none
 </file>
 
-<file path="src/sass/settings/_variables.sass">
-// Цвета
-$clr-text: #1a1a1a
-$clr-text-muted: #6b6b73
-$clr-accent: #6C613E
-$clr-secondary: #28a5ec
-$clr-accent-darker: #3F3F25
-$clr-bg-light: #f9f9fb
-$clr-bg-alt: #f3f1ef
+<file path="src/sass/components/_breadcrumbs.sass">
+@use '../settings/shared' as v
 
-$base-fsize: 16
+.breadcrumbs
+  margin-top: v.$space-xl
 
-// Типографика (шкала)
-$fz-xs: 0.625rem    // 10px
-$fz-sm: 0.75rem     // 12px
-$fz-md: 0.875rem    // 14px
-$fz-base: 1rem      // 16px
-$fz-lg: 1.0625rem   // 17px
-$fz-xl: 1.25rem     // 20px
-$fz-xxl: 1.5625rem  // 25px
-$fz-hero: 2.1875rem // 35px
+  &__list
+    display: flex
+    flex-wrap: wrap
+    column-gap: v.$space-xs
 
-// Отступы (шаг сетки)
-$space-xs: 0.3125rem // 5px
-$space-sm: 0.625rem  // 10px
-$space-md: 1rem      // 16px
-$space-lg: 1.25rem   // 20px
-$space-xl: 1.875rem  // 30px
+  &__item
+    color: v.$clr-accent
+    font-weight: 500
+    position: relative
+    font-size: v.$fz-md
 
-// Скругления 
-$rad-sm: 0.5rem      // 8px
-$rad-md: 0.75rem     // 12px
-$rad-lg: 1rem        // 16px
+    &::after
+      padding-left: v.$space-xs
+      content: '/'
 
-// Тени
-$shadow-sm: 0 0.25rem 0.75rem rgba(0,0,0,0.1)
-$shadow-md: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.05)
-$shadow-lg: 0 0.625rem 1.625rem rgba(12,21,38,.06)
-             
-// Анимации
-$tr-fast: .2s ease-in-out
-$tr-base: .3s ease
+    &:last-child
+      @include v.has-mouse
+        &:hover
+          cursor: default
 
-// Размеры контейнера
-$container-width: 31.875rem // 510px
-$container-padding: 1rem    // 16px
-$section-padding-y: 1.875rem 0 // 30px
+      &::after
+        display: none
+
+    &:last-child
+      color: v.$clr-accent-darker
+      
+  &__link
+    text-decoration: none
+    color: currentColor
+    transition: color v.$tr-base
+    
+    @include v.has-mouse
+      &:hover
+        color: v.$clr-secondary
+
+  &_light
+    .breadcrumbs__item
+      &:last-child
+        color: v.$clr-accent
+
+    .breadcrumbs__link
+      color: #fff
+</file>
+
+<file path="src/sass/components/_categories.sass">
+@use '../settings/shared' as v
+
+.categories
+  
+  &__flex-wrap
+
+    @include v.media(tablet)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      gap: v.$space-lg
+      align-items: stretch
 
 
-// Стандартный стек системных шрифтов
-$ff-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"
+  &__item  
+    position: relative
+    margin-bottom: v.$space-lg
 
-// Системный шрифт с засечками (вместо Playfair)
-$ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
+    @include v.media(tablet)
+      margin-bottom: 0
+      
+    &:last-child
+      margin-bottom: 0
 
-// $ff-base: 'Montserrat', 'Montserrat-Fallback', sans-serif
-// $ff-accent: 'PlayfairDisplay', 'PlayfairDisplay-Fallback', serif
+
+    
+  &__img
+    overflow: hidden
+    height: 100%
+    aspect-ratio: 16/9
+    position: relative
+    border-radius: v.$rad-lg
+    
+    &::before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      background-color: rgba(0,0,0,0.4)
+
+    img
+      height: 100%
+
+  &__desc
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    padding: 0 v.$space-lg v.$space-lg
+
+  &__title
+    color: #fff
+    text-transform: uppercase  
+    display: flex
+    align-items: center
+    font-size: v.$fz-xl
+
+    @include v.media(desktop)
+      font-size: v.$fz-xxl
+
+  &__link
+    position: absolute
+    width: 100%
+    height: 100%
+    inset: 0
+</file>
+
+<file path="src/sass/components/_header.critical.sass">
+@use '../settings/shared' as v
+
+@mixin flex-center
+  display: flex
+  align-items: center
+
+.header
+  width: calc( 100% - (v.$space-md * 2) )
+  z-index: 4
+  position: fixed
+  top: v.$space-md
+  left: 0
+  right: 0
+  margin: 0 auto
+  opacity: 0
+  transition: opacity v.$tr-fast
+  transition-delay: .25s
+
+  &__container
+    display: flex
+    align-items: stretch
+    justify-content: space-between
+    column-gap: v.$space-xs
+    height: v.to-rem(50)
+    border-radius: v.$rad-sm
+    transition: background-color v.$tr-base, max-width v.$tr-base, padding v.$tr-base
+
+    @include v.media(tablet)
+      box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .2)
+
+    &.container
+      padding: 0
+      @include v.media(tablet)
+        padding: 0 v.$space-md
+
+  .header__logo
+    @include flex-center
+
+    @include v.media(tablet)
+      width: v.to-rem(30)
+
+    @include v.media(laptop)
+      width: auto
+
+  .logo
+    display: flex
+    color: #fff
+
+    @include v.media(desktop)
+      width: v.to-rem(130)
+      height: v.to-rem(40)
+
+    .hidden-elem
+      @include v.media(tablet)
+        display: none
+
+      @include v.media(laptop)
+        display: flex
+
+    svg
+      width: 100%
+      height: 100%
+      transition: color v.$tr-fast
+
+  &__nav
+    display: none
+
+    @include v.media(tablet)
+      display: flex
+      justify-content: center
+      flex-grow: 1
+
+  &__nav-list
+    column-gap: v.$space-xs
+
+    @include v.media(tablet)
+      column-gap: v.$space-md
+      display: flex
+      align-items: stretch
+      list-style: none
+      justify-content: space-around
+
+  &__nav-item
+    @include flex-center
+    gap: v.$space-xs
+    position: relative
+    flex-direction: column
+
+  &__nav-link
+    @include flex-center
+    text-decoration: none
+    font-weight: 500
+    height: 100%
+    color: #fff
+    transition: color v.$tr-base
+
+    @include v.media(tablet)
+      font-size: v.$fz-md
+      
+
+    @include v.media(laptop)
+      font-size: v.$fz-lg
+
+    @include v.media(desktop)
+      font-size: v.$fz-xl
+
+  &__controls
+    @include flex-center
+    gap: v.$space-xs
+
+    .hamburger
+      color: #fff
+
+      @include flex-center
+      margin-left: v.$space-xs
+
+      @include v.media(tablet)
+        display: none
+
+  &__btn
+    transition: min-width v.$tr-fast
+    width: v.to-rem(75)
+    display: flex
+    align-items: center
+    justify-content: center
+
+    @include v.media(laptop)
+      width: v.to-rem(110)
+
+  &__btn,
+  &__callback-wrap
+    @include flex-center
+    transition: font-size v.$tr-base
+    border-radius: v.$rad-sm
+    border: v.to-rem(1) solid #fff
+    position: relative
+    height: v.to-rem(30)
+    font-size: v.$fz-sm
+    padding: 0 v.$space-xs
+    white-space: nowrap
+    background-color: v.$clr-accent
+    color: #fff
+
+    @include v.media(laptop)
+      font-size: v.$fz-md
+
+  &__btn
+    transition: background-color v.$tr-base
+
+    @include v.has-mouse
+      &:hover
+        background-color: rgb(v.$clr-accent, 70%)
+
+  &__callback
+    height: 100%
+    @include flex-center
+    position: relative
+
+  &_inside
+    .header__container
+      padding: 0 v.$space-md
+
+  &_inside,
+  &_reduced
+    .header__container
+      background-color: #f9f9fb
+      box-shadow: v.$shadow-sm
+
+    .logo
+      color: #000
+
+    .hamburger
+      color: v.$clr-accent
+
+    .header__nav-link
+      color: v.$clr-text
+      @include v.has-mouse
+        &:hover
+          color: v.$clr-accent-darker
+
+  &_reduced
+    opacity: 1
+    .header__container
+      padding: 0 v.$space-xs
+
+      @media (min-width: 340px)
+        padding: 0 v.$space-md
+
+      @include v.media(desktop)
+        max-width: calc( v.to-rem(1200) - (v.$container-padding * 3) )
+
+    .logo
+      flex-shrink: 0
+
+      @include v.media(desktop)
+        width: v.to-rem(100)
+        height: v.to-rem(30)
+
+    .header__nav-link
+      text-transform: inherit
+
+  &_glued
+    opacity: 1
+</file>
+
+<file path="src/sass/components/_hero.critical.sass">
+@use '../settings/shared' as v
+
+@mixin wh
+  width: 100%
+  height: 100%
+
+.hero
+  position: relative
+ 
+  &::before
+    @include wh
+    position: absolute
+    content: ''
+    inset: 0
+    background-color: rgba(0,0,0,0.5)
+    z-index: 2
+
+
+  &__poster
+    @include wh
+
+    img
+      height: 100%
+
+    &_bottom-right-bg
+      img
+        object-position: bottom right
+
+    &_top-bg
+      img
+        object-position: top
+   
+    &_right-bg
+      img
+        object-position: right
+    
+    &_bottom-bg
+      img
+        object-position: bottom
+
+  &__media,
+  &__video
+    @include wh
+    position: absolute
+    inset: 0
+
+  &__content
+    position: relative
+    z-index: 3
+    min-height: 75vh
+    padding-top: v.to-rem(85)
+    padding-bottom: v.to-rem(120)
+    display: flex
+    align-items: flex-start
+
+    @include v.landscape
+      padding-bottom: v.$space-xl
+      height: auto
+    
+    @include v.media(tablet)
+      min-height: 100svh
+      
+    @include v.media(laptop)
+      align-items: flex-end
+      padding-bottom: v.to-rem(100)
+   
+
+  &__title
+    font-family: v.$ff-accent
+    color: #fff
+    font-size: v.$fz-hero
+    line-height: v.to-rem(40)
+    font-weight: 400
+
+    @include v.media(tablet)
+      font-size: v.to-rem(60)
+      line-height: v.to-rem(60)
+
+      
+      
+
+  &__title-accent
+    font-style: italic
+    font-weight: 300
+    font-size: 80%
+
+  &__subtitle
+    margin-top: v.$space-lg
+    text-transform: uppercase
+    color: #fff
+    line-height: 1.6
+    font-weight: 500
+    max-width: v.to-rem(360)
+    width: 100%
+
+  &__btn-links
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    gap: v.$space-sm
+    margin-top: v.$space-sm
+
+    @include v.media(tablet)
+      flex-direction: row
+
+  &_inside
+    .hero__content
+      min-height: v.to-rem(400)
+      align-items: flex-end
+</file>
+
+<file path="src/sass/components/_whatsapp.sass">
+@use '../settings/shared' as v
+
+.whatsapp-float
+  position: fixed
+  width: v.to-rem(60)
+  height: v.to-rem(60)
+  bottom: v.to-rem(20)
+  right: v.to-rem(5)
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  z-index: 10000
+  transition: transform v.$tr-base
+  text-decoration: none
+  svg
+    width: 100%
+    height: 100%  
+
+  @include v.has-mouse
+    &:hover
+      transform: scale(1.1)
+      animation: none
+</file>
+
+<file path="src/booking.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Авторские туры по Кыргызстану | Mongu</title>
+    <meta
+      name="description"
+      content="Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по самым красивым перевалам и озерам Кыргызстана с опытными гидами." />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Авторские туры по Кыргызстану — Mongu" />
+    <meta property="og:description" content="Индивидуальные джип-туры и конные экспедиции по Кыргызстану." />
+    <meta property="og:url" content="https://mongu.kg/" />
+    <meta property="og:image" content="https://mongu.kg/images/og-image.jpg" />
+
+    <meta name="theme-color" content="#6c613e" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#3F3F25" media="(prefers-color-scheme: dark)" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="canonical" href="https://mongu.kg/" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "TravelAgency",
+        "name": "Mongu",
+        "description": "Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по Кыргызстану.",
+        "url": "https://mongu.kg/"
+      }
+    </script>
+  </head>
+  <body>
+    <a
+      href="https://wa.me/996555150795"
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Написать в WhatsApp">
+      <!-- SVG WhatsApp Float оставлен инлайном для мгновенной загрузки -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 175.22 175.55">
+        <defs>
+          <linearGradient id="b" x1="85.92" x2="86.53" y1="32.57" y2="137.09" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#57d163" />
+            <stop offset="1" stop-color="#23b33a" />
+          </linearGradient>
+          <filter id="a" width="1.11" height="1.11" x="-.06" y="-.06" color-interpolation-filters="sRGB">
+            <feGaussianBlur stdDeviation="3.53" />
+          </filter>
+        </defs>
+        <path fill="#b3b3b3" d="m54.53 138.45 2.24 1.32a61 61 0 0 0 31.12 8.53h.03a61.23 61.23 0 0 0 61.15-61.14c0-16.33-6.35-31.7-17.9-43.25a60.8 60.8 0 0 0-43.23-17.93 61.23 61.23 0 0 0-61.18 61.13 61 61 0 0 0 9.35 32.54l1.46 2.31-6.18 22.56zm-40.8 23.54 10.43-38.11a73.4 73.4 0 0 1-9.82-36.77c.02-40.56 33.02-73.55 73.58-73.55 19.68 0 38.15 7.67 52.04 21.57s21.54 32.38 21.53 52.04c-.01 40.55-33.02 73.55-73.57 73.55h-.04a73.5 73.5 0 0 1-35.15-8.95zm0 0" filter="url(#a)" />
+        <path fill="#fff" d="m12.97 161.24 10.43-38.12a73.4 73.4 0 0 1-9.82-36.77C13.6 45.8 46.61 12.8 87.16 12.8c19.68.01 38.16 7.67 52.05 21.57s21.54 32.39 21.53 52.04c-.02 40.55-33.03 73.55-73.58 73.55h-.03a73.5 73.5 0 0 1-35.16-8.95z" />
+        <path fill="url(#b)" d="M87.18 25.23a61.23 61.23 0 0 0-61.17 61.13 61 61 0 0 0 9.34 32.53l1.46 2.31-6.18 22.56 23.15-6.07 2.23 1.33a61 61 0 0 0 31.13 8.52h.02a61.23 61.23 0 0 0 61.15-61.13 60.8 60.8 0 0 0-17.9-43.25 60.8 60.8 0 0 0-43.23-17.93" />
+        <path fill="#fff" fill-rule="evenodd" d="M68.77 55.6c-1.38-3.06-2.83-3.12-4.13-3.17l-3.53-.05c-1.22 0-3.22.46-4.9 2.3s-6.44 6.3-6.44 15.34 6.6 17.78 7.51 19 12.72 20.39 31.4 27.76c15.53 6.12 18.7 4.9 22.07 4.6s10.87-4.45 12.4-8.74 1.54-7.97 1.08-8.74-1.69-1.23-3.53-2.15-10.88-5.36-12.56-5.98-2.91-.92-4.14.92-4.74 5.98-5.82 7.2-2.14 1.39-3.98.47-7.76-2.86-14.78-9.12c-5.47-4.88-9.16-10.9-10.23-12.73s-.12-2.84.8-3.75c.83-.83 1.84-2.15 2.77-3.22s1.22-1.84 1.83-3.07.3-2.3-.15-3.22-4.03-10.01-5.67-13.65" />
+      </svg>
+    </a>
+
+    <header class="header">
+      <div class="header__container container container_wide">
+        <div class="header__logo">
+          <a href="/" class="logo" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 708 198">
+              <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+              <path
+                class="hidden-elem"
+                fill="currentColor"
+                d="M658.6 164a50 50 0 0 1-36.4-13q-13-13-13-37.6V49.7h21v62.8q0 17.3 7.4 25.4 7.5 7.8 21.2 7.8 13.8 0 21.1-8t7.4-25.2V49.7H708v63.5q0 24.6-13.2 37.7a49 49 0 0 1-36.2 13m-120.3 0q-12.6.2-24.4-4a56 56 0 0 1-36.3-53.9q-.1-12.1 4.4-23.2 4.6-10.6 12.7-18.3a58 58 0 0 1 19.6-12.2q11.8-4.5 24.3-4.3 14.4 0 25.8 4.7a51 51 0 0 1 19.5 13.7l-13.2 12.8a43 43 0 0 0-31.2-12.8 46 46 0 0 0-16.4 2.9A38 38 0 0 0 501.6 90a43 43 0 0 0 8.5 44.5q5.6 5.3 12.8 8.1 8 3 16.5 3t16.1-2.5q8.5-3.1 15-9.2l12 15.8a63 63 0 0 1-20.7 10.7 81 81 0 0 1-23.5 3.6m44.2-14.3-19.9-2.8v-42.2h19.9zM355 162.4V49.5h17.3l70.7 86.8h-8.5V49.6h20.8v112.8H438l-70.6-86.8h8.6v86.8zm-82.9 1.5q-12.6.2-24.4-4.3a56 56 0 0 1-36.5-53.6q0-12.5 4.4-23 4.5-10.3 12.8-18.2a58 58 0 0 1 19.3-12.3Q259.5 48 272 48a65 65 0 0 1 24.2 4.4A58 58 0 0 1 328.3 83q4.6 11 4.5 23 0 12.7-4.5 23.2t-12.7 18.4a60 60 0 0 1-19.4 12.1q-11.6 4.5-24 4.3m-.2-18.3q8.6 0 15.8-2.9a37 37 0 0 0 20.8-20.8q3-7.2 3-16a39 39 0 0 0-11.2-28.2 36 36 0 0 0-12.6-8.4q-7.6-3-15.8-2.9-8.6 0-15.8 2.9-7.1 3-12.5 8.4a39 39 0 0 0-11.3 28.3q0 8.5 2.9 15.7a37 37 0 0 0 21 21q7.6 3 15.7 2.9" />
+              <path class="hidden-elem" fill="currentColor" d="m202.6 67.4 142.1 66.1-5.6 12-142.1-66z" />
+              <path
+                fill="currentColor"
+                d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+            </svg>
+          </a>
+        </div>
+        <nav class="header__nav" aria-label="Основная навигация">
+          <ul class="header__nav-list">
+            <li class="header__nav-item">
+              <a href="/categories.html" class="header__nav-link">Tours</a>
+              <ul class="header__nav-sublist">
+                <li class="header__nav-subitem"><a href="/trekking-category.html" class="header__nav-sublink">Trekking adventures</a></li>
+                <li class="header__nav-subitem"><a href="/horseback-category.html" class="header__nav-sublink">Horseback expedition</a></li>
+                <li class="header__nav-subitem"><a href="/offroad-category.html" class="header__nav-sublink">Overland jeep journeys</a></li>
+                <li class="header__nav-subitem"><a href="/nomadic-category.html" class="header__nav-sublink">Nomadic heritage</a></li>
+                <li class="header__nav-subitem"><a href="/custom-category.html" class="header__nav-sublink">Custom expedition</a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item"><a href="#" class="header__nav-link">Private tours</a></li>
+            <li class="header__nav-item"><a href="/lodge.html" class="header__nav-link">Sokmo lodge</a></li>
+            <li class="header__nav-item">
+              <a href="#" class="header__nav-link">Destination</a>
+              <ul class="header__nav-sublist header__nav-sublist_full-width">
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#ik"></use></svg><span>Issyk-Kul</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#nr"></use></svg><span>Naryn</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#chui"></use></svg><span>Chuy</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#tl"></use></svg><span>Talas</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#dj"></use></svg><span>Jalal-Abad</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#osh"></use></svg><span>Osh</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#bt"></use></svg><span>Batken</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#tj"></use></svg><span>Tajikistan</span></a></li>
+                <li class="header__nav-subitem"><a href="#" class="header__nav-sublink"><svg class="icon"><use href="/maps.svg#kz"></use></svg><span>Kazakhstan</span></a></li>
+              </ul>
+            </li>
+            <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
+            <li class="header__nav-item"><a href="/blog.html" class="header__nav-link">Blog</a></li>
+            <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
+          </ul>
+        </nav>
+        <div class="header__controls">
+          <a href="/booking.html" type="button" class="header__btn">Book now</a>
+          <div class="header__callback">
+            <div class="header__callback-wrap">
+              <svg class="icon icon_headphones"><use href="#headphone"></use></svg>
+              <svg class="icon icon_angle"><use href="#angle"></use></svg>
+            </div>
+            <ul class="header__callback-list">
+              <li class="header__callback-item">
+                <a class="header__callback-link" href="https://wa.me/996555150795" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon"><use href="/icons.svg#whatsapp"></use></svg>Chat on WhatsApp
+                </a>
+              </li>
+              <li class="header__callback-item">
+                <a class="header__callback-link" href="mailto:info@mongu.kg">
+                  <svg class="icon"><use href="/icons.svg#envelope"></use></svg>Email a Trip Specialist
+                </a>
+              </li>
+            </ul>
+          </div>
+          <button type="button" aria-label="Mobile menu" class="hamburger js-hamburger">
+            <svg class="icon"><use href="#hamburger"></use></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="hero hero_inside">
+      <div class="hero__media">
+        <div class="hero__poster">
+          <picture>
+            <source type="image/avif" media="(min-width: 1024px)" srcset="./images/hero-categories/trekking-hero-1440.avif" />
+            <source type="image/webp" media="(min-width: 1024px)" srcset="./images/hero-categories/trekking-hero-1440.webp" />
+            <img src="./images/hero-categories/trekking-hero-1440.jpg" alt="Booking" class="hero__poster-img" width="1440" height="400" fetchpriority="high" loading="eager" />
+          </picture>
+        </div>
+      </div>
+      <div class="hero__content">
+        <div class="container">
+          <h1 class="hero__title">Booking</h1>
+        </div>
+      </div>
+    </section>
+
+    <main class="main-content">
+      <div class="container">
+        <nav aria-label="Хлебные крошки" class="breadcrumbs">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
+            <li class="breadcrumbs__item" aria-current="page">Booking</li>
+          </ul>
+        </nav>
+      </div>
+
+      <section class="section-padding section-padding_sm-interval">
+        <div class="container">
+          <div class="title-wrap">
+            <h1 class="title">Create your journey</h1>
+          </div>
+
+          <div class="js-booking-container">
+            <!-- ЭКРАН 0: Выбор пути -->
+            <div class="booking-intro js-booking-intro">
+              <div class="booking-intro__grid">
+                <div class="booking-intro__card booking-intro__card_wa">
+                  <div>
+                    <svg class="icon"><use href="/icons.svg#whatsapp"></use></svg>
+                    <h3 class="booking-intro__title">Fast booking via WhatsApp</h3>
+                    <p class="booking-intro__desc">Get instant confirmation and chat with our trip specialist in 1 click.</p>
+                  </div>
+                  <a href="https://wa.me/996555150795" target="_blank" rel="noopener noreferrer" class="btn btn_light js-whatsapp-fast-btn">Chat on WhatsApp</a>
+                </div>
+                <div class="booking-intro__card booking-intro__card_form">
+                  <div>
+                    <svg class="icon"><use href="/icons.svg#form"></use></svg>
+                    <h3 class="booking-intro__title">Book on Website</h3>
+                    <p class="booking-intro__desc">Select dates, customize your trip with add-ons, and fill out the details yourself.</p>
+                  </div>
+                  <button type="button" class="btn js-start-wizard">Continue on Website</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- САМ WIZARD (Теперь это полноценная форма) -->
+            <form class="booking js-booking-wizard booking-hidden-elem" id="js-booking-form">
+              <div class="booking__main">
+                <!-- Прогресс-бар -->
+                <div class="booking__progress">
+                  <div class="booking__step booking__step_active" data-step="1">1. Selection</div>
+                  <div class="booking__step" data-step="2">2. Details</div>
+                  <div class="booking__step" data-step="3">3. Add-ons</div>
+                  <div class="booking__step" data-step="4">4. Guest Info</div>
+                </div>
+
+                <div class="booking__panels">
+                  <!-- ШАГ 1: Что бронируем -->
+                  <div class="booking__panel js-booking-panel" data-panel="1">
+                    <h2 class="booking__panel-title">What would you like to book?</h2>
+                    <div class="booking__types booking__types_grid-flexible">
+                      
+                      <!-- Добавлен data-item-type="tour" -->
+                      <label class="booking-card">
+                        <input type="radio" name="booking_type" value="trekking" data-item-type="tour" class="booking-card__input" checked />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#trekking"></use></svg>
+                          <span class="booking-card__title">Trekking adventures</span>
+                          <span class="booking-card__desc">Guided group & private treks</span>
+                        </span>
+                      </label>
+                      <label class="booking-card">
+                        <input type="radio" name="booking_type" value="horseback" data-item-type="tour" class="booking-card__input" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#horse"></use></svg>
+                          <span class="booking-card__title">Horseback expedition</span>
+                          <span class="booking-card__desc">Nomad mountain trails</span>
+                        </span>
+                      </label>
+                      <label class="booking-card">
+                        <input type="radio" name="booking_type" value="jeep" data-item-type="tour" class="booking-card__input" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#car"></use></svg>
+                          <span class="booking-card__title">Overland jeep journeys</span>
+                          <span class="booking-card__desc">Passes & lake expeditions</span>
+                        </span>
+                      </label>
+                      <label class="booking-card">
+                        <input type="radio" name="booking_type" value="nomadic" data-item-type="tour" class="booking-card__input" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#nomadic"></use></svg>
+                          <span class="booking-card__title">Nomadic heritage</span>
+                          <span class="booking-card__desc">Authentic cultural experiences</span>
+                        </span>
+                      </label>
+                      
+                      <!-- Добавлен data-item-type="custom" -->
+                      <label class="booking-card">
+                        <input type="radio" name="booking_type" value="custom" data-item-type="custom" class="booking-card__input" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#map"></use></svg>
+                          <span class="booking-card__title">Custom expedition</span>
+                          <span class="booking-card__desc">Pre-designed unique itineraries</span>
+                        </span>
+                      </label>
+                      
+                      <!-- Добавлен data-item-type="accommodation" -->
+                      <label class="booking-card">
+                        <input type="radio" name="booking_type" value="sokmo" data-item-type="accommodation" class="booking-card__input" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#tent"></use></svg>
+                          <span class="booking-card__title">Sokmo Lodge</span>
+                          <span class="booking-card__desc">Alpine camp experience</span>
+                        </span>
+                      </label>
+                      <label class="booking-card">
+                        <input type="radio" name="booking_type" value="mongu" data-item-type="accommodation" class="booking-card__input" />
+                        <span class="booking-card__content">
+                          <svg class="icon"><use href="/icons.svg#hotel"></use></svg>
+                          <span class="booking-card__title">Mongu Hotel</span>
+                          <span class="booking-card__desc">Comfortable city stay</span>
+                        </span>
+                      </label>
+                    </div>
+                    <div class="btn-wrap">
+                      <button type="button" class="btn js-next-step">Continue</button>
+                    </div>
+                  </div>
+
+                  <!-- ШАГ 2: Даты и гости (Остается без изменений, работает как раньше) -->
+                  <div class="booking__panel js-booking-panel booking-hidden-elem" data-panel="2">
+                    <h2 class="booking__panel-title">Select dates & guests</h2>
+                    <div class="booking-form">
+                      <div class="booking-form__row js-tour-select-wrap">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Select Tour</label>
+                          <div class="custom-select js-custom-select">
+                            <select name="tour_id" class="custom-select__native js-custom-select-native" hidden>
+                              <option value="" disabled selected data-price="0">Choose a tour...</option>
+                              <option value="ala-archa" data-price="600">Mountaineering in Ala-Archa</option>
+                              <option value="karkyra" data-price="1300">Karkyra Horseback Expedition</option>
+                            </select>
+                            <div class="custom-select__trigger js-custom-select-trigger" tabindex="0">
+                              <span class="custom-select__value js-custom-select-value">Choose a tour...</span>
+                              <svg class="icon custom-select__arrow"><use href="/icons.svg#angle"></use></svg>
+                            </div>
+                            <div class="custom-select__dropdown">
+                              <div class="custom-select__search-wrap">
+                                <input type="text" class="custom-select__search js-custom-select-search" placeholder="Search tour..." />
+                              </div>
+                              <ul class="custom-select__list js-custom-select-list">
+                                <li class="custom-select__option js-custom-select-option" data-value="ala-archa">Mountaineering in Ala-Archa</li>
+                                <li class="custom-select__option js-custom-select-option" data-value="karkyra">Karkyra Horseback Expedition</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="booking-form__row booking-form__row_col-2">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Date <span style="font-weight: 400; color: #999">(Optional)</span></label>
+                          <input type="date" class="booking-form__input" name="booking_date" />
+                        </div>
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Guests</label>
+                          <div class="pax-counter">
+                            <button type="button" class="pax-counter__btn js-pax-minus">-</button>
+                            <input type="number" class="pax-counter__input js-pax-input" name="guests" value="1" readonly />
+                            <button type="button" class="pax-counter__btn js-pax-plus">+</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-wrap">
+                      <button type="button" class="btn btn_bordered js-prev-step"><svg class="icon"><use href="/icons.svg#arrow"></use></svg>Back</button>
+                      <button type="button" class="btn js-next-step">Continue<svg class="icon"><use href="/icons.svg#arrow"></use></svg></button>
+                    </div>
+                  </div>
+
+                  <!-- ШАГ 3: Дополнения (Управление видимостью и расчетом через HTML) -->
+                  <div class="booking__panel js-booking-panel booking-hidden-elem" data-panel="3">
+                    <h2 class="booking__panel-title">Enhance your trip</h2>
+                    <div class="booking-addons">
+                      
+                      <!-- data-exclude-on: скрывает блок, если выбран этот тип тура -->
+                      <!-- data-calc-type: per_person (умножает на гостей) или fixed (считает 1 раз) -->
+                      <div class="booking-recommendation js-hotel-recommendation js-addon-wrap" data-exclude-on="mongu">
+                        <div class="booking-recommendation__header">
+                          <svg class="icon"><use href="/icons.svg#hotel"></use></svg>
+                          <span>Stay with us in Karakol</span>
+                        </div>
+                        <label class="booking-addon booking-addon_special">
+                          <input type="checkbox" name="addon_mongu" value="80" 
+                                data-title="Mongu Hotel Stay" 
+                                data-calc-type="per_person" 
+                                class="booking-addon__input js-addon-checkbox" />
+                          <span class="booking-addon__content">
+                            <span class="booking-addon__info">
+                              <span class="booking-addon__title">Mongu Hotel <span class="booking-addon__badge">Our property</span></span>
+                              <span class="booking-addon__desc">We will be delighted to welcome you at our own hotel before or after your expedition.</span>
+                            </span>
+                            <span class="booking-addon__price">+$80</span>
+                          </span>
+                        </label>
+                      </div>
+
+                      <label class="booking-addon js-addon-wrap" data-exclude-on="sokmo,mongu">
+                        <input type="checkbox" name="addon_tent" value="180" 
+                              data-title="Single Tent Accommodation" 
+                              data-calc-type="per_person" 
+                              class="booking-addon__input js-addon-checkbox" />
+                        <span class="booking-addon__content">
+                          <span class="booking-addon__info">
+                            <span class="booking-addon__title">Single Tent Accommodation</span>
+                            <span class="booking-addon__desc">Private tent for the entire trek (per person)</span>
+                          </span>
+                          <span class="booking-addon__price">+$180</span>
+                        </span>
+                      </label>
+
+                      <label class="booking-addon js-addon-wrap">
+                        <input type="checkbox" name="addon_transfer" value="50" 
+                              data-title="Airport Transfer" 
+                              data-calc-type="fixed" 
+                              class="booking-addon__input js-addon-checkbox" />
+                        <span class="booking-addon__content">
+                          <span class="booking-addon__info">
+                            <span class="booking-addon__title">Airport Transfer</span>
+                            <span class="booking-addon__desc">Meet & Greet at Manas Airport (fixed per vehicle)</span>
+                          </span>
+                          <span class="booking-addon__price">+$50</span>
+                        </span>
+                      </label>
+                    </div>
+
+                    <div class="booking-form__group" style="margin-top: 1.5rem">
+                      <label class="booking-form__label">Dietary Requirements</label>
+                      <div class="custom-select js-custom-select">
+                        <select name="dietary" class="custom-select__native js-custom-select-native" hidden>
+                          <option value="none" selected>No special requirements</option>
+                          <option value="vegetarian">Vegetarian</option>
+                          <option value="vegan">Vegan</option>
+                        </select>
+                        <div class="custom-select__trigger js-custom-select-trigger" tabindex="0">
+                          <span class="custom-select__value js-custom-select-value">No special requirements</span>
+                          <svg class="icon custom-select__arrow"><use href="/icons.svg#angle"></use></svg>
+                        </div>
+                        <div class="custom-select__dropdown">
+                          <ul class="custom-select__list js-custom-select-list">
+                            <li class="custom-select__option custom-select__option_selected js-custom-select-option" data-value="none">No special requirements</li>
+                            <li class="custom-select__option js-custom-select-option" data-value="vegetarian">Vegetarian</li>
+                            <li class="custom-select__option js-custom-select-option" data-value="vegan">Vegan</li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="btn-wrap" style="margin-top: 2rem">
+                      <button type="button" class="btn btn_bordered js-prev-step"><svg class="icon"><use href="/icons.svg#arrow"></use></svg>Back</button>
+                      <button type="button" class="btn js-next-step">Continue<svg class="icon"><use href="/icons.svg#arrow"></use></svg></button>
+                    </div>
+                  </div>
+
+                  <!-- ШАГ 4: Данные -->
+                  <div class="booking__panel js-booking-panel booking-hidden-elem" data-panel="4">
+                    <h2 class="booking__panel-title">Your Details</h2>
+                    <div class="booking-form">
+                      <div class="booking-form__row">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Full Name</label>
+                          <input type="text" class="booking-form__input" name="full_name" placeholder="John Doe" required />
+                        </div>
+                      </div>
+                      <div class="booking-form__row booking-form__row_col-2">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Email Address</label>
+                          <input type="email" class="booking-form__input" name="email" placeholder="john@example.com" required />
+                        </div>
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Phone / WhatsApp</label>
+                          <input type="tel" class="booking-form__input" name="phone" placeholder="+1 234 567 8900" required />
+                        </div>
+                      </div>
+                      <div class="booking-form__row">
+                        <div class="booking-form__group">
+                          <label class="booking-form__label">Additional Comments</label>
+                          <textarea class="booking-form__input" name="comments" rows="3" placeholder="Any questions or special requests?"></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn-wrap">
+                      <button type="button" class="btn btn_bordered js-prev-step">Back</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ПРАВАЯ ЧАСТЬ: Итоговая смета -->
+              <aside class="booking__sidebar">
+                <div class="order-summary">
+                  <h3 class="order-summary__title">Booking Summary</h3>
+                  <div class="order-summary__content">
+                    <div class="order-summary__item">
+                      <span class="order-summary__label">Type:</span>
+                      <span class="order-summary__val js-summary-type">Not selected</span>
+                    </div>
+                    <div class="order-summary__item">
+                      <span class="order-summary__label">Date:</span>
+                      <span class="order-summary__val js-summary-date">—</span>
+                    </div>
+                    <div class="order-summary__item">
+                      <span class="order-summary__label">Guests:</span>
+                      <span class="order-summary__val js-summary-pax">1 pax</span>
+                    </div>
+                    <div class="js-summary-addons-container"></div>
+                    <hr class="order-summary__divider" />
+                    <div class="order-summary__total">
+                      <span>Total:</span>
+                      <span class="order-summary__price js-summary-total">$0</span>
+                    </div>
+                  </div>
+
+                  <a href="https://wa.me/996555150795" target="_blank" rel="noopener noreferrer" class="btn order-summary__wa-btn js-whatsapp-fast-btn">
+                    <svg class="icon"><use href="/icons.svg#whatsapp"></use></svg>Book via WhatsApp
+                  </a>
+                  <div class="booking__divider-text"><span>or</span></div>
+                  <!-- Кнопка submit формы для дальнейшей отправки в October CMS -->
+                  <button type="submit" class="btn btn_bordered order-summary__btn js-submit-booking">Submit Request</button>
+                  <p class="order-summary__note">No payment required at this step.</p>
+                </div>
+              </aside>
+            </form>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__top section-padding section-bg">
+        <div class="container">
+          <div class="footer__top-grid">
+            <div class="footer__grid-item">
+              <h2 class="title">Plan your jorney</h2>
+            </div>
+            <div class="footer__grid-item">
+              <p class="footer__subtitle">
+                Lorem ipsum dolor sit amet <br />
+                consectetur adipisicing.
+              </p>
+            </div>
+            <div class="footer__grid-item">
+              <a href="tel:996555123456" class="footer__contacts-link">
+                <svg class="icon">
+                  <use href="#whatsapp"></use>
+                </svg>
+                <div>
+                  <strong class="footer__contacts-title">Whatsapp</strong>
+                  <span>+996 555 123 456</span>
+                </div>
+              </a>
+            </div>
+            <div class="footer__grid-item">
+              <a href="mailto:info@mongu.com" class="footer__contacts-link">
+                <svg class="icon">
+                  <use href="#envelope"></use>
+                </svg>
+                <div>
+                  <strong class="footer__contacts-title">Email</strong>
+                  <span>info@mongu.com</span>
+                </div>
+              </a>
+            </div>
+            <div class="footer__grid-item">
+              <a href="#" class="footer__contacts-link">
+                <svg class="icon">
+                  <use href="./icons.svg#instagram"></use>
+                </svg>
+                <div>
+                  <strong class="footer__contacts-title">Instagram</strong>
+                  <span>@mongu</span>
+                </div>
+              </a>
+            </div>
+            <div class="footer__grid-item">
+              <button type="button" class="footer__btn btn">
+                Booking
+                <svg class="icon">
+                  <use href="/icons.svg#arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-flex-wrap">
+            <a href="/" class="logo" aria-label="На главную">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 708 198">
+                <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+                <path
+                  fill="currentColor"
+                  d="M658.6 164a50 50 0 0 1-36.4-13q-13-13-13-37.6V49.7h21v62.8q0 17.3 7.4 25.4 7.5 7.8 21.2 7.8 13.8 0 21.1-8t7.4-25.2V49.7H708v63.5q0 24.6-13.2 37.7a49 49 0 0 1-36.2 13m-120.3 0q-12.6.2-24.4-4a56 56 0 0 1-36.3-53.9q-.1-12.1 4.4-23.2 4.6-10.6 12.7-18.3a58 58 0 0 1 19.6-12.2q11.8-4.5 24.3-4.3 14.4 0 25.8 4.7a51 51 0 0 1 19.5 13.7l-13.2 12.8a43 43 0 0 0-31.2-12.8 46 46 0 0 0-16.4 2.9A38 38 0 0 0 501.6 90a43 43 0 0 0 8.5 44.5q5.6 5.3 12.8 8.1 8 3 16.5 3t16.1-2.5q8.5-3.1 15-9.2l12 15.8a63 63 0 0 1-20.7 10.7 81 81 0 0 1-23.5 3.6m44.2-14.3-19.9-2.8v-42.2h19.9zM355 162.4V49.5h17.3l70.7 86.8h-8.5V49.6h20.8v112.8H438l-70.6-86.8h8.6v86.8zm-82.9 1.5q-12.6.2-24.4-4.3a56 56 0 0 1-36.5-53.6q0-12.5 4.4-23 4.5-10.3 12.8-18.2a58 58 0 0 1 19.3-12.3Q259.5 48 272 48a65 65 0 0 1 24.2 4.4A58 58 0 0 1 328.3 83q4.6 11 4.5 23 0 12.7-4.5 23.2t-12.7 18.4a60 60 0 0 1-19.4 12.1q-11.6 4.5-24 4.3m-.2-18.3q8.6 0 15.8-2.9a37 37 0 0 0 20.8-20.8q3-7.2 3-16a39 39 0 0 0-11.2-28.2 36 36 0 0 0-12.6-8.4q-7.6-3-15.8-2.9-8.6 0-15.8 2.9-7.1 3-12.5 8.4a39 39 0 0 0-11.3 28.3q0 8.5 2.9 15.7a37 37 0 0 0 21 21q7.6 3 15.7 2.9" />
+                <path fill="currentColor" d="m202.6 67.4 142.1 66.1-5.6 12-142.1-66z" />
+                <path
+                  fill="currentColor"
+                  d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+              </svg>
+            </a>
+
+            <nav aria-label="Основная навигация">
+              <ul>
+                <li><a href="/categories.html">Tours</a></li>
+                <li><a href="#">Private tours</a></li>
+                <li><a href="/lodge.html">Sokmo lodge</a></li>
+                <li><a href="#">Destination</a></li>
+                <li><a href="/about.html">About us</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contacts.html">Contacts</a></li>
+              </ul>
+            </nav>
+
+            <p class="footer__copyright">&copy; MONGU 2026</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M14.1 7.3q.4-.6.9 0l4.4 4.4.6.4-.6.4L15 17h-.8v-.8l3.1-3.3H5.7l-.6-.4a1 1 0 0 1 .3-.9h11.9L14 8.1z"/>
+      </symbol>
+      <symbol id="hamburger" viewBox="0 0 16 12">
+        <path
+          fill="currentColor"
+          d="M14.6 10c.1591 0 .3117.0632.4243.1757.1125.1126.1757.2652.1757.4243s-.0632.3117-.1757.4243c-.1126.1125-.2652.1757-.4243.1757H.6c-.15913 0-.311742-.0632-.424264-.1757C.0632141 10.9117 0 10.7591 0 10.6s.0632141-.3117.175736-.4243C.288258 10.0632.44087 10 .6 10zm0-5c.0788 0 .1568.01552.2296.04567s.139.07435.1947.13007c.0557.05571.0999.12185.13.19465.0302.07279.0457.15082.0457.22961s-.0155.15681-.0457.22961c-.0301.0728-.0743.13894-.13.19465-.0557.05572-.1219.09992-.1947.13007S14.6788 6.2 14.6 6.2H.6c-.078793 0-.156815-.01552-.22961-.04567s-.138939-.07435-.194654-.13007a.599884.599884 0 0 1-.1300641-.19465C.0155191 5.75681 0 5.67879 0 5.6s.0155191-.15682.0456719-.22961a.599884.599884 0 0 1 .1300641-.19465c.055715-.05572.121859-.09992.194654-.13007S.521207 5 .6 5zm0-5c.1591 0 .3117.0632141.4243.175736C15.1368.288258 15.2.44087 15.2.6s-.0632.311742-.1757.42426c-.1126.11253-.2652.17574-.4243.17574H.6c-.15913 0-.311742-.06321-.424264-.17574C.0632141.911742 0 .75913 0 .6S.0632141.288258.175736.175736C.288258.0632141.44087 0 .6 0z" />
+      </symbol>
+      <symbol id="cross" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M15 8a.6.6 0 0 1 1 1l-3.1 3 3 3a.6.6 0 0 1-.8 1L12 12.8l-3 3a.6.6 0 0 1-1-.8l3.1-3.1-3-3a.6.6 0 0 1 .8-1L12 11z" />
+      </symbol>
+      <symbol id="angle" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M15.6 9.6a.6.6 0 0 1 .8.8l-4 4-.4.5-.4-.5-4-4a.6.6 0 0 1 .8-.8L12 13z" />
+      </symbol>
+      <symbol id="headphone" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M11.2 19.6a1.2 1.2 0 1 1 0-2.3 1.2 1.2 0 0 1 0 2.3m0-1.8a.6.6 0 1 0 .5 1.1.6.6 0 0 0-.5-1" />
+        <path
+          fill="currentColor"
+          d="M18.6 9.9a6.7 6.7 0 0 0-13.2 0 2 2 0 0 0-1.7 2V14a2 2 0 0 0 1.5 2 7 7 0 0 0 5.2 2.7v-.6a7 7 0 0 1-4.5-2h.2q1-.1 1-1v-4.3a1 1 0 0 0-1-1H6a6.2 6.2 0 0 1 12 0 1 1 0 0 0-1 1v4.3q0 .9 1 1h.4c1.1 0 2-1 2-2.1v-2.1a2 2 0 0 0-1.7-2M6 10.4q.5 0 .5.5V15q0 .3-.5.4h-.4q-1.3-.2-1.5-1.5v-2.1q.2-1.4 1.5-1.5zM19.8 14a1.5 1.5 0 0 1-1.5 1.5h-.4a.4.4 0 0 1-.5-.5v-4.2q0-.3.5-.4h.4q1.4.1 1.5 1.5z" />
+      </symbol>
+      <symbol id="envelope" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M20.4 7q-.1-1.3-1.4-1.4H5Q3.7 5.7 3.6 7v10q.1 1.3 1.4 1.4h14q1.3-.1 1.4-1.4zm-2.7.8a.6.6 0 1 1 .9 1l-4.8 4.4c-1 1-2.6 1-3.6 0L5.5 8.7a.6.6 0 0 1 .8-.9l4.8 4.5q.9.8 1.8 0zm4 9.2c0 1.4-1.3 2.6-2.7 2.6H5A2.6 2.6 0 0 1 2.4 17V7c0-1.4 1.2-2.6 2.6-2.6h14c1.4 0 2.6 1.2 2.6 2.6z" />
+      </symbol>
+      <symbol id="whatsapp" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="m16 13.8-1.4-.7q-.4-.2-.6 0l-.7 1h-.5L11 12.9l-1.2-1.5.1-.5.4-.3.2-.4v-.4L9.8 8q-.3-.4-.5-.3h-.5l-.6.2a3 3 0 0 0-.8 1.9q0 1.4 1 2.3a10 10 0 0 0 3.8 3.4l1.3.5h1.4a2 2 0 0 0 1.5-1q.2-.5.1-1z" />
+        <path
+          fill="currentColor"
+          d="M18.3 5.6A9 9 0 0 0 12 3a9 9 0 0 0-7.8 4.5 9 9 0 0 0 0 8.9L3 21l4.8-1.2a9 9 0 0 0 12.6-4.4 9 9 0 0 0-2-9.8M12 19.3q-2.1 0-3.9-1l-.2-.2L5 19l.7-2.8-.2-.2a7.4 7.4 0 0 1 1.7-9.7A7.5 7.5 0 0 1 19 9q.5 1.4.5 2.8a7.4 7.4 0 0 1-7.4 7.4" />
+      </symbol>
+    </svg>
+
+    <div class="menu js-menu">
+      <div class="menu__sidebar">
+        <div class="menu__sidebar-top">
+          <a href="/" class="menu__logo" aria-label="На главную">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 213 198">
+              <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
+              <path
+                fill="#000"
+                d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
+            </svg>
+          </a>
+          <div class="menu__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media facebok">
+                  <svg class="icon">
+                    <use href="/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="social media instagram">
+                  <svg class="icon">
+                    <use href="/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="video-sharing platform youtube">
+                  <svg class="icon">
+                    <use href="/icons.svg#youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="social__item">
+                <a
+                  href="#"
+                  class="social__link"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="messanger WhatsApp">
+                  <svg class="icon">
+                    <use href="/icons.svg#whatsapp"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu__close js-menu-close">
+            <svg class="icon">
+              <use href="/icons.svg#cross"></use>
+            </svg>
+          </div>
+        </div>
+
+        <nav class="menu__nav" aria-label="Мобильная навигация">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__item-link" href="/categories.html">Tours</a>
+
+              <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </button>
+              <div class="menu__submenu-wrapper">
+                <ul class="menu__submenu">
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/trekking-category.html">Trekking adventures</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/horseback-category.html">Horseback expedition</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/offroad-category.html">Overland jeep journeys</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/nomadic-category.html">Nomadic heritage</a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/custom-category.html">Custom expedition</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Private tours</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/lodge.html">Sokmo lodge</a></li>
+            <li class="menu__item">
+              <a class="menu__item-link" href="#">Destination</a>
+              <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </button>
+              <div class="menu__submenu-wrapper">
+                <ul class="menu__submenu menu__submenu_without-indents">
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#ik"></use>
+                      </svg>
+                      Issyk-Kul
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#nr"></use>
+                      </svg>
+                      Naryn
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#chui"></use>
+                      </svg>
+                      Chuy
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#tl"></use>
+                      </svg>
+                      Talas
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#dj"></use>
+                      </svg>
+                      Jalal-Abad
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#osh"></use>
+                      </svg>
+                      Osh
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#bt"></use>
+                      </svg>
+                      Batken
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#tj"></use>
+                      </svg>
+                      Tajikistan
+                    </a>
+                  </li>
+                  <li class="menu__subitem">
+                    <a class="menu__item-sublink" href="/category.html">
+                      <svg class="icon">
+                        <use href="/maps.svg#kz"></use>
+                      </svg>
+                      Kazakhstan
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/blog.html">Blog</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <script type="module" src="./js/booking.js"></script>
+  </body>
+</html>
 </file>
 
 <file path="src/horseback-category.html">
@@ -3745,99 +6837,98 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
     <section class="hero hero_inside">
       <div class="hero__media">
         <div class="hero__poster hero__poster_bottom-bg">
-        <picture>
-          
-          <source
-            type="image/avif"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-1920.avif 1920w, 
-              ./images/hero-categories/horseback-hero-3840.avif 3840w"
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-1920.webp 1920w, 
-              ./images/hero-categories/horseback-hero-3840.webp 3840w" 
-            />
+          <picture>
+            <source
+              type="image/avif"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/horseback-hero-1920.avif 1920w,
+                ./images/hero-categories/horseback-hero-3840.avif 3840w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/horseback-hero-1920.webp 1920w,
+                ./images/hero-categories/horseback-hero-3840.webp 3840w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-1440.avif 1440w, 
-              ./images/hero-categories/horseback-hero-2880.avif 2880w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-1440.webp 1440w,
-              ./images/hero-categories/horseback-hero-2880.webp 2880w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/horseback-hero-1440.avif 1440w,
+                ./images/hero-categories/horseback-hero-2880.avif 2880w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/horseback-hero-1440.webp 1440w,
+                ./images/hero-categories/horseback-hero-2880.webp 2880w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-800.avif 800w, 
-              ./images/hero-categories/horseback-hero-1600.avif 1600w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-800.webp 800w, 
-              ./images/hero-categories/horseback-hero-1600.webp 1600w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/horseback-hero-800.avif   800w,
+                ./images/hero-categories/horseback-hero-1600.avif 1600w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/horseback-hero-800.webp   800w,
+                ./images/hero-categories/horseback-hero-1600.webp 1600w
+              " />
 
-          <source
-            type="image/avif"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-450.avif 450w, 
-              ./images/hero-categories/horseback-hero-900.avif 900w" 
-            />
-          <source
-            type="image/webp"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/horseback-hero-450.webp 450w, 
-              ./images/hero-categories/horseback-hero-900.webp 900w" 
-            />
+            <source
+              type="image/avif"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/horseback-hero-450.avif 450w,
+                ./images/hero-categories/horseback-hero-900.avif 900w
+              " />
+            <source
+              type="image/webp"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/horseback-hero-450.webp 450w,
+                ./images/hero-categories/horseback-hero-900.webp 900w
+              " />
 
-          <img
-            src="./images/hero-categories/horseback-hero-1440.jpg"
-            alt="Категория"
-            class="hero__poster-img"
-            width="450"
-            height="400"
-            fetchpriority="high"
+            <img
+              src="./images/hero-categories/horseback-hero-1440.jpg"
+              alt="Категория"
+              class="hero__poster-img"
+              width="450"
+              height="400"
+              fetchpriority="high"
               loading="eager" />
-        </picture>
+          </picture>
         </div>
       </div>
 
@@ -3849,8 +6940,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
     </section>
 
     <main class="main-content">
-      
-
       <section>
         <div class="container">
           <nav aria-label="Хлебные крошки" class="breadcrumbs">
@@ -3870,7 +6959,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
       <section class="section-padding section-padding_sm-interval">
         <div class="container">
           <div class="card-grid">
-            
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
@@ -4350,7 +7438,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
               </div>
               <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
-            
           </div>
         </div>
       </section>
@@ -4934,99 +8021,98 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
     <section class="hero hero_inside">
       <div class="hero__media">
         <div class="hero__poster hero__poster_bottom-bg">
-        <picture>
-          
-          <source
-            type="image/avif"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/nomadic-hero-1920.avif 1920w, 
-              ./images/hero-categories/nomadic-hero-3840.avif 3840w"
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/nomadic-hero-1920.webp 1920w, 
-              ./images/hero-categories/nomadic-hero-3840.webp 3840w" 
-            />
+          <picture>
+            <source
+              type="image/avif"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/nomadic-hero-1920.avif 1920w,
+                ./images/hero-categories/nomadic-hero-3840.avif 3840w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/nomadic-hero-1920.webp 1920w,
+                ./images/hero-categories/nomadic-hero-3840.webp 3840w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/nomadic-hero-1440.avif 1440w, 
-              ./images/hero-categories/nomadic-hero-2880.avif 2880w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/nomadic-hero-1440.webp 1440w,
-              ./images/hero-categories/nomadic-hero-2880.webp 2880w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/nomadic-hero-1440.avif 1440w,
+                ./images/hero-categories/nomadic-hero-2880.avif 2880w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/nomadic-hero-1440.webp 1440w,
+                ./images/hero-categories/nomadic-hero-2880.webp 2880w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/nomadic-hero-800.avif 800w, 
-              ./images/hero-categories/nomadic-hero-1600.avif 1600w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/nomadic-hero-800.webp 800w, 
-              ./images/hero-categories/nomadic-hero-1600.webp 1600w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/nomadic-hero-800.avif   800w,
+                ./images/hero-categories/nomadic-hero-1600.avif 1600w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/nomadic-hero-800.webp   800w,
+                ./images/hero-categories/nomadic-hero-1600.webp 1600w
+              " />
 
-          <source
-            type="image/avif"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/nomadic-hero-450.avif 450w, 
-              ./images/hero-categories/nomadic-hero-900.avif 900w" 
-            />
-          <source
-            type="image/webp"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/nomadic-hero-450.webp 450w, 
-              ./images/hero-categories/nomadic-hero-900.webp 900w" 
-            />
+            <source
+              type="image/avif"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/nomadic-hero-450.avif 450w,
+                ./images/hero-categories/nomadic-hero-900.avif 900w
+              " />
+            <source
+              type="image/webp"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/nomadic-hero-450.webp 450w,
+                ./images/hero-categories/nomadic-hero-900.webp 900w
+              " />
 
-          <img
-            src="./images/hero-categories/nomadic-hero-1440.jpg"
-            alt="Категория"
-            class="hero__poster-img"
-            width="450"
-            height="400"
-            fetchpriority="high"
+            <img
+              src="./images/hero-categories/nomadic-hero-1440.jpg"
+              alt="Категория"
+              class="hero__poster-img"
+              width="450"
+              height="400"
+              fetchpriority="high"
               loading="eager" />
-        </picture>
+          </picture>
         </div>
       </div>
 
@@ -5038,8 +8124,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
     </section>
 
     <main class="main-content">
-      
-
       <section>
         <div class="container">
           <nav aria-label="Хлебные крошки" class="breadcrumbs">
@@ -5059,7 +8143,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
       <section class="section-padding section-padding_sm-interval">
         <div class="container">
           <div class="card-grid">
-            
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
@@ -5539,7 +8622,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
               </div>
               <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
-            
           </div>
         </div>
       </section>
@@ -6123,99 +9205,98 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
     <section class="hero hero_inside">
       <div class="hero__media">
         <div class="hero__poster hero__poster_bottom-bg">
-        <picture>
-          
-          <source
-            type="image/avif"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/offroad-hero-1920.avif 1920w, 
-              ./images/hero-categories/offroad-hero-3840.avif 3840w"
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/offroad-hero-1920.webp 1920w, 
-              ./images/hero-categories/offroad-hero-3840.webp 3840w" 
-            />
+          <picture>
+            <source
+              type="image/avif"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/offroad-hero-1920.avif 1920w,
+                ./images/hero-categories/offroad-hero-3840.avif 3840w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/offroad-hero-1920.webp 1920w,
+                ./images/hero-categories/offroad-hero-3840.webp 3840w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/offroad-hero-1440.avif 1440w, 
-              ./images/hero-categories/offroad-hero-2880.avif 2880w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/offroad-hero-1440.webp 1440w,
-              ./images/hero-categories/offroad-hero-2880.webp 2880w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/offroad-hero-1440.avif 1440w,
+                ./images/hero-categories/offroad-hero-2880.avif 2880w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/offroad-hero-1440.webp 1440w,
+                ./images/hero-categories/offroad-hero-2880.webp 2880w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/offroad-hero-800.avif 800w, 
-              ./images/hero-categories/offroad-hero-1600.avif 1600w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/offroad-hero-800.webp 800w, 
-              ./images/hero-categories/offroad-hero-1600.webp 1600w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/offroad-hero-800.avif   800w,
+                ./images/hero-categories/offroad-hero-1600.avif 1600w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/offroad-hero-800.webp   800w,
+                ./images/hero-categories/offroad-hero-1600.webp 1600w
+              " />
 
-          <source
-            type="image/avif"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/offroad-hero-450.avif 450w, 
-              ./images/hero-categories/offroad-hero-900.avif 900w" 
-            />
-          <source
-            type="image/webp"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/offroad-hero-450.webp 450w, 
-              ./images/hero-categories/offroad-hero-900.webp 900w" 
-            />
+            <source
+              type="image/avif"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/offroad-hero-450.avif 450w,
+                ./images/hero-categories/offroad-hero-900.avif 900w
+              " />
+            <source
+              type="image/webp"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/offroad-hero-450.webp 450w,
+                ./images/hero-categories/offroad-hero-900.webp 900w
+              " />
 
-          <img
-            src="./images/hero-categories/offroad-hero-1440.jpg"
-            alt="Категория"
-            class="hero__poster-img"
-            width="450"
-            height="400"
-            fetchpriority="high"
+            <img
+              src="./images/hero-categories/offroad-hero-1440.jpg"
+              alt="Категория"
+              class="hero__poster-img"
+              width="450"
+              height="400"
+              fetchpriority="high"
               loading="eager" />
-        </picture>
+          </picture>
         </div>
       </div>
 
@@ -6227,8 +9308,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
     </section>
 
     <main class="main-content">
-      
-
       <section>
         <div class="container">
           <nav aria-label="Хлебные крошки" class="breadcrumbs">
@@ -6248,7 +9327,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
       <section class="section-padding section-padding_sm-interval">
         <div class="container">
           <div class="card-grid">
-            
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
@@ -6728,7 +9806,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
               </div>
               <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
-            
           </div>
         </div>
       </section>
@@ -7312,99 +10389,98 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
     <section class="hero hero_inside">
       <div class="hero__media">
         <div class="hero__poster">
-        <picture>
-          
-          <source
-            type="image/avif"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/trekking-hero-1920.avif 1920w, 
-              ./images/hero-categories/trekking-hero-3840.avif 3840w"
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/trekking-hero-1920.webp 1920w, 
-              ./images/hero-categories/trekking-hero-3840.webp 3840w" 
-            />
+          <picture>
+            <source
+              type="image/avif"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-1920.avif 1920w,
+                ./images/hero-categories/trekking-hero-3840.avif 3840w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-1920.webp 1920w,
+                ./images/hero-categories/trekking-hero-3840.webp 3840w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/trekking-hero-1440.avif 1440w, 
-              ./images/hero-categories/trekking-hero-2880.avif 2880w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/trekking-hero-1440.webp 1440w,
-              ./images/hero-categories/trekking-hero-2880.webp 2880w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-1440.avif 1440w,
+                ./images/hero-categories/trekking-hero-2880.avif 2880w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-1440.webp 1440w,
+                ./images/hero-categories/trekking-hero-2880.webp 2880w
+              " />
 
-          <source
-            type="image/avif"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/trekking-hero-800.avif 800w, 
-              ./images/hero-categories/trekking-hero-1600.avif 1600w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/trekking-hero-800.webp 800w, 
-              ./images/hero-categories/trekking-hero-1600.webp 1600w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-800.avif   800w,
+                ./images/hero-categories/trekking-hero-1600.avif 1600w
+              " />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-800.webp   800w,
+                ./images/hero-categories/trekking-hero-1600.webp 1600w
+              " />
 
-          <source
-            type="image/avif"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/trekking-hero-450.avif 450w, 
-              ./images/hero-categories/trekking-hero-900.avif 900w" 
-            />
-          <source
-            type="image/webp"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/trekking-hero-450.webp 450w, 
-              ./images/hero-categories/trekking-hero-900.webp 900w" 
-            />
+            <source
+              type="image/avif"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-450.avif 450w,
+                ./images/hero-categories/trekking-hero-900.avif 900w
+              " />
+            <source
+              type="image/webp"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="
+                ./images/hero-categories/trekking-hero-450.webp 450w,
+                ./images/hero-categories/trekking-hero-900.webp 900w
+              " />
 
-          <img
-            src="./images/hero-categories/trekking-hero-1440.jpg"
-            alt="Категория"
-            class="hero__poster-img"
-            width="450"
-            height="400"
-            fetchpriority="high"
+            <img
+              src="./images/hero-categories/trekking-hero-1440.jpg"
+              alt="Категория"
+              class="hero__poster-img"
+              width="450"
+              height="400"
+              fetchpriority="high"
               loading="eager" />
-        </picture>
+          </picture>
         </div>
       </div>
 
@@ -7416,8 +10492,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
     </section>
 
     <main class="main-content">
-      
-
       <section>
         <div class="container">
           <nav aria-label="Хлебные крошки" class="breadcrumbs">
@@ -7437,7 +10511,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
       <section class="section-padding section-padding_sm-interval">
         <div class="container">
           <div class="card-grid">
-            
             <article class="tour-card">
               <div class="tour-card__head">
                 <div class="tour-card__img">
@@ -7917,7 +10990,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
               </div>
               <a href="/tour.html" class="tour-card__link" aria-label="tour name"></a>
             </article>
-            
           </div>
         </div>
       </section>
@@ -8256,648 +11328,6 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
 </html>
 </file>
 
-<file path="src/js/accordion.js">
-export const initAccordion = () => {
-  document.querySelectorAll(".js-accordion").forEach(accordion => {
-    accordion.addEventListener("click", e => {
-      const header = e.target.closest(".accordion__header");
-      if (!header) return;
-
-      const content = document.getElementById(header.getAttribute("aria-controls"));
-      const isExpanded = header.getAttribute("aria-expanded") === "true";
-
-      // Закрытие при открытии новой
-      /*
-      accordion.querySelectorAll('.accordion__header').forEach(h => {
-        h.setAttribute('aria-expanded', 'false');
-        document.getElementById(h.getAttribute('aria-controls')).hidden = true;
-      });
-      */
-
-      header.setAttribute("aria-expanded", !isExpanded);
-      content.setAttribute("aria-hidden", isExpanded);
-      accordion.classList.toggle("accordion_active", !isExpanded);
-    });
-  });
-};
-</file>
-
-<file path="src/js/categories.js">
-import { initHeader } from "./header-fixed?categoriesPage";
-import { initMenu } from "./menu?categoriesPage";         
-import "/sass/categories.sass";
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  initHeader();
-  initMenu();
-
-});
-</file>
-
-<file path="src/js/lodge.js">
-import { initHeader } from "./header-fixed?indexPage";
-import { initMenu } from "./menu?indexPage";
-import "/sass/lodge.sass";
-
-document.addEventListener("DOMContentLoaded", () => {
-  initHeader();
-  initMenu();
-});
-</file>
-
-<file path="src/js/slider.js">
-export const initSliders = () => {
-  document.querySelectorAll(".js-slider").forEach(sliderContainer => {
-    const slider = sliderContainer.querySelector(".js-slider-viewport");
-    const slides = slider ? slider.querySelectorAll(".js-slide") : [];
-    const navItems = sliderContainer.querySelectorAll("[data-index]");
-    const btnPrev = sliderContainer.querySelector(".js-slider-prev");
-    const btnNext = sliderContainer.querySelector(".js-slider-next");
-    if (!slider || slides.length === 0) return;
-    
-    let sliderWidth = slider.clientWidth;
-    const updateSliderWidth = () => {
-      sliderWidth = slider.clientWidth;
-    };
-    
-    const resizeObserver = new ResizeObserver(() => updateSliderWidth());
-    resizeObserver.observe(slider);
-
-    function syncNavigators(activeIndex) {
-      navItems.forEach(item => {
-        const isActive = item.getAttribute("data-index") === activeIndex;
-        if (item.classList.contains("pagination-dot")) {
-          item.classList.toggle("pagination-dot--active", isActive);
-        }
-        if (item.classList.contains("js-thumb-item")) {
-          item.classList.toggle("slider__thumb--active", isActive);
-        }
-      });
-    }
-
-    navItems.forEach(item => {
-      item.addEventListener("click", () => {
-        const targetIndex = item.getAttribute("data-index");
-        const targetSlide = slider.querySelector(`.js-slide[data-index="${targetIndex}"]`);
-        if (targetSlide) {
-          targetSlide.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "start" });
-          syncNavigators(targetIndex);
-        }
-      });
-    });
-
-    if (btnNext) {
-      btnNext.addEventListener("click", () => {
-        slider.scrollBy({ left: sliderWidth, behavior: "smooth" });
-      });
-    }
-
-    if (btnPrev) {
-      btnPrev.addEventListener("click", () => {
-        slider.scrollBy({ left: -sliderWidth, behavior: "smooth" });
-      });
-    }
-
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            syncNavigators(entry.target.getAttribute("data-index"));
-          }
-        });
-      },
-      { root: slider, threshold: 0.6 }
-    );
-    
-    slides.forEach(slide => observer.observe(slide));
-  });
-};
-</file>
-
-<file path="src/sass/base/_fonts.sass">
-// @font-face
-//   font-family: 'Montserrat-Fallback'
-//   src: local('Arial')
-//   size-adjust: 104%
-//   ascent-override: 95%
-//   descent-override: 26%
-//   line-gap-override: 0%
-
-// @font-face
-//   font-family: 'PlayfairDisplay-Fallback'
-//   src: local('Times New Roman')
-//   size-adjust: 110%
-//   ascent-override: 98%
-//   descent-override: 28%
-//   line-gap-override: 0%
-
-// @font-face
-//   font-family: 'PlayfairDisplay-Fallback'
-//   src: local('Times New Roman')
-//   font-style: italic
-//   size-adjust: 110%
-//   ascent-override: 98%
-//   descent-override: 28%
-//   line-gap-override: 0%
-
-// @font-face
-//   font-family: 'Montserrat'
-//   src: url('../../assets/fonts/Montserrat-Regular.woff2') format('woff2')
-//   font-weight: 400
-//   font-style: normal
-//   font-display: swap
-
-// @font-face
-//   font-family: 'Montserrat'
-//   src: url('../../assets/fonts/Montserrat-Medium.woff2') format('woff2')
-//   font-weight: 500
-//   font-style: normal
-//   font-display: swap
-
-// @font-face
-//   font-family: 'Montserrat'
-//   src: url('../../assets/fonts/Montserrat-SemiBold.woff2') format('woff2')
-//   font-weight: 600
-//   font-style: normal
-//   font-display: swap
-
-// @font-face
-//   font-family: 'PlayfairDisplay'
-//   src: url('../../assets/fonts/PlayfairDisplay-Regular.woff2') format('woff2')
-//   font-weight: 400
-//   font-style: normal
-//   font-display: swap
-
-// @font-face
-//   font-family: 'PlayfairDisplay'
-//   src: url('../../assets/fonts/PlayfairDisplay-Italic.woff2') format('woff2')
-//   font-weight: 400
-//   font-style: italic
-//   font-display: swap
-</file>
-
-<file path="src/sass/components/_breadcrumbs.sass">
-@use '../settings/shared' as v
-
-.breadcrumbs
-  margin-top: v.$space-xl
-
-  &__list
-    display: flex
-    flex-wrap: wrap
-    column-gap: v.$space-xs
-
-  &__item
-    color: v.$clr-accent
-    font-weight: 500
-    position: relative
-    font-size: v.$fz-md
-
-    &::after
-      padding-left: v.$space-xs
-      content: '/'
-
-    &:last-child
-      @include v.has-mouse
-        &:hover
-          cursor: default
-
-      &::after
-        display: none
-
-    &:last-child
-      color: v.$clr-accent-darker
-      
-  &__link
-    text-decoration: none
-    color: currentColor
-    transition: color v.$tr-base
-    
-    @include v.has-mouse
-      &:hover
-        color: v.$clr-secondary
-
-  &_light
-    .breadcrumbs__item
-      &:last-child
-        color: v.$clr-accent
-
-    .breadcrumbs__link
-      color: #fff
-</file>
-
-<file path="src/sass/components/_categories.sass">
-@use '../settings/shared' as v
-
-.categories
-  
-  &__flex-wrap
-
-    @include v.media(tablet)
-      display: grid
-      grid-template-columns: repeat(2, 1fr)
-      gap: v.$space-lg
-      align-items: stretch
-
-
-  &__item  
-    position: relative
-    margin-bottom: v.$space-lg
-
-    @include v.media(tablet)
-      margin-bottom: 0
-      
-    &:last-child
-      margin-bottom: 0
-
-
-    
-  &__img
-    overflow: hidden
-    height: 100%
-    aspect-ratio: 16/9
-    position: relative
-    border-radius: v.$rad-lg
-    
-    &::before
-      position: absolute
-      content: ''
-      width: 100%
-      height: 100%
-      background-color: rgba(0,0,0,0.4)
-
-    img
-      height: 100%
-
-  &__desc
-    position: absolute
-    left: 0
-    bottom: 0
-    width: 100%
-    padding: 0 v.$space-lg v.$space-lg
-
-  &__title
-    color: #fff
-    text-transform: uppercase  
-    display: flex
-    align-items: center
-    font-size: v.$fz-xl
-
-    @include v.media(desktop)
-      font-size: v.$fz-xxl
-
-  &__link
-    position: absolute
-    width: 100%
-    height: 100%
-    inset: 0
-</file>
-
-<file path="src/sass/components/_header.critical.sass">
-@use '../settings/shared' as v
-
-@mixin flex-center
-  display: flex
-  align-items: center
-
-.header
-  width: calc( 100% - (v.$space-md * 2) )
-  z-index: 4
-  position: fixed
-  top: v.$space-md
-  left: 0
-  right: 0
-  margin: 0 auto
-  opacity: 0
-  transition: opacity v.$tr-fast
-  transition-delay: .25s
-
-  &__container
-    display: flex
-    align-items: stretch
-    justify-content: space-between
-    column-gap: v.$space-xs
-    height: v.to-rem(50)
-    border-radius: v.$rad-sm
-    transition: background-color v.$tr-base, max-width v.$tr-base, padding v.$tr-base
-
-    @include v.media(tablet)
-      box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .2)
-
-    &.container
-      padding: 0
-      @include v.media(tablet)
-        padding: 0 v.$space-md
-
-  .header__logo
-    @include flex-center
-
-    @include v.media(tablet)
-      width: v.to-rem(30)
-
-    @include v.media(laptop)
-      width: auto
-
-  .logo
-    display: flex
-    color: #fff
-
-    @include v.media(desktop)
-      width: v.to-rem(130)
-      height: v.to-rem(40)
-
-    .hidden-elem
-      @include v.media(tablet)
-        display: none
-
-      @include v.media(laptop)
-        display: flex
-
-    svg
-      width: 100%
-      height: 100%
-      transition: color v.$tr-fast
-
-  &__nav
-    display: none
-
-    @include v.media(tablet)
-      display: flex
-      justify-content: center
-      flex-grow: 1
-
-  &__nav-list
-    column-gap: v.$space-xs
-
-    @include v.media(tablet)
-      column-gap: v.$space-md
-      display: flex
-      align-items: stretch
-      list-style: none
-      justify-content: space-around
-
-  &__nav-item
-    @include flex-center
-    gap: v.$space-xs
-    position: relative
-    flex-direction: column
-
-  &__nav-link
-    @include flex-center
-    text-decoration: none
-    font-weight: 500
-    height: 100%
-    color: #fff
-    transition: color v.$tr-base
-
-    @include v.media(tablet)
-      font-size: v.$fz-md
-      
-
-    @include v.media(laptop)
-      font-size: v.$fz-lg
-
-    @include v.media(desktop)
-      font-size: v.$fz-xl
-
-  &__controls
-    @include flex-center
-    gap: v.$space-xs
-
-    .hamburger
-      color: #fff
-
-      @include flex-center
-      margin-left: v.$space-xs
-
-      @include v.media(tablet)
-        display: none
-
-  &__btn
-    transition: min-width v.$tr-fast
-    width: v.to-rem(75)
-    display: flex
-    align-items: center
-    justify-content: center
-
-    @include v.media(laptop)
-      width: v.to-rem(110)
-
-  &__btn,
-  &__callback-wrap
-    @include flex-center
-    transition: font-size v.$tr-base
-    border-radius: v.$rad-sm
-    border: v.to-rem(1) solid #fff
-    position: relative
-    height: v.to-rem(30)
-    font-size: v.$fz-sm
-    padding: 0 v.$space-xs
-    white-space: nowrap
-    background-color: v.$clr-accent
-    color: #fff
-
-    @include v.media(laptop)
-      font-size: v.$fz-md
-
-  &__btn
-    transition: background-color v.$tr-base
-
-    @include v.has-mouse
-      &:hover
-        background-color: rgb(v.$clr-accent, 70%)
-
-  &__callback
-    height: 100%
-    @include flex-center
-    position: relative
-
-  &_inside
-    .header__container
-      padding: 0 v.$space-md
-
-  &_inside,
-  &_reduced
-    .header__container
-      background-color: #f9f9fb
-      box-shadow: v.$shadow-sm
-
-    .logo
-      color: #000
-
-    .hamburger
-      color: v.$clr-accent
-
-    .header__nav-link
-      color: v.$clr-text
-      @include v.has-mouse
-        &:hover
-          color: v.$clr-accent-darker
-
-  &_reduced
-    opacity: 1
-    .header__container
-      padding: 0 v.$space-xs
-
-      @media (min-width: 340px)
-        padding: 0 v.$space-md
-
-      @include v.media(desktop)
-        max-width: calc( v.to-rem(1200) - (v.$container-padding * 3) )
-
-    .logo
-      flex-shrink: 0
-
-      @include v.media(desktop)
-        width: v.to-rem(100)
-        height: v.to-rem(30)
-
-    .header__nav-link
-      text-transform: inherit
-
-  &_glued
-    opacity: 1
-</file>
-
-<file path="src/sass/components/_hero.critical.sass">
-@use '../settings/shared' as v
-
-@mixin wh
-  width: 100%
-  height: 100%
-
-.hero
-  position: relative
- 
-  &::before
-    @include wh
-    position: absolute
-    content: ''
-    inset: 0
-    background-color: rgba(0,0,0,0.5)
-    z-index: 2
-
-
-  &__poster
-    @include wh
-
-    img
-      height: 100%
-
-    &_bottom-right-bg
-      img
-        object-position: bottom right
-
-    &_top-bg
-      img
-        object-position: top
-   
-    &_right-bg
-      img
-        object-position: right
-    
-    &_bottom-bg
-      img
-        object-position: bottom
-
-  &__media,
-  &__video
-    @include wh
-    position: absolute
-    inset: 0
-
-  &__content
-    position: relative
-    z-index: 3
-    min-height: 75vh
-    padding-top: v.to-rem(85)
-    padding-bottom: v.to-rem(120)
-    display: flex
-    align-items: flex-start
-
-    @include v.landscape
-      padding-bottom: v.$space-xl
-      height: auto
-    
-    @include v.media(tablet)
-      min-height: 100svh
-      
-    @include v.media(laptop)
-      align-items: flex-end
-      padding-bottom: v.to-rem(100)
-   
-
-  &__title
-    font-family: v.$ff-accent
-    color: #fff
-    font-size: v.$fz-hero
-    line-height: v.to-rem(40)
-    font-weight: 400
-
-    @include v.media(tablet)
-      font-size: v.to-rem(60)
-      line-height: v.to-rem(60)
-
-      
-      
-
-  &__title-accent
-    font-style: italic
-    font-weight: 300
-    font-size: 80%
-
-  &__subtitle
-    margin-top: v.$space-lg
-    text-transform: uppercase
-    color: #fff
-    line-height: 1.6
-    font-weight: 500
-    max-width: v.to-rem(360)
-    width: 100%
-
-  &__btn-links
-    display: flex
-    flex-direction: column
-    align-items: flex-start
-    gap: v.$space-sm
-    margin-top: v.$space-sm
-
-    @include v.media(tablet)
-      flex-direction: row
-
-  &_inside
-    .hero__content
-      min-height: v.to-rem(400)
-      align-items: flex-end
-</file>
-
-<file path="src/sass/components/_whatsapp.sass">
-@use '../settings/shared' as v
-
-.whatsapp-float
-  position: fixed
-  width: v.to-rem(60)
-  height: v.to-rem(60)
-  bottom: v.to-rem(20)
-  right: v.to-rem(5)
-  border-radius: 50%
-  display: flex
-  align-items: center
-  justify-content: center
-  z-index: 10000
-  transition: transform v.$tr-base
-  text-decoration: none
-  svg
-    width: 100%
-    height: 100%  
-
-  @include v.has-mouse
-    &:hover
-      transform: scale(1.1)
-      animation: none
-</file>
-
 <file path="src/js/category.js">
 import { initHeader } from "./header-fixed?categoriesPage";
 import { initMenu } from "./menu?categoriesPage";         
@@ -8975,35 +11405,6 @@ export const initMenu = () => {
     });
   });
 };
-</file>
-
-<file path="src/js/tour.js">
-import { initHeader } from "./header-fixed?indexPage";
-import { initMenu } from "./menu?indexPage";
-import { initSliders } from "./slider?indexPage";
-import { initTabs } from "./tabs?indexPage";
-import { initAccordion } from "./accordion?indexPage";
-import "/sass/tour.sass";
-
-document.addEventListener("DOMContentLoaded", () => {
-  initHeader();
-  initMenu();
-  
-
-  if ("requestIdleCallback" in window) {
-    requestIdleCallback(() => {
-      initSliders();
-      initTabs();
-      initAccordion();
-    }, { timeout: 1000 });
-  } else {
-    setTimeout(() => {
-      initSliders();
-      initTabs();
-      initAccordion();
-    }, 200);
-  }
-});
 </file>
 
 <file path="src/sass/components/_accordion.sass">
@@ -9230,6 +11631,55 @@ document.addEventListener("DOMContentLoaded", () => {
 @use './core'
 </file>
 
+<file path="src/js/tour.js">
+import { initHeader } from "./header-fixed?indexPage";
+import { initMenu } from "./menu?indexPage";
+import { initSliders } from "./slider?indexPage";
+import { initTabs } from "./tabs?indexPage";
+import { initAccordion } from "./accordion?indexPage";
+import "/sass/tour.sass";
+
+document.addEventListener("DOMContentLoaded", () => {
+  initHeader();
+  initMenu();
+
+  if ("requestIdleCallback" in window) {
+    requestIdleCallback(
+      () => {
+        initSliders();
+        initTabs();
+        initAccordion();
+      },
+      { timeout: 1000 }
+    );
+  } else {
+    setTimeout(() => {
+      initSliders();
+      initTabs();
+      initAccordion();
+    }, 200);
+  }
+
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".js-book-btn");
+    if (!btn) return; // Если клик не по кнопке - игнорируем
+
+    e.preventDefault();
+
+    // Берем ID тура (например, "ala-archa") из атрибута кнопки
+    const tourId = btn.dataset.tourId;
+
+    // Переходим на страницу бронирования и передаем ID прямо в ссылке!
+    if (tourId) {
+      window.location.href = `/booking.html?tour=${tourId}`;
+    } else {
+      window.location.href = `/booking.html`;
+    }
+  });
+
+});
+</file>
+
 <file path="src/sass/components/_badges.sass">
 @use '../settings/shared' as v
 
@@ -9293,77 +11743,6 @@ document.addEventListener("DOMContentLoaded", () => {
       
       .icon
         color: v.$clr-accent
-</file>
-
-<file path="src/sass/components/_button.sass">
-@use '../settings/shared' as v
-button,
-.btn
-  border: none
-  outline: none
-  background: none
-  text-decoration: none
-  cursor: pointer
-  
-
-.btn-wrap
-  display: flex
-
-  &_centered
-    justify-content: center
-
-.btn
-  display: inline-flex
-  align-items: center
-  justify-content: center
-  column-gap: v.$space-xs
-  padding: v.$space-sm v.$space-md
-  font-size: v.$fz-sm
-  background-color: v.$clr-accent
-  color: #fff
-  text-decoration: none
-  font-weight: 500
-  transition: background-color v.$tr-base
-  text-transform: uppercase
-  letter-spacing: v.to-rem(1)
-  border: none
-  cursor: pointer
-
-  @include v.media(laptop)
-    padding: v.$space-md v.$space-xl
-    font-size: v.$fz-base
-
-  @include v.has-mouse
-    &:hover
-      background-color: rgb(v.$clr-accent, 70%)
-
-      .icon
-        transform: translateX(v.to-rem(5))
-
-  .icon
-    width: v.to-rem(24)
-    height: v.to-rem(24)
-    transition: transform v.$tr-base
-    color: currentColor
-    flex-shrink: 0
-
-  &_light
-    background-color: #fff
-    color: v.$clr-text
-
-    @include v.has-mouse
-      &:hover
-        color: #fff
-
-  &_bordered
-    background-color: transparent
-    border: v.to-rem(1) solid v.$clr-accent
-    color: v.$clr-accent
-
-    @include v.has-mouse
-      &:hover
-        background-color: v.$clr-accent
-        color: #fff
 </file>
 
 <file path="src/sass/components/_footer.sass">
@@ -10261,6 +12640,78 @@ ul
   padding: 0
   li
     list-style: none
+</file>
+
+<file path="src/sass/components/_button.sass">
+@use '../settings/shared' as v
+button,
+.btn
+  border: none
+  outline: none
+  background: none
+  text-decoration: none
+  cursor: pointer
+  
+
+.btn-wrap
+  display: flex
+
+  &_centered
+    justify-content: center
+
+.btn
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  column-gap: v.$space-xs
+  padding: v.$space-sm v.$space-md
+  font-size: v.$fz-sm
+  background-color: v.$clr-accent
+  color: #fff
+  text-decoration: none
+  font-weight: 500
+  transition: background-color v.$tr-base
+  text-transform: uppercase
+  letter-spacing: v.to-rem(1)
+  border: none
+  cursor: pointer
+  line-height: normal
+
+  @include v.media(laptop)
+    padding: v.$space-md v.$space-xl
+    font-size: v.$fz-base
+
+  @include v.has-mouse
+    &:hover
+      background-color: rgb(v.$clr-accent, 70%)
+
+      .icon
+        transform: translateX(v.to-rem(5))
+
+  .icon
+    width: v.to-rem(24)
+    height: v.to-rem(24)
+    transition: transform v.$tr-base
+    color: currentColor
+    flex-shrink: 0
+
+  &_light
+    background-color: #fff
+    color: v.$clr-text
+
+    @include v.has-mouse
+      &:hover
+        color: #fff
+
+  &_bordered
+    background-color: transparent
+    border: v.to-rem(1) solid v.$clr-accent
+    color: v.$clr-accent
+
+    @include v.has-mouse
+      &:hover
+        background-color: v.$clr-accent
+        color: #fff
 </file>
 
 <file path="src/sass/components/_promo-highlight.sass">
@@ -12189,99 +14640,74 @@ ul
     <section class="hero hero_inside">
       <div class="hero__media">
         <div class="hero__poster">
-        <picture>
-          
-          <source
-            type="image/avif"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/hero-1920.avif 1920w, 
-              ./images/hero-categories/hero-3840.avif 3840w"
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1440px)"
-            sizes="100vw"
-            width="1920"
-            height="400"
-            srcset="
-              ./images/hero-categories/hero-1920.webp 1920w, 
-              ./images/hero-categories/hero-3840.webp 3840w" 
-            />
+          <picture>
+            <source
+              type="image/avif"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="./images/hero-categories/hero-1920.avif 1920w, ./images/hero-categories/hero-3840.avif 3840w" />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="./images/hero-categories/hero-1920.webp 1920w, ./images/hero-categories/hero-3840.webp 3840w" />
 
-          <source
-            type="image/avif"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/hero-1440.avif 1440w, 
-              ./images/hero-categories/hero-2880.avif 2880w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 1024px)"
-            sizes="100vw"
-            width="1440"
-            height="400"
-            srcset="
-              ./images/hero-categories/hero-1440.webp 1440w,
-              ./images/hero-categories/hero-2880.webp 2880w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="./images/hero-categories/hero-1440.avif 1440w, ./images/hero-categories/hero-2880.avif 2880w" />
+            <source
+              type="image/webp"
+              media="(min-width: 1024px)"
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="./images/hero-categories/hero-1440.webp 1440w, ./images/hero-categories/hero-2880.webp 2880w" />
 
-          <source
-            type="image/avif"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/hero-800.avif 800w, 
-              ./images/hero-categories/hero-1600.avif 1600w" 
-            />
-          <source
-            type="image/webp"
-            media="(min-width: 768px)"
-            sizes="100vw"
-            width="800"
-            height="400"
-            srcset="
-              ./images/hero-categories/hero-800.webp 800w, 
-              ./images/hero-categories/hero-1600.webp 1600w" 
-            />
+            <source
+              type="image/avif"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="./images/hero-categories/hero-800.avif 800w, ./images/hero-categories/hero-1600.avif 1600w" />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="./images/hero-categories/hero-800.webp 800w, ./images/hero-categories/hero-1600.webp 1600w" />
 
-          <source
-            type="image/avif"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/hero-450.avif 450w, 
-              ./images/hero-categories/hero-900.avif 900w" 
-            />
-          <source
-            type="image/webp"
-            sizes="100vw"
-            width="450"
-            height="400"
-            srcset="
-              ./images/hero-categories/hero-450.webp 450w, 
-              ./images/hero-categories/hero-900.webp 900w" 
-            />
+            <source
+              type="image/avif"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="./images/hero-categories/hero-450.avif 450w, ./images/hero-categories/hero-900.avif 900w" />
+            <source
+              type="image/webp"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="./images/hero-categories/hero-450.webp 450w, ./images/hero-categories/hero-900.webp 900w" />
 
-          <img
-            src="./images/hero-categories/hero-1440.jpg"
-            alt="Категория"
-            class="hero__poster-img"
-            width="450"
-            height="400"
-            fetchpriority="high"
+            <img
+              src="./images/hero-categories/hero-1440.jpg"
+              alt="Категория"
+              class="hero__poster-img"
+              width="450"
+              height="400"
+              fetchpriority="high"
               loading="eager" />
-        </picture>
+          </picture>
         </div>
       </div>
 
@@ -12293,7 +14719,6 @@ ul
     </section>
 
     <main class="main-content">
-      
       <section>
         <div class="container">
           <nav aria-label="Хлебные крошки" class="breadcrumbs">
@@ -14232,7 +16657,7 @@ ul
       </svg>
     </a>
 
-    <header class="header">
+    <header class="header header_inside">
       <div class="header__container container container_wide">
         <div class="header__logo">
           <a href="/" class="logo" aria-label="На главную">
@@ -14843,7 +17268,7 @@ ul
                   <div class="price-card__value">От $600</div>
                   <div class="price-card__label">Цена программы на одного человека</div>
                 </div>
-                <button type="button" class="tour__btn btn">Book now</button>
+                <button type="button" class="tour__btn btn js-book-btn" data-tour-id="ala-archa" data-price="600">Book now</button>
                 <a href="#" class="tour__all-link">
                   <span>Смотреть все туры</span>
                   <svg class="icon">
@@ -16317,7 +18742,10 @@ ul
                     full immersion into the region’s unique atmosphere.
                   </p>
                 </div>
-                <a href="/custom-category.html" class="teaser-cat__link" aria-label="Смотреть туры: Custom expedition"></a>
+                <a
+                  href="/custom-category.html"
+                  class="teaser-cat__link"
+                  aria-label="Смотреть туры: Custom expedition"></a>
               </div>
 
               <div class="teaser-cat__item js-slide" data-index="5">

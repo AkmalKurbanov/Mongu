@@ -1,0 +1,382 @@
+@use '../settings/shared' as v
+
+.hotel-hero
+  &__title
+    font-family: v.$ff-accent
+    font-size: v.to-rem(40)
+    font-weight: 500
+    color: v.$clr-text
+    line-height: 1.1
+    margin-bottom: v.$space-lg
+    text-align: center
+
+    @include v.media(tablet)
+      font-size: v.to-rem(64)
+      margin-bottom: v.$space-xl
+
+  &__subtitle
+    font-size: v.to-rem(20)
+    font-family: v.$ff-base
+    font-weight: 400
+    color: v.$clr-accent
+    display: block
+    margin-top: v.$space-sm
+    text-transform: uppercase
+    letter-spacing: v.to-rem(2)
+
+    @include v.media(tablet)
+      font-size: v.to-rem(24)
+
+  &__media
+    border-radius: v.$rad-lg
+    overflow: hidden
+    aspect-ratio: 4 / 3
+    background-color: #e2e2e9
+    box-shadow: v.$shadow-lg
+
+    @include v.media(tablet)
+      aspect-ratio: 21 / 9
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
+
+.hotel-concept
+  &__grid
+    display: flex
+    flex-direction: column
+    gap: v.$space-xl
+
+    @include v.media(laptop)
+      display: grid
+      grid-template-columns: 5fr 7fr
+      align-items: center
+      gap: v.to-rem(80)
+
+  &__text
+    p
+      font-size: v.$fz-md
+      color: v.$clr-text-muted
+      line-height: 1.6
+      margin-bottom: v.$space-md
+
+      @include v.media(laptop)
+        font-size: v.$fz-lg
+
+  &__images
+    position: relative
+    display: flex
+    justify-content: flex-end
+    padding-top: v.$space-xl
+    margin-bottom: 10%
+
+    .img-main
+      width: 80%
+      border-radius: v.$rad-md
+      overflow: hidden
+      box-shadow: v.$shadow-lg
+      z-index: 1
+
+      img
+        width: 100%
+        height: auto
+        display: block
+
+    .img-secondary
+      position: absolute
+      width: 50%
+      left: 0
+      bottom: -10%
+      border-radius: v.$rad-md
+      overflow: hidden
+      box-shadow: v.$shadow-lg
+      z-index: 2
+      border: v.to-rem(8) solid #fff
+
+      img
+        width: 100%
+        height: auto
+        display: block
+
+.hotel-features
+  &__grid
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: v.$space-md
+    margin: 0
+    padding: 0
+    list-style: none
+
+    @include v.media(laptop)
+      grid-template-columns: repeat(4, 1fr)
+      gap: v.$space-lg
+
+  &__item
+    background-color: #fff
+    padding: v.$space-sm
+    border-radius: v.$rad-md
+    box-shadow: v.$shadow-sm
+    border: v.to-rem(1) solid transparent
+    transition: transform v.$tr-fast, border-color v.$tr-fast
+    
+    @include v.media(tablet)
+      padding: v.$space-lg
+
+    @include v.has-mouse
+      &:hover
+        transform: translateY(v.to-rem(-5))
+        border-color: rgba(v.$clr-accent, 0.3)
+
+    .icon
+      width: v.to-rem(40)
+      height: v.to-rem(40)
+      color: v.$clr-accent
+      
+      @include v.media(tablet)
+        margin-bottom: v.$space-md
+
+    h3
+      font-size: v.$fz-lg
+      font-weight: 600
+      color: v.$clr-text
+      margin-bottom: v.$space-sm
+
+    p
+      font-size: v.$fz-sm
+      color: v.$clr-text-muted
+      line-height: 1.5
+      margin: 0
+
+
+.room-showcase
+  &__wrapper
+    position: relative
+    display: flex
+    flex-direction: column
+    gap: v.$space-md
+    margin-top: v.$space-xl
+
+    @include v.media(laptop)
+      display: grid
+      grid-template-columns: repeat(12, 1fr)
+      align-items: center
+      gap: 0
+
+  &__visual
+    border-radius: v.$rad-lg
+    overflow: hidden
+    background-color: #e2e2e9
+    box-shadow: v.$shadow-md
+    position: relative
+
+    @include v.media(laptop)
+      grid-column: 1 / 9
+      grid-row: 1
+
+    .slider__thumbnails
+      display: grid
+      grid-template-columns: repeat(4, 1fr)
+      gap: v.$space-xs
+      margin-top: v.$space-sm
+      position: absolute
+      width: 100%
+      bottom: 0
+      
+    .slider__nav
+      top: v.$space-sm
+      right: v.$space-sm
+    .slider__thumb
+      aspect-ratio: 16 / 9
+      border-radius: v.$rad-sm
+      overflow: hidden
+      cursor: pointer
+      opacity: 0.6
+      transition: opacity v.$tr-base
+
+      img
+        width: 100%
+        height: 100%
+        object-fit: cover
+        display: block
+        pointer-events: none
+
+      &--active
+        opacity: 1
+
+  &__slider-wrap
+    position: relative
+    aspect-ratio: 4 / 3
+    border-radius: v.$rad-lg
+    overflow: hidden
+
+  &__slider-track
+    display: flex
+    height: 100%
+
+  &__slide
+    width: 100%
+    height: 100%
+    flex-shrink: 0
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
+
+  &__content
+    background-color: #fff
+    border-radius: v.$rad-lg
+    padding: v.$space-lg
+    box-shadow: v.$shadow-lg
+    border: v.to-rem(1) solid #e2e2e9
+    display: flex
+    flex-direction: column
+    gap: v.$space-lg
+
+    @include v.media(laptop)
+      grid-column: 7 / 13
+      grid-row: 1
+      padding: v.to-rem(40)
+      z-index: 2
+      transform: translateY(v.to-rem(30))
+
+  &__header
+    display: flex
+    flex-direction: column
+    gap: v.$space-xs
+
+  &__title
+    font-family: v.$ff-accent
+    font-size: v.to-rem(32)
+    font-weight: 500
+    color: v.$clr-text
+
+  &__meta
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    gap: v.$space-xs
+    font-size: v.$fz-sm
+    font-weight: 600
+    color: v.$clr-accent
+    text-transform: uppercase
+    letter-spacing: 0.05em
+
+    .dot
+      color: v.$clr-text-muted
+      font-size: v.$fz-xs
+
+  &__desc
+    font-size: v.$fz-md
+    line-height: 1.6
+    color: v.$clr-text-muted
+
+  &__amenities
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: v.$space-md
+    padding-top: v.$space-md
+    border-top: v.to-rem(1) solid #e2e2e9
+
+    .amenity
+      display: flex
+      align-items: center
+      gap: v.$space-xs
+      font-size: v.$fz-sm
+      font-weight: 500
+      color: v.$clr-text
+
+      .icon
+        width: v.to-rem(20)
+        height: v.to-rem(20)
+        color: v.$clr-accent
+
+  &__action
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-top: v.$space-xs
+    padding-top: v.$space-md
+    border-top: v.to-rem(1) dashed #e2e2e9
+
+    .price
+      display: flex
+      flex-direction: column
+
+      &__val
+        font-size: v.$fz-xxl
+        font-weight: 600
+        color: v.$clr-accent
+
+      &__label
+        font-size: v.$fz-xs
+        color: v.$clr-text-muted
+        text-transform: uppercase
+        letter-spacing: 0.05em
+
+    .btn
+      padding: v.$space-md v.$space-lg
+  
+.hotel-trust
+  &__header
+    display: flex
+    flex-direction: column
+    gap: v.$space-lg
+    margin-bottom: v.$space-xl
+
+    @include v.media(laptop)
+      flex-direction: row
+      align-items: center
+      justify-content: space-between
+
+.booking-badge
+  display: inline-flex
+  align-items: center
+  background-color: #003b95
+  padding: v.to-rem(12) v.$space-md
+  border-radius: v.$rad-md
+  text-decoration: none
+  color: #fff
+  gap: v.$space-md
+  box-shadow: v.$shadow-md
+  transition: transform v.$tr-base, box-shadow v.$tr-base
+  width: max-content
+
+  @include v.has-mouse
+    &:hover
+      transform: translateY(v.to-rem(-3))
+      box-shadow: v.$shadow-lg
+
+  &__score
+    background-color: #fff
+    color: #003b95
+    font-weight: 700
+    font-size: v.$fz-xl
+    width: v.to-rem(48)
+    height: v.to-rem(48)
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: v.to-rem(8) 
+    border-bottom-right-radius: 0 
+
+  &__info
+    display: flex
+    flex-direction: column
+    gap: v.to-rem(2)
+
+  &__title
+    font-weight: 700
+    font-size: v.$fz-lg
+
+  &__desc
+    font-size: v.$fz-xs
+    opacity: 0.9
+
+  .icon
+    width: v.to-rem(20)
+    height: v.to-rem(20)
+    margin-left: v.$space-sm

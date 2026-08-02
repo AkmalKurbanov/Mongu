@@ -1,0 +1,284 @@
+@use '../settings/shared' as v
+
+.about-hero
+  &__grid
+    display: flex
+    flex-direction: column
+    gap: v.$space-xl
+
+    @include v.media(laptop)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: center
+      gap: v.to-rem(60)
+
+  &__content
+    order: 2
+
+    @include v.media(laptop)
+      order: 1
+
+  .title-accent
+    font-family: v.$ff-accent
+    font-style: italic
+    color: v.$clr-accent
+
+  &__lead
+    font-size: v.$fz-md
+    color: v.$clr-text-muted
+    line-height: 1.6
+    margin-top: v.$space-md
+    margin-bottom: v.$space-xl
+
+    @include v.media(laptop)
+      font-size: v.$fz-lg
+
+  &__stats
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: v.$space-sm
+    border-top: v.to-rem(1) solid #e2e2e9
+    padding-top: v.$space-lg
+
+  &__stat
+    display: flex
+    flex-direction: column
+    gap: v.to-rem(4)
+
+  &__stat-val
+    font-size: v.$fz-xxl
+    font-family: v.$ff-accent
+    color: v.$clr-accent
+    line-height: 1
+
+    @include v.media(tablet)
+      font-size: v.$fz-hero
+
+  &__stat-label
+    font-size: v.$fz-xs
+    text-transform: uppercase
+    font-weight: 600
+    color: v.$clr-text-muted
+    letter-spacing: v.to-rem(1)
+
+  &__media
+    order: 1
+    border-radius: v.$rad-lg
+    overflow: hidden
+    aspect-ratio: 3 / 4 // Фиксируем пропорции для мобайла от CLS
+    background-color: #e2e2e9
+    position: relative
+
+    @include v.media(laptop)
+      order: 2
+      aspect-ratio: 4 / 5 // Пропорции для десктопа
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    display: block
+
+.about-values
+  &__list
+    display: flex
+    flex-direction: column
+    gap: v.$space-xl
+    margin-top: v.$space-xl
+
+    @include v.media(tablet)
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      gap: v.$space-lg
+
+  &__item
+    text-align: center
+    padding: v.$space-lg
+    background-color: #fff
+    border-radius: v.$rad-md
+    box-shadow: v.$shadow-sm
+    transition: transform v.$tr-base
+
+    @include v.has-mouse
+      &:hover
+        transform: translateY(v.to-rem(-5))
+
+    .icon
+      width: v.to-rem(48)
+      height: v.to-rem(48)
+      color: v.$clr-accent
+      margin-bottom: v.$space-md
+
+    h3
+      font-size: v.$fz-lg
+      margin-bottom: v.$space-sm
+      color: v.$clr-text
+
+    p
+      font-size: v.$fz-sm
+      color: v.$clr-text-muted
+      line-height: 1.5
+
+.about-team
+  &__grid
+    display: flex
+    flex-direction: column
+    gap: v.$space-lg
+    margin-top: v.$space-xl
+
+    @include v.media(tablet)
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+
+    @include v.media(laptop)
+      grid-template-columns: repeat(4, 1fr) // Если гидов будет больше
+
+.team-card
+  background-color: #f9f9fb
+  border-radius: v.$rad-md
+  overflow: hidden
+  border: v.to-rem(1) solid #e2e2e9
+
+  &__photo
+    aspect-ratio: 1 / 1
+    background-color: #e2e2e9
+    overflow: hidden
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      transition: transform v.$tr-base
+
+  @include v.has-mouse
+    &:hover
+      .team-card__photo img
+        transform: scale(1.05)
+
+  &__info
+    padding: v.$space-md
+    text-align: center
+
+  &__name
+    font-size: v.$fz-lg
+    margin-bottom: v.to-rem(4)
+    color: v.$clr-text
+
+  &__role
+    font-size: v.$fz-xs
+    text-transform: uppercase
+    color: v.$clr-accent
+    font-weight: 600
+    margin-bottom: v.$space-sm
+
+  &__bio
+    font-size: v.$fz-sm
+    color: v.$clr-text-muted
+    line-height: 1.4
+
+.about-infra
+  &__grid
+    display: flex
+    flex-direction: column
+    gap: v.$space-xl
+
+    @include v.media(laptop)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: center
+      gap: v.to-rem(60)
+
+  &__media
+    position: relative
+    border-radius: v.$rad-lg
+    overflow: hidden
+    aspect-ratio: 4 / 3
+    background-color: #e2e2e9
+
+    @include v.media(laptop)
+      aspect-ratio: 4 / 4 // Делаем картинку более квадратной на десктопе
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    display: block
+
+  &__badge
+    position: absolute
+    top: v.$space-md
+    left: v.$space-md
+    background-color: #fff
+    padding: v.$space-xs v.$space-md
+    border-radius: v.$rad-md
+    display: flex
+    align-items: center
+    gap: v.$space-xs
+    font-weight: 600
+    font-size: v.$fz-sm
+    color: v.$clr-accent
+    box-shadow: v.$shadow-sm
+
+    .icon
+      width: v.to-rem(20)
+      height: v.to-rem(20)
+
+  &__content
+    display: flex
+    flex-direction: column
+
+  &__lead
+    font-size: v.$fz-md
+    color: v.$clr-text-muted
+    line-height: 1.6
+    margin-top: v.$space-sm
+    margin-bottom: v.$space-lg
+
+    @include v.media(laptop)
+      font-size: v.$fz-lg
+      margin-bottom: v.$space-xl
+
+  &__list
+    display: flex
+    flex-direction: column
+    gap: v.$space-md
+    margin: 0
+    padding: 0
+    list-style: none
+
+  &__item
+    display: flex
+    align-items: flex-start
+    gap: v.$space-md
+    padding: v.$space-md
+    background-color: #f9f9fb
+    border-radius: v.$rad-md
+    border: v.to-rem(1) solid #e2e2e9
+    transition: border-color v.$tr-base, background-color v.$tr-base
+
+    @include v.has-mouse
+      &:hover
+        border-color: v.$clr-accent
+        background-color: rgba(v.$clr-accent, 0.02)
+
+    .icon
+      width: v.to-rem(32)
+      height: v.to-rem(32)
+      color: v.$clr-accent
+      flex-shrink: 0
+      margin-top: v.to-rem(4) // Выравнивание иконки по первой строке текста
+
+    h3
+      font-size: v.$fz-md
+      font-weight: 600
+      color: v.$clr-text
+      margin-bottom: v.to-rem(4)
+
+      @include v.media(tablet)
+        font-size: v.$fz-lg
+
+    p
+      font-size: v.$fz-sm
+      color: v.$clr-text-muted
+      line-height: 1.5
+      margin: 0    
