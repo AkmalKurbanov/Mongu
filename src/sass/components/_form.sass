@@ -1,0 +1,198 @@
+@use '../settings/shared' as v
+
+.form
+  &__row
+    margin-bottom: v.$space-md
+
+    &_col-2
+      @include v.media(tablet)
+        display: grid
+        grid-template-columns: 1fr 1fr
+        gap: v.$space-md
+
+  &__group
+    display: flex
+    flex-direction: column
+    gap: v.to-rem(8)
+
+  &__label
+    font-size: v.$fz-sm
+    font-weight: 600
+    color: v.$clr-text
+
+  &__input
+    width: 100%
+    padding: v.to-rem(12) v.$space-sm
+    border: v.to-rem(1) solid #ccc
+    border-radius: v.$rad-sm
+    font-family: v.$ff-base
+    font-size: v.$fz-md
+    color: v.$clr-text
+    background-color: #fff
+    outline: none
+    transition: border-color v.$tr-fast
+    -webkit-appearance: none
+
+    &:focus
+      border-color: v.$clr-accent
+
+    &_textarea
+      resize: vertical
+      min-height: v.to-rem(120)
+
+  // Ошибки валидации October CMS
+  &__error
+    color: #f44336
+    font-size: v.$fz-xs
+    display: none
+    margin-top: v.to-rem(4)
+
+    &:not(:empty)
+      display: block
+      animation: fadeIn 0.3s ease
+
+// --- КАСТОМНЫЙ СЕЛЕКТ (Универсальный) ---
+.custom-select
+  position: relative
+  width: 100%
+  user-select: none
+
+  &__trigger
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: v.to-rem(12) v.$space-sm
+    background-color: #fff
+    border: v.to-rem(1) solid #ccc
+    border-radius: v.$rad-sm
+    cursor: pointer
+    transition: border-color v.$tr-fast, box-shadow v.$tr-fast
+    outline: none
+
+    &:hover, &:focus
+      border-color: v.$clr-accent
+
+  &__value
+    font-size: v.$fz-md
+    color: v.$clr-text
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+  &__arrow
+    width: v.to-rem(20)
+    height: v.to-rem(20)
+    color: v.$clr-text-muted
+    transition: transform v.$tr-base ease
+
+  &_open &__trigger
+    border-color: v.$clr-accent
+    box-shadow: 0 0 0 v.to-rem(3) rgba(35, 179, 58, 0.1)
+
+  &_open &__arrow
+    transform: rotate(180deg)
+
+  &__dropdown
+    position: absolute
+    top: calc(100% + 8px)
+    left: 0
+    right: 0
+    background: #fff
+    border: v.to-rem(1) solid #e2e2e9
+    border-radius: v.$rad-sm
+    box-shadow: v.$shadow-lg
+    opacity: 0
+    visibility: hidden
+    transform: translateY(-10px)
+    transition: opacity v.$tr-fast, transform v.$tr-fast, visibility v.$tr-fast
+    z-index: 10
+    padding: 0
+    overflow: hidden
+
+  &_open &__dropdown
+    opacity: 1
+    visibility: visible
+    transform: translateY(0)
+
+  &__search-wrap
+    padding: v.$space-sm
+    border-bottom: 1px solid #e2e2e9
+    background-color: #f9f9fb
+
+  &__search
+    width: 100%
+    padding: v.to-rem(8) v.$space-sm
+    border: 1px solid #ccc
+    border-radius: v.$rad-sm
+    font-family: v.$ff-base
+    font-size: v.$fz-sm
+    outline: none
+    transition: border-color v.$tr-fast
+
+    &:focus
+      border-color: v.$clr-accent
+
+  &__list
+    list-style: none
+    margin: 0
+    padding: v.$space-xs 0
+    max-height: v.to-rem(220)
+    overflow-y: auto
+
+  &__option
+    padding: v.$space-sm v.$space-md
+    font-size: v.$fz-md
+    color: v.$clr-text
+    cursor: pointer
+    transition: background-color v.$tr-fast, color v.$tr-fast
+
+    @include v.has-mouse
+      &:hover
+        background-color: #f9f9fb
+        color: v.$clr-accent
+
+    &_selected
+      background-color: rgba(35, 179, 58, 0.05)
+      color: v.$clr-accent
+      font-weight: 600
+
+// --- СЧЕТЧИК ЛЮДЕЙ (Универсальный) ---
+.pax-counter
+  display: flex
+  align-items: center
+  border: v.to-rem(1) solid #ccc
+  border-radius: v.$rad-sm
+  overflow: hidden
+  height: v.to-rem(46)
+
+  &__btn
+    width: v.to-rem(46)
+    height: 100%
+    background-color: #f9f9fb
+    border: none
+    font-size: v.$fz-lg
+    color: v.$clr-text
+    cursor: pointer
+    transition: background-color v.$tr-fast
+
+    @include v.has-mouse
+      &:hover
+        background-color: #e2e2e9
+
+  &__input
+    flex: 1
+    height: 100%
+    border: none
+    text-align: center
+    font-weight: 600
+    font-size: v.$fz-md
+    outline: none
+    -moz-appearance: textfield
+
+@keyframes fadeIn
+  from
+    opacity: 0
+    transform: translateY(-5px)
+  to
+    opacity: 1
+    transform: translateY(0)

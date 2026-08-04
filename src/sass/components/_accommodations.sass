@@ -1,0 +1,142 @@
+@use '../settings/shared' as v
+
+.accommodations-grid
+  display: flex
+  flex-direction: column
+  gap: v.$space-xl
+  margin-top: v.$space-xl
+
+.acc-card
+  display: flex
+  flex-direction: column
+  background-color: #fff
+  border-radius: v.$rad-lg
+  overflow: hidden
+  box-shadow: v.$shadow-md
+  border: v.to-rem(1) solid #e2e2e9
+  transition: transform v.$tr-base, box-shadow v.$tr-base
+
+  @include v.media(laptop)
+    flex-direction: row // Делаем горизонтальными на десктопе
+    align-items: stretch
+
+  @include v.has-mouse
+    &:hover
+      transform: translateY(v.to-rem(-4))
+      box-shadow: v.$shadow-lg
+
+  &__visual
+    position: relative
+    width: 100%
+    aspect-ratio: 4 / 3
+    background-color: v.$clr-bg-alt
+    overflow: hidden
+
+    @include v.media(laptop)
+      width: 45% // Изображение занимает 45% карточки
+      flex-shrink: 0
+      aspect-ratio: auto // Высота подстраивается под контент
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
+
+  &__badge
+    position: absolute
+    top: v.$space-md
+    left: v.$space-md
+    background-color: #fff
+    color: v.$clr-text
+    font-size: v.$fz-xs
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    padding: v.to-rem(6) v.$space-sm
+    border-radius: v.$rad-md
+    display: flex
+    align-items: center
+    gap: v.$space-xs
+    box-shadow: v.$shadow-sm
+
+    .icon
+      width: v.to-rem(16)
+      height: v.to-rem(16)
+      color: v.$clr-accent
+
+    &_dark
+      background-color: v.$clr-accent-darker
+      color: #fff
+
+      .icon
+        color: #fff
+
+  &__content
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    padding: v.$space-lg
+    flex-grow: 1
+
+    @include v.media(tablet)
+      padding: v.$space-xl
+
+  &__header
+    margin-bottom: v.$space-lg
+
+  &__title
+    font-size: v.$fz-xxl
+    font-weight: 600
+    color: v.$clr-text
+    margin-bottom: v.$space-sm
+    font-family: v.$ff-accent
+
+  &__desc
+    font-size: v.$fz-md
+    color: v.$clr-text-muted
+    line-height: 1.6
+
+  &__features
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    gap: v.$space-sm
+    margin-bottom: v.$space-xl
+    list-style: none
+    padding: 0
+
+    li
+      display: flex
+      align-items: center
+      gap: v.$space-xs
+      font-size: v.$fz-sm
+      font-weight: 500
+      color: v.$clr-text
+
+      .icon
+        width: v.to-rem(20)
+        height: v.to-rem(20)
+        color: v.$clr-accent
+        flex-shrink: 0
+
+  &__footer
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-top: v.$space-md
+    border-top: v.to-rem(1) dashed #ccc
+
+  &__price-wrap
+    display: flex
+    flex-direction: column
+
+  &__price-label
+    font-size: v.$fz-xs
+    color: v.$clr-text-muted
+    text-transform: uppercase
+    letter-spacing: 0.05em
+
+  &__price
+    font-size: v.$fz-xl
+    font-weight: 600
+    color: v.$clr-accent

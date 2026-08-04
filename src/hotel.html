@@ -33,7 +33,7 @@
         "logo": "https://mongu.kg/images/logo.png",
         "image": "https://mongu.kg/images/hero/hero-desktop-2x.jpg",
         "telephone": "+996555123456",
-        "email": "info@mongu.com",
+        "email": "mongu.karakol@gmail.com",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Karakol",
@@ -127,7 +127,7 @@
             </li>
             <li class="header__nav-item"><a href="#" class="header__nav-link">Private tours</a></li>
             <li class="header__nav-item">
-              <a href="/lodge.html" class="header__nav-link">Accommodations</a>
+              <a href="/accommodations.html" class="header__nav-link">Accommodations</a>
               <ul class="header__nav-sublist">
                 <li class="header__nav-subitem">
                   <a href="/hotel.html" class="header__nav-sublink">Mongu Hotel</a>
@@ -135,13 +135,10 @@
                 <li class="header__nav-subitem">
                   <a href="/lodge.html" class="header__nav-sublink">Sokmo Lodge</a>
                 </li>
-                <li class="header__nav-subitem">
-                  <a href="/trekking-category.html" class="header__nav-sublink">Private Yurt Camps</a>
-                </li>
               </ul>
             </li>
             <li class="header__nav-item">
-              <a href="#" class="header__nav-link">Destination</a>
+              <a href="/destination.html" class="header__nav-link">Destination</a>
               <ul class="header__nav-sublist header__nav-sublist_full-width">
                 <li class="header__nav-subitem">
                   <a href="#" class="header__nav-sublink"
@@ -191,7 +188,7 @@
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/blog.html" class="header__nav-link">Travel Guide</a></li>
+            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -213,7 +210,7 @@
                 </a>
               </li>
               <li class="header__callback-item">
-                <a class="header__callback-link" href="mailto:info@mongu.kg">
+                <a class="header__callback-link" href="mailto:mongu.karakol@gmail.com">
                   <svg class="icon"><use href="/icons.svg#envelope"></use></svg>Email a Trip Specialist
                 </a>
               </li>
@@ -232,23 +229,74 @@
           <picture>
             <source
               type="image/avif"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="./images/hotel/hero-1920.avif 1920w, ./images/hotel/hero-3840.avif 3840w" />
+            <source
+              type="image/webp"
+              media="(min-width: 1440px)"
+              sizes="100vw"
+              width="1920"
+              height="400"
+              srcset="./images/hotel/hero-1920.webp 1920w, ./images/hotel/hero-3840.webp 3840w" />
+
+            <source
+              type="image/avif"
               media="(min-width: 1024px)"
-              srcset="./images/hero-categories/trekking-hero-1440.avif" />
+              sizes="100vw"
+              width="1440"
+              height="400"
+              srcset="./images/hotel/hero-1440.avif 1440w, ./images/hotel/hero-2880.avif 2880w" />
             <source
               type="image/webp"
               media="(min-width: 1024px)"
-              srcset="./images/hero-categories/trekking-hero-1440.webp" />
-            <img
-              src="./images/hero-categories/trekking-hero-1440.jpg"
-              alt="Booking"
-              class="hero__poster-img"
+              sizes="100vw"
               width="1440"
+              height="400"
+              srcset="./images/hotel/hero-1440.webp 1440w, ./images/hotel/hero-2880.webp 2880w" />
+
+            <source
+              type="image/avif"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="./images/hotel/hero-800.avif 800w, ./images/hotel/hero-1600.avif 1600w" />
+            <source
+              type="image/webp"
+              media="(min-width: 768px)"
+              sizes="100vw"
+              width="800"
+              height="400"
+              srcset="./images/hotel/hero-800.webp 800w, ./images/hotel/hero-1600.webp 1600w" />
+
+            <source
+              type="image/avif"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="./images/hotel/hero-450.avif 450w, ./images/hotel/hero-900.avif 900w" />
+            <source
+              type="image/webp"
+              sizes="100vw"
+              width="450"
+              height="400"
+              srcset="./images/hotel/hero-450.webp 450w, ./images/hotel/hero-900.webp 900w" />
+
+            <img
+              src="./images/hotel/hero-1440.jpg"
+              alt="Категория"
+              class="hero__poster-img"
+              width="450"
               height="400"
               fetchpriority="high"
               loading="eager" />
           </picture>
         </div>
       </div>
+
       <div class="hero__content">
         <div class="container">
           <h1 class="hero__title">
@@ -260,19 +308,20 @@
     </section>
 
     <main class="main-content hotel-page">
-      <!-- Хлебные крошки -->
-      <div class="container" style="padding-top: 20px">
-        <nav aria-label="Хлебные крошки" class="breadcrumbs">
-          <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
-            <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/categories.html">Accommodation</a></li>
-            <li class="breadcrumbs__item" aria-current="page">Mongu Hotel</li>
-          </ul>
-        </nav>
+      <div class="breadcrumbs">
+        <div class="container">
+          <nav aria-label="Хлебные крошки" class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
+              <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/categories.html">Accommodation</a></li>
+              <li class="breadcrumbs__item" aria-current="page">Mongu Hotel</li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       <!-- Hero: Главный экран отеля -->
-      <section class="hotel-hero section-padding_sm-interval">
+      <section class="hotel-hero">
         <div class="container">
           <div class="hotel-hero__media">
             <picture>
@@ -352,12 +401,12 @@
           </div>
           <ul class="hotel-features__grid">
             <li class="hotel-features__item">
-              <svg class="icon"><use href="#wifi"></use></svg>
+              <svg class="icon"><use href="/hotel.svg#wifi"></use></svg>
               <h3>Free Wi-Fi</h3>
               <p>High-speed internet access available throughout the entire property.</p>
             </li>
             <li class="hotel-features__item">
-              <svg class="icon"><use href="#ski"></use></svg>
+              <svg class="icon"><use href="/hotel.svg#ski"></use></svg>
               <h3>Ski & Mountain Gear Rental</h3>
               <p>
                 Professional rental service for skis, snowboards, and high-altitude trekking equipment right on the
@@ -365,32 +414,32 @@
               </p>
             </li>
             <li class="hotel-features__item">
-              <svg class="icon"><use href="#parking"></use></svg>
+              <svg class="icon"><use href="/hotel.svg#parking"></use></svg>
               <h3>Free Parking</h3>
               <p>Secure, gated parking area for private and overland vehicles.</p>
             </li>
             <li class="hotel-features__item">
-              <svg class="icon"><use href="#transfer"></use></svg>
+              <svg class="icon"><use href="/hotel.svg#transfer"></use></svg>
               <h3>Airport Shuttle</h3>
               <p>Direct transfer services to and from the airport on request.</p>
             </li>
             <li class="hotel-features__item">
-              <svg class="icon"><use href="#cigarete"></use></svg>
+              <svg class="icon"><use href="/hotel.svg#cigarete"></use></svg>
               <h3>Non-Smoking Rooms</h3>
               <p>Clean, fresh, and smoke-free environment across all rooms.</p>
             </li>
             <li class="hotel-features__item">
-              <svg class="icon"><use href="#delivery"></use></svg>
+              <svg class="icon"><use href="/hotel.svg#delivery"></use></svg>
               <h3>Room Service</h3>
               <p>Prompt food and beverage delivery directly to your door.</p>
             </li>
             <li class="hotel-features__item">
-              <svg class="icon"><use href="#breakfast"></use></svg>
+              <svg class="icon"><use href="/hotel.svg#breakfast"></use></svg>
               <h3>Delicious Breakfast</h3>
               <p>Hearty and fresh morning meals available daily at the hotel.</p>
             </li>
             <li class="hotel-features__item">
-              <svg class="icon"><use href="#dryer"></use></svg>
+              <svg class="icon"><use href="/hotel.svg#dryer"></use></svg>
               <h3>Gear Drying Room</h3>
               <p>Professional heated facility to dry your boots and outdoor clothing.</p>
             </li>
@@ -406,13 +455,11 @@
             <p class="subtitle">Designed for recovery after the hardest expeditions</p>
           </div>
 
-          <div class="room-showcase__wrapper">
-            
+          <div class="room-showcase__wrapper js-slider">
             <!-- Слайдер галереи номера (строго 4:3) -->
-            <div class="room-showcase__visual js-slider">
+            <div class="room-showcase__visual">
               <div class="room-showcase__slider-wrap">
                 <div class="room-showcase__slider-track js-slider-viewport">
-                  
                   <!-- Слайд 1 -->
                   <div class="room-showcase__slide js-slide" data-index="0">
                     <picture>
@@ -420,8 +467,8 @@
                         type="image/avif"
                         sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
                         srcset="
-                          ./images/hotel/slide-1-400.avif 400w,
-                          ./images/hotel/slide-1-800.avif 800w,
+                          ./images/hotel/slide-1-400.avif   400w,
+                          ./images/hotel/slide-1-800.avif   800w,
                           ./images/hotel/slide-1-1200.avif 1200w,
                           ./images/hotel/slide-1-1600.avif 1600w
                         " />
@@ -429,8 +476,8 @@
                         type="image/webp"
                         sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
                         srcset="
-                          ./images/hotel/slide-1-400.webp 400w,
-                          ./images/hotel/slide-1-800.webp 800w,
+                          ./images/hotel/slide-1-400.webp   400w,
+                          ./images/hotel/slide-1-800.webp   800w,
                           ./images/hotel/slide-1-1200.webp 1200w,
                           ./images/hotel/slide-1-1600.webp 1600w
                         " />
@@ -451,8 +498,8 @@
                         type="image/avif"
                         sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
                         srcset="
-                          ./images/hotel/slide-2-400.avif 400w,
-                          ./images/hotel/slide-2-800.avif 800w,
+                          ./images/hotel/slide-2-400.avif   400w,
+                          ./images/hotel/slide-2-800.avif   800w,
                           ./images/hotel/slide-2-1200.avif 1200w,
                           ./images/hotel/slide-2-1600.avif 1600w
                         " />
@@ -460,8 +507,8 @@
                         type="image/webp"
                         sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
                         srcset="
-                          ./images/hotel/slide-2-400.webp 400w,
-                          ./images/hotel/slide-2-800.webp 800w,
+                          ./images/hotel/slide-2-400.webp   400w,
+                          ./images/hotel/slide-2-800.webp   800w,
                           ./images/hotel/slide-2-1200.webp 1200w,
                           ./images/hotel/slide-2-1600.webp 1600w
                         " />
@@ -482,8 +529,8 @@
                         type="image/avif"
                         sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
                         srcset="
-                          ./images/hotel/slide-3-400.avif 400w,
-                          ./images/hotel/slide-3-800.avif 800w,
+                          ./images/hotel/slide-3-400.avif   400w,
+                          ./images/hotel/slide-3-800.avif   800w,
                           ./images/hotel/slide-3-1200.avif 1200w,
                           ./images/hotel/slide-3-1600.avif 1600w
                         " />
@@ -491,8 +538,8 @@
                         type="image/webp"
                         sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
                         srcset="
-                          ./images/hotel/slide-3-400.webp 400w,
-                          ./images/hotel/slide-3-800.webp 800w,
+                          ./images/hotel/slide-3-400.webp   400w,
+                          ./images/hotel/slide-3-800.webp   800w,
                           ./images/hotel/slide-3-1200.webp 1200w,
                           ./images/hotel/slide-3-1600.webp 1600w
                         " />
@@ -513,8 +560,8 @@
                         type="image/avif"
                         sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
                         srcset="
-                          ./images/hotel/slide-4-400.avif 400w,
-                          ./images/hotel/slide-4-800.avif 800w,
+                          ./images/hotel/slide-4-400.avif   400w,
+                          ./images/hotel/slide-4-800.avif   800w,
                           ./images/hotel/slide-4-1200.avif 1200w,
                           ./images/hotel/slide-4-1600.avif 1600w
                         " />
@@ -522,8 +569,8 @@
                         type="image/webp"
                         sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
                         srcset="
-                          ./images/hotel/slide-4-400.webp 400w,
-                          ./images/hotel/slide-4-800.webp 800w,
+                          ./images/hotel/slide-4-400.webp   400w,
+                          ./images/hotel/slide-4-800.webp   800w,
                           ./images/hotel/slide-4-1200.webp 1200w,
                           ./images/hotel/slide-4-1600.webp 1600w
                         " />
@@ -537,15 +584,35 @@
                     </picture>
                   </div>
 
-                </div>
-
-                <!-- Стрелки -->
-                <div class="slider__nav">
-                  <div class="slider__btn slider__btn_prev js-slider-prev" aria-label="Previous slide">
-                    <svg class="icon"><use href="#angle"></use></svg>
-                  </div>
-                  <div class="slider__btn slider__btn_next js-slider-next" aria-label="Next slide">
-                    <svg class="icon"><use href="#angle"></use></svg>
+                  <!-- Слайд 5 -->
+                  <div class="room-showcase__slide js-slide" data-index="4">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
+                        srcset="
+                          ./images/hotel/slide-4-400.avif   400w,
+                          ./images/hotel/slide-4-800.avif   800w,
+                          ./images/hotel/slide-4-1200.avif 1200w,
+                          ./images/hotel/slide-4-1600.avif 1600w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1024px) 66vw, calc(100vw - 32px)"
+                        srcset="
+                          ./images/hotel/slide-4-400.webp   400w,
+                          ./images/hotel/slide-4-800.webp   800w,
+                          ./images/hotel/slide-4-1200.webp 1200w,
+                          ./images/hotel/slide-4-1600.webp 1600w
+                        " />
+                      <img
+                        src="./images/hotel/slide-4-800.jpg"
+                        alt="Terrace View"
+                        width="800"
+                        height="600"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
                   </div>
                 </div>
 
@@ -562,32 +629,99 @@
               <div class="slider__thumbnails js-slider-thumbnails">
                 <div class="slider__thumb js-thumb-item slider__thumb--active" data-index="0">
                   <picture>
-                    <source type="image/avif" srcset="./images/hotel/thumb-1-160.avif 1x, ./images/hotel/thumb-1-320.avif 2x" />
-                    <source type="image/webp" srcset="./images/hotel/thumb-1-160.webp 1x, ./images/hotel/thumb-1-320.webp 2x" />
-                    <img src="./images/hotel/thumb-1-160.jpg" alt="Thumb 1" width="160" height="120" loading="lazy" decoding="async" />
+                    <source
+                      type="image/avif"
+                      srcset="./images/hotel/thumb-1-160.avif 1x, ./images/hotel/thumb-1-320.avif 2x" />
+                    <source
+                      type="image/webp"
+                      srcset="./images/hotel/thumb-1-160.webp 1x, ./images/hotel/thumb-1-320.webp 2x" />
+                    <img
+                      src="./images/hotel/thumb-1-160.jpg"
+                      alt="Thumb 1"
+                      width="160"
+                      height="120"
+                      loading="lazy"
+                      decoding="async" />
                   </picture>
                 </div>
                 <div class="slider__thumb js-thumb-item" data-index="1">
                   <picture>
-                    <source type="image/avif" srcset="./images/hotel/thumb-2-160.avif 1x, ./images/hotel/thumb-2-320.avif 2x" />
-                    <source type="image/webp" srcset="./images/hotel/thumb-2-160.webp 1x, ./images/hotel/thumb-2-320.webp 2x" />
-                    <img src="./images/hotel/thumb-2-160.jpg" alt="Thumb 2" width="160" height="120" loading="lazy" decoding="async" />
+                    <source
+                      type="image/avif"
+                      srcset="./images/hotel/thumb-2-160.avif 1x, ./images/hotel/thumb-2-320.avif 2x" />
+                    <source
+                      type="image/webp"
+                      srcset="./images/hotel/thumb-2-160.webp 1x, ./images/hotel/thumb-2-320.webp 2x" />
+                    <img
+                      src="./images/hotel/thumb-2-160.jpg"
+                      alt="Thumb 2"
+                      width="160"
+                      height="120"
+                      loading="lazy"
+                      decoding="async" />
                   </picture>
                 </div>
                 <div class="slider__thumb js-thumb-item" data-index="2">
                   <picture>
-                    <source type="image/avif" srcset="./images/hotel/thumb-3-160.avif 1x, ./images/hotel/thumb-3-320.avif 2x" />
-                    <source type="image/webp" srcset="./images/hotel/thumb-3-160.webp 1x, ./images/hotel/thumb-3-320.webp 2x" />
-                    <img src="./images/hotel/thumb-3-160.jpg" alt="Thumb 3" width="160" height="120" loading="lazy" decoding="async" />
+                    <source
+                      type="image/avif"
+                      srcset="./images/hotel/thumb-3-160.avif 1x, ./images/hotel/thumb-3-320.avif 2x" />
+                    <source
+                      type="image/webp"
+                      srcset="./images/hotel/thumb-3-160.webp 1x, ./images/hotel/thumb-3-320.webp 2x" />
+                    <img
+                      src="./images/hotel/thumb-3-160.jpg"
+                      alt="Thumb 3"
+                      width="160"
+                      height="120"
+                      loading="lazy"
+                      decoding="async" />
                   </picture>
                 </div>
                 <div class="slider__thumb js-thumb-item" data-index="3">
                   <picture>
-                    <source type="image/avif" srcset="./images/hotel/thumb-4-160.avif 1x, ./images/hotel/thumb-4-320.avif 2x" />
-                    <source type="image/webp" srcset="./images/hotel/thumb-4-160.webp 1x, ./images/hotel/thumb-4-320.webp 2x" />
-                    <img src="./images/hotel/thumb-4-160.jpg" alt="Thumb 4" width="160" height="120" loading="lazy" decoding="async" />
+                    <source
+                      type="image/avif"
+                      srcset="./images/hotel/thumb-4-160.avif 1x, ./images/hotel/thumb-4-320.avif 2x" />
+                    <source
+                      type="image/webp"
+                      srcset="./images/hotel/thumb-4-160.webp 1x, ./images/hotel/thumb-4-320.webp 2x" />
+                    <img
+                      src="./images/hotel/thumb-4-160.jpg"
+                      alt="Thumb 4"
+                      width="160"
+                      height="120"
+                      loading="lazy"
+                      decoding="async" />
                   </picture>
                 </div>
+                <div class="slider__thumb js-thumb-item" data-index="4">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      srcset="./images/hotel/thumb-4-160.avif 1x, ./images/hotel/thumb-4-320.avif 2x" />
+                    <source
+                      type="image/webp"
+                      srcset="./images/hotel/thumb-4-160.webp 1x, ./images/hotel/thumb-4-320.webp 2x" />
+                    <img
+                      src="./images/hotel/thumb-4-160.jpg"
+                      alt="Thumb 4"
+                      width="160"
+                      height="120"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
+                </div>
+              </div>
+            </div>
+
+            <!-- Стрелки -->
+            <div class="slider__nav">
+              <div class="slider__btn slider__btn_prev js-slider-prev" aria-label="Previous slide">
+                <svg class="icon"><use href="#angle"></use></svg>
+              </div>
+              <div class="slider__btn slider__btn_next js-slider-next" aria-label="Next slide">
+                <svg class="icon"><use href="#angle"></use></svg>
               </div>
             </div>
 
@@ -610,14 +744,26 @@
                 перед покорением новых высот.
               </p>
 
-              <div class="room-showcase__amenities">
-                <div class="amenity"><svg class="icon"><use href="./icons.svg#bed"></use></svg> 2 Extra-Long Beds</div>
-                <div class="amenity"><svg class="icon"><use href="./icons.svg#shower"></use></svg> Walk-in Shower</div>
-                <div class="amenity"><svg class="icon"><use href="./icons.svg#coffee"></use></svg> Coffee Machine</div>
-                <div class="amenity"><svg class="icon"><use href="./icons.svg#tv"></use></svg> Flat-screen TV</div>
-                <div class="amenity"><svg class="icon"><use href="./icons.svg#safe"></use></svg> Safe & Fridge</div>
-                <div class="amenity"><svg class="icon"><use href="./icons.svg#kettle"></use></svg> Electric Kettle</div>
-              </div>
+              <ul class="room-showcase__amenities">
+                <li class="amenity">Terrace</li>
+                <li class="amenity">Safety deposit box</li>
+                <li class="amenity">Washing machine</li>
+                <li class="amenity">Desk</li>
+                <li class="amenity">Refrigerator</li>
+                <li class="amenity">Ironing facilities</li>
+                <li class="amenity">Coffee machine</li>
+                <li class="amenity">Heating</li>
+                <li class="amenity">Flat-screen TV</li>
+                <li class="amenity">Carpeted</li>
+                <li class="amenity">Electric kettle</li>
+                <li class="amenity">Dishwasher</li>
+                <li class="amenity">Wardrobe or closet</li>
+                <li class="amenity">Game console</li>
+                <li class="amenity">Dining table</li>
+                <li class="amenity">Drying rack for clothing</li>
+                <li class="amenity">Baby safety gates</li>
+                <li class="amenity">Air purifiers</li>
+              </ul>
 
               <div class="room-showcase__action">
                 <div class="price">
@@ -738,19 +884,19 @@
 
       <section class="promo-highlight">
         <div class="promo-highlight__img">
-          <picture class="promo-highlight__img">
+          <picture class="promo-highlight__img promo-highlight__img_bg-bottom-right">
             <!-- AVIF -->
             <source
               type="image/avif"
               sizes="(min-width: 768px) 50vw, 100vw"
               srcset="
-                ./images/lodge/promo-highlight-360.avif   360w,
-                ./images/lodge/promo-highlight-480.avif   480w,
-                ./images/lodge/promo-highlight-600.avif   600w,
-                ./images/lodge/promo-highlight-750.avif   750w,
-                ./images/lodge/promo-highlight-900.avif   900w,
-                ./images/lodge/promo-highlight-1200.avif 1200w,
-                ./images/lodge/promo-highlight-1800.avif 1800w
+                ./images/hotel/promo-highlight-360.avif   360w,
+                ./images/hotel/promo-highlight-480.avif   480w,
+                ./images/hotel/promo-highlight-600.avif   600w,
+                ./images/hotel/promo-highlight-750.avif   750w,
+                ./images/hotel/promo-highlight-900.avif   900w,
+                ./images/hotel/promo-highlight-1200.avif 1200w,
+                ./images/hotel/promo-highlight-1800.avif 1800w
               " />
 
             <!-- WEBP -->
@@ -758,19 +904,19 @@
               type="image/webp"
               sizes="(min-width: 768px) 50vw, 100vw"
               srcset="
-                ./images/lodge/promo-highlight-360.webp   360w,
-                ./images/lodge/promo-highlight-480.webp   480w,
-                ./images/lodge/promo-highlight-600.webp   600w,
-                ./images/lodge/promo-highlight-750.webp   750w,
-                ./images/lodge/promo-highlight-900.webp   900w,
-                ./images/lodge/promo-highlight-1200.webp 1200w,
-                ./images/lodge/promo-highlight-1800.webp 1800w
+                ./images/hotel/promo-highlight-360.webp   360w,
+                ./images/hotel/promo-highlight-480.webp   480w,
+                ./images/hotel/promo-highlight-600.webp   600w,
+                ./images/hotel/promo-highlight-750.webp   750w,
+                ./images/hotel/promo-highlight-900.webp   900w,
+                ./images/hotel/promo-highlight-1200.webp 1200w,
+                ./images/hotel/promo-highlight-1800.webp 1800w
               " />
 
             <!-- FALLBACK -->
             <img
-              src="./images/lodge/promo-highlight-1200.jpg"
-              alt="Sokmo Lodge"
+              src="./images/hotel/promo-highlight-1200.jpg"
+              alt="Mongu hotel"
               width="1200"
               height="675"
               loading="lazy"
@@ -788,7 +934,7 @@
             <a href="" class="btn btn_light more-btn">
               Book your stay
               <svg class="icon">
-                <use href="#arrow"></use>
+                <use href="/icons.svg#arrow"></use>
               </svg>
             </a>
           </div>
@@ -810,35 +956,44 @@
               </p>
             </div>
             <div class="footer__grid-item">
-              <a href="tel:996555123456" class="footer__contacts-link">
+              <a
+                href="https://wa.me/996555150795"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer__contacts-link">
                 <svg class="icon">
-                  <use href="#whatsapp"></use>
+                  <use href="/icons.svg#whatsapp"></use>
                 </svg>
                 <div>
                   <strong class="footer__contacts-title">Whatsapp</strong>
-                  <span>+996 555 123 456</span>
+                  <span>+996 555 150 795</span>
                 </div>
               </a>
             </div>
             <div class="footer__grid-item">
-              <a href="mailto:info@mongu.com" class="footer__contacts-link">
+              <a href="mailto:mongu.karakol@gmail.com" class="footer__contacts-link">
                 <svg class="icon">
-                  <use href="#envelope"></use>
+                  <use href="/icons.svg#envelope"></use>
                 </svg>
                 <div>
                   <strong class="footer__contacts-title">Email</strong>
-                  <span>info@mongu.com</span>
+                  <span>mongu.karakol@gmail.com</span>
                 </div>
               </a>
             </div>
             <div class="footer__grid-item">
-              <a href="#" class="footer__contacts-link">
+              <a
+                href="https://www.instagram.com/monguhotel/"
+                class="footer__contacts-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="social media instagram">
                 <svg class="icon">
                   <use href="./icons.svg#instagram"></use>
                 </svg>
                 <div>
                   <strong class="footer__contacts-title">Instagram</strong>
-                  <span>@mongu</span>
+                  <span>@monguhotel</span>
                 </div>
               </a>
             </div>
@@ -873,9 +1028,9 @@
                 <li><a href="/categories.html">Tours</a></li>
                 <li><a href="#">Private tours</a></li>
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
-                <li><a href="#">Destination</a></li>
+                <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/travel-guide.html">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -887,7 +1042,7 @@
     </footer>
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <symbol id="arrow" viewBox="0 0 24 24">
         <path
           fill="currentColor"
           d="M14.1 7.3q.4-.6.9 0l4.4 4.4.6.4-.6.4L15 17h-.8v-.8l3.1-3.3H5.7l-.6-.4a1 1 0 0 1 .3-.9h11.9L14 8.1z" />
@@ -896,11 +1051,6 @@
         <path
           fill="currentColor"
           d="M14.6 10c.1591 0 .3117.0632.4243.1757.1125.1126.1757.2652.1757.4243s-.0632.3117-.1757.4243c-.1126.1125-.2652.1757-.4243.1757H.6c-.15913 0-.311742-.0632-.424264-.1757C.0632141 10.9117 0 10.7591 0 10.6s.0632141-.3117.175736-.4243C.288258 10.0632.44087 10 .6 10zm0-5c.0788 0 .1568.01552.2296.04567s.139.07435.1947.13007c.0557.05571.0999.12185.13.19465.0302.07279.0457.15082.0457.22961s-.0155.15681-.0457.22961c-.0301.0728-.0743.13894-.13.19465-.0557.05572-.1219.09992-.1947.13007S14.6788 6.2 14.6 6.2H.6c-.078793 0-.156815-.01552-.22961-.04567s-.138939-.07435-.194654-.13007a.599884.599884 0 0 1-.1300641-.19465C.0155191 5.75681 0 5.67879 0 5.6s.0155191-.15682.0456719-.22961a.599884.599884 0 0 1 .1300641-.19465c.055715-.05572.121859-.09992.194654-.13007S.521207 5 .6 5zm0-5c.1591 0 .3117.0632141.4243.175736C15.1368.288258 15.2.44087 15.2.6s-.0632.311742-.1757.42426c-.1126.11253-.2652.17574-.4243.17574H.6c-.15913 0-.311742-.06321-.424264-.17574C.0632141.911742 0 .75913 0 .6S.0632141.288258.175736.175736C.288258.0632141.44087 0 .6 0z" />
-      </symbol>
-      <symbol id="cross" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M15 8a.6.6 0 0 1 1 1l-3.1 3 3 3a.6.6 0 0 1-.8 1L12 12.8l-3 3a.6.6 0 0 1-1-.8l3.1-3.1-3-3a.6.6 0 0 1 .8-1L12 11z" />
       </symbol>
       <symbol id="angle" viewBox="0 0 24 24">
         <path fill="currentColor" d="M15.6 9.6a.6.6 0 0 1 .8.8l-4 4-.4.5-.4-.5-4-4a.6.6 0 0 1 .8-.8L12 13z" />
@@ -912,77 +1062,6 @@
         <path
           fill="currentColor"
           d="M18.6 9.9a6.7 6.7 0 0 0-13.2 0 2 2 0 0 0-1.7 2V14a2 2 0 0 0 1.5 2 7 7 0 0 0 5.2 2.7v-.6a7 7 0 0 1-4.5-2h.2q1-.1 1-1v-4.3a1 1 0 0 0-1-1H6a6.2 6.2 0 0 1 12 0 1 1 0 0 0-1 1v4.3q0 .9 1 1h.4c1.1 0 2-1 2-2.1v-2.1a2 2 0 0 0-1.7-2M6 10.4q.5 0 .5.5V15q0 .3-.5.4h-.4q-1.3-.2-1.5-1.5v-2.1q.2-1.4 1.5-1.5zM19.8 14a1.5 1.5 0 0 1-1.5 1.5h-.4a.4.4 0 0 1-.5-.5v-4.2q0-.3.5-.4h.4q1.4.1 1.5 1.5z" />
-      </symbol>
-      <symbol id="envelope" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M20.4 7q-.1-1.3-1.4-1.4H5Q3.7 5.7 3.6 7v10q.1 1.3 1.4 1.4h14q1.3-.1 1.4-1.4zm-2.7.8a.6.6 0 1 1 .9 1l-4.8 4.4c-1 1-2.6 1-3.6 0L5.5 8.7a.6.6 0 0 1 .8-.9l4.8 4.5q.9.8 1.8 0zm4 9.2c0 1.4-1.3 2.6-2.7 2.6H5A2.6 2.6 0 0 1 2.4 17V7c0-1.4 1.2-2.6 2.6-2.6h14c1.4 0 2.6 1.2 2.6 2.6z" />
-      </symbol>
-      <symbol id="whatsapp" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="m16 13.8-1.4-.7q-.4-.2-.6 0l-.7 1h-.5L11 12.9l-1.2-1.5.1-.5.4-.3.2-.4v-.4L9.8 8q-.3-.4-.5-.3h-.5l-.6.2a3 3 0 0 0-.8 1.9q0 1.4 1 2.3a10 10 0 0 0 3.8 3.4l1.3.5h1.4a2 2 0 0 0 1.5-1q.2-.5.1-1z" />
-        <path
-          fill="currentColor"
-          d="M18.3 5.6A9 9 0 0 0 12 3a9 9 0 0 0-7.8 4.5 9 9 0 0 0 0 8.9L3 21l4.8-1.2a9 9 0 0 0 12.6-4.4 9 9 0 0 0-2-9.8M12 19.3q-2.1 0-3.9-1l-.2-.2L5 19l.7-2.8-.2-.2a7.4 7.4 0 0 1 1.7-9.7A7.5 7.5 0 0 1 19 9q.5 1.4.5 2.8a7.4 7.4 0 0 1-7.4 7.4" />
-      </symbol>
-
-      <symbol id="parking" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M19.3 12a7.2 7.2 0 1 0-7.3 7.3v1.2a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17v-1.2c4 0 7.3-3.3 7.3-7.3" />
-        <path
-          fill="currentColor"
-          d="M9.5 16.5v-8h3q1 0 1.7.3.7.4 1 1t.3 1.3-.3 1.3-1 1-1.7.3h-2v-1h2l1-.2.5-.6.2-.8q0-.5-.2-.8l-.6-.6-1-.2h-1.6v7z" />
-      </symbol>
-
-      <symbol id="wifi" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M13.5 16.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m1 0a2.5 2.5 0 1 0-5 0 2.5 2.5 0 0 0 5 0m1.4-3.9a5.5 5.5 0 0 0-7.8 0 .5.5 0 0 0 .7.7 4.5 4.5 0 0 1 6.4 0 .5.5 0 0 0 .7-.7m2.1-2.1a8.5 8.5 0 0 0-12.1.2.5.5 0 0 0 .8.5 7.5 7.5 0 0 1 10.8.1.5.5 0 0 0 .5-.8M20 8a11.5 11.5 0 0 0-16 .2.5.5 0 0 0 .8.6 10.5 10.5 0 0 1 14.4.1.5.5 0 0 0 .6-.8" />
-      </symbol>
-
-      <symbol id="cigarete" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M16.8 10.4h1.6l.5.5V13a.5.5 0 0 1-.5.6h-5.3a.5.5 0 1 0 0 1h5.3A1.6 1.6 0 0 0 20 13v-2a1.6 1.6 0 0 0-1.6-1.6h-1.6a.5.5 0 0 0 0 1m-10 3.2H5.6l.5.5V9.8l-.5.6H11a.5.5 0 1 0 0-1H5.7l-.6.4v4.3q0 .5.6.5h1a.5.5 0 1 0 0-1m6.8-1.1V14a.5.5 0 1 0 1 0v-1.6a.5.5 0 0 0-1 0M3 9.8v4.3a.5.5 0 1 0 1 0V9.8a.5.5 0 1 0-1 0m1 11L19.7 5a.5.5 0 0 0-.7-.7L3 20a.5.5 0 1 0 .8.7M6.1 4.5a1.6 1.6 0 0 1-1.6 1.6A1.6 1.6 0 0 0 3 7.7a.5.5 0 0 0 1 0 .5.5 0 0 1 .6-.5 2.7 2.7 0 0 0 2.7-2.7.5.5 0 0 0-1.1 0" />
-      </symbol>
-      <symbol id="delivery" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M13.3 6.4a1.3 1.3 0 1 1-2.6 0 1.3 1.3 0 0 1 2.6 0m1 0a2.4 2.4 0 1 0-4.7 0 2.4 2.4 0 0 0 4.8 0m-2.8 9.8v3.2a.5.5 0 0 0 1 0v-3.2a.5.5 0 0 0-1 0M18.2 9a1.6 1.6 0 0 0-2.2.5 1 1 0 0 1-1 .3q-3-1-6 0a1 1 0 0 1-1-.3 1.6 1.6 0 1 0-2.6 1.8 4 4 0 0 0 4.7 1.5l-.8-.5v7.1a1.6 1.6 0 1 0 3.2 0h-1a1.6 1.6 0 1 0 3.2 0v-7H14l-.2.4a4 4 0 0 0 4.7-1.5 1.6 1.6 0 0 0-.4-2.3m-.6 1 .2.7a3 3 0 0 1-3.5 1.1.5.5 0 0 0-.7.5v7.1a.5.5 0 0 1-1 0c0-.7-1.1-.7-1.1 0a.5.5 0 0 1-1.1 0v-7a.5.5 0 0 0-.7-.6 3 3 0 0 1-3.5-1.1.5.5 0 1 1 1-.6 2 2 0 0 0 2.2.7q2.6-.9 5.2 0a2 2 0 0 0 2.3-.7zm-1.4-2.3a1.6 1.6 0 1 1 3.2 0l.6-.5h-4.3zm-1 0q0 .5.5.5H20l.5-.5a2.7 2.7 0 0 0-5.3 0m3.2-2.1v-1a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0M4.6 7.7a1.6 1.6 0 1 1 3.2 0l.5-.5H4zm-1.1 0q0 .5.5.5h4.3l.5-.5a2.7 2.7 0 1 0-5.3 0m3.2-2.1v-1a.5.5 0 1 0-1 0v1a.5.5 0 1 0 1 0" />
-      </symbol>
-      <symbol id="breakfast" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M6.2 6.58h8.68a.54.54 0 0 1 .54.54v5.42a4.87 4.87 0 1 1-9.75 0V7.13a.54.54 0 0 1 .54-.55m0-1.08a1.63 1.63 0 0 0-1.62 1.63v5.41a5.96 5.96 0 0 0 11.92 0V7.13a1.6 1.6 0 0 0-1.62-1.63zm-2.16 13H20.3a.54.54 0 0 0 0-1.08H4.04a.54.54 0 1 0 0 1.08M15.96 7.67h1.08a2.72 2.72 0 0 1 1.91 4.62c-.5.5-1.2.8-1.91.8h-1.19a.54.54 0 0 0 0 1.08h1.2a3.8 3.8 0 0 0 0-7.59h-1.1a.54.54 0 0 0 0 1.09" />
-      </symbol>
-      <symbol id="ski" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          fill-rule="evenodd"
-          d="M3.7 4.3a.4.4 0 0 0 0 .8h.4v10h-.7a.4.4 0 0 0-.3.6l1 1v2.2a.4.4 0 1 0 .7 0v-2.2l1-1a.4.4 0 0 0-.2-.7h-.8V5h.4a.4.4 0 1 0 0-.7zm15.4 0a.4.4 0 1 0 0 .8h.3v10h-.7a.4.4 0 0 0-.3.6l1 1v2.2a.4.4 0 1 0 .8 0v-2.2l1-1a.4.4 0 0 0-.3-.7h-.7V5h.3a.4.4 0 0 0 0-.7z"
-          clip-rule="evenodd" />
-        <path
-          fill="currentColor"
-          d="M15.3 8h-.9V6.4h.2v-.1l-.2-1-.4-1a1 1 0 0 0 .6-.7v-.4a1 1 0 0 0-.8-.8H10a1 1 0 0 0-.8.8v.4a1 1 0 0 0 .7.8l-.5.8-.2 1v.1h.1l.1.1V8l-.8.2-.1.1v2.2a1 1 0 0 0 1 1v.5a1.2 1.2 0 0 0 1.1 1.2h2.6a1.2 1.2 0 0 0 1.2-1.2v-.4a1 1 0 0 0 1-1.1V8.2zm-.2.4v.5h-.6v-.6zm-1.9 3.2v-.8h.5l.1-.2V8.8l-.1-.2h-.5V7l.9-.3v5zm-2.2 0v-.8h1.9v.8zM11 9h1.9v1.4h-2zm-.4 1.4h-.2V9h.3zm.8-3h1.1l.4-.2v1.4h-2V7.2zM13.2 9h.3v1.4h-.3zm-.7-4.8h-1.2V4h1.2zm.1-.5h-1.5l-.2.1v.4h-.3V2.8H13v1.4h-.3zm1.7-.4v.4l-.5.5h-.3V2.8h.3zm-4.8.4v-.4l.5-.5h.2v1.4H10zm.3 1.7s.2-.9.8-.9h2.6c.6 0 .9.9.9.9l.2.8-1.9.8h-.9l-1.8-.7h-.1zm.8 1.6v1.6h-.4l-.2.2v1.8l.2.2h.4v.8h-.8v-5zM9.4 8.3v.6h-.6v-.5zm-.6 2v-1h.6v2a1 1 0 0 1-.6-.8m4.4 2.5h-2.6a1 1 0 0 1-.8-.8H14a1 1 0 0 1-.9.8m1.3-1.7v-2h.6v1.3a1 1 0 0 1-.6.7" />
-        <path fill="currentColor" d="M11.8 6.9h.2l1-1v-.3l-1-1h-.2l-1 1V6zm.2-2 .7.8-.7.8-.8-.8z" />
-        <path
-          fill="currentColor"
-          d="m11.7 5.4-.1.2V6a.2.2 0 1 0 .3 0v-.4zm.5.7.2-.1v-.4a.2.2 0 0 0-.4 0V6zm3.7 13.6-2.4-2.4 2.3-2.3a1.1 1.1 0 0 0-1.5-1.6l-2.4 2.4-2.3-2.4A1.1 1.1 0 0 0 8.1 15l2.3 2.3L8 19.7q-.5.6 0 1.2l.4.4q.6.5 1.1 0l2.4-2.4 2.5 2.4q.6.5 1.1 0l.4-.4q.4-.6 0-1.2m-1.2-5.9a.5.5 0 1 1 .7.8l-.3.3-.8-.7zm-.8.7.8.8-1.2 1.2a1 1 0 0 0-.7-.8zm-5.1.4-.3-.3a.5.5 0 0 1 .7-.8l.4.4zm.4.4.8-.8 1.6 1.6-.8.8zm0 5.6h-.4l-.4-.4V20l.1-.2.8.8zm.5-.6-.8-.8 1.5-1.4.8.8zm1.8-1.8-.7-.8 1.3-1.3a.5.5 0 0 1 .8.8zm2.7 1.8-1.9-1.8.8-.8 1.9 1.8zm1.3.2-.4.4h-.4l-.1-.2.7-.8.2.2q.2.2 0 .4" />
-      </symbol>
-      <symbol id="transfer" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M19.1 10.5H9a1.4 1.4 0 0 0-1.4 1.4v3.3H4.9a1.4 1.4 0 0 0-1.4 1.4V19A1.4 1.4 0 0 0 5 20.4h1a2.2 2.2 0 0 0 4.3 0H14a2.2 2.2 0 0 0 4.2 0h.3q2-.2 2.2-2.2v-6.3a1.4 1.4 0 0 0-1.5-1.4m.2 1.4v3.3h-2.7v-3.5h2.5zm-6.6 3.3v-3.5h2.6v3.5zM9 11.7h2.5v3.5H8.7v-3.3zm-.8 9a1 1 0 1 1 0-1.9 1 1 0 0 1 0 2m7.9 0a1 1 0 1 1 0-1.9 1 1 0 0 1 0 2m2.4-1.6H18a2.2 2.2 0 0 0-4.2 0h-3.7a2.2 2.2 0 0 0-4.2 0H5l-.2-.1v-2.4l.1-.1h14.4v1.7a1 1 0 0 1-1 1M3.6 6.1a.6.6 0 0 1 .9-.3l1 .6 2-1-2.2-1.2A.6.6 0 0 1 5.9 3l3 1.7 2-1a.6.6 0 1 1 .6 1.1L5.8 7.7h-.6l-1.4-.8a.6.6 0 0 1-.2-.9" />
-      </symbol>
-      <symbol id="dryer" viewBox="0 0 24 24">
-        <path
-          fill="currentColor"
-          d="M20.1 2.8H4q-.4 0-.4.3v16.3q0 .3.4.4h16q.3 0 .4-.4V3q0-.3-.4-.3m-.4.7V6H4.3V3.5zm-2 3.4v7.8c0 1.2-1 2.3-2.3 2.3H8.6c-1.2 0-2.3-1-2.3-2.3V6.9zm-13.4 12V6.9h1.3v7.9a3 3 0 0 0 3 3h6.8a3 3 0 0 0 3-3v-8h1.3V19z" />
-        <path
-          fill="currentColor"
-          d="M17 5.1h1.3a.4.4 0 1 0 0-.8H17a.4.4 0 1 0 0 .8m-3.2 0h1.3a.4.4 0 1 0 0-.8h-1.3a.4.4 0 1 0 0 .8M6 20.5H3.9a.4.4 0 1 0 0 .7h2a.4.4 0 1 0 0-.7m14.2 0h-2a.4.4 0 1 0 0 .7h2a.4.4 0 1 0 0-.7" />
       </symbol>
     </svg>
 
@@ -1107,7 +1186,7 @@
               </div>
             </li>
             <li class="menu__item">
-              <a class="menu__item-link" href="#">Destination</a>
+              <a class="menu__item-link" href="/destination.html">Destination</a>
               <button class="js-trigger-submenu menu__submenu-trigger" type="button" aria-label="Open submenu">
                 <svg class="icon">
                   <use href="#angle"></use>
@@ -1192,7 +1271,7 @@
             </li>
             <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/blog.html">Blog</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>

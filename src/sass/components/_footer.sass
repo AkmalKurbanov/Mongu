@@ -66,19 +66,18 @@
   &__contacts-link
     position: relative
     display: flex
-    column-gap: v.$space-sm
+    column-gap: v.$space-xs
     color: v.$clr-text
-
-  &__contacts-link
-
+    line-height: 1
+    
     @include v.media(tablet)
       column-gap: v.$space-lg
       align-items: center
 
     .icon
       flex-shrink: 0
-      width: v.to-rem(24)
-      height: v.to-rem(24)
+      width: v.to-rem(20)
+      height: v.to-rem(20)
 
       @include v.media(tablet)
         width: v.to-rem(32)
@@ -89,8 +88,11 @@
 
     span
       font-weight: 500
-      font-size: v.$fz-sm
+      font-size: v.$fz-xs
       transition: color v.$tr-base
+      
+      @include v.media(tablet)
+        font-size: v.$fz-sm
 
     @include v.has-mouse
       &:hover
