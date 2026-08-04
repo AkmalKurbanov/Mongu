@@ -1,1 +1,45 @@
 @use './core-critical'
+@use './components/breadcrumbs'
+@use './settings/shared' as v
+.hotel-hero
+  &__title
+    font-family: v.$ff-accent
+    font-size: v.to-rem(40)
+    font-weight: 500
+    color: v.$clr-text
+    line-height: 1.1
+    margin-bottom: v.$space-lg
+    text-align: center
+
+    @include v.media(tablet)
+      font-size: v.to-rem(64)
+      margin-bottom: v.$space-xl
+
+  &__subtitle
+    font-size: v.to-rem(20)
+    font-family: v.$ff-base
+    font-weight: 400
+    color: v.$clr-accent
+    display: block
+    margin-top: v.$space-sm
+    text-transform: uppercase
+    letter-spacing: v.to-rem(2)
+
+    @include v.media(tablet)
+      font-size: v.to-rem(24)
+
+  &__media
+    border-radius: v.$rad-lg
+    overflow: hidden
+    aspect-ratio: 4 / 3
+    background-color: #e2e2e9
+    box-shadow: v.$shadow-lg
+
+    @include v.media(tablet)
+      aspect-ratio: 21 / 9
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
