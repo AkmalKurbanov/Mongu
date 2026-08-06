@@ -328,7 +328,7 @@
       </div>
     </section>
 
-    <main class="main-content">
+    <main class="main-content ">
 
       <div class="breadcrumbs">
         <div class="container">
@@ -345,6 +345,9 @@
 
       <section class="section-padding-bottom categories">
         <div class="container">
+          <div class="title-wrap">
+            <h2 class="title">Не знаю что написать</h2>
+          </div>
           <div class="categories__flex-wrap">
             <div class="categories__item">
               <div class="categories__img">
@@ -375,7 +378,7 @@
                 </picture>
               </div>
               <div class="categories__desc">
-                <h2 class="categories__title">Trekking adventures</h3>
+                <h3 class="categories__title">Trekking adventures</h3>
               </div>
               <a href="/trekking-category.html" aria-label="Смотреть туры: Trekking adventures" class="categories__link"></a>
             </div>
@@ -409,7 +412,7 @@
                 </picture>
               </div>
               <div class="categories__desc">
-                <h2 class="categories__title">Horseback expedition</h3>
+                <h3 class="categories__title">Horseback expedition</h3>
               </div>
               <a href="/horseback-category.html" aria-label="Смотреть туры: Horseback expedition" class="categories__link"></a>
             </div>
@@ -443,7 +446,7 @@
                 </picture>
               </div>
               <div class="categories__desc">
-                <h2 class="categories__title">Overland & jeep journeys</h3>
+                <h3 class="categories__title">Overland & jeep journeys</h3>
               </div>
               <a href="/offroad-category.html" aria-label="Смотреть туры: Overland & jeep journeys" class="categories__link"></a>
             </div>
@@ -477,7 +480,7 @@
                 </picture>
               </div>
               <div class="categories__desc">
-                <h2 class="categories__title">Nomadic heritage</h3>
+                <h3 class="categories__title">Nomadic heritage</h3>
               </div>
               <a href="/nomadic-category.html" aria-label="Смотреть туры: Nomadic heritage" class="categories__link"></a>
             </div>
@@ -511,7 +514,7 @@
                 </picture>
               </div>
               <div class="categories__desc">
-                <h2 class="categories__title">Custom expedition</h3>
+                <h3 class="categories__title">Custom expedition</h3>
               </div>
               <a href="/custom-category.html" aria-label="Смотреть туры: Custom expedition" class="categories__link"></a>
             </div>
@@ -585,58 +588,69 @@
       <div class="footer__top section-padding section-bg">
         <div class="container">
           <div class="footer__top-grid">
-            <div class="footer__grid-item">
-              <h2 class="title">Plan your jorney</h2>
+            
+            <!-- Добавлен модификатор _title -->
+            <div class="footer__grid-item footer__grid-item_title">
+              <h2 class="title">Plan your journey</h2>
             </div>
-            <div class="footer__grid-item">
+            
+            <!-- Добавлен модификатор _desc -->
+            <div class="footer__grid-item footer__grid-item_desc">
               <p class="footer__subtitle">
                 Lorem ipsum dolor sit amet <br />
                 consectetur adipisicing.
               </p>
             </div>
-            <div class="footer__grid-item">
-              <a href="https://wa.me/996555150795" target="_blank" rel="noopener noreferrer" class="footer__contacts-link">
-                <svg class="icon">
-                  <use href="/icons.svg#whatsapp"></use>
-                </svg>
-                <div>
-                  <strong class="footer__contacts-title">Whatsapp</strong>
-                  <span>+996 555 150 795</span>
-                </div>
-              </a>
-            </div>
-            <div class="footer__grid-item">
-              <a href="mailto:mongu.karakol@gmail.com" class="footer__contacts-link">
-                <svg class="icon">
-                  <use href="/icons.svg#envelope"></use>
-                </svg>
-                <div>
-                  <strong class="footer__contacts-title">Email</strong>
-                  <span>mongu.karakol@gmail.com</span>
-                </div>
-              </a>
-            </div>
-            <div class="footer__grid-item">
-              <a href="https://www.instagram.com/monguhotel/" class="footer__contacts-link" target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="social media instagram">
-                <svg class="icon">
-                  <use href="./icons.svg#instagram"></use>
-                </svg>
-                <div>
-                  <strong class="footer__contacts-title">Instagram</strong>
-                  <span>@monguhotel</span>
-                </div>
-              </a>
-            </div>
-            <div class="footer__grid-item">
-              <button type="button" class="footer__btn btn">
+
+            <!-- SEO-обертка для контактов (визуально будет скрыта) -->
+            <address class="footer__address-wrapper">
+              <div class="footer__grid-item">
+                <a href="https://wa.me/996555150795" target="_blank" rel="noopener noreferrer" class="footer__contacts-link">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/icons.svg#whatsapp"></use>
+                  </svg>
+                  <div>
+                    <strong class="footer__contacts-title">Whatsapp</strong>
+                    <span>+996 555 150 795</span>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="footer__grid-item">
+                <a href="mailto:mongu.karakol@gmail.com" class="footer__contacts-link">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/icons.svg#envelope"></use>
+                  </svg>
+                  <div>
+                    <strong class="footer__contacts-title">Email</strong>
+                    <span>mongu.karakol@gmail.com</span>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="footer__grid-item">
+                <a href="https://www.instagram.com/monguhotel/" class="footer__contacts-link" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="./icons.svg#instagram"></use>
+                  </svg>
+                  <div>
+                    <strong class="footer__contacts-title">Instagram</strong>
+                    <span>@monguhotel</span>
+                  </div>
+                </a>
+              </div>
+            </address>
+
+            <!-- Добавлен модификатор _action, кнопка заменена на <a> -->
+            <div class="footer__grid-item footer__grid-item_action">
+              <a href="/booking.html" class="footer__btn btn">
                 Booking
-                <svg class="icon">
+                <svg class="icon" aria-hidden="true">
                   <use href="/icons.svg#arrow"></use>
                 </svg>
-              </button>
+              </a>
             </div>
+            
           </div>
         </div>
       </div>
@@ -902,7 +916,7 @@
                 </ul>
               </div>
             </li>
-            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
+            
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>

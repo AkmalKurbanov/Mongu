@@ -3,22 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Авторские туры по Кыргызстану | Mongu</title>
-    <meta
-      name="description"
-      content="Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по самым красивым перевалам и озерам Кыргызстана с опытными гидами." />
+    <meta name="description" content="Индивидуальные и авторские джип-туры, конные прогулки и экспедиции по самым красивым перевалам и озерам Кыргызстана с опытными гидами." />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Авторские туры по Кыргызстану — Mongu" />
     <meta property="og:description" content="Индивидуальные джип-туры и конные экспедиции по Кыргызстану." />
     <meta property="og:url" content="https://mongu.kg/" />
     <meta property="og:image" content="https://mongu.kg/images/og-image.jpg" />
-
     <meta name="theme-color" content="#6c613e" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#3F3F25" media="(prefers-color-scheme: dark)" />
+
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href="https://mongu.kg/" />
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -266,7 +262,7 @@
       </div>
 
       <!-- Главный экран About -->
-      <section class="about-hero section-padding_sm-interval">
+      <section class="about-hero section-padding-bottom">
         <div class="container">
           <div class="about-hero__grid">
             <div class="about-hero__content">
@@ -376,62 +372,884 @@
       </section>
 
       <!-- Команда (Лица продают и повышают E-E-A-T) -->
-      <section class="about-team section-padding">
+      <section class="section-padding section-bg">
         <div class="container">
           <div class="title-wrap">
-            <h2 class="title title_centered">Meet Your Guides</h2>
+            <h2 class="title title_centered">Meet our team</h2>
           </div>
 
-          <div class="about-team__grid">
-            <!-- Гид 1 -->
-            <article class="team-card">
-              <div class="team-card__photo">
-                <!-- Отложенная загрузка для контента ниже сгиба -->
-                <picture>
-                  <source type="image/avif" srcset="./images/reviews/user-150.avif" />
-                  <source type="image/webp" srcset="./images/reviews/user-150.webp" />
-                  <img
-                    src="./images/reviews/user-150.jpg"
-                    alt="Azamat - Head Guide"
-                    width="300"
-                    height="350"
-                    loading="lazy"
-                    decoding="async" />
-                </picture>
-              </div>
-              <div class="team-card__info">
-                <h3 class="team-card__name">Azamat</h3>
-                <p class="team-card__role">Head Trekking Guide</p>
-                <p class="team-card__bio">
-                  15+ years conquering peaks above 5000m. Knows the local flora and fauna like the back of his hand.
-                </p>
-              </div>
-            </article>
+          <div class="card-slider card-slider_per-3 slider js-slider">
+            <div class="card-slider__viewport js-slider-viewport">
+              <article class="card card_centered js-slide" data-index="0">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.avif   400w,
+                          ./images/team/team1-600.avif   600w,
+                          ./images/team/team1-800.avif   800w,
+                          ./images/team/team1-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.webp   400w,
+                          ./images/team/team1-600.webp   600w,
+                          ./images/team/team1-800.webp   800w,
+                          ./images/team/team1-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/team/team1-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
+                </div>
 
-            <!-- Гид 2 -->
-            <article class="team-card">
-              <div class="team-card__photo">
-                <picture>
-                  <source type="image/avif" srcset="./images/reviews/user-100.avif" />
-                  <source type="image/webp" srcset="./images/reviews/user-100.webp" />
-                  <img
-                    src="./images/reviews/user-100.jpg"
-                    alt="Ruslan - Offroad Specialist"
-                    width="300"
-                    height="350"
-                    loading="lazy"
-                    decoding="async" />
-                </picture>
+                <div class="card__body">
+                  <div>
+                    <h3 class="card__title">John Doe</h3>
+                    <span class="card__subtitle">Experienced guide</span>
+                  </div>
+
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
+                  </p>
+
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
+              </article>
+              <article class="card card_centered js-slide" data-index="1">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.avif   400w,
+                          ./images/team/team1-600.avif   600w,
+                          ./images/team/team1-800.avif   800w,
+                          ./images/team/team1-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.webp   400w,
+                          ./images/team/team1-600.webp   600w,
+                          ./images/team/team1-800.webp   800w,
+                          ./images/team/team1-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/team/team1-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="card__body">
+                  <div>
+                    <h3 class="card__title">John Doe</h3>
+                    <span class="card__subtitle">Experienced guide</span>
+                  </div>
+
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
+                  </p>
+
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
+              </article>
+              <article class="card card_centered js-slide" data-index="2">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.avif   400w,
+                          ./images/team/team1-600.avif   600w,
+                          ./images/team/team1-800.avif   800w,
+                          ./images/team/team1-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.webp   400w,
+                          ./images/team/team1-600.webp   600w,
+                          ./images/team/team1-800.webp   800w,
+                          ./images/team/team1-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/team/team1-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="card__body">
+                  <div>
+                    <h3 class="card__title">John Doe</h3>
+                    <span class="card__subtitle">Experienced guide</span>
+                  </div>
+
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
+                  </p>
+
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
+              </article>
+              <article class="card card_centered js-slide" data-index="3">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.avif   400w,
+                          ./images/team/team1-600.avif   600w,
+                          ./images/team/team1-800.avif   800w,
+                          ./images/team/team1-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.webp   400w,
+                          ./images/team/team1-600.webp   600w,
+                          ./images/team/team1-800.webp   800w,
+                          ./images/team/team1-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/team/team1-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="card__body">
+                  <div>
+                    <h3 class="card__title">John Doe</h3>
+                    <span class="card__subtitle">Experienced guide</span>
+                  </div>
+
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
+                  </p>
+
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
+              </article>
+              <article class="card card_centered js-slide" data-index="4">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.avif   400w,
+                          ./images/team/team1-600.avif   600w,
+                          ./images/team/team1-800.avif   800w,
+                          ./images/team/team1-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/team/team1-400.webp   400w,
+                          ./images/team/team1-600.webp   600w,
+                          ./images/team/team1-800.webp   800w,
+                          ./images/team/team1-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/team/team1-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
+                </div>
+
+                <div class="card__body">
+                  <div>
+                    <h3 class="card__title">John Doe</h3>
+                    <span class="card__subtitle">Experienced guide</span>
+                  </div>
+
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
+                  </p>
+
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
+              </article>
+            </div>
+            <div class="slider__nav">
+              <div class="slider__btn slider__btn_prev js-slider-prev" aria-label="Previous slide">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
               </div>
-              <div class="team-card__info">
-                <h3 class="team-card__name">Ruslan</h3>
-                <p class="team-card__role">Overland Specialist</p>
-                <p class="team-card__bio">
-                  Professional 4x4 driver and mechanic. Can fix a jeep in the middle of nowhere using just basic tools.
-                </p>
+              <div class="slider__btn slider__btn_next js-slider-next" aria-label="Next slide">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
               </div>
-            </article>
+            </div>
+            <div class="slider__pagination js-pagination">
+              <div class="pagination-dot" data-index="0"></div>
+              <div class="pagination-dot" data-index="1"></div>
+              <div class="pagination-dot" data-index="2"></div>
+              <div class="pagination-dot" data-index="3"></div>
+              <div class="pagination-dot" data-index="4"></div>
+            </div>
           </div>
+
+          <!-- <div class="cards__slider js-slider">
+            <div class="cards__grid slider js-slider-viewport">
+              <article class="cards__item card js-slide" data-index="0">
+                <a href="/tour.html" class="card__link" aria-label="Подробнее о туре: Название"></a>
+                <div class="card__img">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.avif   400w,
+                        ./images/guides/guides-600.avif   600w,
+                        ./images/guides/guides-800.avif   800w,
+                        ./images/guides/guides-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.webp   400w,
+                        ./images/guides/guides-600.webp   600w,
+                        ./images/guides/guides-800.webp   800w,
+                        ./images/guides/guides-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/guides/guides-800.jpg"
+                      alt="Описание"
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
+                </div>
+                <div class="card__desc card__desc_cetered">
+                  <h3 class="card__title">Name</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
+                    deserunt tempore!
+                  </p>
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article class="cards__item card js-slide" data-index="1">
+                <a href="/tour.html" class="card__link" aria-label="Подробнее о туре: Название"></a>
+                <div class="card__img">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.avif   400w,
+                        ./images/guides/guides-600.avif   600w,
+                        ./images/guides/guides-800.avif   800w,
+                        ./images/guides/guides-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.webp   400w,
+                        ./images/guides/guides-600.webp   600w,
+                        ./images/guides/guides-800.webp   800w,
+                        ./images/guides/guides-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/guides/guides-800.jpg"
+                      alt="Описание"
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
+                </div>
+                <div class="card__desc card__desc_cetered">
+                  <h3 class="card__title">Name</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
+                    deserunt tempore!
+                  </p>
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article class="cards__item card js-slide" data-index="2">
+                <a href="/tour.html" class="card__link" aria-label="Подробнее о туре: Название"></a>
+                <div class="card__img">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.avif   400w,
+                        ./images/guides/guides-600.avif   600w,
+                        ./images/guides/guides-800.avif   800w,
+                        ./images/guides/guides-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.webp   400w,
+                        ./images/guides/guides-600.webp   600w,
+                        ./images/guides/guides-800.webp   800w,
+                        ./images/guides/guides-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/guides/guides-800.jpg"
+                      alt="Описание"
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
+                </div>
+                <div class="card__desc card__desc_cetered">
+                  <h3 class="card__title">Name</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
+                    deserunt tempore!
+                  </p>
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article class="cards__item card js-slide" data-index="3">
+                <a href="/tour.html" class="card__link" aria-label="Подробнее о туре: Название"></a>
+                <div class="card__img">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.avif   400w,
+                        ./images/guides/guides-600.avif   600w,
+                        ./images/guides/guides-800.avif   800w,
+                        ./images/guides/guides-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.webp   400w,
+                        ./images/guides/guides-600.webp   600w,
+                        ./images/guides/guides-800.webp   800w,
+                        ./images/guides/guides-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/guides/guides-800.jpg"
+                      alt="Описание"
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
+                </div>
+                <div class="card__desc card__desc_cetered">
+                  <h3 class="card__title">Name</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
+                    deserunt tempore!
+                  </p>
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+              <article class="cards__item card js-slide" data-index="4">
+                <a href="/tour.html" class="card__link" aria-label="Подробнее о туре: Название"></a>
+                <div class="card__img">
+                  <picture>
+                    <source
+                      type="image/avif"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.avif   400w,
+                        ./images/guides/guides-600.avif   600w,
+                        ./images/guides/guides-800.avif   800w,
+                        ./images/guides/guides-1200.avif 1200w
+                      " />
+                    <source
+                      type="image/webp"
+                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
+                      srcset="
+                        ./images/guides/guides-400.webp   400w,
+                        ./images/guides/guides-600.webp   600w,
+                        ./images/guides/guides-800.webp   800w,
+                        ./images/guides/guides-1200.webp 1200w
+                      " />
+                    <img
+                      src="./images/guides/guides-800.jpg"
+                      alt="Описание"
+                      width="800"
+                      height="600"
+                      loading="lazy"
+                      decoding="async" />
+                  </picture>
+                </div>
+                <div class="card__desc card__desc_cetered">
+                  <h3 class="card__title">Name</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
+                    deserunt tempore!
+                  </p>
+                  <div class="social">
+                    <ul class="social__list">
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media facebok">
+                          <svg class="icon">
+                            <use href="/icons.svg#facebook"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="social media instagram">
+                          <svg class="icon">
+                            <use href="/icons.svg#instagram"></use>
+                          </svg>
+                        </a>
+                      </li>
+                      <li class="social__item">
+                        <a
+                          href="#"
+                          class="social__link"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="video-sharing platform youtube">
+                          <svg class="icon">
+                            <use href="/icons.svg#youtube"></use>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="slider__nav">
+              <div class="slider__btn slider__btn_prev js-slider-prev" aria-label="Previous slide">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </div>
+              <div class="slider__btn slider__btn_next js-slider-next" aria-label="Next slide">
+                <svg class="icon">
+                  <use href="#angle"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="slider__pagination js-pagination">
+              <div class="pagination-dot" data-index="0"></div>
+              <div class="pagination-dot" data-index="1"></div>
+              <div class="pagination-dot" data-index="2"></div>
+              <div class="pagination-dot" data-index="3"></div>
+              <div class="pagination-dot" data-index="4"></div>
+            </div>
+          </div> -->
         </div>
       </section>
 
@@ -442,29 +1260,42 @@
             <!-- Медиа-блок с арт-дирекшеном -->
             <div class="about-infra__media">
               <picture>
+                <!-- AVIF для Desktop (от 1024px и выше) -->
                 <source
                   type="image/avif"
                   media="(min-width: 1024px)"
-                  srcset="./images/lodge/lodge-card-800.avif 1x, ./images/lodge/lodge-card-1200.avif 2x" />
+                  sizes="(min-width: 1440px) 554px, 414px"
+                  srcset="./images/about/about-intro-554.avif 554w, ./images/about/about-intro-1108.avif 1108w" />
+
+                <!-- WebP для Desktop (от 1024px и выше) -->
                 <source
                   type="image/webp"
                   media="(min-width: 1024px)"
-                  srcset="./images/lodge/lodge-card-800.webp 1x, ./images/lodge/lodge-card-1200.webp 2x" />
+                  sizes="(min-width: 1440px) 554px, 414px"
+                  srcset="./images/about/about-intro-554.webp 554w, ./images/about/about-intro-1108.webp 1108w" />
+
+                <!-- AVIF для Mobile & Tablet (до 1023px) -->
                 <source
                   type="image/avif"
                   media="(max-width: 1023px)"
-                  srcset="./images/lodge/lodge-card-400.avif 1x, ./images/lodge/lodge-card-800.avif 2x" />
+                  sizes="(min-width: 768px) 688px, 100vw"
+                  srcset="./images/hero/about-intro-688.avif 688w, ./images/about/about-intro-1376.avif 1376w" />
+
+                <!-- WebP для Mobile & Tablet (до 1023px) -->
                 <source
                   type="image/webp"
                   media="(max-width: 1023px)"
-                  srcset="./images/lodge/lodge-card-400.webp 1x, ./images/lodge/lodge-card-800.webp 2x" />
+                  sizes="(min-width: 768px) 688px, 100vw"
+                  srcset="./images/about/about-intro-688.webp 688w, ./images/about/about-intro-1376.webp 1376w" />
+
                 <img
-                  src="./images/lodge/lodge-card-800.jpg"
-                  alt="Sokmo Lodge and private yurt camps owned by MONGU"
-                  class="about-infra__img"
-                  width="600"
-                  height="450"
-                  loading="lazy"
+                  src="./images/about/about-intro-688.jpg"
+                  alt="MONGU team exploring the Tian Shan mountains"
+                  class="about-hero__img"
+                  width="450"
+                  height="600"
+                  fetchpriority="high"
+                  loading="eager"
                   decoding="async" />
               </picture>
 
@@ -523,65 +1354,69 @@
       <div class="footer__top section-padding section-bg">
         <div class="container">
           <div class="footer__top-grid">
-            <div class="footer__grid-item">
-              <h2 class="title">Plan your jorney</h2>
+            
+            <!-- Добавлен модификатор _title -->
+            <div class="footer__grid-item footer__grid-item_title">
+              <h2 class="title">Plan your journey</h2>
             </div>
-            <div class="footer__grid-item">
+            
+            <!-- Добавлен модификатор _desc -->
+            <div class="footer__grid-item footer__grid-item_desc">
               <p class="footer__subtitle">
                 Lorem ipsum dolor sit amet <br />
                 consectetur adipisicing.
               </p>
             </div>
-            <div class="footer__grid-item">
-              <a
-                href="https://wa.me/996555150795"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="footer__contacts-link">
-                <svg class="icon">
-                  <use href="/icons.svg#whatsapp"></use>
-                </svg>
-                <div>
-                  <strong class="footer__contacts-title">Whatsapp</strong>
-                  <span>+996 555 150 795</span>
-                </div>
-              </a>
-            </div>
-            <div class="footer__grid-item">
-              <a href="mailto:mongu.karakol@gmail.com" class="footer__contacts-link">
-                <svg class="icon">
-                  <use href="/icons.svg#envelope"></use>
-                </svg>
-                <div>
-                  <strong class="footer__contacts-title">Email</strong>
-                  <span>mongu.karakol@gmail.com</span>
-                </div>
-              </a>
-            </div>
-            <div class="footer__grid-item">
-              <a
-                href="https://www.instagram.com/monguhotel/"
-                class="footer__contacts-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="social media instagram">
-                <svg class="icon">
-                  <use href="./icons.svg#instagram"></use>
-                </svg>
-                <div>
-                  <strong class="footer__contacts-title">Instagram</strong>
-                  <span>@monguhotel</span>
-                </div>
-              </a>
-            </div>
-            <div class="footer__grid-item">
-              <button type="button" class="footer__btn btn">
+
+            <!-- SEO-обертка для контактов (визуально будет скрыта) -->
+            <address class="footer__address-wrapper">
+              <div class="footer__grid-item">
+                <a href="https://wa.me/996555150795" target="_blank" rel="noopener noreferrer" class="footer__contacts-link">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/icons.svg#whatsapp"></use>
+                  </svg>
+                  <div>
+                    <strong class="footer__contacts-title">Whatsapp</strong>
+                    <span>+996 555 150 795</span>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="footer__grid-item">
+                <a href="mailto:mongu.karakol@gmail.com" class="footer__contacts-link">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/icons.svg#envelope"></use>
+                  </svg>
+                  <div>
+                    <strong class="footer__contacts-title">Email</strong>
+                    <span>mongu.karakol@gmail.com</span>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="footer__grid-item">
+                <a href="https://www.instagram.com/monguhotel/" class="footer__contacts-link" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="./icons.svg#instagram"></use>
+                  </svg>
+                  <div>
+                    <strong class="footer__contacts-title">Instagram</strong>
+                    <span>@monguhotel</span>
+                  </div>
+                </a>
+              </div>
+            </address>
+
+            <!-- Добавлен модификатор _action, кнопка заменена на <a> -->
+            <div class="footer__grid-item footer__grid-item_action">
+              <a href="/booking.html" class="footer__btn btn">
                 Booking
-                <svg class="icon">
+                <svg class="icon" aria-hidden="true">
                   <use href="/icons.svg#arrow"></use>
                 </svg>
-              </button>
+              </a>
             </div>
+            
           </div>
         </div>
       </div>
@@ -589,14 +1424,15 @@
         <div class="container">
           <div class="footer__bottom-flex-wrap">
             <a href="/" class="logo" aria-label="На главную">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 28">
-                <path fill="#6bbbea" d="m7.5 9.7 4-9.7L15 9.5l-1.6-1.2-2.3 5-1.8-4.9z" />
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 708 198">
+                <path fill="#6bbbea" d="M53.3 68.7 81.6 0l24 67.5-11.5-9.1-16.2 35.9-13-34.7z" />
                 <path
                   fill="currentColor"
-                  d="M93 23.2a7 7 0 0 1-5.1-1.8Q86 19.5 86 16V7h3v9q0 2.3 1 3.5a4 4 0 0 0 3 1.1q2 0 3-1.1t1-3.6V7h3v9q0 3.5-1.9 5.3a7 7 0 0 1-5 1.9m-17 0q-1.9 0-3.5-.6a8 8 0 0 1-5.1-7.6q0-1.7.6-3.3a8 8 0 0 1 4.5-4.3q1.8-.6 3.5-.6 2 0 3.6.7 1.5.6 2.8 1.9l-1.9 1.8a6 6 0 0 0-4.4-1.8q-1.2 0-2.3.4a5.4 5.4 0 0 0-3.3 6.2 6 6 0 0 0 1.4 3q.9.7 1.9 1.2 1 .3 2.3.4 1.2 0 2.3-.4 1.2-.4 2-1.3l1.8 2.3q-1.4 1-3 1.5-1.5.5-3.3.5m6.3-2-2.8-.4v-6h2.8zM50 23V7h2.5l10 12.3h-1.2V7h3v16h-2.5l-10-12.3H53V23zm-11.7.2q-1.8 0-3.4-.6a8 8 0 0 1-5.2-7.6q0-1.8.7-3.3t1.8-2.5T35 7.4a10 10 0 0 1 6.8 0q3.1 1.3 4.6 4.3.6 1.6.6 3.3 0 1.8-.6 3.3a8 8 0 0 1-4.6 4.3q-1.6.6-3.4.6m0-2.6a6 6 0 0 0 2.2-.4 5 5 0 0 0 3-3q.4-1 .4-2.2a6 6 0 0 0-3.4-5.2q-1-.4-2.2-.4a5.5 5.5 0 0 0-5.6 5.6q0 1.2.4 2.2a5 5 0 0 0 3 3q1.1.4 2.2.4" />
+                  d="M658.6 164a50 50 0 0 1-36.4-13q-13-13-13-37.6V49.7h21v62.8q0 17.3 7.4 25.4 7.5 7.8 21.2 7.8 13.8 0 21.1-8t7.4-25.2V49.7H708v63.5q0 24.6-13.2 37.7a49 49 0 0 1-36.2 13m-120.3 0q-12.6.2-24.4-4a56 56 0 0 1-36.3-53.9q-.1-12.1 4.4-23.2 4.6-10.6 12.7-18.3a58 58 0 0 1 19.6-12.2q11.8-4.5 24.3-4.3 14.4 0 25.8 4.7a51 51 0 0 1 19.5 13.7l-13.2 12.8a43 43 0 0 0-31.2-12.8 46 46 0 0 0-16.4 2.9A38 38 0 0 0 501.6 90a43 43 0 0 0 8.5 44.5q5.6 5.3 12.8 8.1 8 3 16.5 3t16.1-2.5q8.5-3.1 15-9.2l12 15.8a63 63 0 0 1-20.7 10.7 81 81 0 0 1-23.5 3.6m44.2-14.3-19.9-2.8v-42.2h19.9zM355 162.4V49.5h17.3l70.7 86.8h-8.5V49.6h20.8v112.8H438l-70.6-86.8h8.6v86.8zm-82.9 1.5q-12.6.2-24.4-4.3a56 56 0 0 1-36.5-53.6q0-12.5 4.4-23 4.5-10.3 12.8-18.2a58 58 0 0 1 19.3-12.3Q259.5 48 272 48a65 65 0 0 1 24.2 4.4A58 58 0 0 1 328.3 83q4.6 11 4.5 23 0 12.7-4.5 23.2t-12.7 18.4a60 60 0 0 1-19.4 12.1q-11.6 4.5-24 4.3m-.2-18.3q8.6 0 15.8-2.9a37 37 0 0 0 20.8-20.8q3-7.2 3-16a39 39 0 0 0-11.2-28.2 36 36 0 0 0-12.6-8.4q-7.6-3-15.8-2.9-8.6 0-15.8 2.9-7.1 3-12.5 8.4a39 39 0 0 0-11.3 28.3q0 8.5 2.9 15.7a37 37 0 0 0 21 21q7.6 3 15.7 2.9" />
+                <path fill="currentColor" d="m202.6 67.4 142.1 66.1-5.6 12-142.1-66z" />
                 <path
                   fill="currentColor"
-                  d="m28.6 9.5 20 9.4-.7 1.7-20-9.4zM6.9 11l1.9-1.4.8 2.4L0 28zm5.4 1.2 1.3-2.9 1.8 1.6 2.6 7.3 5.4-6.2 6.7 16-7.2-11-5.5 8.3z" />
+                  d="m48.8 78.2 13.5-10.4 6 17.1L0 197.4zm38.5 8L96 66l13.1 11 18.4 51.6L166 85l47 113-51-78.2-38.7 59.3z" />
               </svg>
             </a>
 
@@ -846,7 +1682,6 @@
                 </ul>
               </div>
             </li>
-            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>

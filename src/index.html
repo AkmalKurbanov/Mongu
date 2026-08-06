@@ -424,7 +424,7 @@
                         ./images/teaser-categories/teaser-trekking-1152.webp 1152w
                       " />
                     <img
-                      class="teaser-card__img"
+                      class="card__img"
                       src="./images/teaser-categories/teaser-trekking-1152.jpg"
                       alt="Trekking Adventures"
                       width="576"
@@ -478,7 +478,7 @@
                         ./images/teaser-categories/teaser-horseback-1152.webp 1152w
                       " />
                     <img
-                      class="teaser-card__img"
+                      class="card__img"
                       src="./images/teaser-categories/teaser-horseback-1152.jpg"
                       alt="Trekking Adventures"
                       width="576"
@@ -532,7 +532,7 @@
                         ./images/teaser-categories/teaser-offroad-1152.webp 1152w
                       " />
                     <img
-                      class="teaser-card__img"
+                      class="card__img"
                       src="./images/teaser-categories/teaser-offroad-1152.jpg"
                       alt="Trekking Adventures"
                       width="576"
@@ -586,7 +586,7 @@
                         ./images/teaser-categories/teaser-nomadic-1152.webp 1152w
                       " />
                     <img
-                      class="teaser-card__img"
+                      class="card__img"
                       src="./images/teaser-categories/teaser-nomadic-1152.jpg"
                       alt="Trekking Adventures"
                       width="576"
@@ -640,7 +640,7 @@
                         ./images/teaser-categories/teaser-custom-1152.webp 1152w
                       " />
                     <img
-                      class="teaser-card__img"
+                      class="card__img"
                       src="./images/teaser-categories/teaser-custom-1152.jpg"
                       alt="Trekking Adventures"
                       width="576"
@@ -694,7 +694,7 @@
                         ./images/teaser-categories/teaser-camp-1152.webp 1152w
                       " />
                     <img
-                      class="teaser-card__img"
+                      class="card__img"
                       src="./images/teaser-categories/teaser-camp-1152.jpg"
                       alt="Trekking Adventures"
                       width="576"
@@ -804,269 +804,296 @@
         </div>
       </section>
 
-      <section class="teaser-cards section-padding section-bg">
+      <section class="cards section-padding section-bg">
         <div class="container">
           <div class="title-wrap">
             <h2 class="title title_centered">Popular tours</h2>
           </div>
 
-          <div class="teaser-cards__slider js-slider">
-            <div class="teaser-cards__grid slider js-slider-viewport">
-              <article class="teaser-cards__item teaser-card js-slide" data-index="0">
-                <a href="/tour.html" class="teaser-card__link" aria-label="Подробнее о туре: Название"></a>
-                <div class="teaser-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular1-400.avif   400w,
-                        ./images/teaser-cards/popular1-600.avif   600w,
-                        ./images/teaser-cards/popular1-800.avif   800w,
-                        ./images/teaser-cards/popular1-1200.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular1-400.webp   400w,
-                        ./images/teaser-cards/popular1-600.webp   600w,
-                        ./images/teaser-cards/popular1-800.webp   800w,
-                        ./images/teaser-cards/popular1-1200.webp 1200w
-                      " />
-                    <img
-                      src="./images/teaser-cards/popular1-800.jpg"
-                      alt="Описание"
-                      width="800"
-                      height="600"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+          <div class="card-slider card-slider_per-4 js-slider">
+            
+            <div class="card-slider__viewport slider js-slider-viewport">
+              
+              <article class="card js-slide" data-index="0">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular1-400.avif   400w,
+                          ./images/teaser-cards/popular1-600.avif   600w,
+                          ./images/teaser-cards/popular1-800.avif   800w,
+                          ./images/teaser-cards/popular1-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular1-400.webp   400w,
+                          ./images/teaser-cards/popular1-600.webp   600w,
+                          ./images/teaser-cards/popular1-800.webp   800w,
+                          ./images/teaser-cards/popular1-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/teaser-cards/popular1-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
                 </div>
-                <div class="teaser-card__desc">
+
+                <div class="card__body">
                   <ul class="badges">
                     <li class="badges__badge badges__badge_category">
                       <a href="/category.html">категория</a>
                     </li>
                     <li class="badges__badge badges__badge_duration">3 дня</li>
                   </ul>
-                  <h3 class="teaser-card__title">Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
-                    deserunt tempore!
+
+                  <h3 class="card__title">Mountaineering training</h3>
+                  
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                   </p>
-                  <span class="teaser-card__more">
-                    More
+                  <span class="card__more-btn more-btn">
+                    more
                     <svg class="icon">
-                      <use href="#arrow"></use>
+                      <use href="/icons.svg#arrow"></use>
                     </svg>
                   </span>
                 </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
               </article>
-              <article class="teaser-cards__item teaser-card js-slide" data-index="1">
-                <a href="/tour.html" class="teaser-card__link" aria-label="Подробнее о туре: Название"></a>
-                <div class="teaser-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular2-400.avif   400w,
-                        ./images/teaser-cards/popular2-600.avif   600w,
-                        ./images/teaser-cards/popular2-800.avif   800w,
-                        ./images/teaser-cards/popular2-1200.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular2-400.webp   400w,
-                        ./images/teaser-cards/popular2-600.webp   600w,
-                        ./images/teaser-cards/popular2-800.webp   800w,
-                        ./images/teaser-cards/popular2-1200.webp 1200w
-                      " />
-                    <img
-                      src="./images/teaser-cards/popular2-800.jpg"
-                      alt="Описание"
-                      width="1200"
-                      height="900"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+
+              <article class="card js-slide" data-index="1">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular2-400.avif   400w,
+                          ./images/teaser-cards/popular2-600.avif   600w,
+                          ./images/teaser-cards/popular2-800.avif   800w,
+                          ./images/teaser-cards/popular2-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular2-400.webp   400w,
+                          ./images/teaser-cards/popular2-600.webp   600w,
+                          ./images/teaser-cards/popular2-800.webp   800w,
+                          ./images/teaser-cards/popular2-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/teaser-cards/popular2-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
                 </div>
-                <div class="teaser-card__desc">
+
+                <div class="card__body">
                   <ul class="badges">
                     <li class="badges__badge badges__badge_category">
                       <a href="/category.html">категория</a>
                     </li>
                     <li class="badges__badge badges__badge_duration">3 дня</li>
                   </ul>
-                  <h3 class="teaser-card__title">Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
-                    deserunt tempore!
+
+                  <h3 class="card__title">Mountaineering training in Ala-Archa</h3>
+                  
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                   </p>
-                  <span class="teaser-card__more">
-                    More
+                  <span class="card__more-btn more-btn">
+                    more
                     <svg class="icon">
-                      <use href="#arrow"></use>
+                      <use href="/icons.svg#arrow"></use>
                     </svg>
                   </span>
                 </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
               </article>
-              <article class="teaser-cards__item teaser-card js-slide" data-index="2">
-                <a href="/tour.html" class="teaser-card__link" aria-label="Подробнее о туре: Название"></a>
-                <div class="teaser-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular3-400.avif   400w,
-                        ./images/teaser-cards/popular3-600.avif   600w,
-                        ./images/teaser-cards/popular3-800.avif   800w,
-                        ./images/teaser-cards/popular3-1200.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular3-400.webp   400w,
-                        ./images/teaser-cards/popular3-600.webp   600w,
-                        ./images/teaser-cards/popular3-800.webp   800w,
-                        ./images/teaser-cards/popular3-1200.webp 1200w
-                      " />
-                    <img
-                      src="./images/teaser-cards/popular3-800.jpg"
-                      alt="Описание"
-                      width="1200"
-                      height="900"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+
+              <article class="card js-slide" data-index="2">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular3-400.avif   400w,
+                          ./images/teaser-cards/popular3-600.avif   600w,
+                          ./images/teaser-cards/popular3-800.avif   800w,
+                          ./images/teaser-cards/popular3-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular3-400.webp   400w,
+                          ./images/teaser-cards/popular3-600.webp   600w,
+                          ./images/teaser-cards/popular3-800.webp   800w,
+                          ./images/teaser-cards/popular3-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/teaser-cards/popular3-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
                 </div>
-                <div class="teaser-card__desc">
+
+                <div class="card__body">
                   <ul class="badges">
                     <li class="badges__badge badges__badge_category">
                       <a href="/category.html">категория</a>
                     </li>
                     <li class="badges__badge badges__badge_duration">3 дня</li>
                   </ul>
-                  <h3 class="teaser-card__title">Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
-                    deserunt tempore!
+
+                  <h3 class="card__title">Mountaineering training in Ala-Archa</h3>
+                  
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                   </p>
-                  <span class="teaser-card__more">
-                    More
+                  <span class="card__more-btn more-btn">
+                    more
                     <svg class="icon">
-                      <use href="#arrow"></use>
+                      <use href="/icons.svg#arrow"></use>
                     </svg>
                   </span>
                 </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
               </article>
-              <article class="teaser-cards__item teaser-card js-slide" data-index="3">
-                <a href="/tour.html" class="teaser-card__link" aria-label="Подробнее о туре: Название"></a>
-                <div class="teaser-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular4-400.avif   400w,
-                        ./images/teaser-cards/popular4-600.avif   600w,
-                        ./images/teaser-cards/popular4-800.avif   800w,
-                        ./images/teaser-cards/popular4-1200.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular4-400.webp   400w,
-                        ./images/teaser-cards/popular4-600.webp   600w,
-                        ./images/teaser-cards/popular4-800.webp   800w,
-                        ./images/teaser-cards/popular4-1200.webp 1200w
-                      " />
-                    <img
-                      src="./images/teaser-cards/popular4-800.jpg"
-                      alt="Описание"
-                      width="1200"
-                      height="900"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+
+              <article class="card js-slide" data-index="3">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular4-400.avif   400w,
+                          ./images/teaser-cards/popular4-600.avif   600w,
+                          ./images/teaser-cards/popular4-800.avif   800w,
+                          ./images/teaser-cards/popular4-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular4-400.webp   400w,
+                          ./images/teaser-cards/popular4-600.webp   600w,
+                          ./images/teaser-cards/popular4-800.webp   800w,
+                          ./images/teaser-cards/popular4-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/teaser-cards/popular4-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
                 </div>
-                <div class="teaser-card__desc">
+
+                <div class="card__body">
                   <ul class="badges">
                     <li class="badges__badge badges__badge_category">
                       <a href="/category.html">категория</a>
                     </li>
                     <li class="badges__badge badges__badge_duration">3 дня</li>
                   </ul>
-                  <h3 class="teaser-card__title">Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
-                    deserunt tempore!
+
+                  <h3 class="card__title">Mountaineering training in Ala-Archa</h3>
+                  
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                   </p>
-                  <span class="teaser-card__more">
-                    More
+                  <span class="card__more-btn more-btn">
+                    more
                     <svg class="icon">
-                      <use href="#arrow"></use>
+                      <use href="/icons.svg#arrow"></use>
                     </svg>
                   </span>
                 </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
               </article>
-              <article class="teaser-cards__item teaser-card js-slide" data-index="4">
-                <a href="/tour.html" class="teaser-card__link" aria-label="Подробнее о туре: Название"></a>
-                <div class="teaser-card__img">
-                  <picture>
-                    <source
-                      type="image/avif"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular5-400.avif   400w,
-                        ./images/teaser-cards/popular5-600.avif   600w,
-                        ./images/teaser-cards/popular5-800.avif   800w,
-                        ./images/teaser-cards/popular5-1200.avif 1200w
-                      " />
-                    <source
-                      type="image/webp"
-                      sizes="(min-width: 1024px) 215px, (min-width: 768px) 335px, calc(100vw - 32px)"
-                      srcset="
-                        ./images/teaser-cards/popular5-400.webp   400w,
-                        ./images/teaser-cards/popular5-600.webp   600w,
-                        ./images/teaser-cards/popular5-800.webp   800w,
-                        ./images/teaser-cards/popular5-1200.webp 1200w
-                      " />
-                    <img
-                      src="./images/teaser-cards/popular5-800.jpg"
-                      alt="Описание"
-                      width="1200"
-                      height="900"
-                      loading="lazy"
-                      decoding="async" />
-                  </picture>
+
+              <article class="card js-slide" data-index="4">
+                <div class="card__head">
+                  <div class="card__img card__img_aspect-4-3">
+                    <picture>
+                      <source
+                        type="image/avif"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular5-400.avif   400w,
+                          ./images/teaser-cards/popular5-600.avif   600w,
+                          ./images/teaser-cards/popular5-800.avif   800w,
+                          ./images/teaser-cards/popular5-1200.avif 1200w
+                        " />
+                      <source
+                        type="image/webp"
+                        sizes="(min-width: 1440px) 376px, (min-width: 1024px) 282px, (min-width: 768px) 334px, calc(100vw - 32px)"
+                        srcset="
+                          ./images/teaser-cards/popular5-400.webp   400w,
+                          ./images/teaser-cards/popular5-600.webp   600w,
+                          ./images/teaser-cards/popular5-800.webp   800w,
+                          ./images/teaser-cards/popular5-1200.webp 1200w
+                        " />
+                      <img
+                        src="./images/teaser-cards/popular5-800.jpg"
+                        alt="Description"
+                        width="1920"
+                        height="1080"
+                        loading="lazy"
+                        decoding="async" />
+                    </picture>
+                  </div>
                 </div>
-                <div class="teaser-card__desc">
+
+                <div class="card__body">
                   <ul class="badges">
                     <li class="badges__badge badges__badge_category">
                       <a href="/category.html">категория</a>
                     </li>
                     <li class="badges__badge badges__badge_duration">3 дня</li>
                   </ul>
-                  <h3 class="teaser-card__title">Lorem, ipsum dolor.</h3>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi nisi blanditiis ipsa veritatis
-                    deserunt tempore!
+
+                  <h3 class="card__title">Mountaineering training in Ala-Archa</h3>
+                  
+                  <p class="card__desc">
+                    A 7-day practical mountaineering course combining rock climbing, ice climbing, rope work and...
                   </p>
-                  <span class="teaser-card__more">
-                    More
+                  <span class="card__more-btn more-btn">
+                    more
                     <svg class="icon">
-                      <use href="#arrow"></use>
+                      <use href="/icons.svg#arrow"></use>
                     </svg>
                   </span>
                 </div>
+                <a href="/tour.html" class="card__link" aria-label="tour name"></a>
               </article>
+
             </div>
             <div class="slider__nav">
               <div class="slider__btn slider__btn_prev js-slider-prev" aria-label="Previous slide">
@@ -1380,65 +1407,69 @@
       <div class="footer__top section-padding section-bg">
         <div class="container">
           <div class="footer__top-grid">
-            <div class="footer__grid-item">
-              <h2 class="title">Plan your jorney</h2>
+            
+            <!-- Добавлен модификатор _title -->
+            <div class="footer__grid-item footer__grid-item_title">
+              <h2 class="title">Plan your journey</h2>
             </div>
-            <div class="footer__grid-item">
+            
+            <!-- Добавлен модификатор _desc -->
+            <div class="footer__grid-item footer__grid-item_desc">
               <p class="footer__subtitle">
                 Lorem ipsum dolor sit amet <br />
                 consectetur adipisicing.
               </p>
             </div>
-            <div class="footer__grid-item">
-              <a
-                href="https://wa.me/996555150795"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="footer__contacts-link">
-                <svg class="icon">
-                  <use href="/icons.svg#whatsapp"></use>
-                </svg>
-                <div>
-                  <strong class="footer__contacts-title">Whatsapp</strong>
-                  <span>+996 555 150 795</span>
-                </div>
-              </a>
-            </div>
-            <div class="footer__grid-item">
-              <a href="mailto:mongu.karakol@gmail.com" class="footer__contacts-link">
-                <svg class="icon">
-                  <use href="/icons.svg#envelope"></use>
-                </svg>
-                <div>
-                  <strong class="footer__contacts-title">Email</strong>
-                  <span>mongu.karakol@gmail.com</span>
-                </div>
-              </a>
-            </div>
-            <div class="footer__grid-item">
-              <a
-                href="https://www.instagram.com/monguhotel/"
-                class="footer__contacts-link"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="social media instagram">
-                <svg class="icon">
-                  <use href="./icons.svg#instagram"></use>
-                </svg>
-                <div>
-                  <strong class="footer__contacts-title">Instagram</strong>
-                  <span>@monguhotel</span>
-                </div>
-              </a>
-            </div>
-            <div class="footer__grid-item">
-              <button type="button" class="footer__btn btn">
+
+            <!-- SEO-обертка для контактов (визуально будет скрыта) -->
+            <address class="footer__address-wrapper">
+              <div class="footer__grid-item">
+                <a href="https://wa.me/996555150795" target="_blank" rel="noopener noreferrer" class="footer__contacts-link">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/icons.svg#whatsapp"></use>
+                  </svg>
+                  <div>
+                    <strong class="footer__contacts-title">Whatsapp</strong>
+                    <span>+996 555 150 795</span>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="footer__grid-item">
+                <a href="mailto:mongu.karakol@gmail.com" class="footer__contacts-link">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="/icons.svg#envelope"></use>
+                  </svg>
+                  <div>
+                    <strong class="footer__contacts-title">Email</strong>
+                    <span>mongu.karakol@gmail.com</span>
+                  </div>
+                </a>
+              </div>
+              
+              <div class="footer__grid-item">
+                <a href="https://www.instagram.com/monguhotel/" class="footer__contacts-link" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" aria-hidden="true">
+                    <use href="./icons.svg#instagram"></use>
+                  </svg>
+                  <div>
+                    <strong class="footer__contacts-title">Instagram</strong>
+                    <span>@monguhotel</span>
+                  </div>
+                </a>
+              </div>
+            </address>
+
+            <!-- Добавлен модификатор _action, кнопка заменена на <a> -->
+            <div class="footer__grid-item footer__grid-item_action">
+              <a href="/booking.html" class="footer__btn btn">
                 Booking
-                <svg class="icon">
-                  <use href="#arrow"></use>
+                <svg class="icon" aria-hidden="true">
+                  <use href="/icons.svg#arrow"></use>
                 </svg>
-              </button>
+              </a>
             </div>
+            
           </div>
         </div>
       </div>
@@ -1458,10 +1489,10 @@
               </svg>
             </a>
 
-            <nav aria-label="Footer navigation">
+            <nav aria-label="Основная навигация">
               <ul>
                 <li><a href="/categories.html">Tours</a></li>
-                <li><a href="/private.html">Private tours</a></li>
+                <li><a href="#">Private tours</a></li>
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
@@ -1704,7 +1735,7 @@
                 </ul>
               </div>
             </li>
-            <li class="menu__item"><a class="menu__item-link" href="#">Gallery</a></li>
+
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>

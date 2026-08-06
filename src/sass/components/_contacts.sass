@@ -2,32 +2,7 @@
 
 .contacts
 
-  &__grid
-    display: flex
-    flex-direction: column
-    gap: v.$space-lg
-
-    @include v.media(laptop)
-      display: grid
-      // Идеальная пропорция: Карта 4.5 части, Инфо 5.5 частей
-      grid-template-columns: 3fr 1fr
-      gap: v.$space-xl
-      align-items: stretch // Растягивает карту по высоте правой колонки
-      
-  &__map
-    border-radius: v.$rad-lg
-    overflow: hidden
-    background-color: v.$clr-bg-alt
-    height: v.to-rem(350)
-    box-shadow: v.$shadow-md
-    position: relative
-
-    iframe
-      display: block
-      width: 100%
-      height: 100%
-      border: 0
-
+  
   &__info
     display: flex
     flex-direction: column

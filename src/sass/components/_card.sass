@@ -10,7 +10,7 @@
   @include v.media(laptop)
     grid-template-columns: repeat(3, 1fr)
 
-  .tour-card
+  .card
     margin-bottom: v.$space-lg
 
     &:last-child
@@ -19,7 +19,50 @@
     @include v.media(tablet)
       margin: 0
 
-.tour-card
+.card-slider
+  position: relative
+
+  &__viewport
+    display: flex 
+    align-items: stretch
+
+  .card
+    box-shadow: none
+    width: 100%
+
+    // @include v.has-mouse
+    //   &:hover
+    //     transform: none
+
+    //     .card__img img
+    //       transform: none
+
+  &__viewport
+    gap: v.$space-lg
+
+  &_per-4
+    .card
+      @include v.media(tablet)
+        width: calc( (50% - (1 * v.$space-lg) / 2) )
+
+      @include v.media(laptop)
+        width: calc( (100% - (3 * v.$space-sm)) / 4 )
+
+      @include v.media(desktop)
+        width: calc( (100% - (3 * v.$space-lg)) / 4 )
+
+  &_per-3
+    .card
+      @include v.media(tablet)
+        width: calc( (50% - (1 * v.$space-lg) / 2) )
+
+      @include v.media(laptop)
+        width: calc( (100% - (3 * v.$space-sm)) / 3 )
+
+      @include v.media(desktop)
+        width: calc( (100% - (3 * v.$space-lg)) / 3 )
+
+.card
   position: relative
   background-color: #fff
   border-radius: v.$rad-md
@@ -27,6 +70,8 @@
   width: 100%
   box-shadow: v.$shadow-lg
   transition: transform v.$tr-base
+  display: flex
+  flex-direction: column
 
   &__head
     position: relative
@@ -51,17 +96,31 @@
       object-fit: cover
       transition: transform v.$tr-base
 
+    &_aspect-4-3
+      aspect-ratio: 4 / 3
+
   &__body
     display: flex
     flex-direction: column
     row-gap: v.$space-sm
     padding: v.$space-md
+    height: 100%
 
     @include v.media(tablet)
       padding: v.$space-lg
 
+    .badges
+
+      &__badge_category
+        z-index: 2
+
   &__title
     font-size: v.$fz-lg
+
+  &__subtitle
+    font-weight: 500
+    color: rgba(v.$clr-text, .7)
+    display: block
 
   &__desc
     font-size: v.$fz-md
@@ -75,6 +134,13 @@
   &__btn
     width: 100%
     border-radius: v.$rad-md
+    transition: opacity v.$tr-base
+
+  &__more-btn
+    text-transform: uppercase
+    color: v.$clr-accent
+    font-weight: 500
+    margin-top: auto
 
   &__features
     display: grid
@@ -115,5 +181,10 @@
     &:hover
       transform: translateY(v.to-rem(-3))
 
-      .tour-card__img img
+      .card__img img
         transform: scale(1.02)
+      .card__btn
+        opacity: 0.85
+
+  &_centered
+    text-align: center

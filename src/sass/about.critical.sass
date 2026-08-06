@@ -1,1 +1,81 @@
 @use './core-critical'
+@use './components/breadcrumbs'
+@use './settings/shared' as v
+.about-hero
+  &__grid
+    display: flex
+    flex-direction: column
+    gap: v.$space-xl
+
+    @include v.media(laptop)
+      display: grid
+      grid-template-columns: 1fr 1fr
+      align-items: center
+      gap: v.to-rem(60)
+
+  &__content
+    order: 2
+
+    @include v.media(laptop)
+      order: 1
+
+  .title-accent
+    font-family: v.$ff-accent
+    font-style: italic
+    color: v.$clr-accent
+
+  &__lead
+    font-size: v.$fz-md
+    color: v.$clr-text-muted
+    line-height: 1.6
+    margin-top: v.$space-md
+    margin-bottom: v.$space-xl
+
+    @include v.media(laptop)
+      font-size: v.$fz-lg
+
+  &__stats
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: v.$space-sm
+    border-top: v.to-rem(1) solid #e2e2e9
+    padding-top: v.$space-lg
+
+  &__stat
+    display: flex
+    flex-direction: column
+    gap: v.to-rem(4)
+
+  &__stat-val
+    font-size: v.$fz-xxl
+    font-family: v.$ff-accent
+    color: v.$clr-accent
+    line-height: 1
+
+    @include v.media(tablet)
+      font-size: v.$fz-hero
+
+  &__stat-label
+    font-size: v.$fz-xs
+    text-transform: uppercase
+    font-weight: 600
+    color: v.$clr-text-muted
+    letter-spacing: v.to-rem(1)
+
+  &__media
+    order: 1
+    border-radius: v.$rad-lg
+    overflow: hidden
+    aspect-ratio: 3 / 4
+    background-color: #e2e2e9
+    position: relative
+
+    @include v.media(laptop)
+      order: 2
+      aspect-ratio: 4 / 5
+
+  &__img
+    width: 100%
+    height: 100%
+    object-fit: cover
+    display: block

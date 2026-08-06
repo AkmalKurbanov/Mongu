@@ -14,11 +14,15 @@
     @include v.media(desktop)
       grid-template-columns: repeat(5, 1fr)
 
+  &__address-wrapper
+    display: contents
+
   &__grid-item
     display: flex
     align-items: center
     grid-column: span 2 / span 2
-
+    font-style: normal
+    
     @include v.media(tablet)
       grid-column: span 1 / span 1
       justify-content: center
@@ -26,11 +30,8 @@
     @include v.media(desktop)
       grid-row-start: 2
 
-    &:first-child
-      grid-row-start: 1
-
-    &:first-child,
-    &:nth-child(2)
+    &_title,
+    &_desc
       grid-column: span 4 / span 4
       justify-content: center
       text-align: center
@@ -38,14 +39,16 @@
       @include v.media(desktop)
         justify-content: flex-start
 
-    &:nth-child(2)
+    &_title
+      grid-row-start: 1
+
+    &_desc
       grid-row-start: 2
 
       @include v.media(desktop)
         grid-column: span 1 / span 1
         text-align: left
-
-    &:last-child
+    &_action
       grid-column: span 2 / span 2
 
       @include v.media(tablet)

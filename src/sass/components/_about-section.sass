@@ -3,8 +3,7 @@
 .about
 
   &__link
-    transition: color v.$tr-base
-    color: v.$clr-accent
+    color: v.$clr-text
     text-transform: uppercase
     font-weight: 500
     display: inline-flex
@@ -13,14 +12,9 @@
     margin: 0 auto
     
     @include v.media(laptop)
-      color: v.$clr-text
-      justify-content: flex-start
       margin: 0
       grid-column: 1
       grid-row: 3
-
-    .icon
-      transition: transform v.$tr-base
 
   &__title
     @include v.media(laptop)
@@ -89,7 +83,7 @@
     text-align: center
 
     @include v.media(tablet)
-      padding: 0 v.to-rem(5)
+      padding: 0 v.$space-xs
 
       &:last-child
         border: none
