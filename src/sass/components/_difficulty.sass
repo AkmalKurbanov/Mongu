@@ -1,0 +1,46 @@
+@use '../settings/shared' as v
+
+.difficulty
+
+  &_lvl-1
+    .icon_difficulty-arrow
+      transform: rotate(-65deg)
+      margin-left: v.to-rem(7.5)
+      margin-bottom: v.to-rem(2)
+
+  &_lvl-2
+    .icon_difficulty-arrow
+      transform: rotate(-23deg)
+      margin-left: v.to-rem(4)
+
+  &_lvl-3
+    .icon_difficulty-arrow
+      margin-right: v.to-rem(4)
+      transform: rotate(23deg)
+
+  &_lvl-4
+    .icon_difficulty-arrow
+      transform: rotate(65deg)
+      margin-right: v.to-rem(7.5)
+      margin-bottom: v.to-rem(2)
+
+  &__icon
+    display: flex
+    position: relative
+    align-items: flex-end
+    justify-content: center
+
+    .icon
+      &_difficulty
+        width: v.to-rem(60)
+        height: v.to-rem(40)
+        align-items: flex-start
+
+      &_difficulty-arrow
+        width: v.to-rem(12)
+        height: v.to-rem(24)
+        position: absolute
+        transform-origin: bottom
+        display: flex
+        align-items: center
+        justify-content: center

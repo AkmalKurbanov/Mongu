@@ -1,3 +1,8 @@
-@use './components/contacts' 
+@use './core-critical'
+@use './components/contacts.critical'  as contacts-crit
+
+@use './critical-end-marker'
+
+@use './components/contacts'  as contacts-main
 @use './components/form' 
 @use './core'  

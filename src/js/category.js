@@ -1,5 +1,5 @@
-import { initHeader } from "./header-fixed?categoriesPage";
-import { initMenu } from "./menu?categoriesPage";         
+import { initHeader } from "./header-fixed?categoryPage";
+import { initMenu } from "./menu?categoryPage";         
 import "/sass/category.sass";
 
 document.addEventListener("DOMContentLoaded", () => {

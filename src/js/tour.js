@@ -1,8 +1,8 @@
-import { initHeader } from "./header-fixed?indexPage";
-import { initMenu } from "./menu?indexPage";
-import { initSliders } from "./slider?indexPage";
-import { initTabs } from "./tabs?indexPage";
-import { initAccordion } from "./accordion?indexPage";
+import { initHeader } from "./header-fixed?tourPage";
+import { initMenu } from "./menu?tourPage";
+import { initSliders } from "./slider?tourPage";
+import { initTabs } from "./tabs?tourPage";
+import { initAccordion } from "./accordion?tourPage";
 import "/sass/tour.sass";
 
 document.addEventListener("DOMContentLoaded", () => {
