@@ -49,15 +49,25 @@
       padding-left: v.$space-lg
       position: relative
 
-      &:before
+      &:before,
+      &:after
         position: absolute
         content: ''
+
+      &:before
         background-color: v.$clr-accent
         width: v.to-rem(1)
         height: 100%
         left: v.to-rem(7.5)
         top: v.to-rem(32)
       
+      &:after
+        height: v.to-rem(1)
+        width: calc( 100% - v.$space-lg )
+        background-color: #c7c7e7
+        right: 0
+        bottom: 0
+
       &:last-child
         &:before
           display: none  
