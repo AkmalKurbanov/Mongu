@@ -6,7 +6,7 @@
 
 .hero
   position: relative
- 
+
   &::before
     @include wh
     position: absolute
@@ -15,28 +15,47 @@
     background-color: rgba(0,0,0,0.5)
     z-index: 2
 
-
   &__poster
     @include wh
 
     img
       height: 100%
 
-    &_bottom-right-bg
+    &_center-bg
       img
-        object-position: bottom right
+        object-position: center
 
     &_top-bg
       img
         object-position: top
-   
-    &_right-bg
-      img
-        object-position: right
-    
+
     &_bottom-bg
       img
         object-position: bottom
+
+    &_left-bg
+      img
+        object-position: left
+
+    &_right-bg
+      img
+        object-position: right
+
+    &_top-left-bg
+      img
+        object-position: top left
+
+    &_top-right-bg
+      img
+        object-position: top right
+
+    &_bottom-left-bg
+      img
+        object-position: bottom left
+
+    &_bottom-right-bg
+      img
+        object-position: bottom right
 
   &__media,
   &__video
@@ -56,14 +75,13 @@
     @include v.landscape
       padding-bottom: v.$space-xl
       height: auto
-    
+
     @include v.media(tablet)
       min-height: 100svh
-      
+
     @include v.media(laptop)
       align-items: flex-end
       padding-bottom: v.to-rem(100)
-   
 
   &__title
     font-family: v.$ff-accent
@@ -75,9 +93,6 @@
     @include v.media(tablet)
       font-size: v.to-rem(60)
       line-height: v.to-rem(60)
-
-      
-      
 
   &__title-accent
     font-style: italic

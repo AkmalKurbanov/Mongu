@@ -1,0 +1,173 @@
+@use '../settings/shared' as v
+
+.dest-mosaic
+  display: flex
+  // flex-direction: column
+  gap: v.$space-md
+
+  @include v.media(tablet)
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-auto-flow: row dense // Включили умное заполнение пустот
+
+  @include v.media(laptop)
+    grid-template-columns: repeat(4, 1fr)
+    grid-auto-rows: v.to-rem(280) // Базовая высота ячейки сетки
+
+  &__item
+    position: relative
+    border-radius: v.$rad-md
+    overflow: hidden
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    aspect-ratio: 4/3
+    width: 100%
+    max-width: 100%
+
+    @include v.media(laptop)
+      aspect-ratio: auto
+
+    &::after
+      content: ''
+      position: absolute
+      inset: 0
+      background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.8) 100%)
+      z-index: 1
+      transition: background v.$tr-base
+
+    @include v.media(laptop)
+      min-height: auto // Сброс для десктопа, высота управляется сеткой
+      grid-column: span 1
+      grid-row: span 1
+
+    // =========================================
+    // УНИВЕРСАЛЬНЫЕ КЛАССЫ СЕТКИ (вместо nth-child)
+    // =========================================
+
+    // Большая карточка (занимает 2 колонки и 2 ряда)
+    &_big
+      @include v.media(laptop)
+        grid-column: span 2
+        grid-row: span 2
+
+    // Широкая карточка (занимает 2 колонки и 1 ряд)
+    &_wide
+      @include v.media(laptop)
+        grid-column: span 2
+        grid-row: span 1
+
+    // Высокая карточка (занимает 1 колонку и 2 ряда)
+    &_tall
+      @include v.media(laptop)
+        grid-column: span 1
+        grid-row: span 2
+
+    // =========================================
+    
+    &.show-info
+      &::after
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%)
+
+      .dest-mosaic__bg img
+        transform: scale(1.05)
+
+      .dest-mosaic__reveal
+        grid-template-rows: 1fr
+
+    @include v.has-mouse
+      &:hover
+        &::after
+          background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%)
+
+        .dest-mosaic__bg img
+          transform: scale(1.05)
+
+        .dest-mosaic__reveal
+          grid-template-rows: 1fr
+
+  &__bg
+    position: absolute
+    inset: 0
+    width: 100%
+    height: 100%
+    z-index: 0
+
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+      display: block
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+
+  &__content
+    position: relative
+    z-index: 2
+    padding: v.$space-md
+    color: #fff
+
+    @include v.media(desktop)
+      padding: v.$space-xl
+
+  &__icon-wrap
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: v.to-rem(48)
+    height: v.to-rem(48)
+    margin-bottom: v.$space-xs
+    border-radius: 50% // Или v.$rad-md для квадрата
+    background-color: rgba(255, 255, 255, 0.1) // Полупрозрачный белый
+    backdrop-filter: blur(8px) // Эффект матового стекла
+    border: 1px solid rgba(255, 255, 255, 0.2)
+
+    .icon
+      width: v.to-rem(40)
+      height: v.to-rem(24)
+      color: #fff
+
+      &_cat-icon
+        width: v.to-rem(35)
+        height: v.to-rem(35)
+
+  &__title
+    font-family: v.$ff-accent
+    font-size: v.$fz-xl
+    font-weight: 600
+    margin: 0
+
+  &__reveal
+    display: grid
+    grid-template-rows: 0fr
+    transition: grid-template-rows 0.4s ease
+
+    @include v.is-touch
+      grid-template-rows: 1fr
+
+  &__reveal-inner
+    overflow: hidden
+
+    p
+      margin-top: v.$space-sm
+      font-size: v.$fz-sm
+      line-height: 1.5
+      color: rgba(255,255,255, 0.8)
+
+      @include v.media(tablet)
+        font-size: v.$fz-md
+
+  &__btn
+    display: inline-flex
+    align-items: center
+    gap: v.$space-xs
+    margin-top: v.$space-sm
+    font-size: v.$fz-xs
+    font-weight: 600
+    text-transform: uppercase
+    letter-spacing: 0.05em
+    color: v.$clr-accent
+
+  &__link
+    position: absolute
+    inset: 0
+    z-index: 5
