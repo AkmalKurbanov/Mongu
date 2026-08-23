@@ -2437,7 +2437,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -2789,7 +2789,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -3030,7 +3030,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -3233,7 +3233,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -3301,7 +3301,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
     <main class="main-content contacts">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
               <li class="breadcrumbs__item" aria-current="page">Contacts</li>
@@ -3451,7 +3451,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -3692,7 +3692,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -3895,7 +3895,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -4472,7 +4472,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -4713,7 +4713,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -4725,7 +4725,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
 </html>
 </file>
 
-<file path="src/travel-guide.html">
+<file path="src{{'travel-guide'|page}}">
 <!doctype html>
 <html lang="en">
   <head>
@@ -4916,7 +4916,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -4984,7 +4984,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
     <main class="travel-guide section-padding-bottom">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Home</a>
@@ -5162,7 +5162,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -5403,7 +5403,7 @@ $breakpoints: ('tablet': 768px, 'laptop': 1024px, 'desktop': 1440px, 'xlarge': 1
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -5923,7 +5923,7 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -5991,7 +5991,7 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
     <main class="main-content about">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
               <li class="breadcrumbs__item" aria-current="page">About Us</li>
@@ -7182,7 +7182,7 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -7422,7 +7422,7 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
               </div>
             </li>
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -7625,7 +7625,7 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -8472,7 +8472,7 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -8713,7 +8713,7 @@ $ff-accent: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -10667,7 +10667,7 @@ export const initMenu = () => {
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -10810,7 +10810,7 @@ export const initMenu = () => {
     <main class="main-content">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Главная</a>
@@ -11636,7 +11636,7 @@ export const initMenu = () => {
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -11877,7 +11877,7 @@ export const initMenu = () => {
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -12069,7 +12069,7 @@ export const initMenu = () => {
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -12178,7 +12178,7 @@ export const initMenu = () => {
     <main class="main-content">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Главная</a>
@@ -12757,7 +12757,7 @@ export const initMenu = () => {
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -13016,7 +13016,7 @@ export const initMenu = () => {
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -13857,7 +13857,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -13925,7 +13925,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <main class="main-content">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
               <li class="breadcrumbs__item" aria-current="page">Booking</li>
@@ -14450,7 +14450,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -14691,7 +14691,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -14883,7 +14883,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -15026,7 +15026,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <main class="main-content">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Home</a>
@@ -15852,7 +15852,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -16093,7 +16093,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -16285,7 +16285,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -16428,7 +16428,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <main class="main-content">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Главная</a>
@@ -17254,7 +17254,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -17513,7 +17513,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -17705,7 +17705,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -17848,7 +17848,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <main class="main-content">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Главная</a>
@@ -18674,7 +18674,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -18933,7 +18933,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -19125,7 +19125,7 @@ document.addEventListener("DOMContentLoaded", () => {
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -19268,7 +19268,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <main class="main-content">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Home</a>
@@ -20094,7 +20094,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -20353,7 +20353,7 @@ document.addEventListener("DOMContentLoaded", () => {
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -21725,7 +21725,7 @@ ul
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -21870,7 +21870,7 @@ ul
 
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Home</a>
@@ -22215,7 +22215,7 @@ ul
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -22456,7 +22456,7 @@ ul
             </li>
             
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -22648,7 +22648,7 @@ ul
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -22767,7 +22767,7 @@ ul
     <main class="main-content">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Home</a>
@@ -23349,7 +23349,7 @@ ul
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -23590,7 +23590,7 @@ ul
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -23796,7 +23796,7 @@ ul
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -23908,7 +23908,7 @@ ul
     <main class="main-content main-content_dark-bg lodge">
       <div class="breadcrumbs breadcrumbs_light">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
               <li class="breadcrumbs__item">
@@ -24390,7 +24390,7 @@ ul
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -24649,7 +24649,7 @@ ul
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -24841,7 +24841,7 @@ ul
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -24879,7 +24879,7 @@ ul
     <main class="main-content">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Главная</a>
@@ -25851,7 +25851,7 @@ ul
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -26123,7 +26123,7 @@ ul
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>
@@ -26315,7 +26315,7 @@ ul
               </ul>
             </li>
             <li class="header__nav-item"><a href="/about.html" class="header__nav-link">About us</a></li>
-            <li class="header__nav-item"><a href="/travel-guide.html" class="header__nav-link">Travel guide</a></li>
+            <li class="header__nav-item"><a href="{{'travel-guide'|page}}" class="header__nav-link">Travel guide</a></li>
             <li class="header__nav-item"><a href="/contacts.html" class="header__nav-link">Contacts</a></li>
           </ul>
         </nav>
@@ -27634,7 +27634,7 @@ ul
                 <li><a href="/lodge.html">Sokmo lodge</a></li>
                 <li><a href="/destination.html">Destination</a></li>
                 <li><a href="/about.html">About us</a></li>
-                <li><a href="/travel-guide.html">Travel guide</a></li>
+                <li><a href="{{'travel-guide'|page}}">Travel guide</a></li>
                 <li><a href="/contacts.html">Contacts</a></li>
               </ul>
             </nav>
@@ -27875,7 +27875,7 @@ ul
             </li>
 
             <li class="menu__item"><a class="menu__item-link" href="/about.html">About us</a></li>
-            <li class="menu__item"><a class="menu__item-link" href="/travel-guide.html">Travel guide</a></li>
+            <li class="menu__item"><a class="menu__item-link" href="{{'travel-guide'|page}}">Travel guide</a></li>
             <li class="menu__item"><a class="menu__item-link" href="/contacts.html">Contacts</a></li>
           </ul>
         </nav>

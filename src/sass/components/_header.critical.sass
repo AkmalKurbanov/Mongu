@@ -12,9 +12,12 @@
   left: 0
   right: 0
   margin: 0 auto
-  opacity: 0
-  transition: opacity v.$tr-fast
-  transition-delay: .25s
+  // Убрали opacity: 0. Шапка видна по умолчанию!
+  transition: opacity 0.3s ease, transform 0.3s ease
+  
+  &_hidden
+    transform: translateY(-150%) !important
+    opacity: 0 !important
 
   &__container
     display: flex
@@ -23,7 +26,7 @@
     column-gap: v.$space-xs
     height: v.to-rem(50)
     border-radius: v.$rad-sm
-    transition: background-color v.$tr-base, max-width v.$tr-base, padding v.$tr-base
+    // Полностью убрали transition отсюда. Смена стилей будет мгновенной вне экрана.
 
     @include v.media(tablet)
       box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .2)
@@ -194,7 +197,6 @@
           color: v.$clr-accent-darker
 
   &_reduced
-    opacity: 1
     .header__container
       padding: 0 v.$space-xs
 
@@ -213,6 +215,3 @@
 
     .header__nav-link
       text-transform: inherit
-
-  &_glued
-    opacity: 1

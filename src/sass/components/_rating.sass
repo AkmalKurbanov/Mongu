@@ -1,0 +1,80 @@
+@use '../settings/shared' as v
+// Сначала объявляем миксин в самом верху файла
+=half-star
+  color: #e5e5e5
+  position: relative
+  overflow: hidden
+  &::after
+    content: "\2605"
+    position: absolute
+    left: 0
+    top: 0
+    width: 50%
+    overflow: hidden
+    color: #ffc107
+
+.rating
+  display: flex
+  align-items: center
+  gap: v.$space-sm
+
+  &__stars
+    display: inline-flex
+    align-items: center
+    gap: v.$space-xs
+    line-height: 1
+
+  &__star
+    font-size: v.$fz-xl
+    color: #e5e5e5
+    display: inline-block
+    position: relative
+
+  // --- Рейтинг 1.0 - 1.5 ---
+  &[data-rating^="1.0"] 
+    .rating__star:nth-child(1)
+      color: #ffc107
+  &[data-rating="1.5"] 
+    .rating__star:nth-child(2)
+      +half-star
+
+  // --- Рейтинг 2.0 - 2.5 ---
+  &[data-rating^="2.0"] 
+    .rating__star:nth-child(-n+2)
+      color: #ffc107
+  &[data-rating="2.5"] 
+    .rating__star:nth-child(1), 
+    .rating__star:nth-child(2)
+      color: #ffc107
+    .rating__star:nth-child(3)
+      +half-star
+
+  // --- Рейтинг 3.0 - 3.5 ---
+  &[data-rating^="3.0"] 
+    .rating__star:nth-child(-n+3)
+      color: #ffc107
+  &[data-rating="3.5"] 
+    .rating__star:nth-child(-n+3)
+      color: #ffc107
+    .rating__star:nth-child(4)
+      +half-star
+
+  // --- Рейтинг 4.0 - 4.5 ---
+  &[data-rating^="4.0"] 
+    .rating__star:nth-child(-n+4)
+      color: #ffc107
+  &[data-rating="4.5"] 
+    .rating__star:nth-child(-n+4)
+      color: #ffc107
+    .rating__star:nth-child(5)
+      +half-star
+
+  // --- Рейтинг 5.0 ---
+  &[data-rating="5.0"] 
+    .rating__star:nth-child(-n+5)
+      color: #ffc107
+
+  &__total
+    font-weight: bold
+    font-size: v.$fz-xl
+    color: green

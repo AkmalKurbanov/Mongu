@@ -6,6 +6,28 @@
   gap: v.$space-xl
   margin-top: v.$space-xl
 
+  @include v.media(tablet)
+    display: grid
+    grid-template-columns: 1fr 1fr
+    gap: v.$space-md
+
+  @include v.media(laptop)
+    display: flex
+    
+  &_per-2
+    
+    .content-card__content
+      @include v.media(tablet)
+        padding: v.$space-md  
+
+    .content-card__title    
+      font-size: v.$fz-lg
+
+    .btn
+      width: 100%  
+
+
+
 .content-card
   display: flex
   flex-direction: column
@@ -16,6 +38,7 @@
   border: v.to-rem(1) solid #e2e2e9
   transition: transform v.$tr-base, box-shadow v.$tr-base
 
+  
   @include v.media(laptop)
     flex-direction: row
     align-items: stretch
@@ -28,7 +51,7 @@
   &__visual
     position: relative
     width: 100%
-    aspect-ratio: 4 / 3
+    aspect-ratio: 16 / 9
     background-color: v.$clr-bg-alt
     overflow: hidden
 
@@ -81,9 +104,12 @@
 
     @include v.media(tablet)
       padding: v.$space-xl
+    
+    @include v.media(laptop)
+      padding: v.$space-md v.$space-xl
 
   &__header
-    margin-bottom: v.$space-lg
+    margin-bottom: v.$space-md
 
   &__title
     font-size: v.$fz-xxl
@@ -101,7 +127,7 @@
     display: grid
     grid-template-columns: repeat(2, 1fr)
     gap: v.$space-md
-    margin-bottom: v.$space-xl
+    margin-bottom: v.$space-md
     padding: 0
 
     li

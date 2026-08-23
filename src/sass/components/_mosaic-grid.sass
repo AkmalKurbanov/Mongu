@@ -1,6 +1,6 @@
 @use '../settings/shared' as v
 
-.dest-mosaic
+.mosaic-grid
   display: flex
   // flex-direction: column
   gap: v.$space-md
@@ -41,10 +41,6 @@
       grid-column: span 1
       grid-row: span 1
 
-    // =========================================
-    // УНИВЕРСАЛЬНЫЕ КЛАССЫ СЕТКИ (вместо nth-child)
-    // =========================================
-
     // Большая карточка (занимает 2 колонки и 2 ряда)
     &_big
       @include v.media(laptop)
@@ -63,16 +59,20 @@
         grid-column: span 1
         grid-row: span 2
 
+    &_right
+      @include v.media(tablet)
+        grid-column-end: -1
+
     // =========================================
-    
+
     &.show-info
       &::after
         background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%)
 
-      .dest-mosaic__bg img
+      .mosaic-grid__bg img
         transform: scale(1.05)
 
-      .dest-mosaic__reveal
+      .mosaic-grid__reveal
         grid-template-rows: 1fr
 
     @include v.has-mouse
@@ -80,10 +80,10 @@
         &::after
           background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.9) 100%)
 
-        .dest-mosaic__bg img
+        .mosaic-grid__bg img
           transform: scale(1.05)
 
-        .dest-mosaic__reveal
+        .mosaic-grid__reveal
           grid-template-rows: 1fr
 
   &__bg

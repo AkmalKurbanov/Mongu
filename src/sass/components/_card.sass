@@ -23,7 +23,7 @@
   position: relative
 
   &__viewport
-    display: flex 
+    display: flex
     align-items: stretch
 
   .card
@@ -46,7 +46,7 @@
         width: calc( (50% - (1 * v.$space-lg) / 2) )
 
       @include v.media(laptop)
-        width: calc( (100% - (3 * v.$space-sm)) / 4 )
+        width: calc( (100% - (2 * v.$space-lg)) / 3 )
 
       @include v.media(desktop)
         width: calc( (100% - (3 * v.$space-lg)) / 4 )
@@ -57,10 +57,7 @@
         width: calc( (50% - (1 * v.$space-lg) / 2) )
 
       @include v.media(laptop)
-        width: calc( (100% - (3 * v.$space-sm)) / 3 )
-
-      @include v.media(desktop)
-        width: calc( (100% - (3 * v.$space-lg)) / 3 )
+        width: calc( (100% - (2 * v.$space-lg)) / 3 )
 
 .card
   position: relative
@@ -131,6 +128,8 @@
     @include v.media(tablet)
       padding: 0 v.$space-lg v.$space-lg
 
+  &__btn-wrap
+    margin-top: v.$space-lg
   &__btn
     width: 100%
     border-radius: v.$rad-md

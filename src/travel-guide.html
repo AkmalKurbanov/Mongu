@@ -83,7 +83,7 @@
     <main class="travel-guide section-padding-bottom">
       <div class="breadcrumbs">
         <div class="container">
-          <nav aria-label="Хлебные крошки">
+          <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item">
                 <a class="breadcrumbs__link" href="/">Home</a>
@@ -94,84 +94,492 @@
         </div>
       </div>
 
-      <section class="section-padding-bottom">
-  <div class="container">
-
-    <div class="content-grid">
-      <!-- Универсальная карточка -->
-      <article class="content-card">
-        <div class="content-card__visual">
-          <picture>
-            <source
-              type="image/avif"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              srcset="
-                ./images/path-600.avif   600w,
-                ./images/path-1200.avif 1200w
-              " />
-            <source
-              type="image/webp"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-              srcset="
-                ./images/path-600.webp   600w,
-                ./images/path-1200.webp 1200w
-              " />
-            <img
-              src="./images/path-600.jpg"
-              alt="Описание изображения"
-              width="600"
-              height="400"
-              loading="lazy"
-              decoding="async" />
-          </picture>
-          <div class="content-card__badge">
-            <svg class="icon"><use href="/icons.svg#tag"></use></svg> Лейбл
+      <section class="section-padding">
+        <div class="container">
+          <div class="title-wrap">
+            <h2 class="title title_centered">Explore Central Asian Ranges</h2>
+            <p class="subtitle">From high-altitude alpine lakes to wild gorges and ancient nomadic paths</p>
           </div>
+          <div class="slider js-slider">
+            <div class="mosaic-grid js-slider-viewport">
+            <!-- 1. Иссык-Куль (Большая: 1-я) -->
+            <article class="mosaic-grid__item mosaic-grid__item_big js-slide">
+              <div class="mosaic-grid__bg">
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1440px) 579px, (min-width: 1024px) 439px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-issyk-kul-400.avif   400w,
+                      ./images/destination/destination-issyk-kul-600.avif   600w,
+                      ./images/destination/destination-issyk-kul-800.avif   800w,
+                      ./images/destination/destination-issyk-kul-1200.avif 1200w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1440px) 579px, (min-width: 1024px) 439px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-issyk-kul-400.webp   400w,
+                      ./images/destination/destination-issyk-kul-600.webp   600w,
+                      ./images/destination/destination-issyk-kul-800.webp   800w,
+                      ./images/destination/destination-issyk-kul-1200.webp 1200w
+                    " />
+                  <img
+                    src="./images/destination/destination-issyk-kul-800.jpg"
+                    alt="Issyk-Kul region"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
+              </div>
+              <div class="mosaic-grid__content">
+                <div class="mosaic-grid__title-wrap">
+                  <div class="mosaic-grid__icon-wrap">
+                    <svg class="icon icon_cat-icon">
+                      <use href="/icons.svg#trekking"></use>
+                    </svg>
+                  </div>
+                  <h3 class="mosaic-grid__title">Lorem, ipsum.</h3>
+                </div>
+                <div class="mosaic-grid__reveal">
+                  <div class="mosaic-grid__reveal-inner">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, rem autem. Architecto earum dolores, similique ab libero vel. Dicta reprehenderit similique debitis quasi hic molestiae cum nulla voluptatum id quos!
+                    </p>
+                    <span class="mosaic-grid__btn"
+                      >Explore Region <svg class="icon"><use href="/icons.svg#arrow"></use></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <a href="/category.html" class="mosaic-grid__link" aria-label="Explore Issyk-Kul"></a>
+            </article>
+
+            <!-- 2. Нарын (Большая: 2-я) -->
+            <article class="mosaic-grid__item mosaic-grid__item_wide js-slide">
+              <div class="mosaic-grid__bg">
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1440px) 579px, (min-width: 1024px) 439px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-naryn-400.avif   400w,
+                      ./images/destination/destination-naryn-600.avif   600w,
+                      ./images/destination/destination-naryn-800.avif   800w,
+                      ./images/destination/destination-naryn-1200.avif 1200w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1440px) 579px, (min-width: 1024px) 439px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-naryn-400.webp   400w,
+                      ./images/destination/destination-naryn-600.webp   600w,
+                      ./images/destination/destination-naryn-800.webp   800w,
+                      ./images/destination/destination-naryn-1200.webp 1200w
+                    " />
+                  <img
+                    src="./images/destination/destination-naryn-800.jpg"
+                    alt="Naryn region"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
+              </div>
+              <div class="mosaic-grid__content">
+                <div class="mosaic-grid__title-wrap">
+                  <div class="mosaic-grid__icon-wrap">
+                    <svg class="icon icon_cat-icon">
+                      <use href="/icons.svg#trekking"></use>
+                    </svg>
+                  </div>
+                  <h3 class="mosaic-grid__title">Lorem, ipsum.</h3>
+                </div>
+                <div class="mosaic-grid__reveal">
+                  <div class="mosaic-grid__reveal-inner">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, rem autem. Architecto earum dolores, similique ab libero vel. Dicta reprehenderit similique debitis quasi hic molestiae cum nulla voluptatum id quos!
+                    </p>
+                    <span class="mosaic-grid__btn"
+                      >Explore Region <svg class="icon"><use href="/icons.svg#arrow"></use></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <a href="/category.html" class="mosaic-grid__link"></a>
+            </article>
+
+            <!-- 3. Чуй (Стандартная: 3-я) -->
+            <article class="mosaic-grid__item mosaic-grid__item_tall js-slide">
+              <div class="mosaic-grid__bg">
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-chuy-400.avif   400w,
+                      ./images/destination/destination-chuy-600.avif   600w,
+                      ./images/destination/destination-chuy-800.avif   800w,
+                      ./images/destination/destination-chuy-1200.avif 1200w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-chuy-400.webp   400w,
+                      ./images/destination/destination-chuy-600.webp   600w,
+                      ./images/destination/destination-chuy-800.webp   800w,
+                      ./images/destination/destination-chuy-1200.webp 1200w
+                    " />
+                  <img
+                    src="./images/destination/destination-chuy-800.jpg"
+                    alt="Chuy region"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
+              </div>
+              <div class="mosaic-grid__content">
+                <div class="mosaic-grid__title-wrap">
+                  <div class="mosaic-grid__icon-wrap">
+                    <svg class="icon icon_cat-icon">
+                      <use href="/icons.svg#trekking"></use>
+                    </svg>
+                  </div>
+                  <h3 class="mosaic-grid__title">Lorem, ipsum.</h3>
+                </div>
+                <div class="mosaic-grid__reveal">
+                  <div class="mosaic-grid__reveal-inner">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, rem autem. Architecto earum dolores, similique ab libero vel. Dicta reprehenderit similique debitis quasi hic molestiae cum nulla voluptatum id quos!
+                    </p>
+                    <span class="mosaic-grid__btn"
+                      >Explore Region <svg class="icon"><use href="/icons.svg#arrow"></use></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <a href="/category.html" class="mosaic-grid__link"></a>
+            </article>
+
+            <!-- 4. Талас (Стандартная: 4-я) -->
+            <article class="mosaic-grid__item js-slide">
+              <div class="mosaic-grid__bg">
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-talas-400.avif   400w,
+                      ./images/destination/destination-talas-600.avif   600w,
+                      ./images/destination/destination-talas-800.avif   800w,
+                      ./images/destination/destination-talas-1200.avif 1200w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-talas-400.webp   400w,
+                      ./images/destination/destination-talas-600.webp   600w,
+                      ./images/destination/destination-talas-800.webp   800w,
+                      ./images/destination/destination-talas-1200.webp 1200w
+                    " />
+                  <img
+                    src="./images/destination/destination-talas-800.jpg"
+                    alt="Talas region"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
+              </div>
+              <div class="mosaic-grid__content">
+                <div class="mosaic-grid__title-wrap">
+                  <div class="mosaic-grid__icon-wrap">
+                    <svg class="icon icon_cat-icon">
+                      <use href="/icons.svg#trekking"></use>
+                    </svg>
+                  </div>
+                  <h3 class="mosaic-grid__title">Lorem, ipsum.</h3>
+                </div>
+                <div class="mosaic-grid__reveal">
+                  <div class="mosaic-grid__reveal-inner">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, rem autem. Architecto earum dolores, similique ab libero vel. Dicta reprehenderit similique debitis quasi hic molestiae cum nulla voluptatum id quos!
+                    </p>
+                    <span class="mosaic-grid__btn"
+                      >Explore Region <svg class="icon"><use href="/icons.svg#arrow"></use></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <a href="/category.html" class="mosaic-grid__link"></a>
+            </article>
+
+            <!-- 5. Джалал-Абад (Большая: 5-я) -->
+            <article class="mosaic-grid__item mosaic-grid__item_wide js-slide">
+              <div class="mosaic-grid__bg">
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1440px) 579px, (min-width: 1024px) 439px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-jalal-abad-400.avif   400w,
+                      ./images/destination/destination-jalal-abad-600.avif   600w,
+                      ./images/destination/destination-jalal-abad-800.avif   800w,
+                      ./images/destination/destination-jalal-abad-1200.avif 1200w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1440px) 579px, (min-width: 1024px) 439px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-jalal-abad-400.webp   400w,
+                      ./images/destination/destination-jalal-abad-600.webp   600w,
+                      ./images/destination/destination-jalal-abad-800.webp   800w,
+                      ./images/destination/destination-jalal-abad-1200.webp 1200w
+                    " />
+                  <img
+                    src="./images/destination/destination-jalal-abad-800.jpg"
+                    alt="Jalal-Abad region"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
+              </div>
+              <div class="mosaic-grid__content">
+                <div class="mosaic-grid__title-wrap">
+                  <div class="mosaic-grid__icon-wrap">
+                    <svg class="icon icon_cat-icon">
+                      <use href="/icons.svg#trekking"></use>
+                    </svg>
+                  </div>
+                  <h3 class="mosaic-grid__title">Lorem, ipsum.</h3>
+                </div>
+                <div class="mosaic-grid__reveal">
+                  <div class="mosaic-grid__reveal-inner">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, rem autem. Architecto earum dolores, similique ab libero vel. Dicta reprehenderit similique debitis quasi hic molestiae cum nulla voluptatum id quos!
+                    </p>
+                    <span class="mosaic-grid__btn"
+                      >Explore Region <svg class="icon"><use href="/icons.svg#arrow"></use></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <a href="/category.html" class="mosaic-grid__link"></a>
+            </article>
+
+            <!-- 6. Ош (Стандартная: 6-я) -->
+            <article class="mosaic-grid__item js-slide">
+              <div class="mosaic-grid__bg">
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-osh-400.avif   400w,
+                      ./images/destination/destination-osh-600.avif   600w,
+                      ./images/destination/destination-osh-800.avif   800w,
+                      ./images/destination/destination-osh-1200.avif 1200w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-osh-400.webp   400w,
+                      ./images/destination/destination-osh-600.webp   600w,
+                      ./images/destination/destination-osh-800.webp   800w,
+                      ./images/destination/destination-osh-1200.webp 1200w
+                    " />
+                  <img
+                    src="./images/destination/destination-osh-800.jpg"
+                    alt="Osh region"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
+              </div>
+              <div class="mosaic-grid__content">
+                <div class="mosaic-grid__title-wrap">
+                  <div class="mosaic-grid__icon-wrap">
+                    <svg class="icon icon_cat-icon">
+                      <use href="/icons.svg#trekking"></use>
+                    </svg>
+                  </div>
+                  <h3 class="mosaic-grid__title">Lorem, ipsum.</h3>
+                </div>
+                <div class="mosaic-grid__reveal">
+                  <div class="mosaic-grid__reveal-inner">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, rem autem. Architecto earum dolores, similique ab libero vel. Dicta reprehenderit similique debitis quasi hic molestiae cum nulla voluptatum id quos!
+                    </p>
+                    <span class="mosaic-grid__btn"
+                      >Explore Region <svg class="icon"><use href="/icons.svg#arrow"></use></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <a href="/category.html" class="mosaic-grid__link"></a>
+            </article>
+
+            <!-- 7. Казахстан (Стандартная: 7-я) -->
+            <article class="mosaic-grid__item js-slide">
+              <div class="mosaic-grid__bg">
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-kazakhstan-400.avif   400w,
+                      ./images/destination/destination-kazakhstan-600.avif   600w,
+                      ./images/destination/destination-kazakhstan-800.avif   800w,
+                      ./images/destination/destination-kazakhstan-1200.avif 1200w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-kazakhstan-400.webp   400w,
+                      ./images/destination/destination-kazakhstan-600.webp   600w,
+                      ./images/destination/destination-kazakhstan-800.webp   800w,
+                      ./images/destination/destination-kazakhstan-1200.webp 1200w
+                    " />
+                  <img
+                    src="./images/destination/destination-kazakhstan-800.jpg"
+                    alt="Kazakhstan"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
+              </div>
+              <div class="mosaic-grid__content">
+                <div class="mosaic-grid__title-wrap">
+                  <div class="mosaic-grid__icon-wrap">
+                    <svg class="icon icon_cat-icon">
+                      <use href="/icons.svg#trekking"></use>
+                    </svg>
+                  </div>
+                  <h3 class="mosaic-grid__title">Lorem, ipsum.</h3>
+                </div>
+                <div class="mosaic-grid__reveal">
+                  <div class="mosaic-grid__reveal-inner">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, rem autem. Architecto earum dolores, similique ab libero vel. Dicta reprehenderit similique debitis quasi hic molestiae cum nulla voluptatum id quos!
+                    </p>
+                    <span class="mosaic-grid__btn"
+                      >Explore Region <svg class="icon"><use href="/icons.svg#arrow"></use></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <a href="/category.html" class="mosaic-grid__link" aria-label="Explore Kazakhstan"></a>
+            </article>
+
+            <!-- 8. Таджикистан (Стандартная: 8-я) -->
+            <article class="mosaic-grid__item js-slide">
+              <div class="mosaic-grid__bg">
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-tajikistan-400.avif   400w,
+                      ./images/destination/destination-tajikistan-600.avif   600w,
+                      ./images/destination/destination-tajikistan-800.avif   800w,
+                      ./images/destination/destination-tajikistan-1200.avif 1200w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1440px) 285px, (min-width: 1024px) 215px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-tajikistan-400.webp   400w,
+                      ./images/destination/destination-tajikistan-600.webp   600w,
+                      ./images/destination/destination-tajikistan-800.webp   800w,
+                      ./images/destination/destination-tajikistan-1200.webp 1200w
+                    " />
+                  <img
+                    src="./images/destination/destination-tajikistan-800.jpg"
+                    alt="Tajikistan"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
+              </div>
+              <div class="mosaic-grid__content">
+                <div class="mosaic-grid__title-wrap">
+                  <div class="mosaic-grid__icon-wrap">
+                    <svg class="icon icon_cat-icon">
+                      <use href="/icons.svg#trekking"></use>
+                    </svg>
+                  </div>
+                  <h3 class="mosaic-grid__title">Lorem, ipsum.</h3>
+                </div>
+                <div class="mosaic-grid__reveal">
+                  <div class="mosaic-grid__reveal-inner">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, rem autem. Architecto earum dolores, similique ab libero vel. Dicta reprehenderit similique debitis quasi hic molestiae cum nulla voluptatum id quos!
+                    </p>
+                    <span class="mosaic-grid__btn"
+                      >Explore Region <svg class="icon"><use href="/icons.svg#arrow"></use></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <a href="/category.html" class="mosaic-grid__link" aria-label="Explore Tajikistan"></a>
+            </article>
+
+            <!-- 9. Баткен (Большая: 9-я) -->
+            <article class="mosaic-grid__item mosaic-grid__item_wide js-slide">
+              <div class="mosaic-grid__bg">
+                <picture>
+                  <source
+                    type="image/avif"
+                    sizes="(min-width: 1440px) 579px, (min-width: 1024px) 439px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-batken-400.avif   400w,
+                      ./images/destination/destination-batken-600.avif   600w,
+                      ./images/destination/destination-batken-800.avif   800w,
+                      ./images/destination/destination-batken-1200.avif 1200w
+                    " />
+                  <source
+                    type="image/webp"
+                    sizes="(min-width: 1440px) 579px, (min-width: 1024px) 439px, (min-width: 768px) 339px, 100vw"
+                    srcset="
+                      ./images/destination/destination-batken-400.webp   400w,
+                      ./images/destination/destination-batken-600.webp   600w,
+                      ./images/destination/destination-batken-800.webp   800w,
+                      ./images/destination/destination-batken-1200.webp 1200w
+                    " />
+                  <img
+                    src="./images/destination/destination-batken-800.jpg"
+                    alt="Batken region"
+                    loading="lazy"
+                    decoding="async" />
+                </picture>
+              </div>
+              <div class="mosaic-grid__content">
+                <div class="mosaic-grid__title-wrap">
+                  <div class="mosaic-grid__icon-wrap">
+                    <svg class="icon icon_cat-icon">
+                      <use href="/icons.svg#trekking"></use>
+                    </svg>
+                  </div>
+                  <h3 class="mosaic-grid__title">Lorem, ipsum.</h3>
+                </div>
+                <div class="mosaic-grid__reveal">
+                  <div class="mosaic-grid__reveal-inner">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, rem autem. Architecto earum dolores, similique ab libero vel. Dicta reprehenderit similique debitis quasi hic molestiae cum nulla voluptatum id quos!
+                    </p>
+                    <span class="mosaic-grid__btn"
+                      >Explore Region <svg class="icon"><use href="/icons.svg#arrow"></use></svg
+                    ></span>
+                  </div>
+                </div>
+              </div>
+              <a href="/category.html" class="mosaic-grid__link" aria-label="Explore Batken"></a>
+            </article>
+          </div>
+          </div>
+          
         </div>
-
-        <div class="content-card__content">
-          <div class="content-card__header">
-            <h2 class="content-card__title">Title Lorem ipsum dolor sit amet.</h3>
-            <p class="content-card__desc">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto id eos ea, dolor quia excepturi?
-            </p>
-          </div>
-
-          <!-- Универсальный список (метаданные, фичи, удобства) -->
-          <ul class="content-card__list">
-            <li>
-              <svg class="icon"><use href="/icons.svg#icon1"></use></svg> Пункт 1
-            </li>
-            <li>
-              <svg class="icon"><use href="/icons.svg#icon2"></use></svg> Пункт 2
-            </li>
-            <li>
-              <svg class="icon"><use href="/icons.svg#icon3"></use></svg> Пункт 3
-            </li>
-            <li>
-              <svg class="icon"><use href="/icons.svg#icon4"></use></svg> Пункт 4
-            </li>
-          </ul>
-
-          <div class="content-card__footer">
-            <div class="content-card__stats">
-              <span class="content-card__stats-label">Лейбл (от / время)</span>
-              <span class="content-card__stats-val">Tag, category</span>
-            </div>
-            <a href="#" class="btn btn_bordered">Read more</a>
-          </div>
-        </div>
-      </article>
-      
-    </div>
-  </div>
-</section>
+      </section>
     </main>
 
     <load src="./partials/footer.html" />
     <load src="./partials/mobile-menu.html" />
     <load src="./partials/sprite-inline.html" />
 
-    <script type="module" src="./js/travel-guide.js"></script>
+    <script type="module" src="./js/mosaic-grid.js"></script>
   </body>
 </html>

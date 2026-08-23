@@ -1,4 +1,5 @@
 import { initHeader } from "./header-fixed?tourPage";
+import { initScrollTop } from "./scroll?tourPage";
 import { initMenu } from "./menu?tourPage";
 import { initSliders } from "./slider?tourPage";
 import { initTabs } from "./tabs?tourPage";
@@ -7,6 +8,7 @@ import "/sass/tour.sass";
 
 document.addEventListener("DOMContentLoaded", () => {
   initHeader();
+  initScrollTop();
   initMenu();
 
   if ("requestIdleCallback" in window) {

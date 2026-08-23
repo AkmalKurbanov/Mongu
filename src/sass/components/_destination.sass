@@ -85,6 +85,7 @@
   border-radius: v.$rad-md
   overflow: hidden
   box-shadow: v.$shadow-sm
+  aspect-ratio: 1 / 1
 
   img
     width: 100%
@@ -94,7 +95,6 @@
   &_main
     position: relative
     z-index: 1
-    aspect-ratio: 4 / 5
 
   &_float
     position: absolute
@@ -102,7 +102,6 @@
     right: 0
     z-index: 2
     width: 60%
-    aspect-ratio: 1 / 1
     border: v.to-rem(4) solid #ffffff
     transform: translateY(10%)
     transition: transform v.$tr-base

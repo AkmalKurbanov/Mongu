@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Авторские туры по Кыргызстану | Mongu</title>
     <meta
       name="description"
@@ -13,12 +12,11 @@
     <meta property="og:description" content="Индивидуальные джип-туры и конные экспедиции по Кыргызстану." />
     <meta property="og:url" content="https://mongu.kg/" />
     <meta property="og:image" content="https://mongu.kg/images/og-image.jpg" />
-
     <meta name="theme-color" content="#6c613e" media="(prefers-color-scheme: light)" />
     <meta name="theme-color" content="#3F3F25" media="(prefers-color-scheme: dark)" />
+
     <link rel="manifest" href="/site.webmanifest" />
     <link rel="canonical" href="https://mongu.kg/" />
-
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -75,74 +73,57 @@
       </div>
       <div class="hero__content">
         <div class="container">
-          <h1 class="hero__title">Contacts</h1>
+          <h1 class="hero__title">Article</h1>
         </div>
       </div>
     </section>
 
-    <main class="main-content contacts">
+    <main class="main-content about">
       <div class="breadcrumbs">
         <div class="container">
           <nav aria-label="breadcrumbs">
             <ul class="breadcrumbs__list">
               <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="/">Home</a></li>
-              <li class="breadcrumbs__item" aria-current="page">Contacts</li>
+              <li class="breadcrumbs__item" aria-current="page">Article</li>
             </ul>
           </nav>
         </div>
       </div>
 
-      <section class="section-padding-bottom">
-        <div class="container">
-          <div class="contacts__grid">
-            <!-- Левая колонка: Карта -->
-            <div class="contacts__map">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2942.32196781541!2d78.39862287611574!3d42.48470727118156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38865bbb4b216527%3A0xc8138a1d9c5e8bea!2sMONGU%20mini%20hotel!5e0!3m2!1sru!2skg!4v1785822850558!5m2!1sru!2skg"
-                width="100%"
-                height="100%"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="MONGU Locations">
-              </iframe>
-            </div>
+      <article class="article section-padding-bottom">
+  <div class="container">
+    <header class="article__header">
+      <h1 class="article__title">{{ record.title }}</h1>
+    </header>
 
-            <!-- Правая колонка: Блоки с информацией -->
-            <div class="contacts__info">
-              <!-- Блок 2: Адреса -->
-              <div class="contacts__panel">
-                <h2 class="contacts__panel-title contacts__panel-title_bordered">Our Contacts & location</h2>
-                <div class="contacts__details">
-                  <div class="contacts__item">
-                    <span class="contacts__label">Whatsapp</span>
-                    <a href="tel:+996555150795" class="contacts__value">+996 555 150 795</a>
-                  </div>
+    {# Баннер Hero статьи, если он задан в Tailor #}
+    {% if record.hero %}
+      <figure class="article__hero">
+        <img 
+          src="{{ record.hero.path }}" 
+          alt="{{ record.hero_caption|default(record.title) }}" 
+          class="article__hero-img article__hero-img--{{ record.hero_position|default('center-bg') }}" 
+          loading="eager"
+          decoding="async"
+        >
+        {% if record.hero_caption %}
+          <figcaption class="article__hero-caption">{{ record.hero_caption }}</figcaption>
+        {% endif %}
+      </figure>
+    {% endif %}
 
-                  <div class="contacts__item">
-                    <span class="contacts__label">Office / Mongu hotel</span>
-                    <span class="contacts__value">
-                      Kyrgyzstan, Karakol city,<br />
-                      Jusaev st., 83
-                    </span>
-                  </div>
-                  <div class="contacts__item contacts__item_full">
-                    <span class="contacts__label">E-mail</span>
-                    <a href="mailto:mongu.karakol@gmail.com" class="contacts__value">mongu.karakol@gmail.com</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    {# Основной контент с рендерингом сниппетов через |content #}
+    <div class="article__body">
+      {{ record.description|content }}
+    </div>
+  </div>
+</article>
     </main>
 
     <load src="./partials/footer.html" />
     <load src="./partials/mobile-menu.html" />
     <load src="./partials/sprite-inline.html" />
 
-    <script type="module" src="./js/contacts.js"></script>
+    <script type="module" src="./js/article.js"></script>
   </body>
 </html>

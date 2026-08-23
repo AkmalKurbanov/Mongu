@@ -65,3 +65,27 @@ img
 
 main
   flex: 1 0 auto
+
+.scroll-up
+  width: v.to-rem(40)
+  min-height: v.to-rem(40)
+  display: flex
+  align-items: center
+  justify-content: center
+  border-radius: 100%
+  background-color: #fff
+  box-shadow: v.$shadow-sm
+  position: fixed
+  bottom: v.to-rem(30)
+  right: v.to-rem(15)
+  transition: transform v.$tr-base
+
+  svg
+    transform: rotate(-90deg)
+    width: 25px
+    height: 25px
+
+  @include v.has-mouse
+    &:hover
+      transform: scale(1.1)
+      animation: none  
