@@ -1,147 +1,53 @@
 @use '../settings/shared' as v
 
 .article
-  color: v.$clr-text
-  font-family: v.$ff-base
- 
-  &__header
-    margin-bottom: v.$space-lg
+  img
+    border-radius: v.$rad-sm
+    aspect-ratio: 16/9
+    box-shadow: v.$shadow-lg
+    height: 100%
 
-  &__title
-    font-family: v.$ff-accent
-    font-size: v.$fz-xxl
-    line-height: 1.2
-    color: v.$clr-text
-    margin: 0
-
-    @media (min-width: 768px)
-      font-size: v.$fz-hero
-
-  &__hero
-    margin: 0 0 v.$space-xl 0
-    border-radius: v.$rad-md
-    overflow: hidden
-    box-shadow: v.$shadow-sm
-
-    &-img
-      display: block
-      width: 100%
-      height: 14rem
-      object-fit: cover
-
-      @media (min-width: 768px)
-        height: 22rem
-
-      
-
-    &-caption
-      padding: v.$space-xs v.$space-sm
-      font-size: v.$fz-xs
-      color: v.$clr-text-muted
-      text-align: right
-
-  &__body
-    font-size: v.$fz-base
-    line-height: 1.65
-    color: v.$clr-text
-
-    p
-      margin: 0 0 v.$space-md 0
-
-    h2, h3, h4
-      font-family: v.$ff-accent
-      color: v.$clr-accent-darker
-      margin: v.$space-xl 0 v.$space-sm 0
-      line-height: 1.3
-
-    h2
-      font-size: v.$fz-xl
-    h3
-      font-size: v.$fz-lg
-
-    ul, ol
-      margin: 0 0 v.$space-md 0
-      padding-left: v.$space-lg
-
-    li
-      margin-bottom: v.$space-xs
-
-    blockquote
-      margin: v.$space-lg 0
-      padding: v.$space-md v.$space-lg
-      background-color: v.$clr-bg-alt
-      border-left: 3px solid v.$clr-accent
-      border-radius: 0 v.$rad-sm v.$rad-sm 0
-      font-style: italic
-      color: v.$clr-accent-darker
-
-
-.article-media-wide
-  margin: v.$space-xl 0
-  border-radius: v.$rad-md
-  overflow: hidden
-
-  &__wrapper
-    position: relative
-    width: 100%
-    border-radius: v.$rad-md
-    overflow: hidden
-    box-shadow: v.$shadow-md
-
-  &__img
-    display: block
-    width: 100%
-    height: auto
-    object-fit: cover
-
-  &__caption
-    margin-top: v.$space-xs
-    font-size: v.$fz-xs
+  &__img-caption
+    margin-top: v.$space-sm
+    font-size: v.$fz-sm
     color: v.$clr-text-muted
     text-align: center
 
-.article-card-media
-  margin: v.$space-xl 0
-  padding: v.$space-md
-  background-color: v.$clr-bg-light
-  border: 1px solid v.$clr-bg-alt
-  border-radius: v.$rad-lg
-  box-shadow: v.$shadow-sm
-  display: flex
-  flex-direction: column
-  gap: v.$space-md
-
-  @media (min-width: 600px)
-    flex-direction: row
-    align-items: center
-    padding: v.$space-lg
+  &__card
+    display: flex
+    flex-direction: column
     gap: v.$space-lg
+    margin-bottom: v.$space-xl
 
-  &__visual
-    flex: 0 0 100%
+    &:last-child
+      margin-bottom: 0
 
-    @media (min-width: 600px)
-      flex: 0 0 40%
+    @include v.media(laptop)
+      flex-direction: row
 
-  &__img
-    display: block
-    width: 100%
-    height: 100%
-    object-fit: cover
-    border-radius: v.$rad-sm
+      &_reverse
+        flex-direction: row-reverse
 
-  &__body
-    flex: 1
+    h2
+      margin-bottom: v.$space-md
+      
+  &__card-col
+    @include v.media(laptop)
+      width: 50%
 
-  &__title
-    font-family: v.$ff-accent
-    font-size: v.$fz-lg
-    color: v.$clr-accent-darker
-    margin: 0 0 v.$space-xs 0
-    line-height: 1.3
+  &__card-text
+    display: flex
+    flex-direction: column
+    justify-content: center
 
-  &__text
-    font-size: v.$fz-sm
-    color: v.$clr-text-muted
-    line-height: 1.5
-    margin: 0
+    
+
+  &__img-full
+    margin-bottom: v.$space-xl
+    &:last-child
+      margin-bottom: 0
+    img
+      height: v.to-rem(350)
+
+  &__text-content
+    margin-bottom: v.$space-xl
